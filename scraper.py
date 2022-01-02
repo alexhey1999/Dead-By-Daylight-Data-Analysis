@@ -2,7 +2,7 @@
 import cv2
 import numpy as np
 from os import listdir
-import argparse
+import argparse, random
 
 #Nebula
 #dbdicontoolbox://EvaZioNe-Nebula
@@ -77,6 +77,41 @@ def calculatePerks(perkList,location, Screen):
     return perks
 
 
+def calculateItems(itemList, location, Screen):
+    items = {}
+    size = 36
+    cropBorder = 4
+    threshold = 0.85
+
+    # firstrun = True
+
+    for item in itemList:
+        icon = cv2.imread(location+item)
+        icon = cv2.resize(icon, (size, size),interpolation=cv2.INTER_AREA)
+        icon = icon[cropBorder:size-cropBorder , cropBorder:size-cropBorder]
+
+        # if firstrun:
+            # cv2.imshow("Screen", Screen)
+            # cv2.imshow("Icon", icon)
+            # firstrun = False
+
+        result = cv2.matchTemplate(Screen, icon, cv2.TM_CCORR_NORMED)
+        yloc, xloc = np.where(result >= threshold)
+        rectangles = []
+
+        for (x, y) in zip(xloc, yloc):
+            rectangles.append([int(x-cropBorder), int(y-cropBorder), size,size])
+            rectangles.append([int(x-cropBorder), int(y-cropBorder), size,size])
+
+        rectangles, weights = cv2.groupRectangles(rectangles, 1, 0.2)
+        
+        #Perk Count
+        if len(rectangles) > 0:
+            items[item] = len(rectangles)
+            # cv2.imshow("Item", Screen)
+            # print(f'{perk} : {len(rectangles)}')
+    # print(perks)
+    return items
 
 
 def testingPerk(perk,location,Screen,force=False):
@@ -129,9 +164,21 @@ def adjustScreenSizeKiller(Screen):
     Screen = Screen[0+hightStartCut:Screen.shape[0]-hightEndCut, 0+widthStartCut:Screen.shape[1]-widthEndCut]
     # cv2.imshow("Screen", Screen)
     return Screen
+
+def adjustScreenSizeItems(Screen):
+    widthStartCut = 430
+    widthEndCut = 1445
+    hightStartCut = 310
+    hightEndCut = 400
+
+    # print(Screen.shape)
+    Screen = Screen[0+hightStartCut:Screen.shape[0]-hightEndCut, 0+widthStartCut:Screen.shape[1]-widthEndCut]
+    # cv2.imshow("Screen", Screen)
+    return Screen
+
     
 size = 46
-threshold = 0.7
+threshold = 0.70
 cropBorder = 9
 
 def main():
@@ -142,6 +189,8 @@ def main():
     # add expected arguments
     parser.add_argument('--file', dest='imgFile', required=True)
     parser.add_argument('--icon', dest='icon', required=False)
+    parser.add_argument('--forceEnd', dest='forceEnd', required=False)
+    parser.add_argument('--testing', dest='testing', required=False)
 
     # parse args
     args = parser.parse_args()
@@ -150,41 +199,38 @@ def main():
     # set output file
     killerList = listdir("./Killers/")
     perkList = listdir("./Perks/")
+    itemList = listdir("./Items/")
 
     KillerScreen = cv2.imread(imgFile)
     PerkScreen = cv2.imread(imgFile)
+    ItemScreen = cv2.imread(imgFile)
 
     KillerScreen = adjustScreenSizeKiller(KillerScreen)
     PerkScreen = adjustScreenSizePerks(PerkScreen)
+    ItemScreen = adjustScreenSizeItems(ItemScreen)
 
     if args.icon:
         icon = args.icon
         testingPerk(icon, "./Perks/", PerkScreen, True)
+
+    if args.testing:
+        adjustScreenSizeItems(ItemScreen)
     else:
         killerPlayed, confirmation = calculateKiller(killerList, "./Killers/", KillerScreen)
         perks = calculatePerks(perkList, "./Perks/", PerkScreen)
+        items = calculateItems(itemList, "./Items/", ItemScreen)
 
         print(f'Killer Played: {killerPlayed} , Confirmation: {round(confirmation*100,2)}%')
         print(f'Perks: {perks}')
-
+        print(f'Items: {items}')
     
-    # testPerk = "iconPerks_BoonCircleOfHealing.png"
-    #testPerk = "iconPerks_botanyKnowledge.png"
-    #testPerk = "iconPerks_dejaVu.png"
-    #testPerk = "iconPerks_ironGrasp.png"
-    #testPerk = "iconPerks_leftBehind.png"
-    #testPerk = "iconPerks_painResonance.png"
-    #testPerk = "iconPerks_theThirdSeal.png"
-    #testPerk = "iconPerks_TerritorialImperative.png"
-    #testPerk = "iconPerks_objectOfObsession.png"
-    #testPerk = "iconPerks_corruptIntervention.png"
-    # testPerk = "iconPerks_gearHead.png"
-    # testPerk = "iconPerks_enduring.png"
-    
-    while True:
-        key = cv2.waitKey(30)
-        if key == 27 or key == 0:
-            quit()
+    if args.forceEnd:
+        cv2.destroyAllWindows()
+    else:
+        while True:
+            key = cv2.waitKey(30)
+            if key == 27 or key == 0:
+                quit()
     
 if __name__ == "__main__":
     main()
