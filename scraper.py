@@ -2,7 +2,7 @@
 import cv2
 import numpy as np
 from os import listdir
-import warnings
+import argparse
 
 #Nebula
 #dbdicontoolbox://EvaZioNe-Nebula
@@ -135,21 +135,38 @@ threshold = 0.7
 cropBorder = 9
 
 def main():
+    # create parser
+    descStr = "This program converts an image into ASCII art."
+    parser = argparse.ArgumentParser(description=descStr)
 
+    # add expected arguments
+    parser.add_argument('--file', dest='imgFile', required=True)
+    parser.add_argument('--icon', dest='icon', required=False)
+
+    # parse args
+    args = parser.parse_args()
+    imgFile = args.imgFile
+
+    # set output file
     killerList = listdir("./Killers/")
     perkList = listdir("./Perks/")
-    KillerScreen = cv2.imread('test1.jpg')
-    PerkScreen = cv2.imread('test1.jpg')
+
+    KillerScreen = cv2.imread(imgFile)
+    PerkScreen = cv2.imread(imgFile)
 
     KillerScreen = adjustScreenSizeKiller(KillerScreen)
-
     PerkScreen = adjustScreenSizePerks(PerkScreen)
 
-    killerPlayed, confirmation = calculateKiller(killerList, "./Killers/", KillerScreen)
-    perks = calculatePerks(perkList, "./Perks/", PerkScreen)
+    if args.icon:
+        icon = args.icon
+        testingPerk(icon, "./Perks/", PerkScreen, True)
+    else:
+        killerPlayed, confirmation = calculateKiller(killerList, "./Killers/", KillerScreen)
+        perks = calculatePerks(perkList, "./Perks/", PerkScreen)
 
-    print(f'Killer Played: {killerPlayed} , Confirmation: {round(confirmation*100,2)}%')
-    print(f'Perks: {perks}')
+        print(f'Killer Played: {killerPlayed} , Confirmation: {round(confirmation*100,2)}%')
+        print(f'Perks: {perks}')
+
     
     # testPerk = "iconPerks_BoonCircleOfHealing.png"
     #testPerk = "iconPerks_botanyKnowledge.png"
@@ -163,8 +180,6 @@ def main():
     #testPerk = "iconPerks_corruptIntervention.png"
     # testPerk = "iconPerks_gearHead.png"
     # testPerk = "iconPerks_enduring.png"
-    
-    # testingPerk(testPerk, "./Perks/", Screen, True)
     
     while True:
         key = cv2.waitKey(30)
