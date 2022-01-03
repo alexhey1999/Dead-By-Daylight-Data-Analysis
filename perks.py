@@ -12,8 +12,12 @@ def adjustScreenSizePerks(Screen):
     # cv2.imshow("Screen", Screen)
     return Screen
 
-def calculatePerks(perkList,location,Screen,size,threshold,cropBorder):
+def calculatePerks(perkList,location,Screen):
     perks = {}
+    size = 46
+    threshold = 0.67
+    cropBorder = 8
+
     for perk in perkList:
         icon = cv2.imread(location+perk)
         icon = cv2.resize(icon, (size, size),interpolation=cv2.INTER_AREA)

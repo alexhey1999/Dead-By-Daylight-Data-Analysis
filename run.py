@@ -9,7 +9,9 @@ import numpy as np
 from killer import *
 from items import *
 from perks import *
+from offerings import *
 from testing import *
+
 
 
 #Nebula
@@ -30,9 +32,7 @@ def getImageCapture():
     cv2.imwrite('Screenshots/'+fileName, image)
     return fileName
     
-size = 46
-threshold = 0.70
-cropBorder = 9
+
 
 def main():
     # create parser
@@ -47,45 +47,50 @@ def main():
 
     # parse args
     args = parser.parse_args()
-    
 
     # set output file
     killerList = listdir("./Killers/")
     perkList = listdir("./Perks/")
     itemList = listdir("./Items/")
+    offeringList = listdir("./Offerings/")
 
     if args.imgFile:
         imgFile = args.imgFile
         KillerScreen = cv2.imread(imgFile)
         PerkScreen = cv2.imread(imgFile)
         ItemScreen = cv2.imread(imgFile)
+        OfferingScreen = cv2.imread(imgFile)
     else:
         screenshotName = getImageCapture()
-        KillerScreen = cv2.imread(screenshotName)
-        PerkScreen = cv2.imread(screenshotName)
-        ItemScreen = cv2.imread(screenshotName)
+        KillerScreen = cv2.imread('Screenshots/'+screenshotName)
+        PerkScreen = cv2.imread('Screenshots/'+screenshotName)
+        ItemScreen = cv2.imread('Screenshots/'+screenshotName)
+        OfferingScreen = cv2.imread('Screenshots/'+screenshotName)
 
     KillerScreen = adjustScreenSizeKiller(KillerScreen)
     PerkScreen = adjustScreenSizePerks(PerkScreen)
     ItemScreen = adjustScreenSizeItems(ItemScreen)
+    OfferingScreen = adjustScreenSizeOfferings(OfferingScreen)
 
     if args.icon:
         icon = args.icon
         testingPerk(icon, "./Perks/", PerkScreen, True)
 
+
     if args.testing:
-        adjustScreenSizeItems(ItemScreen)
+        pass
+
     else:
 
         killerPlayed, confirmation = calculateKiller(killerList, "./Killers/", KillerScreen)
-
-        perks = calculatePerks(perkList, "./Perks/", PerkScreen, size, threshold, cropBorder)
-
+        perks = calculatePerks(perkList, "./Perks/", PerkScreen)
         items = calculateItems(itemList, "./Items/", ItemScreen)
-
-        print(f'Killer Played: {killerPlayed} , Confirmation: {round(confirmation*100,2)}%')
-        print(f'Perks: {perks}')
-        print(f'Items: {items}')
+        offerings = calculateOfferings(offeringList, "./Offerings/", OfferingScreen)
+        print('\n\n\n\n\n\n')
+        print(f'Killer Played: {killerPlayed} , Confirmation: {round(confirmation*100,2)}%\n')
+        print(f'Perks: {perks}\n')
+        print(f'Items: {items}\n')
+        print(f'Offerings: {offerings}\n')
     
     if args.forceEnd:
         cv2.destroyAllWindows()
