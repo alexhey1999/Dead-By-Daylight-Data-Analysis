@@ -5,7 +5,7 @@ import argparse
 import pyautogui
 import numpy as np
 import pytesseract
-pytesseract.pytesseract.tesseract_cmd = r"C:\Users\alex.hey\AppData\Local\Programs\Tesseract-OCR\tesseract.exe"
+pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
 
 from killer import *
