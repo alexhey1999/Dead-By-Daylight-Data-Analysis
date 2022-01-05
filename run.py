@@ -4,12 +4,15 @@ from os import listdir
 import argparse
 import pyautogui
 import numpy as np
+import pytesseract
+pytesseract.pytesseract.tesseract_cmd = r"C:\Users\alex.hey\AppData\Local\Programs\Tesseract-OCR\tesseract.exe"
 
 
 from killer import *
 from items import *
 from perks import *
 from offerings import *
+from scores import *
 from testing import *
 
 
@@ -60,17 +63,20 @@ def main():
         PerkScreen = cv2.imread(imgFile)
         ItemScreen = cv2.imread(imgFile)
         OfferingScreen = cv2.imread(imgFile)
+        ScoreScreen = cv2.imread(imgFile)
     else:
         screenshotName = getImageCapture()
         KillerScreen = cv2.imread('Screenshots/'+screenshotName)
         PerkScreen = cv2.imread('Screenshots/'+screenshotName)
         ItemScreen = cv2.imread('Screenshots/'+screenshotName)
         OfferingScreen = cv2.imread('Screenshots/'+screenshotName)
+        ScoreScreen = cv2.imread('Screenshots/'+screenshotName)
 
     KillerScreen = adjustScreenSizeKiller(KillerScreen)
     PerkScreen = adjustScreenSizePerks(PerkScreen)
     ItemScreen = adjustScreenSizeItems(ItemScreen)
     OfferingScreen = adjustScreenSizeOfferings(OfferingScreen)
+
 
     if args.icon:
         icon = args.icon
@@ -78,6 +84,8 @@ def main():
 
 
     if args.testing:
+        ScoreScreen = adjustScreenSizeScores(ScoreScreen)
+        calculateScores(ScoreScreen)
         pass
 
     else:

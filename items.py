@@ -20,7 +20,7 @@ def calculateItems(itemList, location, Screen):
     threshold = 0.81
     
 
-    firstrun = True
+    firstrun = False
 
     for item in itemList:
         icon = cv2.imread(location+item)
