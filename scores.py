@@ -13,14 +13,20 @@ def adjustScreenSizeScores(Screen):
     # cv2.imshow("HSV", Screen)
     # Threshold of blue in HSV space
     upper_white = np.array([255, 255, 255])
-    lower_white = np.array([150, 150, 150])
+    lower_white = np.array([155, 155, 155])
 
     mask = cv2.inRange(Screen, lower_white, upper_white)
 
     result = cv2.bitwise_and(Screen, Screen, mask = mask)
-    result = cv2.GaussianBlur(result,(3,3),cv2.BORDER_DEFAULT)
+
+    result = cv2.bitwise_not(result)
+ 
+    # result = cv2.GaussianBlur(result,(3,3),cv2.BORDER_DEFAULT)
 
     result = result[0+hightStartCut:result.shape[0]-hightEndCut, 0+widthStartCut:result.shape[1]-widthEndCut]
+ 
+    
+ 
     # cv2.imshow("Screen", result)
     return result
 
