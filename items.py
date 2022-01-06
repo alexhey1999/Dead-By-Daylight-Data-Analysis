@@ -16,8 +16,8 @@ def adjustScreenSizeItems(Screen):
 def calculateItems(itemList, location, Screen):
     items = {}
     size = 37
-    cropBorder = 0
-    threshold = 0.81
+    cropBorder = 2
+    threshold = 0.85
     
 
     firstrun = False

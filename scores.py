@@ -55,7 +55,7 @@ def calculateScores(Screen):
             except:
                 scores[f'Player {i+1}'] = "NaN"
 
-    firstrun = True
+    firstrun = False
     if firstrun:
         cv2.imshow("Screen", Screen)
         firstrun = False

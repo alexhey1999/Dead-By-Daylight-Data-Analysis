@@ -66,6 +66,7 @@ def main():
         ItemScreen = cv2.imread(imgFile)
         OfferingScreen = cv2.imread(imgFile)
         ScoreScreen = cv2.imread(imgFile)
+        TestingScreen = cv2.imread(imgFile)
     else:
         screenshotName = getImageCapture()
         KillerScreen = cv2.imread('Screenshots/'+screenshotName)
@@ -73,12 +74,13 @@ def main():
         ItemScreen = cv2.imread('Screenshots/'+screenshotName)
         OfferingScreen = cv2.imread('Screenshots/'+screenshotName)
         ScoreScreen = cv2.imread('Screenshots/'+screenshotName)
+        TestingScreen = cv2.imread('Screenshots/'+screenshotName)
 
     KillerScreen = adjustScreenSizeKiller(KillerScreen)
     PerkScreen = adjustScreenSizePerks(PerkScreen)
     ItemScreen = adjustScreenSizeItems(ItemScreen)
     OfferingScreen = adjustScreenSizeOfferings(OfferingScreen)
-
+    ScoreScreen = adjustScreenSizeScores(ScoreScreen)
 
     if args.icon:
         icon = args.icon
@@ -86,8 +88,9 @@ def main():
 
 
     if args.testing:
-        ScoreScreen = adjustScreenSizeScores(ScoreScreen)
-        calculateScores(ScoreScreen)
+        screen = testingScreenAdjust(TestingScreen)
+        perks = testingBlackAndWhite(perkList,"./Perks/",screen)
+        print(perks)
         pass
 
     else:
@@ -96,12 +99,16 @@ def main():
         perks = calculatePerks(perkList, "./Perks/", PerkScreen)
         items = calculateItems(itemList, "./Items/", ItemScreen)
         offerings = calculateOfferings(offeringList, "./Offerings/", OfferingScreen)
+        scores = calculateScores(ScoreScreen)
+
         print('\n\n\n\n\n\n')
         print(f'Killer Played: {killerPlayed} , Confirmation: {round(confirmation*100,2)}%\n')
         print(f'Perks: {perks}\n')
         print(f'Items: {items}\n')
         print(f'Offerings: {offerings}\n')
-    
+        print(f'Scores: {scores}\n')
+
+
     if args.forceEnd:
         cv2.destroyAllWindows()
     else:
