@@ -7,9 +7,10 @@ import numpy as np
 import pytesseract
 import PIL.Image as Image
 
-path = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
-pytesseract.pytesseract.tesseract_cmd = path
+# path = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+path = r'C:\Users\alex.hey\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
 
+pytesseract.pytesseract.tesseract_cmd = path
 
 from killer import *
 from items import *
@@ -17,8 +18,6 @@ from perks import *
 from offerings import *
 from scores import *
 from testing import *
-
-
 
 #Nebula
 #dbdicontoolbox://EvaZioNe-Nebula

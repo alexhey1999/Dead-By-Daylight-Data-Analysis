@@ -7,10 +7,10 @@ def testingScreenAdjust(Screen):
     widthStartCut = 160
     widthEndCut = 1550
     hightStartCut = 290
-    hightEndCut = 290
+    hightEndCut = 300
 
-    upper_white = np.array([255, 255, 255])
-    lower_white = np.array([200, 200, 200])
+    upper_white = np.array([256, 256, 256])
+    lower_white = np.array([145, 145, 145])
 
     mask = cv2.inRange(Screen, lower_white, upper_white)
 
@@ -20,17 +20,9 @@ def testingScreenAdjust(Screen):
     BlackBackground = np.zeros((Screen.shape[0], Screen.shape[1], 3), dtype=np.uint8)
     BlackBackground[:,:,:] = (0,0,0)
 
-
-
     result = cv2.bitwise_and(WhiteBackground,WhiteBackground,BlackBackground ,mask = mask)
 
-    result = cv2.medianBlur(result,1)
-
-    # result = cv2.bitwise_and(Screen, Screen, mask = mask)
-
-    # result = cv2.GaussianBlur(result,(3,3),cv2.BORDER_DEFAULT)
-    # print(Screen.shape)
-
+    # result = cv2.blur(result,(3,3))
     
     result = result[0+hightStartCut:result.shape[0]-hightEndCut, 0+widthStartCut:result.shape[1]-widthEndCut]
     cv2.imshow("Screen", result)
@@ -42,9 +34,9 @@ def testingScreenAdjust(Screen):
 
 def testingBlackAndWhite(perkList,location,Screen):
     perks = {}
-    size = 47
-    threshold = 0.55
-    cropBorder = 6
+    size = 46
+    threshold = 0.57
+    cropBorder = 9
 
     firstrun = True
     #convert screen to black and white
@@ -54,22 +46,24 @@ def testingBlackAndWhite(perkList,location,Screen):
         
         icon = cv2.resize(icon, (size, size),interpolation=cv2.INTER_AREA )
 
-        upper_white = np.array([255, 255, 255])
-        lower_white = np.array([130, 130, 130])
-
-        mask = cv2.inRange(icon, lower_white, upper_white)
-
-        WhiteBackground = np.zeros((icon.shape[0], icon.shape[1], 3), dtype=np.uint8)
-        WhiteBackground[:,:,:] = (255,255,255)
-
-        BlackBackground = np.zeros((icon.shape[0], icon.shape[1], 3), dtype=np.uint8)
-        BlackBackground[:,:,:] = (0,0,0)
 
 
+        # upper_white = np.array([255, 255, 255])
+        # lower_white = np.array([90, 90, 90])
 
-        result = cv2.bitwise_and(WhiteBackground,WhiteBackground,BlackBackground ,mask = mask)
+        # mask = cv2.inRange(icon, lower_white, upper_white)
 
-        icon = cv2.medianBlur(result,1)
+        # WhiteBackground = np.zeros((icon.shape[0], icon.shape[1], 3), dtype=np.uint8)
+        # WhiteBackground[:,:,:] = (255,255,255)
+
+        # BlackBackground = np.zeros((icon.shape[0], icon.shape[1], 3), dtype=np.uint8)
+        # BlackBackground[:,:,:] = (0,0,0)
+
+
+
+        # result = cv2.bitwise_and(WhiteBackground,WhiteBackground,BlackBackground ,mask = mask)
+
+        # icon = cv2.blur(icon,(3,3))
 
         icon = icon[cropBorder:size-cropBorder , cropBorder:size-cropBorder]
 
