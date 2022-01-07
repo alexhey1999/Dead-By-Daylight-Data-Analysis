@@ -34,9 +34,9 @@ def testingScreenAdjust(Screen):
 
 def testingBlackAndWhite(perkList,location,Screen):
     perks = {}
-    size = 46
-    threshold = 0.57
-    cropBorder = 9
+    size = 47
+    threshold = 0.60
+    cropBorder = 4
 
     firstrun = True
     #convert screen to black and white
@@ -73,7 +73,7 @@ def testingBlackAndWhite(perkList,location,Screen):
         yloc, xloc = np.where(result >= threshold)
         rectangles = []
 
-        if perk == "iconPerks_BoonCircleOfHealing.png":
+        if perk == "iconPerks_quickAndQuiet.png":
             cv2.imshow("Screen", Screen)
             cv2.imshow("Icon", icon)
             firstrun = False
