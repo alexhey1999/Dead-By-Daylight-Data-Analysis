@@ -5,8 +5,9 @@ import argparse
 import pyautogui
 import numpy as np
 import pytesseract
+import PIL.Image as Image
 
-path = r'C:\Users\alex.hey\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
+path = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 pytesseract.pytesseract.tesseract_cmd = path
 
 
@@ -36,7 +37,15 @@ def getImageCapture():
     image = cv2.cvtColor(np.array(image),cv2.COLOR_RGB2BGR)
     cv2.imwrite('Screenshots/'+fileName, image)
     return fileName
-    
+
+def imageFix(location):
+    imageList = listdir(location)
+    for fileName in imageList:
+        image = Image.open(location+fileName)
+        image.convert("RGBA")
+        canvas = Image.new('RGBA', image.size, (0,0,0,255)) # Empty canvas colour (r,g,b,a)
+        canvas.paste(image, mask=image) # Paste the image onto the canvas, using it's alpha channel as mask
+        canvas.save(str(location+fileName), format="PNG")
 
 
 def main():
@@ -49,9 +58,16 @@ def main():
     parser.add_argument('--icon', dest='icon', required=False)
     parser.add_argument('--forceEnd', dest='forceEnd', required=False)
     parser.add_argument('--testing', dest='testing', required=False)
+    parser.add_argument('--imageFix', dest='imageFix', required=False)
+    parser.add_argument('--folder', dest='folder', required=False)
 
     # parse args
     args = parser.parse_args()
+
+    if args.imageFix:
+        imageFix(args.folder)
+        quit()
+    
 
     # set output file
     killerList = listdir("./Killers/")

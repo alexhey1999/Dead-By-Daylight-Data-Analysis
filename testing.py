@@ -1,76 +1,85 @@
 import cv2
 import numpy as np
+import PIL.Image as Image
 
 def testingScreenAdjust(Screen):
+    print(Screen.shape)
     widthStartCut = 160
     widthEndCut = 1550
     hightStartCut = 290
     hightEndCut = 290
+
     upper_white = np.array([255, 255, 255])
-    lower_white = np.array([160, 160, 160])
+    lower_white = np.array([200, 200, 200])
 
     mask = cv2.inRange(Screen, lower_white, upper_white)
 
-    result = cv2.bitwise_and(Screen, Screen, mask = mask)
+    WhiteBackground = np.zeros((Screen.shape[0], Screen.shape[1], 3), dtype=np.uint8)
+    WhiteBackground[:,:,:] = (255,255,255)
+
+    BlackBackground = np.zeros((Screen.shape[0], Screen.shape[1], 3), dtype=np.uint8)
+    BlackBackground[:,:,:] = (0,0,0)
+
+
+
+    result = cv2.bitwise_and(WhiteBackground,WhiteBackground,BlackBackground ,mask = mask)
+
+    result = cv2.medianBlur(result,1)
+
+    # result = cv2.bitwise_and(Screen, Screen, mask = mask)
+
+    # result = cv2.GaussianBlur(result,(3,3),cv2.BORDER_DEFAULT)
     # print(Screen.shape)
 
     
     result = result[0+hightStartCut:result.shape[0]-hightEndCut, 0+widthStartCut:result.shape[1]-widthEndCut]
-    # cv2.imshow("Screen", result)
+    cv2.imshow("Screen", result)
     return result
 
 
 
-def testingPerk(perk,location,Screen,size,threshold,cropBorder,force=False):
-    
-
-    icon = cv2.imread(location+perk)
-    icon = cv2.resize(icon, (size, size),interpolation=cv2.INTER_AREA)
-    icon = icon[cropBorder:size-cropBorder , cropBorder:size-cropBorder]
-
-    
-    result = cv2.matchTemplate(Screen, icon, cv2.TM_CCOEFF_NORMED)
-    yloc, xloc = np.where(result >= threshold)
-    rectangles = []
-
-    for (x, y) in zip(xloc, yloc):
-        rectangles.append([int(x-cropBorder), int(y-cropBorder), size,size])
-        rectangles.append([int(x-cropBorder), int(y-cropBorder), size,size])
-
-    rectangles, weights = cv2.groupRectangles(rectangles, 1, 0.2)
-
-    #Perk Count
-    # print(f'{perk} : {len(rectangles)}')
-
-    for (x, y, w, h) in rectangles:
-        cv2.rectangle(Screen, (x, y), (x + w, y + h), (0, 255, 0), 2)
-
-    if len(rectangles) > 0 or force:
-        cv2.imshow("Perk", Screen)
-        cv2.imshow("Icon", icon)
 
 
 def testingBlackAndWhite(perkList,location,Screen):
     perks = {}
-    size = 46
-    threshold = 0.65
-    cropBorder = 0
+    size = 47
+    threshold = 0.55
+    cropBorder = 6
 
     firstrun = True
+    #convert screen to black and white
 
     for perk in perkList:
-        icon = cv2.imread(location+perk,cv2.IMREAD_UNCHANGED)
-        icon = cv2.resize(icon, (size, size),interpolation=cv2.INTER_AREA)
-        trans_mask = icon[:,:,3] == 0
-        icon[trans_mask] = [0, 0, 0, 0]
-        icon = cv2.cvtColor(icon, cv2.COLOR_BGRA2BGR)
+        icon = cv2.imread(location+perk)
+        
+        icon = cv2.resize(icon, (size, size),interpolation=cv2.INTER_AREA )
 
+        upper_white = np.array([255, 255, 255])
+        lower_white = np.array([130, 130, 130])
+
+        mask = cv2.inRange(icon, lower_white, upper_white)
+
+        WhiteBackground = np.zeros((icon.shape[0], icon.shape[1], 3), dtype=np.uint8)
+        WhiteBackground[:,:,:] = (255,255,255)
+
+        BlackBackground = np.zeros((icon.shape[0], icon.shape[1], 3), dtype=np.uint8)
+        BlackBackground[:,:,:] = (0,0,0)
+
+
+
+        result = cv2.bitwise_and(WhiteBackground,WhiteBackground,BlackBackground ,mask = mask)
+
+        icon = cv2.medianBlur(result,1)
+
+        icon = icon[cropBorder:size-cropBorder , cropBorder:size-cropBorder]
+
+        # cv2.imshow(perk, icon)
 
         result = cv2.matchTemplate(Screen, icon, cv2.TM_CCOEFF_NORMED)
         yloc, xloc = np.where(result >= threshold)
         rectangles = []
 
-        if perk == "iconPerks_decisiveStrike.png":
+        if perk == "iconPerks_BoonCircleOfHealing.png":
             cv2.imshow("Screen", Screen)
             cv2.imshow("Icon", icon)
             firstrun = False
@@ -81,7 +90,6 @@ def testingBlackAndWhite(perkList,location,Screen):
 
         rectangles, weights = cv2.groupRectangles(rectangles, 1, 0.2)
 
-        #Perk Count
         if len(rectangles) > 0:
             perks[perk] = len(rectangles)
             # print(f'{perk} : {len(rectangles)}')
@@ -102,3 +110,68 @@ def testingBlackAndWhite(perkList,location,Screen):
 # testPerk = "iconPerks_corruptIntervention.png"
 # testPerk = "iconPerks_gearHead.png"
 # testPerk = "iconPerks_enduring.png"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def testingPerk(perk,location,Screen,size,threshold,cropBorder,force=False):
+    
+
+    icon = cv2.imread(location+perk)
+    icon = cv2.resize(icon, (size, size),interpolation=cv2.INTER_AREA)
+    icon = icon[cropBorder:size-cropBorder , cropBorder:size-cropBorder]
+    
+    
+    result = cv2.matchTemplate(Screen, icon, cv2.TM_CCOEFF_NORMED)
+    yloc, xloc = np.where(result >= threshold)
+    rectangles = []
+
+    for (x, y) in zip(xloc, yloc):
+        rectangles.append([int(x-cropBorder), int(y-cropBorder), size,size])
+        rectangles.append([int(x-cropBorder), int(y-cropBorder), size,size])
+
+    rectangles, weights = cv2.groupRectangles(rectangles, 1, 0.2)
+
+    #Perk Count
+    # print(f'{perk} : {len(rectangles)}')
+
+    for (x, y, w, h) in rectangles:
+        cv2.rectangle(Screen, (x, y), (x + w, y + h), (0, 255, 0), 2)
+
+    if len(rectangles) > 0 or force:
+        cv2.imshow("Perk", Screen)
+        cv2.imshow("Icon", icon)
