@@ -3,17 +3,17 @@ import numpy as np
 import pytesseract
 
 def adjustScreenSizeScores(Screen):
-    widthStartCut = 575
-    widthEndCut = 1200
-    hightStartCut = 310
-    hightEndCut = 300
+    widthStartCut = 650
+    widthEndCut = 1120
+    hightStartCut = 260
+    hightEndCut = 260
 
     # print(Screen.shape)
     # hsv = cv2.cvtColor(Screen, cv2.COLOR_BGR2HSV)
     # cv2.imshow("HSV", Screen)
     # Threshold of blue in HSV space
     upper_white = np.array([255, 255, 255])
-    lower_white = np.array([155, 155, 155])
+    lower_white = np.array([115, 115, 115])
 
     mask = cv2.inRange(Screen, lower_white, upper_white)
 
@@ -25,10 +25,14 @@ def adjustScreenSizeScores(Screen):
 
     result = result[0+hightStartCut:result.shape[0]-hightEndCut, 0+widthStartCut:result.shape[1]-widthEndCut]
  
-    
- 
-    # cv2.imshow("Screen", result)
+    cv2.imshow("Scores", result)
     return result
+
+def checkPlayerScore(scores,playerScore,player):
+    try:
+        scores[player] = int(playerScore)
+    except:
+        scores[player] = "NaN"
 
 def calculateScores(Screen):
     # text = pytesseract.image_to_string(Screen, lang='eng',config='--psm 6 --oem 3 -c tessedit_char_whitelist=0123456789')
@@ -40,27 +44,19 @@ def calculateScores(Screen):
 
     scores = {}
 
-    for i,score in enumerate(text):
-        if i == 4:
-            try:
-                int(score)
-                scores['Killer'] = int(score)
-            except:
-                scores['Killer'] = "NaN"
-
-        else:
-            try:
-                int(score)
-                scores[f'Player {i+1}'] = int(score)
-            except:
-                scores[f'Player {i+1}'] = "NaN"
+    try:
+        checkPlayerScore(scores,text[0],"Player1")
+        checkPlayerScore(scores,text[1],"Player2")
+        checkPlayerScore(scores,text[2],"Player3")
+        checkPlayerScore(scores,text[4],"Player4")
+        checkPlayerScore(scores,text[5],"Killer")
+    except:
+        print("Error")
 
     firstrun = False
     if firstrun:
         cv2.imshow("Screen", Screen)
         firstrun = False
 
-    print(scores)
 
-
-    return text
+    return scores

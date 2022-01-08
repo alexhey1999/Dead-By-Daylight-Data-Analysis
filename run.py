@@ -7,8 +7,8 @@ import numpy as np
 import pytesseract
 import PIL.Image as Image
 
-# path = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
-path = r'C:\Users\alex.hey\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
+path = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+# path = r'C:\Users\alex.hey\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
 
 pytesseract.pytesseract.tesseract_cmd = path
 
@@ -79,22 +79,23 @@ def main():
         KillerScreen = cv2.imread(imgFile)
         PerkScreen = cv2.imread(imgFile)
         ItemScreen = cv2.imread(imgFile)
-        OfferingScreen = cv2.imread(imgFile)
+        # OfferingScreen = cv2.imread(imgFile)
         ScoreScreen = cv2.imread(imgFile)
         TestingScreen = cv2.imread(imgFile)
     else:
         screenshotName = getImageCapture()
+
         KillerScreen = cv2.imread('Screenshots/'+screenshotName)
         PerkScreen = cv2.imread('Screenshots/'+screenshotName)
         ItemScreen = cv2.imread('Screenshots/'+screenshotName)
-        OfferingScreen = cv2.imread('Screenshots/'+screenshotName)
+        # OfferingScreen = cv2.imread('Screenshots/'+screenshotName)
         ScoreScreen = cv2.imread('Screenshots/'+screenshotName)
         TestingScreen = cv2.imread('Screenshots/'+screenshotName)
 
     KillerScreen = adjustScreenSizeKiller(KillerScreen)
     PerkScreen = adjustScreenSizePerks(PerkScreen)
     ItemScreen = adjustScreenSizeItems(ItemScreen)
-    OfferingScreen = adjustScreenSizeOfferings(OfferingScreen)
+    # OfferingScreen = adjustScreenSizeOfferings(OfferingScreen)
     ScoreScreen = adjustScreenSizeScores(ScoreScreen)
 
     if args.icon:
@@ -113,14 +114,14 @@ def main():
         killerPlayed, confirmation = calculateKiller(killerList, "./Killers/", KillerScreen)
         perks = calculatePerks(perkList, "./Perks/", PerkScreen)
         items = calculateItems(itemList, "./Items/", ItemScreen)
-        offerings = calculateOfferings(offeringList, "./Offerings/", OfferingScreen)
+        # offerings = calculateOfferings(offeringList, "./Offerings/", OfferingScreen)
         scores = calculateScores(ScoreScreen)
 
         print('\n\n\n\n\n\n')
         print(f'Killer Played: {killerPlayed} , Confirmation: {round(confirmation*100,2)}%\n')
         print(f'Perks: {perks}\n')
         print(f'Items: {items}\n')
-        print(f'Offerings: {offerings}\n')
+        # print(f'Offerings: {offerings}\n')
         print(f'Scores: {scores}\n')
 
 

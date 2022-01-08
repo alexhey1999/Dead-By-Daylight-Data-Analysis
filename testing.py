@@ -8,13 +8,13 @@ from scipy.stats import entropy
 
 def testingScreenAdjust(Screen):
     print(Screen.shape)
-    widthStartCut = 160
-    widthEndCut = 1550
-    hightStartCut = 290
-    hightEndCut = 300
+    widthStartCut = 170
+    widthEndCut = 1500
+    hightStartCut = 280
+    hightEndCut = 270
 
     upper_white = np.array([256, 256, 256])
-    lower_white = np.array([145, 145, 145])
+    lower_white = np.array([105, 105, 105])
 
     mask = cv2.inRange(Screen, lower_white, upper_white)
 
@@ -38,13 +38,9 @@ def testingScreenAdjust(Screen):
 
 def testingBlackAndWhite(perkList,location,Screen):
     perks = {}
-    size = 45
+    size = 50
     thresholdOriginal = 0.65
     cropBorder = 0
-
-    scalar = 0.25751
-
-    minEnt, maxEnt, aveEnt = 1.5887406794040793, 2.8644528562126528, 2.3302580610210795
 
     firstrun = True
     #convert screen to black and white
@@ -60,15 +56,14 @@ def testingBlackAndWhite(perkList,location,Screen):
 
         # cv2.imshow(perk, icon)
 
-        ent = entropy(icon)
+        # ent = entropy(icon)
 
-        f = []
-        for i in ent:
-            if not(np.isnan(i[0])):
-                f.append(i) 
-        entropyList.append(np.average(f))
+        # f = []
+        # for i in ent:
+        #     if not(np.isnan(i[0])):
+        #         f.append(i) 
+        # entropyList.append(np.average(f))
 
-        # threshold = np.average(f) * scalar
         issuePerks = ["iconPerks_BoonCircleOfHealing.png","iconPerks_BoonExponential","iconPerks_trailOfTorment.png","iconPerks_dragonsGrip.png"]
 
         if perk in issuePerks:
@@ -89,7 +84,7 @@ def testingBlackAndWhite(perkList,location,Screen):
             # print(icon)
 
             #Double Size of Icon
-            icon = cv2.resize(icon, (size*2, size*2),interpolation=cv2.INTER_AREA )
+            # icon = cv2.resize(icon, (size*2, size*2),interpolation=cv2.INTER_AREA )
             cv2.imshow("Icon", icon)
 
         for (x, y) in zip(xloc, yloc):
@@ -114,7 +109,7 @@ def testingBlackAndWhite(perkList,location,Screen):
             perks[perk] = len(rectangles)
 
     #double screen size to make it easier to see
-    Screen = cv2.resize(Screen, (Screen.shape[1]*2, Screen.shape[0]*2),interpolation=cv2.INTER_AREA)
+    # Screen = cv2.resize(Screen, (Screen.shape[1]*2, Screen.shape[0]*2),interpolation=cv2.INTER_AREA)
 
     cv2.imshow("Screen", Screen)
 
