@@ -46,6 +46,19 @@ def imageFix(location):
         canvas.paste(image, mask=image) # Paste the image onto the canvas, using it's alpha channel as mask
         canvas.save(str(location+fileName), format="PNG")
 
+def calculateBrightnessVector(brightness):
+    # If brightness is set to 1, then the variable bVector will 135
+    fullBrightWhite = 135
+    noBrightWhite = 100
+    
+    difference = fullBrightWhite - noBrightWhite
+
+    bVector = noBrightWhite + (difference * float(brightness))
+
+    return bVector
+
+    
+
 
 def main():
     # create parser
@@ -59,6 +72,7 @@ def main():
     parser.add_argument('--testing', dest='testing', required=False)
     parser.add_argument('--imageFix', dest='imageFix', required=False)
     parser.add_argument('--folder', dest='folder', required=False)
+    parser.add_argument('--brightness', dest='brightness', required=False)
 
     # parse args
     args = parser.parse_args()
@@ -66,7 +80,13 @@ def main():
     if args.imageFix:
         imageFix(args.folder)
         quit()
+
+    if args.brightness:
+        bVector = int(calculateBrightnessVector(args.brightness))
+    else:
+        bVector = int(calculateBrightnessVector(1))
     
+    print(bVector)
 
     # set output file
     killerList = listdir("./Killers/")
@@ -79,7 +99,7 @@ def main():
         KillerScreen = cv2.imread(imgFile)
         PerkScreen = cv2.imread(imgFile)
         ItemScreen = cv2.imread(imgFile)
-        # OfferingScreen = cv2.imread(imgFile)
+        OfferingScreen = cv2.imread(imgFile)
         ScoreScreen = cv2.imread(imgFile)
         TestingScreen = cv2.imread(imgFile)
     else:
@@ -88,15 +108,15 @@ def main():
         KillerScreen = cv2.imread('Screenshots/'+screenshotName)
         PerkScreen = cv2.imread('Screenshots/'+screenshotName)
         ItemScreen = cv2.imread('Screenshots/'+screenshotName)
-        # OfferingScreen = cv2.imread('Screenshots/'+screenshotName)
+        OfferingScreen = cv2.imread('Screenshots/'+screenshotName)
         ScoreScreen = cv2.imread('Screenshots/'+screenshotName)
         TestingScreen = cv2.imread('Screenshots/'+screenshotName)
 
-    KillerScreen = adjustScreenSizeKiller(KillerScreen)
-    PerkScreen = adjustScreenSizePerks(PerkScreen)
-    ItemScreen = adjustScreenSizeItems(ItemScreen)
-    # OfferingScreen = adjustScreenSizeOfferings(OfferingScreen)
-    ScoreScreen = adjustScreenSizeScores(ScoreScreen)
+    KillerScreen = adjustScreenSizeKiller(KillerScreen, bVector)
+    PerkScreen = adjustScreenSizePerks(PerkScreen, bVector)
+    ItemScreen = adjustScreenSizeItems(ItemScreen, bVector)
+    OfferingScreen = adjustScreenSizeOfferings(OfferingScreen, bVector)
+    ScoreScreen = adjustScreenSizeScores(ScoreScreen, bVector)
 
     if args.icon:
         icon = args.icon
@@ -114,14 +134,14 @@ def main():
         killerPlayed, confirmation = calculateKiller(killerList, "./Killers/", KillerScreen)
         perks = calculatePerks(perkList, "./Perks/", PerkScreen)
         items = calculateItems(itemList, "./Items/", ItemScreen)
-        # offerings = calculateOfferings(offeringList, "./Offerings/", OfferingScreen)
+        offerings = calculateOfferings(offeringList, "./Offerings/", OfferingScreen)
         scores = calculateScores(ScoreScreen)
 
         print('\n\n\n\n\n\n')
         print(f'Killer Played: {killerPlayed} , Confirmation: {round(confirmation*100,2)}%\n')
         print(f'Perks: {perks}\n')
         print(f'Items: {items}\n')
-        # print(f'Offerings: {offerings}\n')
+        print(f'Offerings: {offerings}\n')
         print(f'Scores: {scores}\n')
 
 

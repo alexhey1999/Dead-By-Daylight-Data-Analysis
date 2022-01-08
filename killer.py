@@ -2,14 +2,14 @@ import cv2
 import numpy as np
 
 
-def adjustScreenSizeKiller(Screen):
+def adjustScreenSizeKiller(Screen,bVector):
     widthStartCut = 480
     widthEndCut = 1390
     hightStartCut = 735
     hightEndCut = 275
 
     upper_white = np.array([256, 256, 256])
-    lower_white = np.array([105, 105, 105])
+    lower_white = np.array([bVector, bVector, bVector])
 
     mask = cv2.inRange(Screen, lower_white, upper_white)
 
@@ -47,5 +47,7 @@ def calculateKiller(killerList, location, Screen):
         if maxVal > mostProbableKillerScore:
             mostProbableKillerScore = maxVal
             mostProbableKiller = killer
+
+    cv2.imshow("Killer Screen", Screen)
 
     return mostProbableKiller, mostProbableKillerScore

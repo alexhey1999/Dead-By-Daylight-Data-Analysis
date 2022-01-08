@@ -1,12 +1,29 @@
+import re
 import cv2
 import numpy as np
 
 
-def adjustScreenSizeOfferings(Screen):
-    widthStartCut = 370
-    widthEndCut = 1495
-    hightStartCut = 310
-    hightEndCut = 300
+def adjustScreenSizeOfferings(Screen,bVector):
+    widthStartCut = 420
+    widthEndCut = 1455
+    hightStartCut = 280
+    hightEndCut = 280
+
+    upper_white = np.array([256, 256, 256])
+    lower_white = np.array([bVector, bVector, bVector])
+
+
+    mask = cv2.inRange(Screen, lower_white, upper_white)
+
+    WhiteBackground = np.zeros((Screen.shape[0], Screen.shape[1], 3), dtype=np.uint8)
+    WhiteBackground[:,:,:] = (255,255,255)
+
+    BlackBackground = np.zeros((Screen.shape[0], Screen.shape[1], 3), dtype=np.uint8)
+    BlackBackground[:,:,:] = (0,0,0)
+
+    result = cv2.bitwise_and(WhiteBackground,WhiteBackground,BlackBackground ,mask = mask)
+
+    Screen = result
 
     # print(Screen.shape)
     Screen = Screen[0+hightStartCut:Screen.shape[0]-hightEndCut, 0+widthStartCut:Screen.shape[1]-widthEndCut]
@@ -15,21 +32,16 @@ def adjustScreenSizeOfferings(Screen):
 
 def calculateOfferings(offeringsList, location, Screen):
     offerings = {}
-    size = 45
+    size = 50
     cropBorder = 7
-    threshold = 0.92
+    threshold = 0.86
 
-    firstrun = False
+    firstrun = True
 
     for item in offeringsList:
         icon = cv2.imread(location+item)
         icon = cv2.resize(icon, (size, size),interpolation=cv2.INTER_AREA)
         icon = icon[cropBorder:size-cropBorder , cropBorder:size-cropBorder]
-        if firstrun:
-                cv2.imshow("Screen", Screen)
-                cv2.imshow("Icon", icon)
-                firstrun = False
-        
 
         result = cv2.matchTemplate(Screen, icon, cv2.TM_CCORR_NORMED)
         yloc, xloc = np.where(result >= threshold)
@@ -44,8 +56,8 @@ def calculateOfferings(offeringsList, location, Screen):
         #Perk Count
         if len(rectangles) > 0:
             offerings[item] = len(rectangles)
-            
-            # cv2.imshow("Item", Screen)
-            # print(f'{perk} : {len(rectangles)}')
-    # print(perks)
+            # cv2.imshow(item, icon)
+
+    cv2.imshow("Offerings Screen", Screen)
+
     return offerings

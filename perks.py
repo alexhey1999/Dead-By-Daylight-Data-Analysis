@@ -2,14 +2,15 @@ import cv2
 import numpy as np
 import random
 
-def adjustScreenSizePerks(Screen):
+def adjustScreenSizePerks(Screen,bVector):
     widthStartCut = 170
     widthEndCut = 1500
     hightStartCut = 280
     hightEndCut = 270
 
     upper_white = np.array([256, 256, 256])
-    lower_white = np.array([105, 105, 105])
+    lower_white = np.array([bVector, bVector, bVector])
+
 
     mask = cv2.inRange(Screen, lower_white, upper_white)
 
@@ -47,7 +48,7 @@ def calculatePerks(perkList,location,Screen):
         issuePerks = ["iconPerks_BoonCircleOfHealing.png","iconPerks_BoonExponential","iconPerks_trailOfTorment.png","iconPerks_dragonsGrip.png","iconPerks_Deadlock.png"]
 
         if perk in issuePerks:
-            threshold = 0.48
+            threshold = 0.55
         else:
             threshold = thresholdOriginal
 
@@ -81,6 +82,6 @@ def calculatePerks(perkList,location,Screen):
             perks[perk.split('_')[1].split('.')[0]] = len(rectangles)
 
 
-    # cv2.imshow("Perk Screen ", Screen)
+    cv2.imshow("Perk Screen ", Screen)
 
     return perks

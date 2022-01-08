@@ -2,7 +2,8 @@ import cv2
 import numpy as np
 import pytesseract
 
-def adjustScreenSizeScores(Screen):
+def adjustScreenSizeScores(Screen,bVector):
+    bVector = int(bVector * 1.2)
     widthStartCut = 650
     widthEndCut = 1120
     hightStartCut = 260
@@ -13,7 +14,8 @@ def adjustScreenSizeScores(Screen):
     # cv2.imshow("HSV", Screen)
     # Threshold of blue in HSV space
     upper_white = np.array([255, 255, 255])
-    lower_white = np.array([115, 115, 115])
+    lower_white = np.array([bVector, bVector, bVector])
+
 
     mask = cv2.inRange(Screen, lower_white, upper_white)
 
@@ -25,7 +27,7 @@ def adjustScreenSizeScores(Screen):
 
     result = result[0+hightStartCut:result.shape[0]-hightEndCut, 0+widthStartCut:result.shape[1]-widthEndCut]
  
-    cv2.imshow("Scores", result)
+    # cv2.imshow("Scores", result)
     return result
 
 def checkPlayerScore(scores,playerScore,player):
@@ -57,6 +59,7 @@ def calculateScores(Screen):
     if firstrun:
         cv2.imshow("Screen", Screen)
         firstrun = False
-
+    
+    cv2.imshow("Scores Screen", Screen)
 
     return scores
