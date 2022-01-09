@@ -1,11 +1,12 @@
-import re
+
 import cv2
 import numpy as np
+import random
 
 
 def adjustScreenSizeOfferings(Screen,bVector):
-    widthStartCut = 420
-    widthEndCut = 1455
+    widthStartCut = 415
+    widthEndCut = 1450
     hightStartCut = 280
     hightEndCut = 280
 
@@ -33,14 +34,33 @@ def adjustScreenSizeOfferings(Screen,bVector):
 def calculateOfferings(offeringsList, location, Screen):
     offerings = {}
     size = 50
-    cropBorder = 7
-    threshold = 0.86
+    cropBorder = 0
+    thresholdOriginal = 0.80
 
     firstrun = True
+
+    underdetectedOfferings = ["iconFavors_bloodyPartyStreamers.png"]
+    overdetectedOfferings = ["iconFavors_clearReagent.png",'iconFavors_faintReagent.png','iconFavors_hazyReagent.png','iconFavors_murkyReagent.png']
+    # overdetectedOfferings = ["iconFavors_bloodyPartyStreamers.png"]
 
     for item in offeringsList:
         icon = cv2.imread(location+item)
         icon = cv2.resize(icon, (size, size),interpolation=cv2.INTER_AREA)
+
+        
+
+        if item in overdetectedOfferings:
+            threshold = 0.90
+
+        elif item in underdetectedOfferings:
+            threshold = 0.70
+
+        elif "mori" in item.lower():
+            threshold = 0.85
+
+        else:
+            threshold = thresholdOriginal
+
         icon = icon[cropBorder:size-cropBorder , cropBorder:size-cropBorder]
 
         result = cv2.matchTemplate(Screen, icon, cv2.TM_CCORR_NORMED)
@@ -53,10 +73,17 @@ def calculateOfferings(offeringsList, location, Screen):
 
         rectangles, weights = cv2.groupRectangles(rectangles, 1, 0.2)
         
-        #Perk Count
+        color = tuple(list(np.random.choice(range(256), size=3)))
+
+        color = (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))
+
+        for (x, y, w, h) in rectangles:
+
+            cv2.putText(Screen, item.split("_")[1].split(".")[0], (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.3, color, 1)
+            cv2.rectangle(Screen, (x, y), (x + w, y + h), color, 2)
+
         if len(rectangles) > 0:
-            offerings[item] = len(rectangles)
-            # cv2.imshow(item, icon)
+            offerings[item.split('_')[1].split('.')[0]] = len(rectangles)
 
     cv2.imshow("Offerings Screen", Screen)
 

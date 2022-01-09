@@ -9,10 +9,6 @@ def adjustScreenSizeScores(Screen,bVector):
     hightStartCut = 260
     hightEndCut = 260
 
-    # print(Screen.shape)
-    # hsv = cv2.cvtColor(Screen, cv2.COLOR_BGR2HSV)
-    # cv2.imshow("HSV", Screen)
-    # Threshold of blue in HSV space
     upper_white = np.array([255, 255, 255])
     lower_white = np.array([bVector, bVector, bVector])
 
@@ -50,10 +46,11 @@ def calculateScores(Screen):
         checkPlayerScore(scores,text[0],"Player1")
         checkPlayerScore(scores,text[1],"Player2")
         checkPlayerScore(scores,text[2],"Player3")
-        checkPlayerScore(scores,text[4],"Player4")
-        checkPlayerScore(scores,text[5],"Killer")
+        checkPlayerScore(scores,text[3],"Player4")
+        checkPlayerScore(scores,text[4],"Killer")
     except:
-        print("Error")
+        print("Error in calculating scores")
+
 
     firstrun = False
     if firstrun:

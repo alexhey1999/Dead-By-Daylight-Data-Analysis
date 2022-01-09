@@ -45,10 +45,14 @@ def calculatePerks(perkList,location,Screen):
 
         icon = icon[cropBorder:size-cropBorder , cropBorder:size-cropBorder]
 
-        issuePerks = ["iconPerks_BoonCircleOfHealing.png","iconPerks_BoonExponential","iconPerks_trailOfTorment.png","iconPerks_dragonsGrip.png","iconPerks_Deadlock.png"]
+        issuePerks = ["iconPerks_BoonCircleOfHealing.png","iconPerks_BoonExponential.png","iconPerks_trailOfTorment.png","iconPerks_dragonsGrip.png","iconPerks_Deadlock.png"]
+
+        overdetectedPerks = ["iconPerks_calmSpirit.png"]
 
         if perk in issuePerks:
             threshold = 0.55
+        elif perk in overdetectedPerks:
+            threshold = 0.70
         else:
             threshold = thresholdOriginal
 
