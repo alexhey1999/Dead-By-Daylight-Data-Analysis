@@ -17,6 +17,7 @@ from items import *
 from perks import *
 from offerings import *
 from scores import *
+from escape import *
 from testing import *
 
 #Nebula
@@ -38,10 +39,13 @@ def getImageCapture():
     return fileName
 
 def imageFix(location):
+
     imageList = listdir(location)
+
     for fileName in imageList:
+
         image = Image.open(location+fileName)
-        image.convert("RGBA")
+        image = image.convert("RGBA")
         canvas = Image.new('RGBA', image.size, (0,0,0,255)) # Empty canvas colour (r,g,b,a)
         canvas.paste(image, mask=image) # Paste the image onto the canvas, using it's alpha channel as mask
         canvas.save(str(location+fileName), format="PNG")
@@ -93,6 +97,7 @@ def main():
     perkList = listdir("./Perks/")
     itemList = listdir("./Items/")
     offeringList = listdir("./Offerings/")
+    escapeList = listdir("./Escapes/")
 
     if args.imgFile:
         imgFile = args.imgFile
@@ -101,6 +106,7 @@ def main():
         ItemScreen = cv2.imread(imgFile)
         OfferingScreen = cv2.imread(imgFile)
         ScoreScreen = cv2.imread(imgFile)
+        EscapeScreen = cv2.imread(imgFile)
         TestingScreen = cv2.imread(imgFile)
     else:
         screenshotName = getImageCapture()
@@ -110,6 +116,7 @@ def main():
         ItemScreen = cv2.imread('Screenshots/'+screenshotName)
         OfferingScreen = cv2.imread('Screenshots/'+screenshotName)
         ScoreScreen = cv2.imread('Screenshots/'+screenshotName)
+        EscapeScreen = cv2.imread('Screenshots/'+screenshotName)
         TestingScreen = cv2.imread('Screenshots/'+screenshotName)
 
     KillerScreen = adjustScreenSizeKiller(KillerScreen, bVector)
@@ -117,6 +124,8 @@ def main():
     ItemScreen = adjustScreenSizeItems(ItemScreen, bVector)
     OfferingScreen = adjustScreenSizeOfferings(OfferingScreen, bVector)
     ScoreScreen = adjustScreenSizeScores(ScoreScreen, bVector)
+    EscapeScreen = adjustScreenSizeEscapes(EscapeScreen, bVector)
+
 
     if args.icon:
         icon = args.icon
@@ -124,9 +133,9 @@ def main():
 
 
     if args.testing:
-        screen = testingScreenAdjust(TestingScreen)
-        perks = testingBlackAndWhite(perkList,"./Perks/",screen)
-        print(perks)
+        # print(escapes)
+        escapes = calculateEscapes(escapeList, "./Escapes/", EscapeScreen)
+        print(escapes)
         pass
 
     else:
@@ -136,6 +145,7 @@ def main():
         items = calculateItems(itemList, "./Items/", ItemScreen)
         offerings = calculateOfferings(offeringList, "./Offerings/", OfferingScreen)
         scores = calculateScores(ScoreScreen)
+        escapes = calculateEscapes(escapeList, "./Escapes/", EscapeScreen)
 
         print('\n\n\n\n\n\n')
         print(f'Killer Played: {killerPlayed} , Confirmation: {round(confirmation*100,2)}%\n')
@@ -143,6 +153,7 @@ def main():
         print(f'Items: {items}\n')
         print(f'Offerings: {offerings}\n')
         print(f'Scores: {scores}\n')
+        print(f'Escapes: {escapes}\n')
 
 
     if args.forceEnd:

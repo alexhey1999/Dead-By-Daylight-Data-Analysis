@@ -45,7 +45,7 @@ def calculatePerks(perkList,location,Screen):
 
         icon = icon[cropBorder:size-cropBorder , cropBorder:size-cropBorder]
 
-        issuePerks = ["iconPerks_BoonCircleOfHealing.png","iconPerks_BoonExponential.png","iconPerks_trailOfTorment.png","iconPerks_dragonsGrip.png","iconPerks_Deadlock.png"]
+        issuePerks = ["iconPerks_BoonCircleOfHealing.png","iconPerks_BoonExponential.png","iconPerks_trailOfTorment.png","iconPerks_dragonsGrip.png","iconPerks_Deadlock.png",'iconPerks_corruptIntervention.png','iconPerks_painResonance.png']
 
         overdetectedPerks = ["iconPerks_calmSpirit.png"]
 
