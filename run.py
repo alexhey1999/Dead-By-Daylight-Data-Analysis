@@ -7,8 +7,8 @@ import numpy as np
 import pytesseract
 import PIL.Image as Image
 
-path = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
-# path = r'C:\Users\alex.hey\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
+# path = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+path = r'C:\Users\alex.hey\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
 
 pytesseract.pytesseract.tesseract_cmd = path
 
@@ -60,6 +60,10 @@ def calculateBrightnessVector(brightness):
     bVector = noBrightWhite + (difference * float(brightness))
 
     return bVector
+
+
+def addDataToStorage(killerPlayed, perks, items, offerings, scores, escapes):
+    pass
 
     
 
@@ -147,13 +151,16 @@ def main():
         scores = calculateScores(ScoreScreen)
         escapes = calculateEscapes(escapeList, "./Escapes/", EscapeScreen,bVector)
 
-        print('\n\n\n\n\n\n')
-        print(f'Killer Played: {killerPlayed} , Confirmation: {round(confirmation*100,2)}%\n')
-        print(f'Perks: {perks}\n')
-        print(f'Items: {items}\n')
-        print(f'Offerings: {offerings}\n')
-        print(f'Scores: {scores}\n')
-        print(f'Escapes: {escapes}\n')
+        if confirmation:    
+            print('\n\n\n\n\n\n')
+            print(f'Killer Played: {killerPlayed} , Confirmation: {round(confirmation*100,2)}%\n')
+            print(f'Perks: {perks}\n')
+            print(f'Items: {items}\n')
+            print(f'Offerings: {offerings}\n')
+            print(f'Scores: {scores}\n')
+            print(f'Escapes: {escapes}\n')
+            addDataToStorage(killerPlayed, perks, items, offerings, scores, escapes)
+
 
 
     if args.forceEnd:

@@ -1,0 +1,10 @@
+{
+    "games":[
+        {
+            "id":1,
+            "date":"11/01/2022",
+            "source":"Scott Jund Stream"           
+        }
+    ],
+    "last_update":"11/01/2022"
+}

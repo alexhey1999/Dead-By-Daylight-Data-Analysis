@@ -1,0 +1,13 @@
+{
+    "scores":[
+        {
+            "player1Score": "0",
+            "player2Score": "0",
+            "player3Score": "0",
+            "player4Score": "0",
+            "killerScore": "0",
+            "gameid":1           
+        }
+    ],
+    "last_update":"11/01/2022"
+}
