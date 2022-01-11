@@ -39,8 +39,8 @@ def calculateOfferings(offeringsList, location, Screen):
 
     firstrun = True
 
-    underdetectedOfferings = ["iconFavors_bloodyPartyStreamers.png"]
-    overdetectedOfferings = ["iconFavors_clearReagent.png",'iconFavors_faintReagent.png','iconFavors_hazyReagent.png','iconFavors_murkyReagent.png']
+    underdetectedOfferings = ["iconFavors_bloodyPartyStreamers.png",'iconsFavors_5thAnniversary.png']
+    overdetectedOfferings = ["iconFavors_clearReagent.png",'iconFavors_faintReagent.png','iconFavors_hazyReagent.png','iconFavors_murkyReagent.png','iconFavors_vigosShroud.png','iconFavors_shroudOfBinding.png', 'iconFavors_shroudOfSeparation.png','iconFavors_shroudOfUnion.png']
     # overdetectedOfferings = ["iconFavors_bloodyPartyStreamers.png"]
 
     for item in offeringsList:

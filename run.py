@@ -145,7 +145,7 @@ def main():
         items = calculateItems(itemList, "./Items/", ItemScreen)
         offerings = calculateOfferings(offeringList, "./Offerings/", OfferingScreen)
         scores = calculateScores(ScoreScreen)
-        escapes = calculateEscapes(escapeList, "./Escapes/", EscapeScreen)
+        escapes = calculateEscapes(escapeList, "./Escapes/", EscapeScreen,bVector)
 
         print('\n\n\n\n\n\n')
         print(f'Killer Played: {killerPlayed} , Confirmation: {round(confirmation*100,2)}%\n')

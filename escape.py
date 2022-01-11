@@ -17,18 +17,12 @@ def adjustScreenSizeEscapes(Screen,bVector):
 
     result = cv2.bitwise_and(Screen, Screen, mask = mask)
 
-    # result = cv2.bitwise_not(result)
- 
-    # result = cv2.GaussianBlur(result,(3,3),cv2.BORDER_DEFAULT)
-
-    # result = Screen
-
     result = result[0+hightStartCut:result.shape[0]-hightEndCut, 0+widthStartCut:result.shape[1]-widthEndCut]
  
     # cv2.imshow("Scores", result)
     return result
 
-def calculateEscapes(escapeList,location,Screen):
+def calculateEscapes(escapeList,location,Screen,bVector):
     offerings = {}
 
     thresholdOriginal = 0.80
@@ -51,9 +45,9 @@ def calculateEscapes(escapeList,location,Screen):
             threshold = 0.75
             
         elif item == "disconnected.png":
-            height = 50
-            width = 50
-            threshold = thresholdOriginal
+            height = 35
+            width = 52
+            threshold = 0.75
 
         elif item == "escape.png":
             height = 40
@@ -71,8 +65,17 @@ def calculateEscapes(escapeList,location,Screen):
             threshold = 0.75
             print(f'Unknown Image {item}')
 
-        icon = cv2.resize(icon, (width,height),interpolation=cv2.INTER_AREA)
+        
+        upper_white = np.array([255, 255, 255])
+        lower_white = np.array([bVector, bVector, bVector])
 
+
+        mask = cv2.inRange(icon, lower_white, upper_white)
+
+        icon = cv2.bitwise_and(icon, icon, mask = mask)
+
+        icon = cv2.resize(icon, (width,height),interpolation=cv2.INTER_AREA)
+        
         # icon = icon[]
 
         # cv2.imshow(item, icon)
