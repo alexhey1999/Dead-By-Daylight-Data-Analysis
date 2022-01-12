@@ -7,6 +7,34 @@
         {
             "name": "iconPowers_huntingHatchets.png",
             "gameid": 2
+        },
+        {
+            "name": "iconPowers_summonsOfPain.png",
+            "gameid": 3
+        },
+        {
+            "name": "iconPowers_cartersSpark.png",
+            "gameid": 4
+        },
+        {
+            "name": "iconPowers_summonsOfPain.png",
+            "gameid": 5
+        },
+        {
+            "name": null,
+            "gameid": 6
+        },
+        {
+            "name": "iconPowers_breath.png",
+            "gameid": 7
+        },
+        {
+            "name": "iconPowers_bloodBond_01.png",
+            "gameid": 8
+        },
+        {
+            "name": "iconPowers_bubbasChainsaw.png",
+            "gameid": 9
         }
     ],
     "last_update": "11/01/2022"

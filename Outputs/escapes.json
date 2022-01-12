@@ -9,6 +9,41 @@
             "death": 1,
             "sacrificed": 3,
             "gameid": 2
+        },
+        {
+            "escape": 3,
+            "sacrificed": 1,
+            "gameid": 3
+        },
+        {
+            "escape": 3,
+            "sacrificed": 1,
+            "gameid": 4
+        },
+        {
+            "escape": 1,
+            "sacrificed": 3,
+            "gameid": 5
+        },
+        {
+            "alive": 3,
+            "death": 1,
+            "gameid": 6
+        },
+        {
+            "escape": 1,
+            "sacrificed": 3,
+            "gameid": 7
+        },
+        {
+            "escape": 2,
+            "sacrificed": 2,
+            "gameid": 8
+        },
+        {
+            "escape": 3,
+            "sacrificed": 1,
+            "gameid": 9
         }
     ],
     "last_update": "11/01/2022"

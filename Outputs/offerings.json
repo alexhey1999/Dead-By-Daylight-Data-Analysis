@@ -11,6 +11,62 @@
         {
             "offering": "momentoMoriCypress",
             "gameid": 2
+        },
+        {
+            "offering": "bogLaurelSachet",
+            "gameid": 3
+        },
+        {
+            "offering": "crispleafAmaranthSachet",
+            "gameid": 3
+        },
+        {
+            "offering": "sweetWilliamSachet",
+            "gameid": 3
+        },
+        {
+            "offering": "bloodyPartyStreamers",
+            "gameid": 4
+        },
+        {
+            "offering": "bloodyPartyStreamers",
+            "gameid": 4
+        },
+        {
+            "offering": "ardentRavenWreath",
+            "gameid": 5
+        },
+        {
+            "offering": "bogLaurelSachet",
+            "gameid": 5
+        },
+        {
+            "offering": "clearReagent",
+            "gameid": 6
+        },
+        {
+            "offering": "freshSweetWilliam",
+            "gameid": 6
+        },
+        {
+            "offering": "bloodyPartyStreamers",
+            "gameid": 7
+        },
+        {
+            "offering": "freshSweetWilliam",
+            "gameid": 7
+        },
+        {
+            "offering": "devoutTanagerWreath",
+            "gameid": 8
+        },
+        {
+            "offering": "petrifiedOak",
+            "gameid": 8
+        },
+        {
+            "offering": "freshBogLaurel",
+            "gameid": 9
         }
     ],
     "last_update": "11/01/2022"

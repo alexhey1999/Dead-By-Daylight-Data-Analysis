@@ -1,6 +1,6 @@
 #Handle Imports
 import cv2
-from os import kill, listdir
+from os import listdir, rename
 import argparse
 import pyautogui
 import numpy as np
@@ -64,7 +64,7 @@ def calculateBrightnessVector(brightness):
     return bVector
 
 
-def addDataToStorage(killerPlayed, perks, items, offerings, scores, escapes, location):
+def addDataToStorage(killerPlayed, perks, items, offerings, scores, escapes, location,file):
     gameID = 0
 
     with open(location+'games.json',"r+") as games:
@@ -173,7 +173,7 @@ def addDataToStorage(killerPlayed, perks, items, offerings, scores, escapes, loc
         escapesFile.seek(0)
         json.dump(escape_data, escapesFile, indent=4)
 
-    
+    rename(file, "Screenshots/Archived/"+file.split('/')[1])
 
 
 
@@ -236,6 +236,8 @@ def main():
         EscapeScreen = cv2.imread('Screenshots/'+screenshotName)
         TestingScreen = cv2.imread('Screenshots/'+screenshotName)
 
+        imgFile = "Screenshots/"+screenshotName
+
     KillerScreen = adjustScreenSizeKiller(KillerScreen, bVector)
     PerkScreen = adjustScreenSizePerks(PerkScreen, bVector)
     ItemScreen = adjustScreenSizeItems(ItemScreen, bVector)
@@ -273,7 +275,7 @@ def main():
         print(f'Escapes: {escapes}\n')
         
         if args.save:    
-            addDataToStorage(killerPlayed, perks, items, offerings, scores, escapes,"./Outputs/")
+            addDataToStorage(killerPlayed, perks, items, offerings, scores, escapes,"./Outputs/", imgFile)
 
     if args.forceEnd:
         cv2.destroyAllWindows()

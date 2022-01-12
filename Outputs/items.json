@@ -15,6 +15,54 @@
         {
             "item": "rundownAidKit",
             "gameid": 2
+        },
+        {
+            "item": "flashlight",
+            "gameid": 3
+        },
+        {
+            "item": "flashlight",
+            "gameid": 3
+        },
+        {
+            "item": "rundownAidKit",
+            "gameid": 3
+        },
+        {
+            "item": "firstAidKit",
+            "gameid": 5
+        },
+        {
+            "item": "winterEventFirecracker",
+            "gameid": 5
+        },
+        {
+            "item": "flashlight",
+            "gameid": 6
+        },
+        {
+            "item": "toolbox",
+            "gameid": 7
+        },
+        {
+            "item": "toolboxWornOut",
+            "gameid": 7
+        },
+        {
+            "item": "toolboxCommodious",
+            "gameid": 8
+        },
+        {
+            "item": "toolboxMechanics",
+            "gameid": 8
+        },
+        {
+            "item": "winterEventFirecracker",
+            "gameid": 8
+        },
+        {
+            "item": "rainbowMap",
+            "gameid": 9
         }
     ],
     "last_update": "11/01/2022"
