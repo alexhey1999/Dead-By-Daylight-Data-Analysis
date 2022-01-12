@@ -1,14 +1,16 @@
 #Handle Imports
 import cv2
-from os import listdir
+from os import kill, listdir
 import argparse
 import pyautogui
 import numpy as np
 import pytesseract
 import PIL.Image as Image
+import json
+import datetime
 
-# path = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
-path = r'C:\Users\alex.hey\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
+path = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+# path = r'C:\Users\alex.hey\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
 
 pytesseract.pytesseract.tesseract_cmd = path
 
@@ -62,8 +64,92 @@ def calculateBrightnessVector(brightness):
     return bVector
 
 
-def addDataToStorage(killerPlayed, perks, items, offerings, scores, escapes):
-    pass
+def addDataToStorage(killerPlayed, perks, items, offerings, scores, escapes, location):
+    gameID = 0
+
+    with open('Screenshots/previousTests.txt',"r+") as counter:
+        gameID = int(counter.read())-1
+    
+    # Write Game Data to file
+
+    # newGameData = {"gameID":gameID,"date":str(datetime.datetime.now())}
+    # print(newGameData)
+
+    # with open(location+'games.json',"r+") as games:
+    #     game_data = json.load(games)
+    #     game_data["games"].append(newGameData)
+    #     games.seek(0)
+    #     json.dump(game_data, games, indent=4)
+    
+
+    # # Write Killer Data to file
+
+    # newKillerData = {"name":killerPlayed,"gameid":gameID}           
+    # print(killerPlayed)
+
+    # with open(location+'killers.json',"r+") as killers:
+    #     killer_data = json.load(killers)
+    #     killer_data["killers"].append(newKillerData)
+    #     killers.seek(0)
+    #     json.dump(killer_data, killers, indent=4)
+
+    # Write Perk Data to file
+    # newPerkData = {"perk":,"gameid":gameID}
+
+
+    # perkArray = []
+    # for i in perks:
+    #     for j in range(perks[i]):
+    #         perkArray.append(i)
+    #     pass
+    
+    # for i in perkArray:
+    #     newPerkData = {"perk":i,"gameid":gameID}
+
+    #     with open(location+'perks.json',"r+") as perks:
+    #         perk_data = json.load(perks)
+    #         perk_data["perks"].append(newPerkData)
+    #         perks.seek(0)
+    #         json.dump(perk_data, perks, indent=4)
+
+    # itemsArray = []
+    # for i in items:
+    #     for j in range(items[i]):
+    #         itemsArray.append(i)
+    #     pass
+
+    # for i in itemsArray:
+    #     newItemData = {"item":i,"gameid":gameID}
+    #     # print(newItemData)
+
+    #     with open(location+'items.json',"r+") as items:
+    #         item_data = json.load(items)
+    #         item_data["items"].append(newItemData)
+    #         items.seek(0)
+    #         json.dump(item_data, items, indent=4)
+    
+    # Write Offering Data to file
+    # newOfferingData = {"offering":,"gameid":gameID}
+
+    offeringArray = []
+    for i in offerings:
+        for j in range(offerings[i]):
+            offeringArray.append(i)
+        pass
+
+    for i in offeringArray:
+        newOfferingData = {"offering":i,"gameid":gameID}
+
+        with open(location+'offerings.json',"r+") as offerings:
+            offering_data = json.load(offerings)
+            offering_data["offerings"].append(newOfferingData)
+            offerings.seek(0)
+            json.dump(offering_data, offerings, indent=4)
+
+
+    
+
+
 
     
 
@@ -81,6 +167,7 @@ def main():
     parser.add_argument('--imageFix', dest='imageFix', required=False)
     parser.add_argument('--folder', dest='folder', required=False)
     parser.add_argument('--brightness', dest='brightness', required=False)
+    parser.add_argument('--record', dest='record', required=False)
 
     # parse args
     args = parser.parse_args()
@@ -151,17 +238,16 @@ def main():
         scores = calculateScores(ScoreScreen)
         escapes = calculateEscapes(escapeList, "./Escapes/", EscapeScreen,bVector)
 
-        if confirmation:    
-            print('\n\n\n\n\n\n')
-            print(f'Killer Played: {killerPlayed} , Confirmation: {round(confirmation*100,2)}%\n')
-            print(f'Perks: {perks}\n')
-            print(f'Items: {items}\n')
-            print(f'Offerings: {offerings}\n')
-            print(f'Scores: {scores}\n')
-            print(f'Escapes: {escapes}\n')
-            addDataToStorage(killerPlayed, perks, items, offerings, scores, escapes)
-
-
+        print('\n\n\n\n\n\n')
+        print(f'Killer Played: {killerPlayed} , Confirmation: {round(confirmation*100,2)}%\n')
+        print(f'Perks: {perks}\n')
+        print(f'Items: {items}\n')
+        print(f'Offerings: {offerings}\n')
+        print(f'Scores: {scores}\n')
+        print(f'Escapes: {escapes}\n')
+        
+        if args.record:    
+            addDataToStorage(killerPlayed, perks, items, offerings, scores, escapes,"./Outputs/")
 
     if args.forceEnd:
         cv2.destroyAllWindows()

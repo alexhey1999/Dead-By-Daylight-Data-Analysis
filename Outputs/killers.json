@@ -1,9 +1,5 @@
 {
-    "killers":[
-        {
-            "name":"Leatherface",
-            "gameid":1           
-        }
+    "killers": [
     ],
-    "last_update":"11/01/2022"
+    "last_update": "11/01/2022"
 }

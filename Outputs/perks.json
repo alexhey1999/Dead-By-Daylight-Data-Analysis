@@ -1,9 +1,5 @@
 {
-    "perks":[
-        {
-            "name":"perkname",
-            "gameid":1           
-        }
+    "perks": [
     ],
-    "last_update":"11/01/2022"
+    "last_update": "11/01/2022"
 }

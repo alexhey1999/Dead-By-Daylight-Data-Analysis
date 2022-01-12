@@ -1,9 +1,5 @@
 {
-    "offerings":[
-        {
-            "name":"Vigos Shroud",
-            "gameid":1           
-        }
+    "offerings": [
     ],
-    "last_update":"11/01/2022"
+    "last_update": "11/01/2022"
 }
