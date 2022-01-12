@@ -1,5 +1,9 @@
 {
     "offerings": [
+        {
+            "offering": "escapeCake",
+            "gameid": 1
+        }
     ],
     "last_update": "11/01/2022"
 }

@@ -9,8 +9,8 @@ import PIL.Image as Image
 import json
 import datetime
 
-path = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
-# path = r'C:\Users\alex.hey\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
+# path = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+path = r'C:\Users\alex.hey\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
 
 pytesseract.pytesseract.tesseract_cmd = path
 
@@ -67,66 +67,72 @@ def calculateBrightnessVector(brightness):
 def addDataToStorage(killerPlayed, perks, items, offerings, scores, escapes, location):
     gameID = 0
 
-    with open('Screenshots/previousTests.txt',"r+") as counter:
-        gameID = int(counter.read())-1
-    
+    with open(location+'games.json',"r+") as games:
+        gameID = 0
+        game_data = json.load(games)
+        for line in game_data["games"]:
+            if line["gameid"] >= gameID:
+                gameID = line["gameid"]
+
+        gameID += 1
+
     # Write Game Data to file
 
-    # newGameData = {"gameID":gameID,"date":str(datetime.datetime.now())}
-    # print(newGameData)
+    newGameData = {"gameid":gameID,"date":str(datetime.datetime.now())}
+    print(newGameData)
 
-    # with open(location+'games.json',"r+") as games:
-    #     game_data = json.load(games)
-    #     game_data["games"].append(newGameData)
-    #     games.seek(0)
-    #     json.dump(game_data, games, indent=4)
+    with open(location+'games.json',"r+") as games:
+        game_data = json.load(games)
+        game_data["games"].append(newGameData)
+        games.seek(0)
+        json.dump(game_data, games, indent=4)
     
 
-    # # Write Killer Data to file
+    # Write Killer Data to file
 
-    # newKillerData = {"name":killerPlayed,"gameid":gameID}           
-    # print(killerPlayed)
+    newKillerData = {"name":killerPlayed,"gameid":gameID}           
+    print(killerPlayed)
 
-    # with open(location+'killers.json',"r+") as killers:
-    #     killer_data = json.load(killers)
-    #     killer_data["killers"].append(newKillerData)
-    #     killers.seek(0)
-    #     json.dump(killer_data, killers, indent=4)
+    with open(location+'killers.json',"r+") as killers:
+        killer_data = json.load(killers)
+        killer_data["killers"].append(newKillerData)
+        killers.seek(0)
+        json.dump(killer_data, killers, indent=4)
 
     # Write Perk Data to file
     # newPerkData = {"perk":,"gameid":gameID}
 
 
-    # perkArray = []
-    # for i in perks:
-    #     for j in range(perks[i]):
-    #         perkArray.append(i)
-    #     pass
+    perkArray = []
+    for i in perks:
+        for j in range(perks[i]):
+            perkArray.append(i)
+        pass
     
-    # for i in perkArray:
-    #     newPerkData = {"perk":i,"gameid":gameID}
+    for i in perkArray:
+        newPerkData = {"perk":i,"gameid":gameID}
 
-    #     with open(location+'perks.json',"r+") as perks:
-    #         perk_data = json.load(perks)
-    #         perk_data["perks"].append(newPerkData)
-    #         perks.seek(0)
-    #         json.dump(perk_data, perks, indent=4)
+        with open(location+'perks.json',"r+") as perks:
+            perk_data = json.load(perks)
+            perk_data["perks"].append(newPerkData)
+            perks.seek(0)
+            json.dump(perk_data, perks, indent=4)
 
-    # itemsArray = []
-    # for i in items:
-    #     for j in range(items[i]):
-    #         itemsArray.append(i)
-    #     pass
+    itemsArray = []
+    for i in items:
+        for j in range(items[i]):
+            itemsArray.append(i)
+        pass
 
-    # for i in itemsArray:
-    #     newItemData = {"item":i,"gameid":gameID}
-    #     # print(newItemData)
+    for i in itemsArray:
+        newItemData = {"item":i,"gameid":gameID}
+        # print(newItemData)
 
-    #     with open(location+'items.json',"r+") as items:
-    #         item_data = json.load(items)
-    #         item_data["items"].append(newItemData)
-    #         items.seek(0)
-    #         json.dump(item_data, items, indent=4)
+        with open(location+'items.json',"r+") as items:
+            item_data = json.load(items)
+            item_data["items"].append(newItemData)
+            items.seek(0)
+            json.dump(item_data, items, indent=4)
     
     # Write Offering Data to file
     # newOfferingData = {"offering":,"gameid":gameID}
@@ -146,6 +152,26 @@ def addDataToStorage(killerPlayed, perks, items, offerings, scores, escapes, loc
             offerings.seek(0)
             json.dump(offering_data, offerings, indent=4)
 
+
+    print(scores)
+    # Write Score Data to file
+    newScoreData = {"player1Score": scores["Player1"],"player2Score": scores["Player2"],"player3Score": scores["Player3"],"player4Score": scores["Player4"],"killerScore": scores["Player1"],"gameid":gameID}
+
+    with open(location+'scores.json',"r+") as scores:
+        score_data = json.load(scores)
+        score_data["scores"].append(newScoreData)
+        scores.seek(0)
+        json.dump(score_data, scores, indent=4) 
+
+    # Write Escape Data to file
+    escapes["gameid"] = gameID
+
+    print(escapes)
+    with open(location+'escapes.json',"r+") as escapesFile:
+        escape_data = json.load(escapesFile)
+        escape_data["escapes"].append(escapes)
+        escapesFile.seek(0)
+        json.dump(escape_data, escapesFile, indent=4)
 
     
 
@@ -167,7 +193,7 @@ def main():
     parser.add_argument('--imageFix', dest='imageFix', required=False)
     parser.add_argument('--folder', dest='folder', required=False)
     parser.add_argument('--brightness', dest='brightness', required=False)
-    parser.add_argument('--record', dest='record', required=False)
+    parser.add_argument('--save', dest='save', required=False)
 
     # parse args
     args = parser.parse_args()
@@ -246,7 +272,7 @@ def main():
         print(f'Scores: {scores}\n')
         print(f'Escapes: {escapes}\n')
         
-        if args.record:    
+        if args.save:    
             addDataToStorage(killerPlayed, perks, items, offerings, scores, escapes,"./Outputs/")
 
     if args.forceEnd:

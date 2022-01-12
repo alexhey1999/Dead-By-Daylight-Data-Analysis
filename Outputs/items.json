@@ -1,5 +1,9 @@
 {
     "items": [
+        {
+            "item": "flashlight",
+            "gameid": 1
+        }
     ],
     "last_update": "11/01/2022"
 }

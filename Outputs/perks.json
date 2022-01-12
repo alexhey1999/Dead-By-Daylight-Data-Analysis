@@ -1,5 +1,85 @@
 {
     "perks": [
+        {
+            "perk": "alert",
+            "gameid": 1
+        },
+        {
+            "perk": "BBQAndChili",
+            "gameid": 1
+        },
+        {
+            "perk": "BoonCircleOfHealing",
+            "gameid": 1
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 1
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 1
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 1
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 1
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 1
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 1
+        },
+        {
+            "perk": "dejaVu",
+            "gameid": 1
+        },
+        {
+            "perk": "Flashbang",
+            "gameid": 1
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 1
+        },
+        {
+            "perk": "lithe",
+            "gameid": 1
+        },
+        {
+            "perk": "monitorAndAbuse",
+            "gameid": 1
+        },
+        {
+            "perk": "popGoesTheWeasel",
+            "gameid": 1
+        },
+        {
+            "perk": "soulGuard",
+            "gameid": 1
+        },
+        {
+            "perk": "spineChill",
+            "gameid": 1
+        },
+        {
+            "perk": "tenacity",
+            "gameid": 1
+        },
+        {
+            "perk": "tinkerer",
+            "gameid": 1
+        },
+        {
+            "perk": "unbreakable",
+            "gameid": 1
+        }
     ],
     "last_update": "11/01/2022"
 }

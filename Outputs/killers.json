@@ -1,5 +1,9 @@
 {
     "killers": [
+        {
+            "name": "iconPowers_yamaokasWrath_demon.png",
+            "gameid": 1
+        }
     ],
     "last_update": "11/01/2022"
 }
