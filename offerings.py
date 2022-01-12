@@ -35,7 +35,7 @@ def calculateOfferings(offeringsList, location, Screen):
     offerings = {}
     size = 50
     cropBorder = 0
-    thresholdOriginal = 0.80
+    thresholdOriginal = 0.88
 
     firstrun = True
 

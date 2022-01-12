@@ -67,6 +67,122 @@
         {
             "offering": "freshBogLaurel",
             "gameid": 9
+        },
+        {
+            "offering": "bogLaurelSachet",
+            "gameid": 10
+        },
+        {
+            "offering": "fragrantCrispleafAmaranth",
+            "gameid": 10
+        },
+        {
+            "offering": "fragrantSweetWilliam",
+            "gameid": 10
+        },
+        {
+            "offering": "vigosShroud",
+            "gameid": 11
+        },
+        {
+            "offering": "clearReagent",
+            "gameid": 12
+        },
+        {
+            "offering": "saltPouch",
+            "gameid": 12
+        },
+        {
+            "offering": "sealedEnvelope",
+            "gameid": 12
+        },
+        {
+            "offering": "shinyCoin",
+            "gameid": 12
+        },
+        {
+            "offering": "tarnishedCoin",
+            "gameid": 12
+        },
+        {
+            "offering": "sweetWilliamSachet",
+            "gameid": 13
+        },
+        {
+            "offering": "freshSweetWilliam",
+            "gameid": 14
+        },
+        {
+            "offering": "sweetWilliamSachet",
+            "gameid": 14
+        },
+        {
+            "offering": "freshSweetWilliam",
+            "gameid": 15
+        },
+        {
+            "offering": "hollowShell",
+            "gameid": 15
+        },
+        {
+            "offering": "survivorPudding",
+            "gameid": 17
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 18
+        },
+        {
+            "offering": "survivorPudding",
+            "gameid": 18
+        },
+        {
+            "offering": "chalkPouch",
+            "gameid": 19
+        },
+        {
+            "offering": "moldyOak",
+            "gameid": 19
+        },
+        {
+            "offering": "theLastMask",
+            "gameid": 21
+        },
+        {
+            "offering": "5thAnniversary",
+            "gameid": 24
+        },
+        {
+            "offering": "5thAnniversary",
+            "gameid": 25
+        },
+        {
+            "offering": "bogLaurelSachet",
+            "gameid": 27
+        },
+        {
+            "offering": "freshCrispleafAmaranth",
+            "gameid": 27
+        },
+        {
+            "offering": "wardBlack",
+            "gameid": 27
+        },
+        {
+            "offering": "boundEnvelope",
+            "gameid": 28
+        },
+        {
+            "offering": "freshPrimroseBlossom",
+            "gameid": 28
+        },
+        {
+            "offering": "clearReagent",
+            "gameid": 30
+        },
+        {
+            "offering": "freshBogLaurel",
+            "gameid": 30
         }
     ],
     "last_update": "11/01/2022"

@@ -44,6 +44,102 @@
             "escape": 3,
             "sacrificed": 1,
             "gameid": 9
+        },
+        {
+            "escape": 4,
+            "gameid": 10
+        },
+        {
+            "escape": 3,
+            "sacrificed": 1,
+            "gameid": 11
+        },
+        {
+            "disconnected": 1,
+            "sacrificed": 3,
+            "gameid": 12
+        },
+        {
+            "escape": 1,
+            "sacrificed": 2,
+            "gameid": 13
+        },
+        {
+            "sacrificed": 4,
+            "gameid": 14
+        },
+        {
+            "escape": 4,
+            "gameid": 15
+        },
+        {
+            "escape": 4,
+            "gameid": 16
+        },
+        {
+            "escape": 1,
+            "sacrificed": 3,
+            "gameid": 17
+        },
+        {
+            "escape": 2,
+            "sacrificed": 2,
+            "gameid": 18
+        },
+        {
+            "escape": 4,
+            "gameid": 19
+        },
+        {
+            "escape": 4,
+            "gameid": 20
+        },
+        {
+            "escape": 2,
+            "sacrificed": 2,
+            "gameid": 21
+        },
+        {
+            "escape": 4,
+            "gameid": 22
+        },
+        {
+            "escape": 4,
+            "gameid": 23
+        },
+        {
+            "escape": 2,
+            "sacrificed": 2,
+            "gameid": 24
+        },
+        {
+            "escape": 2,
+            "sacrificed": 2,
+            "gameid": 25
+        },
+        {
+            "escape": 3,
+            "sacrificed": 1,
+            "gameid": 26
+        },
+        {
+            "escape": 3,
+            "sacrificed": 1,
+            "gameid": 27
+        },
+        {
+            "sacrificed": 4,
+            "gameid": 28
+        },
+        {
+            "escape": 2,
+            "sacrificed": 1,
+            "gameid": 29
+        },
+        {
+            "escape": 2,
+            "sacrificed": 2,
+            "gameid": 30
         }
     ],
     "last_update": "11/01/2022"

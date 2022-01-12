@@ -49,7 +49,7 @@ def calculateItems(itemList, location, Screen):
         elif "map" in item.lower():
             threshold = 0.85
         elif "toolbox" in item.lower():
-            threshold = 0.85
+            threshold = 0.88
         elif "aid" in item.lower() or "medkit" in item.lower():
             # print("aid")
             threshold = 0.85

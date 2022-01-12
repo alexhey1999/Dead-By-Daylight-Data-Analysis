@@ -9,8 +9,8 @@ import PIL.Image as Image
 import json
 import datetime
 
-# path = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
-path = r'C:\Users\alex.hey\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
+path = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+# path = r'C:\Users\alex.hey\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
 
 pytesseract.pytesseract.tesseract_cmd = path
 

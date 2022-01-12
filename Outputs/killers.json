@@ -35,6 +35,90 @@
         {
             "name": "iconPowers_bubbasChainsaw.png",
             "gameid": 9
+        },
+        {
+            "name": "iconPowers_huntingHatchets.png",
+            "gameid": 10
+        },
+        {
+            "name": "iconPowers_huntingHatchets.png",
+            "gameid": 11
+        },
+        {
+            "name": "iconPowers_bell.png",
+            "gameid": 12
+        },
+        {
+            "name": "iconPowers_ghostPower_available.png",
+            "gameid": 13
+        },
+        {
+            "name": "iconPowers_feralFrenzy.png",
+            "gameid": 14
+        },
+        {
+            "name": "iconPowers_feralFrenzy.png",
+            "gameid": 15
+        },
+        {
+            "name": "iconPowers_cartersSpark.png",
+            "gameid": 16
+        },
+        {
+            "name": "iconPowers_trap.png",
+            "gameid": 17
+        },
+        {
+            "name": "iconPowers_huntingHatchets.png",
+            "gameid": 18
+        },
+        {
+            "name": "iconPowers_huntingHatchets.png",
+            "gameid": 19
+        },
+        {
+            "name": "iconPowers_K21.png",
+            "gameid": 20
+        },
+        {
+            "name": "iconPowers_vilePurge.png",
+            "gameid": 21
+        },
+        {
+            "name": "iconPowers_UK.png",
+            "gameid": 22
+        },
+        {
+            "name": "iconPowers_UK.png",
+            "gameid": 23
+        },
+        {
+            "name": "iconPowers_T-virus1.png",
+            "gameid": 24
+        },
+        {
+            "name": "iconPowers_T-virus1.png",
+            "gameid": 25
+        },
+        {
+            "name": "iconPowers_yamaokasHaunting.png",
+            "gameid": 26
+        },
+        {
+            "name": "iconPowers_bell.png",
+            "gameid": 27
+        },
+        {
+            "name": "iconPowers_bell.png",
+            "gameid": 28
+        },
+        {
+            "name": "iconPowers_yamaokasHaunting.png",
+            "gameid": 29
+        },
+        {
+            "name": "iconPowers_huntingHatchets.png",
+            "gameid": 30
         }
     ],
     "last_update": "11/01/2022"
