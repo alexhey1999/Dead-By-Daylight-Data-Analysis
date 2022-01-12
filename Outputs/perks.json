@@ -79,6 +79,86 @@
         {
             "perk": "unbreakable",
             "gameid": 1
+        },
+        {
+            "perk": "bond",
+            "gameid": 2
+        },
+        {
+            "perk": "BoonCircleOfHealing",
+            "gameid": 2
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 2
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 2
+        },
+        {
+            "perk": "botanyKnowledge",
+            "gameid": 2
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 2
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 2
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 2
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 2
+        },
+        {
+            "perk": "ironMaiden",
+            "gameid": 2
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 2
+        },
+        {
+            "perk": "mindBreaker",
+            "gameid": 2
+        },
+        {
+            "perk": "objectOfObsession",
+            "gameid": 2
+        },
+        {
+            "perk": "ruin",
+            "gameid": 2
+        },
+        {
+            "perk": "saboteur",
+            "gameid": 2
+        },
+        {
+            "perk": "selfCare",
+            "gameid": 2
+        },
+        {
+            "perk": "slipperyMeat",
+            "gameid": 2
+        },
+        {
+            "perk": "soulGuard",
+            "gameid": 2
+        },
+        {
+            "perk": "thatanophobia",
+            "gameid": 2
+        },
+        {
+            "perk": "unbreakable",
+            "gameid": 2
         }
     ],
     "last_update": "11/01/2022"

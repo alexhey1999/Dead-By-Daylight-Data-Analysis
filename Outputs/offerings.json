@@ -3,6 +3,14 @@
         {
             "offering": "escapeCake",
             "gameid": 1
+        },
+        {
+            "offering": "freshCrispleafAmaranth",
+            "gameid": 2
+        },
+        {
+            "offering": "momentoMoriCypress",
+            "gameid": 2
         }
     ],
     "last_update": "11/01/2022"

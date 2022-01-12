@@ -3,6 +3,18 @@
         {
             "item": "flashlight",
             "gameid": 1
+        },
+        {
+            "item": "rundownAidKit",
+            "gameid": 2
+        },
+        {
+            "item": "rundownAidKit",
+            "gameid": 2
+        },
+        {
+            "item": "rundownAidKit",
+            "gameid": 2
         }
     ],
     "last_update": "11/01/2022"

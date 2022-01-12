@@ -3,6 +3,10 @@
         {
             "name": "iconPowers_yamaokasWrath_demon.png",
             "gameid": 1
+        },
+        {
+            "name": "iconPowers_huntingHatchets.png",
+            "gameid": 2
         }
     ],
     "last_update": "11/01/2022"

@@ -4,6 +4,11 @@
             "escape": 3,
             "sacrificed": 1,
             "gameid": 1
+        },
+        {
+            "death": 1,
+            "sacrificed": 3,
+            "gameid": 2
         }
     ],
     "last_update": "11/01/2022"
