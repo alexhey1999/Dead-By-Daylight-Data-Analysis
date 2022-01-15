@@ -3,7 +3,7 @@ import numpy as np
 import random
 
 def adjustScreenSizeEscapes(Screen,bVector):
-    bVector = int(bVector*1.1)
+    bVector = int(bVector*0.9)
     widthStartCut = 800
     widthEndCut = 1050
     hightStartCut = 280
