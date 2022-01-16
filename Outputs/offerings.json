@@ -183,6 +183,158 @@
         {
             "offering": "freshBogLaurel",
             "gameid": 30
+        },
+        {
+            "offering": "sealedEnvelope",
+            "gameid": 31
+        },
+        {
+            "offering": "tanagerWreath",
+            "gameid": 31
+        },
+        {
+            "offering": "survivorPudding",
+            "gameid": 32
+        },
+        {
+            "offering": "scratchedCoin",
+            "gameid": 33
+        },
+        {
+            "offering": "shinyCoin",
+            "gameid": 33
+        },
+        {
+            "offering": "shroudOfBinding",
+            "gameid": 33
+        },
+        {
+            "offering": "wardBlack",
+            "gameid": 34
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 35
+        },
+        {
+            "offering": "momentoMoriCypress",
+            "gameid": 35
+        },
+        {
+            "offering": "sealedEnvelope",
+            "gameid": 35
+        },
+        {
+            "offering": "bloodyPartyStreamers",
+            "gameid": 36
+        },
+        {
+            "offering": "bloodyPartyStreamers",
+            "gameid": 37
+        },
+        {
+            "offering": "survivorPudding",
+            "gameid": 38
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 39
+        },
+        {
+            "offering": "survivorPudding",
+            "gameid": 39
+        },
+        {
+            "offering": "bloodyPartyStreamers",
+            "gameid": 40
+        },
+        {
+            "offering": "fragrantSweetWilliam",
+            "gameid": 40
+        },
+        {
+            "offering": "primroseBlossomSachet",
+            "gameid": 40
+        },
+        {
+            "offering": "sealedEnvelope",
+            "gameid": 40
+        },
+        {
+            "offering": "wardBlack",
+            "gameid": 40
+        },
+        {
+            "offering": "creamChalkPouch",
+            "gameid": 41
+        },
+        {
+            "offering": "sweetWilliamSachet",
+            "gameid": 41
+        },
+        {
+            "offering": "wardBlack",
+            "gameid": 41
+        },
+        {
+            "offering": "bloodyPartyStreamers",
+            "gameid": 42
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 42
+        },
+        {
+            "offering": "wardBlack",
+            "gameid": 42
+        },
+        {
+            "offering": "boundEnvelope",
+            "gameid": 43
+        },
+        {
+            "offering": "crowsEye",
+            "gameid": 43
+        },
+        {
+            "offering": "wardBlack",
+            "gameid": 43
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 44
+        },
+        {
+            "offering": "freshCrispleafAmaranth",
+            "gameid": 44
+        },
+        {
+            "offering": "wardBlack",
+            "gameid": 44
+        },
+        {
+            "offering": "bloodyPartyStreamers",
+            "gameid": 45
+        },
+        {
+            "offering": "bogLaurelSachet",
+            "gameid": 45
+        },
+        {
+            "offering": "primroseBlossomSachet",
+            "gameid": 45
+        },
+        {
+            "offering": "fragrantSweetWilliam",
+            "gameid": 47
+        },
+        {
+            "offering": "sealedEnvelope",
+            "gameid": 47
+        },
+        {
+            "offering": "strodeRealtyKey",
+            "gameid": 47
         }
     ],
     "last_update": "11/01/2022"

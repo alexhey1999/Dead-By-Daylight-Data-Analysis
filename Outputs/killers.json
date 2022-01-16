@@ -119,6 +119,74 @@
         {
             "name": "iconPowers_huntingHatchets.png",
             "gameid": 30
+        },
+        {
+            "name": "iconPowers_K21.png",
+            "gameid": 31
+        },
+        {
+            "name": "iconPowers_Wales_ritesOfJudgement.png",
+            "gameid": 32
+        },
+        {
+            "name": "iconPowers_stalker1.png",
+            "gameid": 33
+        },
+        {
+            "name": "iconPowers_T-virus1.png",
+            "gameid": 34
+        },
+        {
+            "name": "T_iconPowers_birdsOfTorment.png",
+            "gameid": 35
+        },
+        {
+            "name": "iconPowers_stalker1.png",
+            "gameid": 36
+        },
+        {
+            "name": "iconPowers_yamaokasWrath_demon.png",
+            "gameid": 37
+        },
+        {
+            "name": "iconPowers_Showstopper_01.png",
+            "gameid": 38
+        },
+        {
+            "name": "iconPowers_Showstopper_01.png",
+            "gameid": 39
+        },
+        {
+            "name": "iconPowers_ofTheAbyss.png",
+            "gameid": 40
+        },
+        {
+            "name": "Atl_Hud_PB_DemogorgonDashMode.png",
+            "gameid": 41
+        },
+        {
+            "name": "Atl_Hud_PB_DemogorgonDashMode.png",
+            "gameid": 42
+        },
+        {
+            "name": "Atl_Hud_PB_DemogorgonDashMode.png",
+            "gameid": 43
+        },
+        {
+            "name": "Atl_Hud_PB_DemogorgonDashMode.png",
+            "gameid": 44
+        },
+        {
+            "name": "iconPowers_T-virus1.png",
+            "gameid": 45
+        },
+        {
+            "name": "iconPowers_T-virus1.png",
+            "gameid": 46
+        },
+        {
+            "name": "iconPowers_T-virus1.png",
+            "gameid": 47
         }
     ],
     "last_update": "11/01/2022"

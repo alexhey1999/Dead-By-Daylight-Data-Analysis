@@ -45,12 +45,21 @@ def calculatePerks(perkList,location,Screen):
 
         icon = icon[cropBorder:size-cropBorder , cropBorder:size-cropBorder]
 
-        issuePerks = ["iconPerks_BoonCircleOfHealing.png","iconPerks_BoonExponential.png","iconPerks_trailOfTorment.png","iconPerks_dragonsGrip.png","iconPerks_Deadlock.png",'iconPerks_corruptIntervention.png','iconPerks_painResonance.png','iconPerks_discordance.png','iconPerks_hexRetribution.png','iconPerks_camaraderie.png','iconPerks_bloodWarden.png']
 
-        overdetectedPerks = ["iconPerks_calmSpirit.png",'iconPerks_flipFlop.png']
+        underdetectedPerks = ["iconPerks_BoonExponential.png","iconPerks_trailOfTorment.png","iconPerks_dragonsGrip.png","iconPerks_Deadlock.png",'iconPerks_painResonance.png','iconPerks_discordance.png','iconPerks_hexRetribution.png','iconPerks_camaraderie.png','iconPerks_bloodWarden.png']
 
-        if perk in issuePerks:
-            threshold = 0.6
+        vUnderdetectedPerks = ['iconPerks_NoWayOut.png',"iconPerks_BoonCircleOfHealing.png",'iconPerks_corruptIntervention.png','iconPerks_BoonShadowStep.png','iconPerks_FastTrack.png']
+
+        noDetection = ['iconPerks_rememberMe.png']
+
+        overdetectedPerks = ["iconPerks_calmSpirit.png",'iconPerks_flipFlop.png','iconPerks_mettleOfMan.png','iconPerks_popGoesTheWeasel.png','iconPerks_deception.png','iconPerks_premonition.png']
+
+        if perk in vUnderdetectedPerks:
+            threshold = 0.55
+        elif perk in underdetectedPerks:
+            threshold = 0.63
+        elif perk in noDetection:
+            threshold = 0.5
         elif perk in overdetectedPerks:
             threshold = 0.70
         else:

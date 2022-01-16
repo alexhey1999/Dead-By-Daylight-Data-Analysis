@@ -195,6 +195,126 @@
         {
             "item": "toolboxCommodious",
             "gameid": 30
+        },
+        {
+            "item": "flashlight",
+            "gameid": 31
+        },
+        {
+            "item": "toolbox",
+            "gameid": 32
+        },
+        {
+            "item": "toolboxWornOut",
+            "gameid": 32
+        },
+        {
+            "item": "flashlight",
+            "gameid": 33
+        },
+        {
+            "item": "flashlightUtility",
+            "gameid": 33
+        },
+        {
+            "item": "firstAidKit",
+            "gameid": 35
+        },
+        {
+            "item": "flashlight",
+            "gameid": 35
+        },
+        {
+            "item": "medkitHalloween",
+            "gameid": 35
+        },
+        {
+            "item": "flashlightSport",
+            "gameid": 40
+        },
+        {
+            "item": "rundownAidKit",
+            "gameid": 40
+        },
+        {
+            "item": "rundownAidKit",
+            "gameid": 40
+        },
+        {
+            "item": "rundownAidKit",
+            "gameid": 41
+        },
+        {
+            "item": "firstAidKit",
+            "gameid": 42
+        },
+        {
+            "item": "firstAidKit",
+            "gameid": 42
+        },
+        {
+            "item": "firstAidKit",
+            "gameid": 42
+        },
+        {
+            "item": "toolbox",
+            "gameid": 42
+        },
+        {
+            "item": "toolboxWornOut",
+            "gameid": 42
+        },
+        {
+            "item": "flashlight",
+            "gameid": 43
+        },
+        {
+            "item": "flashlightSport",
+            "gameid": 43
+        },
+        {
+            "item": "firstAidKit",
+            "gameid": 44
+        },
+        {
+            "item": "flashlightSport",
+            "gameid": 44
+        },
+        {
+            "item": "toolboxEngineers",
+            "gameid": 44
+        },
+        {
+            "item": "rangersAidKit",
+            "gameid": 45
+        },
+        {
+            "item": "toolbox",
+            "gameid": 45
+        },
+        {
+            "item": "toolboxWornOut",
+            "gameid": 45
+        },
+        {
+            "item": "flashlight",
+            "gameid": 46
+        },
+        {
+            "item": "flashlight",
+            "gameid": 46
+        },
+        {
+            "item": "rundownAidKit",
+            "gameid": 46
+        },
+        {
+            "item": "firstAidKit",
+            "gameid": 47
+        },
+        {
+            "item": "flashlightUtility",
+            "gameid": 47
         }
     ],
     "last_update": "11/01/2022"

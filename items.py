@@ -45,7 +45,7 @@ def calculateItems(itemList, location, Screen):
         if "key" in item.lower():
             threshold = 0.90
         elif "flashlight" in item.lower():
-            threshold = 0.75
+            threshold = 0.80
         elif "map" in item.lower():
             threshold = 0.85
         elif "toolbox" in item.lower():

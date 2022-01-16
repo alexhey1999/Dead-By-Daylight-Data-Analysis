@@ -45,6 +45,7 @@ def calculateKiller(killerList, location, Screen):
         result = cv2.matchTemplate(Screen, icon, cv2.TM_CCOEFF_NORMED)
         minVal, maxVal, minLoc, maxLoc = cv2.minMaxLoc(result)
         if maxVal > mostProbableKillerScore:
+            mostProbableKillerPosition = maxLoc
             mostProbableKillerScore = maxVal
             mostProbableKiller = killer
 
