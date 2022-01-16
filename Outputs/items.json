@@ -315,6 +315,82 @@
         {
             "item": "flashlightUtility",
             "gameid": 47
+        },
+        {
+            "item": "firstAidKit",
+            "gameid": 48
+        },
+        {
+            "item": "flashlightHalloween",
+            "gameid": 49
+        },
+        {
+            "item": "rundownAidKit",
+            "gameid": 49
+        },
+        {
+            "item": "toolboxWornOut",
+            "gameid": 49
+        },
+        {
+            "item": "toolboxCommodious",
+            "gameid": 51
+        },
+        {
+            "item": "toolboxCommodious",
+            "gameid": 52
+        },
+        {
+            "item": "flashlightUtility",
+            "gameid": 53
+        },
+        {
+            "item": "toolboxCommodious",
+            "gameid": 53
+        },
+        {
+            "item": "firstAidKit",
+            "gameid": 55
+        },
+        {
+            "item": "flashlight",
+            "gameid": 56
+        },
+        {
+            "item": "rundownAidKit",
+            "gameid": 58
+        },
+        {
+            "item": "toolbox",
+            "gameid": 58
+        },
+        {
+            "item": "toolboxCommodious",
+            "gameid": 58
+        },
+        {
+            "item": "toolboxWornOut",
+            "gameid": 58
+        },
+        {
+            "item": "toolboxWornOut",
+            "gameid": 58
+        },
+        {
+            "item": "rundownAidKit",
+            "gameid": 59
+        },
+        {
+            "item": "toolboxWornOut",
+            "gameid": 59
+        },
+        {
+            "item": "toolbox",
+            "gameid": 60
+        },
+        {
+            "item": "toolboxWornOut",
+            "gameid": 60
         }
     ],
     "last_update": "11/01/2022"

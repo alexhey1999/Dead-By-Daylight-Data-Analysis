@@ -187,6 +187,58 @@
         {
             "name": "iconPowers_T-virus1.png",
             "gameid": 47
+        },
+        {
+            "name": "iconPowers_gasBomb.png",
+            "gameid": 48
+        },
+        {
+            "name": "Atl_Hud_PB_DemogorgonDashMode.png",
+            "gameid": 49
+        },
+        {
+            "name": "iconPowers_bell.png",
+            "gameid": 50
+        },
+        {
+            "name": "iconPowers_huntingHatchets.png",
+            "gameid": 51
+        },
+        {
+            "name": "iconPowers_huntingHatchets.png",
+            "gameid": 52
+        },
+        {
+            "name": "iconPowers_cartersSpark.png",
+            "gameid": 53
+        },
+        {
+            "name": "iconPowers_huntingHatchets.png",
+            "gameid": 54
+        },
+        {
+            "name": "iconPowers_bubbasChainsaw.png",
+            "gameid": 55
+        },
+        {
+            "name": "iconPowers_yamaokasHaunting.png",
+            "gameid": 56
+        },
+        {
+            "name": "iconPowers_blackenedCatalyst.png",
+            "gameid": 57
+        },
+        {
+            "name": "iconPowers_vilePurge.png",
+            "gameid": 58
+        },
+        {
+            "name": "iconPowers_K21.png",
+            "gameid": 59
+        },
+        {
+            "name": "iconPowers_Huntress.png",
+            "gameid": 60
         }
     ],
     "last_update": "11/01/2022"

@@ -335,6 +335,86 @@
         {
             "offering": "strodeRealtyKey",
             "gameid": 47
+        },
+        {
+            "offering": "fragrantPrimroseBlossom",
+            "gameid": 48
+        },
+        {
+            "offering": "freshBogLaurel",
+            "gameid": 48
+        },
+        {
+            "offering": "marysLetter",
+            "gameid": 48
+        },
+        {
+            "offering": "bogLaurelSachet",
+            "gameid": 49
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 49
+        },
+        {
+            "offering": "bloodyPartyStreamers",
+            "gameid": 50
+        },
+        {
+            "offering": "freshPrimroseBlossom",
+            "gameid": 50
+        },
+        {
+            "offering": "marysLetter",
+            "gameid": 53
+        },
+        {
+            "offering": "annotatedBlueprint",
+            "gameid": 54
+        },
+        {
+            "offering": "momentoMoriEbony",
+            "gameid": 54
+        },
+        {
+            "offering": "bloodyPartyStreamers",
+            "gameid": 55
+        },
+        {
+            "offering": "devoutShrikeWreath",
+            "gameid": 56
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 56
+        },
+        {
+            "offering": "petrifiedOak",
+            "gameid": 56
+        },
+        {
+            "offering": "freshSweetWilliam",
+            "gameid": 58
+        },
+        {
+            "offering": "sealedEnvelope",
+            "gameid": 58
+        },
+        {
+            "offering": "shroudOfSeparation",
+            "gameid": 58
+        },
+        {
+            "offering": "ravenWreath",
+            "gameid": 59
+        },
+        {
+            "offering": "sweetWilliamSachet",
+            "gameid": 59
+        },
+        {
+            "offering": "sweetWilliamSachet",
+            "gameid": 59
         }
     ],
     "last_update": "11/01/2022"
