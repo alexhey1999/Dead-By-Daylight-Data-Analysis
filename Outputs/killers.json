@@ -1,243 +1,243 @@
 {
     "killers": [
         {
-            "name": "iconPowers_yamaokasWrath_demon.png",
+            "name": "Oni.png",
             "gameid": 1
         },
         {
-            "name": "iconPowers_huntingHatchets.png",
+            "name": "Huntress.png",
             "gameid": 2
         },
         {
-            "name": "iconPowers_summonsOfPain.png",
+            "name": "Pinhead.png",
             "gameid": 3
         },
         {
-            "name": "iconPowers_cartersSpark.png",
+            "name": "Doctor.png",
             "gameid": 4
         },
         {
-            "name": "iconPowers_summonsOfPain.png",
+            "name": "Pinhead.png",
             "gameid": 5
         },
         {
-            "name": "iconPowers_breath.png",
+            "name": "Nurse.png",
             "gameid": 7
         },
         {
-            "name": "iconPowers_bloodBond_01.png",
+            "name": "Twins.png",
             "gameid": 8
         },
         {
-            "name": "iconPowers_bubbasChainsaw.png",
+            "name": "Bubba.png",
             "gameid": 9
         },
         {
-            "name": "iconPowers_huntingHatchets.png",
+            "name": "Huntress.png",
             "gameid": 10
         },
         {
-            "name": "iconPowers_huntingHatchets.png",
+            "name": "Huntress.png",
             "gameid": 11
         },
         {
-            "name": "iconPowers_bell.png",
+            "name": "Wraith.png",
             "gameid": 12
         },
         {
-            "name": "iconPowers_ghostPower_available.png",
+            "name": "GhostFace.png",
             "gameid": 13
         },
         {
-            "name": "iconPowers_feralFrenzy.png",
+            "name": "Legion.png",
             "gameid": 14
         },
         {
-            "name": "iconPowers_feralFrenzy.png",
+            "name": "Legion.png",
             "gameid": 15
         },
         {
-            "name": "iconPowers_cartersSpark.png",
+            "name": "Doctor.png",
             "gameid": 16
         },
         {
-            "name": "iconPowers_trap.png",
+            "name": "Trapper.png",
             "gameid": 17
         },
         {
-            "name": "iconPowers_huntingHatchets.png",
+            "name": "Huntress.png",
             "gameid": 18
         },
         {
-            "name": "iconPowers_huntingHatchets.png",
+            "name": "Huntress.png",
             "gameid": 19
         },
         {
-            "name": "iconPowers_K21.png",
+            "name": "Blight.png",
             "gameid": 20
         },
         {
-            "name": "iconPowers_vilePurge.png",
+            "name": "Plague.png",
             "gameid": 21
         },
         {
-            "name": "iconPowers_UK.png",
+            "name": "Deathslinger.png",
             "gameid": 22
         },
         {
-            "name": "iconPowers_UK.png",
+            "name": "Deathslinger.png",
             "gameid": 23
         },
         {
-            "name": "iconPowers_T-virus1.png",
+            "name": "Nemesis.png",
             "gameid": 24
         },
         {
-            "name": "iconPowers_T-virus1.png",
+            "name": "Nemesis.png",
             "gameid": 25
         },
         {
-            "name": "iconPowers_yamaokasHaunting.png",
+            "name": "Spirit.png",
             "gameid": 26
         },
         {
-            "name": "iconPowers_bell.png",
+            "name": "Wraith.png",
             "gameid": 27
         },
         {
-            "name": "iconPowers_bell.png",
+            "name": "Wraith.png",
             "gameid": 28
         },
         {
-            "name": "iconPowers_yamaokasHaunting.png",
+            "name": "Spirit.png",
             "gameid": 29
         },
         {
-            "name": "iconPowers_huntingHatchets.png",
+            "name": "Huntress.png",
             "gameid": 30
         },
         {
-            "name": "iconPowers_K21.png",
+            "name": "Blight.png",
             "gameid": 31
         },
         {
-            "name": "iconPowers_Wales_ritesOfJudgement.png",
+            "name": "PyramidHead.png",
             "gameid": 32
         },
         {
-            "name": "iconPowers_stalker1.png",
+            "name": "Myers.png",
             "gameid": 33
         },
         {
-            "name": "iconPowers_T-virus1.png",
+            "name": "Nemesis.png",
             "gameid": 34
         },
         {
-            "name": "T_iconPowers_birdsOfTorment.png",
+            "name": "Artist.png",
             "gameid": 35
         },
         {
-            "name": "iconPowers_stalker1.png",
+            "name": "Myers.png",
             "gameid": 36
         },
         {
-            "name": "iconPowers_yamaokasWrath_demon.png",
+            "name": "Oni.png",
             "gameid": 37
         },
         {
-            "name": "iconPowers_Showstopper_01.png",
+            "name": "Trickster.png",
             "gameid": 38
         },
         {
-            "name": "iconPowers_Showstopper_01.png",
+            "name": "Trickster.png",
             "gameid": 39
         },
         {
-            "name": "iconPowers_ofTheAbyss.png",
+            "name": "Demogorgon.png",
             "gameid": 40
         },
         {
-            "name": "Atl_Hud_PB_DemogorgonDashMode.png",
+            "name": "Demogorgon.png",
             "gameid": 41
         },
         {
-            "name": "Atl_Hud_PB_DemogorgonDashMode.png",
+            "name": "Demogorgon.png",
             "gameid": 42
         },
         {
-            "name": "Atl_Hud_PB_DemogorgonDashMode.png",
+            "name": "Demogorgon.png",
             "gameid": 43
         },
         {
-            "name": "Atl_Hud_PB_DemogorgonDashMode.png",
+            "name": "Demogorgon.png",
             "gameid": 44
         },
         {
-            "name": "iconPowers_T-virus1.png",
+            "name": "Nemesis.png",
             "gameid": 45
         },
         {
-            "name": "iconPowers_T-virus1.png",
+            "name": "Nemesis.png",
             "gameid": 46
         },
         {
-            "name": "iconPowers_T-virus1.png",
+            "name": "Nemesis.png",
             "gameid": 47
         },
         {
-            "name": "iconPowers_gasBomb.png",
+            "name": "Clown.png",
             "gameid": 48
         },
         {
-            "name": "Atl_Hud_PB_DemogorgonDashMode.png",
+            "name": "Demogorgon.png",
             "gameid": 49
         },
         {
-            "name": "iconPowers_bell.png",
+            "name": "Wraith.png",
             "gameid": 50
         },
         {
-            "name": "iconPowers_huntingHatchets.png",
+            "name": "Huntress.png",
             "gameid": 51
         },
         {
-            "name": "iconPowers_huntingHatchets.png",
+            "name": "Huntress.png",
             "gameid": 52
         },
         {
-            "name": "iconPowers_cartersSpark.png",
+            "name": "Doctor.png",
             "gameid": 53
         },
         {
-            "name": "iconPowers_huntingHatchets.png",
+            "name": "Huntress.png",
             "gameid": 54
         },
         {
-            "name": "iconPowers_bubbasChainsaw.png",
+            "name": "Bubba.png",
             "gameid": 55
         },
         {
-            "name": "iconPowers_yamaokasHaunting.png",
+            "name": "Spirit.png",
             "gameid": 56
         },
         {
-            "name": "iconPowers_blackenedCatalyst.png",
+            "name": "Hag.png",
             "gameid": 57
         },
         {
-            "name": "iconPowers_vilePurge.png",
+            "name": "Plague.png",
             "gameid": 58
         },
         {
-            "name": "iconPowers_K21.png",
+            "name": "Blight.png",
             "gameid": 59
         },
         {
-            "name": "iconPowers_Huntress.png",
+            "name": "Huntress.png",
             "gameid": 60
         },
         {
-            "name": "iconPowers_Trapper.png",
+            "name": "Trapper.png",
             "gameid": 61
         }
     ],
