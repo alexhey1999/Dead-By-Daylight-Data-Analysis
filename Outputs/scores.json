@@ -479,6 +479,14 @@
             "player4Score": 11563,
             "killerScore": 21486,
             "gameid": 60
+        },
+        {
+            "player1Score": 24492,
+            "player2Score": 24398,
+            "player3Score": 19728,
+            "player4Score": 16188,
+            "killerScore": 24492,
+            "gameid": 61
         }
     ],
     "last_update": "11/01/2022"

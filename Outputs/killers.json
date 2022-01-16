@@ -21,10 +21,6 @@
             "gameid": 5
         },
         {
-            "name": null,
-            "gameid": 6
-        },
-        {
             "name": "iconPowers_breath.png",
             "gameid": 7
         },
@@ -239,6 +235,10 @@
         {
             "name": "iconPowers_Huntress.png",
             "gameid": 60
+        },
+        {
+            "name": "iconPowers_Trapper.png",
+            "gameid": 61
         }
     ],
     "last_update": "11/01/2022"

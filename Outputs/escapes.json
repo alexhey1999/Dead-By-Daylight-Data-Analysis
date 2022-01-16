@@ -282,6 +282,10 @@
         {
             "sacrificed": 4,
             "gameid": 60
+        },
+        {
+            "escape": 4,
+            "gameid": 61
         }
     ],
     "last_update": "11/01/2022"

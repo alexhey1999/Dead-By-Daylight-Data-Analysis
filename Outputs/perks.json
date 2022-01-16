@@ -4843,6 +4843,82 @@
         {
             "perk": "surge",
             "gameid": 60
+        },
+        {
+            "perk": "agitation",
+            "gameid": 61
+        },
+        {
+            "perk": "anyMeansNecessary",
+            "gameid": 61
+        },
+        {
+            "perk": "BoonCircleOfHealing",
+            "gameid": 61
+        },
+        {
+            "perk": "BoonCircleOfHealing",
+            "gameid": 61
+        },
+        {
+            "perk": "BoonCircleOfHealing",
+            "gameid": 61
+        },
+        {
+            "perk": "BoonShadowStep",
+            "gameid": 61
+        },
+        {
+            "perk": "BoonShadowStep",
+            "gameid": 61
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 61
+        },
+        {
+            "perk": "brutalStrength",
+            "gameid": 61
+        },
+        {
+            "perk": "Clairvoyance",
+            "gameid": 61
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 61
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 61
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 61
+        },
+        {
+            "perk": "Flashbang",
+            "gameid": 61
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 61
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 61
+        },
+        {
+            "perk": "Resurgence",
+            "gameid": 61
+        },
+        {
+            "perk": "soulGuard",
+            "gameid": 61
+        },
+        {
+            "perk": "unnervingPresence",
+            "gameid": 61
         }
     ],
     "last_update": "11/01/2022"
