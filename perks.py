@@ -46,9 +46,9 @@ def calculatePerks(perkList,location,Screen):
         icon = icon[cropBorder:size-cropBorder , cropBorder:size-cropBorder]
 
 
-        underdetectedPerks = ["iconPerks_BoonExponential.png","iconPerks_trailOfTorment.png","iconPerks_dragonsGrip.png","iconPerks_Deadlock.png",'iconPerks_discordance.png','iconPerks_hexRetribution.png','iconPerks_camaraderie.png','iconPerks_bloodWarden.png','iconPerks_popGoesTheWeasel.png','iconPerks_surveillance.png']
+        underdetectedPerks = ["iconPerks_BoonExponential.png","iconPerks_trailOfTorment.png","iconPerks_dragonsGrip.png","iconPerks_Deadlock.png",'iconPerks_discordance.png','iconPerks_hexRetribution.png','iconPerks_camaraderie.png','iconPerks_bloodWarden.png','iconPerks_surveillance.png','iconPerks_FastTrack.png']
 
-        vUnderdetectedPerks = ['iconPerks_NoWayOut.png',"iconPerks_BoonCircleOfHealing.png",'iconPerks_corruptIntervention.png','iconPerks_BoonShadowStep.png','iconPerks_FastTrack.png','iconPerks_painResonance.png']
+        vUnderdetectedPerks = ['iconPerks_NoWayOut.png',"iconPerks_BoonCircleOfHealing.png",'iconPerks_corruptIntervention.png','iconPerks_BoonShadowStep.png']
 
         noDetection = ['iconPerks_rememberMe.png']
 

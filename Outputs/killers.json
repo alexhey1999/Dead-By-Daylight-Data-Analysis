@@ -239,6 +239,10 @@
         {
             "name": "Trapper.png",
             "gameid": 61
+        },
+        {
+            "name": "Legion.png",
+            "gameid": 62
         }
     ],
     "last_update": "11/01/2022"

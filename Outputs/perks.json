@@ -4919,6 +4919,86 @@
         {
             "perk": "unnervingPresence",
             "gameid": 61
+        },
+        {
+            "perk": "BoonCircleOfHealing",
+            "gameid": 62
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 62
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 62
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 62
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 62
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 62
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 62
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 62
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 62
+        },
+        {
+            "perk": "Flashbang",
+            "gameid": 62
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 62
+        },
+        {
+            "perk": "nemesis",
+            "gameid": 62
+        },
+        {
+            "perk": "playWithYourFood",
+            "gameid": 62
+        },
+        {
+            "perk": "proveThyself",
+            "gameid": 62
+        },
+        {
+            "perk": "proveThyself",
+            "gameid": 62
+        },
+        {
+            "perk": "resilience",
+            "gameid": 62
+        },
+        {
+            "perk": "ruin",
+            "gameid": 62
+        },
+        {
+            "perk": "soulGuard",
+            "gameid": 62
+        },
+        {
+            "perk": "surge",
+            "gameid": 62
+        },
+        {
+            "perk": "wellMakeIt",
+            "gameid": 62
         }
     ],
     "last_update": "11/01/2022"

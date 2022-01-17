@@ -419,6 +419,10 @@
         {
             "offering": "devoutShrikeWreath",
             "gameid": 61
+        },
+        {
+            "offering": "bloodyPartyStreamers",
+            "gameid": 62
         }
     ],
     "last_update": "11/01/2022"
