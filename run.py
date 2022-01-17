@@ -155,7 +155,7 @@ def addDataToStorage(killerPlayed, perks, items, offerings, scores, escapes, loc
 
     print(scores)
     # Write Score Data to file
-    newScoreData = {"player1Score": scores["Player1"],"player2Score": scores["Player2"],"player3Score": scores["Player3"],"player4Score": scores["Player4"],"killerScore": scores["Player1"],"gameid":gameID}
+    newScoreData = {"player1Score": scores["Player1"],"player2Score": scores["Player2"],"player3Score": scores["Player3"],"player4Score": scores["Player4"],"killerScore": scores["Killer"],"gameid":gameID}
 
     with open(location+'scores.json',"r+") as scores:
         score_data = json.load(scores)
