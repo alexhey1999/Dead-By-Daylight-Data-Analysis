@@ -290,6 +290,67 @@
         {
             "escape": 4,
             "gameid": 62
+        },
+        {
+            "escape": 4,
+            "gameid": 63
+        },
+        {
+            "escape": 4,
+            "gameid": 64
+        },
+        {
+            "sacrificed": 4,
+            "gameid": 65
+        },
+        {
+            "death": 1,
+            "escape": 3,
+            "gameid": 66
+        },
+        {
+            "escape": 3,
+            "sacrificed": 1,
+            "gameid": 67
+        },
+        {
+            "escape": 4,
+            "gameid": 68
+        },
+        {
+            "escape": 4,
+            "gameid": 69
+        },
+        {
+            "escape": 3,
+            "sacrificed": 1,
+            "gameid": 70
+        },
+        {
+            "sacrificed": 4,
+            "gameid": 71
+        },
+        {
+            "escape": 3,
+            "sacrificed": 1,
+            "gameid": 72
+        },
+        {
+            "sacrificed": 4,
+            "gameid": 73
+        },
+        {
+            "escape": 4,
+            "gameid": 74
+        },
+        {
+            "escape": 1,
+            "sacrificed": 2,
+            "gameid": 75
+        },
+        {
+            "sacrificed": 4,
+            "gameid": 76
         }
     ],
     "last_update": "11/01/2022"

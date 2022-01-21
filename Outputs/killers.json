@@ -243,6 +243,62 @@
         {
             "name": "Legion.png",
             "gameid": 62
+        },
+        {
+            "name": "Wraith.png",
+            "gameid": 63
+        },
+        {
+            "name": "Legion.png",
+            "gameid": 64
+        },
+        {
+            "name": "Huntress.png",
+            "gameid": 65
+        },
+        {
+            "name": "Deathslinger.png",
+            "gameid": 66
+        },
+        {
+            "name": "Blight.png",
+            "gameid": 67
+        },
+        {
+            "name": "Plague.png",
+            "gameid": 68
+        },
+        {
+            "name": "Plague.png",
+            "gameid": 69
+        },
+        {
+            "name": "Oni.png",
+            "gameid": 70
+        },
+        {
+            "name": "GhostFace.png",
+            "gameid": 71
+        },
+        {
+            "name": "Hillbilly.png",
+            "gameid": 72
+        },
+        {
+            "name": "Wraith.png",
+            "gameid": 73
+        },
+        {
+            "name": "Spirit.png",
+            "gameid": 74
+        },
+        {
+            "name": "Clown.png",
+            "gameid": 75
+        },
+        {
+            "name": "Doctor.png",
+            "gameid": 76
         }
     ],
     "last_update": "11/01/2022"

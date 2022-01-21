@@ -423,6 +423,90 @@
         {
             "offering": "bloodyPartyStreamers",
             "gameid": 62
+        },
+        {
+            "offering": "freshBogLaurel",
+            "gameid": 65
+        },
+        {
+            "offering": "bloodyPartyStreamers",
+            "gameid": 66
+        },
+        {
+            "offering": "crispleafAmaranthSachet",
+            "gameid": 66
+        },
+        {
+            "offering": "freshBogLaurel",
+            "gameid": 66
+        },
+        {
+            "offering": "bloodyPartyStreamers",
+            "gameid": 67
+        },
+        {
+            "offering": "freshBogLaurel",
+            "gameid": 67
+        },
+        {
+            "offering": "bloodyPartyStreamers",
+            "gameid": 68
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 68
+        },
+        {
+            "offering": "bloodyPartyStreamers",
+            "gameid": 69
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 69
+        },
+        {
+            "offering": "boundEnvelope",
+            "gameid": 70
+        },
+        {
+            "offering": "freshPrimroseBlossom",
+            "gameid": 70
+        },
+        {
+            "offering": "putridOak",
+            "gameid": 70
+        },
+        {
+            "offering": "petrifiedOak",
+            "gameid": 71
+        },
+        {
+            "offering": "freshBogLaurel",
+            "gameid": 72
+        },
+        {
+            "offering": "freshPrimroseBlossom",
+            "gameid": 73
+        },
+        {
+            "offering": "bloodyPartyStreamers",
+            "gameid": 74
+        },
+        {
+            "offering": "moldyOak",
+            "gameid": 74
+        },
+        {
+            "offering": "survivorPudding",
+            "gameid": 75
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 76
+        },
+        {
+            "offering": "moldyOak",
+            "gameid": 76
         }
     ],
     "last_update": "11/01/2022"

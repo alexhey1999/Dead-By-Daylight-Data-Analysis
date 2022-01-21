@@ -399,6 +399,66 @@
         {
             "item": "flashlightUtility",
             "gameid": 62
+        },
+        {
+            "item": "firstAidKit",
+            "gameid": 63
+        },
+        {
+            "item": "toolbox",
+            "gameid": 64
+        },
+        {
+            "item": "toolboxWornOut",
+            "gameid": 64
+        },
+        {
+            "item": "toolboxWornOut",
+            "gameid": 64
+        },
+        {
+            "item": "flashlight",
+            "gameid": 65
+        },
+        {
+            "item": "flashlight",
+            "gameid": 65
+        },
+        {
+            "item": "rundownAidKit",
+            "gameid": 66
+        },
+        {
+            "item": "rundownAidKit",
+            "gameid": 67
+        },
+        {
+            "item": "firstAidKit",
+            "gameid": 70
+        },
+        {
+            "item": "toolboxAlexs",
+            "gameid": 71
+        },
+        {
+            "item": "toolboxWornOut",
+            "gameid": 72
+        },
+        {
+            "item": "toolboxWornOut",
+            "gameid": 73
+        },
+        {
+            "item": "flashlight",
+            "gameid": 74
+        },
+        {
+            "item": "flashlight",
+            "gameid": 75
+        },
+        {
+            "item": "flashlightSport",
+            "gameid": 76
         }
     ],
     "last_update": "11/01/2022"
