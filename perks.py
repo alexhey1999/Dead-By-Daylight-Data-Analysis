@@ -46,20 +46,20 @@ def calculatePerks(perkList,location,Screen):
         icon = icon[cropBorder:size-cropBorder , cropBorder:size-cropBorder]
 
 
-        underdetectedPerks = ["iconPerks_BoonExponential.png","iconPerks_trailOfTorment.png","iconPerks_dragonsGrip.png","iconPerks_Deadlock.png",'iconPerks_discordance.png','iconPerks_hexRetribution.png','iconPerks_camaraderie.png','iconPerks_bloodWarden.png','iconPerks_surveillance.png','iconPerks_breakout.png','iconPerks_surge.png']
+        underdetectedPerks = ["iconPerks_BoonExponential.png","iconPerks_trailOfTorment.png","iconPerks_dragonsGrip.png",'iconPerks_discordance.png','iconPerks_hexRetribution.png','iconPerks_camaraderie.png','iconPerks_bloodWarden.png','iconPerks_surveillance.png','iconPerks_breakout.png','iconPerks_surge.png',"iconPerks_Deadlock.png"]
 
-        vUnderdetectedPerks = ['iconPerks_NoWayOut.png',"iconPerks_BoonCircleOfHealing.png",'iconPerks_corruptIntervention.png','iconPerks_BoonShadowStep.png','iconPerks_FastTrack.png','iconPerks_surveillance.png']
+        vUnderdetectedPerks = ['iconPerks_NoWayOut.png',"iconPerks_BoonCircleOfHealing.png",'iconPerks_corruptIntervention.png','iconPerks_BoonShadowStep.png','iconPerks_FastTrack.png','iconPerks_surveillance.png', 'iconPerks_painResonance.png','iconPerks_discordance.png']
 
         noDetection = ['iconPerks_rememberMe.png']
 
-        overdetectedPerks = ["iconPerks_calmSpirit.png",'iconPerks_flipFlop.png','iconPerks_mettleOfMan.png','iconPerks_deception.png','iconPerks_premonition.png','iconPerks_alert.png','iconPerks_corruptIntervention.png','iconPerks_popGoesTheWeasel.png']
+        overdetectedPerks = ["iconPerks_calmSpirit.png",'iconPerks_flipFlop.png','iconPerks_mettleOfMan.png','iconPerks_deception.png','iconPerks_premonition.png','iconPerks_alert.png','iconPerks_corruptIntervention.png']
 
         if perk in vUnderdetectedPerks:
-            threshold = 0.55
+            threshold = 0.54
         elif perk in underdetectedPerks:
-            threshold = 0.63
+            threshold = 0.62
         elif perk in noDetection:
-            threshold = 0.5
+            threshold = 0.52
         elif perk in overdetectedPerks:
             threshold = 0.70
         else:

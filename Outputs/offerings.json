@@ -507,6 +507,454 @@
         {
             "offering": "moldyOak",
             "gameid": 76
+        },
+        {
+            "offering": "freshBogLaurel",
+            "gameid": 79
+        },
+        {
+            "offering": "spottedOwlWreath",
+            "gameid": 79
+        },
+        {
+            "offering": "crispleafAmaranthSachet",
+            "gameid": 80
+        },
+        {
+            "offering": "sealedEnvelope",
+            "gameid": 81
+        },
+        {
+            "offering": "hollowShell",
+            "gameid": 82
+        },
+        {
+            "offering": "bloodyPartyStreamers",
+            "gameid": 83
+        },
+        {
+            "offering": "saltPouch",
+            "gameid": 83
+        },
+        {
+            "offering": "wardBlack",
+            "gameid": 84
+        },
+        {
+            "offering": "momentoMoriEbony",
+            "gameid": 85
+        },
+        {
+            "offering": "ardentShrikeWreath",
+            "gameid": 86
+        },
+        {
+            "offering": "bloodyPartyStreamers",
+            "gameid": 86
+        },
+        {
+            "offering": "bloodyPartyStreamers",
+            "gameid": 86
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 88
+        },
+        {
+            "offering": "heartLocket",
+            "gameid": 88
+        },
+        {
+            "offering": "freshPrimroseBlossom",
+            "gameid": 89
+        },
+        {
+            "offering": "freshSweetWilliam",
+            "gameid": 89
+        },
+        {
+            "offering": "petrifiedOak",
+            "gameid": 92
+        },
+        {
+            "offering": "survivorPudding",
+            "gameid": 92
+        },
+        {
+            "offering": "creamChalkPouch",
+            "gameid": 93
+        },
+        {
+            "offering": "bogLaurelSachet",
+            "gameid": 94
+        },
+        {
+            "offering": "devoutTanagerWreath",
+            "gameid": 94
+        },
+        {
+            "offering": "fragrantPrimroseBlossom",
+            "gameid": 94
+        },
+        {
+            "offering": "bloodyPartyStreamers",
+            "gameid": 95
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 95
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 95
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 95
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 95
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 96
+        },
+        {
+            "offering": "saltPouch",
+            "gameid": 96
+        },
+        {
+            "offering": "devoutTanagerWreath",
+            "gameid": 97
+        },
+        {
+            "offering": "petrifiedOak",
+            "gameid": 97
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 97
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 97
+        },
+        {
+            "offering": "crowsEye",
+            "gameid": 98
+        },
+        {
+            "offering": "petrifiedOak",
+            "gameid": 98
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 98
+        },
+        {
+            "offering": "wardSacrificial",
+            "gameid": 98
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 99
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 99
+        },
+        {
+            "offering": "fragrantSweetWilliam",
+            "gameid": 100
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 100
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 101
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 101
+        },
+        {
+            "offering": "wardWhite",
+            "gameid": 101
+        },
+        {
+            "offering": "freshBogLaurel",
+            "gameid": 102
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 102
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 103
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 103
+        },
+        {
+            "offering": "5thAnniversary",
+            "gameid": 105
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 106
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 106
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 106
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 107
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 107
+        },
+        {
+            "offering": "sealedEnvelope",
+            "gameid": 107
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 108
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 108
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 108
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 109
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 109
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 109
+        },
+        {
+            "offering": "spottedOwlWreath",
+            "gameid": 109
+        },
+        {
+            "offering": "putridOak",
+            "gameid": 110
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 110
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 111
+        },
+        {
+            "offering": "sweetWilliamSachet",
+            "gameid": 111
+        },
+        {
+            "offering": "wardBlack",
+            "gameid": 111
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 112
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 112
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 112
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 112
+        },
+        {
+            "offering": "devoutShrikeWreath",
+            "gameid": 113
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 113
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 113
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 114
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 114
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 114
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 114
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 115
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 115
+        },
+        {
+            "offering": "5thAnniversary",
+            "gameid": 115
+        },
+        {
+            "offering": "bogLaurelSachet",
+            "gameid": 116
+        },
+        {
+            "offering": "freshBogLaurel",
+            "gameid": 116
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 116
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 116
+        },
+        {
+            "offering": "annotatedBlueprint",
+            "gameid": 117
+        },
+        {
+            "offering": "bloodyPartyStreamers",
+            "gameid": 117
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 117
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 117
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 118
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 118
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 118
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 118
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 120
+        },
+        {
+            "offering": "clearReagent",
+            "gameid": 121
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 121
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 121
+        },
+        {
+            "offering": "momentoMoriCypress",
+            "gameid": 122
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 122
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 123
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 123
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 123
+        },
+        {
+            "offering": "4thAnniversary",
+            "gameid": 124
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 124
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 124
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 125
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 125
+        },
+        {
+            "offering": "tornBlueprint",
+            "gameid": 125
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 126
+        },
+        {
+            "offering": "redMoneyPacket",
+            "gameid": 126
+        },
+        {
+            "offering": "wardSacrificial",
+            "gameid": 126
+        },
+        {
+            "offering": "5thAnniversary",
+            "gameid": 127
         }
     ],
     "last_update": "11/01/2022"

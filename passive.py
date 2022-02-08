@@ -200,17 +200,11 @@ def main():
     # parse args
     args = parser.parse_args()
 
-    if args.imageFix:
-        imageFix(args.folder)
-        quit()
-
     if args.brightness:
         bVector = int(calculateBrightnessVector(args.brightness))
     else:
         bVector = int(calculateBrightnessVector(1))
     
-    print(bVector)
-
     # set output file
     killerList = listdir("./Killers/")
     perkList = listdir("./Perks/")
@@ -218,79 +212,87 @@ def main():
     offeringList = listdir("./Offerings/")
     escapeList = listdir("./Escapes/")
 
-    if args.imgFile:
-        imgFile = args.imgFile
-        KillerScreen = cv2.imread(imgFile)
-        PerkScreen = cv2.imread(imgFile)
-        ItemScreen = cv2.imread(imgFile)
-        OfferingScreen = cv2.imread(imgFile)
-        ScoreScreen = cv2.imread(imgFile)
-        EscapeScreen = cv2.imread(imgFile)
-        TestingScreen = cv2.imread(imgFile)
-    else:
-        screenshotName = getImageCapture()
-
-        KillerScreen = cv2.imread('Screenshots/'+screenshotName)
-        PerkScreen = cv2.imread('Screenshots/'+screenshotName)
-        ItemScreen = cv2.imread('Screenshots/'+screenshotName)
-        OfferingScreen = cv2.imread('Screenshots/'+screenshotName)
-        ScoreScreen = cv2.imread('Screenshots/'+screenshotName)
-        EscapeScreen = cv2.imread('Screenshots/'+screenshotName)
-        TestingScreen = cv2.imread('Screenshots/'+screenshotName)
-
-        imgFile = "Screenshots/"+screenshotName
-
-    KillerScreen = adjustScreenSizeKiller(KillerScreen, bVector)
-    PerkScreen = adjustScreenSizePerks(PerkScreen, bVector)
-    ItemScreen = adjustScreenSizeItems(ItemScreen, bVector)
-    OfferingScreen = adjustScreenSizeOfferings(OfferingScreen, bVector)
-    ScoreScreen = adjustScreenSizeScores(ScoreScreen, bVector)
-    EscapeScreen = adjustScreenSizeEscapes(EscapeScreen, bVector)
-
-
-    if args.icon:
-        icon = args.icon
-        testingPerk(icon, "./Perks/", PerkScreen, True)
-
-
-    if args.testing:
-        while True:
-            img = ImageGrab.grab(bbox=(70, 100, 350, 170)) #x, y, w, h
-            img_np = np.array(img)
-            screen = cv2.cvtColor(img_np, cv2.COLOR_RGB2BGR)
-            
-            cv2.imshow("Testing", screen )
-            if cv2.waitKey(25) & 0xFF == ord('q'):
-                cv2.destroyAllWindows()
-                break
-
-    else:
-
-        killerPlayed, confirmation = calculateKiller(killerList, "./Killers/", KillerScreen)
-        perks = calculatePerks(perkList, "./Perks/", PerkScreen)
-        items = calculateItems(itemList, "./Items/", ItemScreen)
-        offerings = calculateOfferings(offeringList, "./Offerings/", OfferingScreen)
-        scores = calculateScores(ScoreScreen)
-        escapes = calculateEscapes(escapeList, "./Escapes/", EscapeScreen,bVector)
-
-        print('\n\n\n\n\n\n')
-        print(f'Killer Played: {killerPlayed} , Confirmation: {round(confirmation*100,2)}%\n')
-        print(f'Perks: {perks}\n')
-        print(f'Items: {items}\n')
-        print(f'Offerings: {offerings}\n')
-        print(f'Scores: {scores}\n')
-        print(f'Escapes: {escapes}\n')
+    while True:
+        img = ImageGrab.grab(bbox=(70, 100, 350, 170)) #x, y, w, h
+        img_np = np.array(img)
+        screen = cv2.cvtColor(img_np, cv2.COLOR_BGR2HSV)
         
-        if args.save:    
-            addDataToStorage(killerPlayed, perks, items, offerings, scores, escapes,"./Outputs/", imgFile)
+        lowerRed  = np.array([100,100,100])
+        upperRed= np.array([255,255,255])
 
-    if args.forceEnd:
-        cv2.destroyAllWindows()
-    else:
-        while True:
-            key = cv2.waitKey(30)
-            if key == 27 or key == 0:
-                quit()
+        mask = cv2.inRange(screen, lowerRed, upperRed)
+        WhiteBackground = np.zeros((screen.shape[0], screen.shape[1], 3), dtype=np.uint8)
+        WhiteBackground[:,:,:] = (255,255,255)
+
+        BlackBackground = np.zeros((screen.shape[0], screen.shape[1], 3), dtype=np.uint8)
+        BlackBackground[:,:,:] = (0,0,0)
+
+        result = cv2.bitwise_and(WhiteBackground,WhiteBackground,BlackBackground ,mask = mask)
+        
+        result = cv2.bitwise_not(result)
+
+        text = pytesseract.image_to_string(result, lang='eng',config='--psm 6')
+        # print(text)
+        if "SCOREBOARD" in str(text) :
+            print("Scoreboard Found - Saving Data")
+            screenshotName = getImageCapture()
+
+            KillerScreen = cv2.imread('Screenshots/'+screenshotName)
+            PerkScreen = cv2.imread('Screenshots/'+screenshotName)
+            ItemScreen = cv2.imread('Screenshots/'+screenshotName)
+            OfferingScreen = cv2.imread('Screenshots/'+screenshotName)
+            ScoreScreen = cv2.imread('Screenshots/'+screenshotName)
+            EscapeScreen = cv2.imread('Screenshots/'+screenshotName)
+
+            imgFile = "Screenshots/"+screenshotName
+
+            KillerScreen = adjustScreenSizeKiller(KillerScreen, bVector)
+            PerkScreen = adjustScreenSizePerks(PerkScreen, bVector)
+            ItemScreen = adjustScreenSizeItems(ItemScreen, bVector)
+            OfferingScreen = adjustScreenSizeOfferings(OfferingScreen, bVector)
+            ScoreScreen = adjustScreenSizeScores(ScoreScreen, bVector)
+            EscapeScreen = adjustScreenSizeEscapes(EscapeScreen, bVector)
+            
+            killerPlayed, confirmation = calculateKiller(killerList, "./Killers/", KillerScreen)
+            perks = calculatePerks(perkList, "./Perks/", PerkScreen)
+            items = calculateItems(itemList, "./Items/", ItemScreen)
+            offerings = calculateOfferings(offeringList, "./Offerings/", OfferingScreen)
+            scores = calculateScores(ScoreScreen)
+            escapes = calculateEscapes(escapeList, "./Escapes/", EscapeScreen,bVector)
+
+            print('\n\n\n\n\n\n')
+            print(f'Killer Played: {killerPlayed} , Confirmation: {round(confirmation*100,2)}%\n')
+            print(f'Perks: {perks}\n')
+            print(f'Items: {items}\n')
+            print(f'Offerings: {offerings}\n')
+            print(f'Scores: {scores}\n')
+            print(f'Escapes: {escapes}\n')
+
+            addDataToStorage(killerPlayed, perks, items, offerings, scores, escapes,"./Outputs/", imgFile)
+            print("Starting look for new game")
+            while True:
+                img = ImageGrab.grab(bbox=(115, 990, 180, 1020)) #x, y, w, h
+                img_np = np.array(img)
+                screen = cv2.cvtColor(img_np, cv2.COLOR_RGB2BGR)
+                
+                lowerRed  = np.array([100,100,100])
+                upperRed= np.array([255,255,255])
+
+                mask = cv2.inRange(screen, lowerRed, upperRed)
+                WhiteBackground = np.zeros((screen.shape[0], screen.shape[1], 3), dtype=np.uint8)
+                WhiteBackground[:,:,:] = (255,255,255)
+
+                BlackBackground = np.zeros((screen.shape[0], screen.shape[1], 3), dtype=np.uint8)
+                BlackBackground[:,:,:] = (0,0,0)
+
+                result = cv2.bitwise_and(WhiteBackground,WhiteBackground,BlackBackground ,mask = mask)
+                
+                screen = cv2.bitwise_not(result)
+
+                text = pytesseract.image_to_string(result, lang='eng',config='--psm 6')
+                if "BACK" in text:
+                    print("Back Button Found - Restarting Search for Scoreboard")
+                    break
     
 if __name__ == "__main__":
     main()

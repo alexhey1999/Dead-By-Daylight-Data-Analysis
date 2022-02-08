@@ -299,6 +299,210 @@
         {
             "name": "Doctor.png",
             "gameid": 76
+        },
+        {
+            "name": null,
+            "gameid": 77
+        },
+        {
+            "name": "Nurse.png",
+            "gameid": 78
+        },
+        {
+            "name": "Oni.png",
+            "gameid": 79
+        },
+        {
+            "name": "Clown.png",
+            "gameid": 80
+        },
+        {
+            "name": "Pinhead.png",
+            "gameid": 81
+        },
+        {
+            "name": "Trapper.png",
+            "gameid": 82
+        },
+        {
+            "name": "GhostFace.png",
+            "gameid": 83
+        },
+        {
+            "name": "Bubba.png",
+            "gameid": 84
+        },
+        {
+            "name": "Nemesis.png",
+            "gameid": 85
+        },
+        {
+            "name": "Hag.png",
+            "gameid": 86
+        },
+        {
+            "name": "Wraith.png",
+            "gameid": 87
+        },
+        {
+            "name": "Hillbilly.png",
+            "gameid": 88
+        },
+        {
+            "name": "Deathslinger.png",
+            "gameid": 89
+        },
+        {
+            "name": "Pig.png",
+            "gameid": 90
+        },
+        {
+            "name": "Huntress.png",
+            "gameid": 91
+        },
+        {
+            "name": "Trapper.png",
+            "gameid": 92
+        },
+        {
+            "name": "Hag.png",
+            "gameid": 93
+        },
+        {
+            "name": "Pinhead.png",
+            "gameid": 94
+        },
+        {
+            "name": "Wraith.png",
+            "gameid": 95
+        },
+        {
+            "name": "Bubba.png",
+            "gameid": 96
+        },
+        {
+            "name": "Hillbilly.png",
+            "gameid": 97
+        },
+        {
+            "name": "Nurse.png",
+            "gameid": 98
+        },
+        {
+            "name": "Pig.png",
+            "gameid": 99
+        },
+        {
+            "name": "Nurse.png",
+            "gameid": 100
+        },
+        {
+            "name": "Deathslinger.png",
+            "gameid": 101
+        },
+        {
+            "name": "Huntress.png",
+            "gameid": 102
+        },
+        {
+            "name": "Pig.png",
+            "gameid": 103
+        },
+        {
+            "name": null,
+            "gameid": 104
+        },
+        {
+            "name": "Demogorgon.png",
+            "gameid": 105
+        },
+        {
+            "name": "Nurse.png",
+            "gameid": 106
+        },
+        {
+            "name": "Pig.png",
+            "gameid": 107
+        },
+        {
+            "name": "Pinhead.png",
+            "gameid": 108
+        },
+        {
+            "name": "Huntress.png",
+            "gameid": 109
+        },
+        {
+            "name": "Nurse.png",
+            "gameid": 110
+        },
+        {
+            "name": "Demogorgon.png",
+            "gameid": 111
+        },
+        {
+            "name": "Bubba.png",
+            "gameid": 112
+        },
+        {
+            "name": "Clown.png",
+            "gameid": 113
+        },
+        {
+            "name": "Huntress.png",
+            "gameid": 114
+        },
+        {
+            "name": "Legion.png",
+            "gameid": 115
+        },
+        {
+            "name": "Demogorgon.png",
+            "gameid": 116
+        },
+        {
+            "name": "Artist.png",
+            "gameid": 117
+        },
+        {
+            "name": "Bubba.png",
+            "gameid": 118
+        },
+        {
+            "name": "Legion.png",
+            "gameid": 119
+        },
+        {
+            "name": "Legion.png",
+            "gameid": 120
+        },
+        {
+            "name": "Huntress.png",
+            "gameid": 121
+        },
+        {
+            "name": "Legion.png",
+            "gameid": 122
+        },
+        {
+            "name": "Spirit.png",
+            "gameid": 123
+        },
+        {
+            "name": "Oni.png",
+            "gameid": 124
+        },
+        {
+            "name": "Huntress.png",
+            "gameid": 125
+        },
+        {
+            "name": "Trickster.png",
+            "gameid": 126
+        },
+        {
+            "name": "Nemesis.png",
+            "gameid": 127
         }
     ],
     "last_update": "11/01/2022"
