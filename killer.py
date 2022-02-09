@@ -29,26 +29,25 @@ def adjustScreenSizeKiller(Screen,bVector):
     # cv2.imshow("Killer Screen", result)
     return result
 
-def calculateKiller(killerList, location, Screen):
+def calculateKiller(killerList, location, Screen,show = True):
     mostProbableKiller = None
     mostProbableKillerScore = 0
 
-    firstrun = False
+    # firstrun = False
 
     for killer in killerList:
         icon = cv2.imread(location+killer)
         icon = cv2.resize(icon, (40, 40),interpolation=cv2.INTER_AREA)
 
-        if killer == "iconPowers_feralFrenzy.png" and firstrun:
-            cv2.imshow(killer, icon)
-            firstrun = False
+        # if killer == "iconPowers_feralFrenzy.png" and firstrun:
+        #     cv2.imshow(killer, icon)
+        #     firstrun = False
         result = cv2.matchTemplate(Screen, icon, cv2.TM_CCOEFF_NORMED)
         minVal, maxVal, minLoc, maxLoc = cv2.minMaxLoc(result)
         if maxVal > mostProbableKillerScore:
-            mostProbableKillerPosition = maxLoc
             mostProbableKillerScore = maxVal
             mostProbableKiller = killer
-
-    cv2.imshow("Killer Screen", Screen)
+    if show:
+        cv2.imshow("Killer Screen", Screen)
 
     return mostProbableKiller, mostProbableKillerScore

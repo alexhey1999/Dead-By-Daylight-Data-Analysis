@@ -503,6 +503,42 @@
         {
             "name": "Nemesis.png",
             "gameid": 127
+        },
+        {
+            "name": null,
+            "gameid": 128
+        },
+        {
+            "name": "PyramidHead.png",
+            "gameid": 129
+        },
+        {
+            "name": "Pinhead.png",
+            "gameid": 130
+        },
+        {
+            "name": "Myers.png",
+            "gameid": 131
+        },
+        {
+            "name": "Myers.png",
+            "gameid": 132
+        },
+        {
+            "name": null,
+            "gameid": 133
+        },
+        {
+            "name": "Nemesis.png",
+            "gameid": 134
+        },
+        {
+            "name": "Artist.png",
+            "gameid": 135
+        },
+        {
+            "name": null,
+            "gameid": 136
         }
     ],
     "last_update": "11/01/2022"

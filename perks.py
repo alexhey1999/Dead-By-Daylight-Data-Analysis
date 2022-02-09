@@ -28,7 +28,7 @@ def adjustScreenSizePerks(Screen,bVector):
     # cv2.imshow("Perk Screen", result)
     return result
 
-def calculatePerks(perkList,location,Screen):
+def calculatePerks(perkList,location,Screen,show = True):
     perks = {}
     size = 50
     thresholdOriginal = 0.65
@@ -94,7 +94,7 @@ def calculatePerks(perkList,location,Screen):
         if len(rectangles) > 0:
             perks[perk.split('_')[1].split('.')[0]] = len(rectangles)
 
-
-    cv2.imshow("Perk Screen ", Screen)
+    if show:
+        cv2.imshow("Perk Screen ", Screen)
 
     return perks

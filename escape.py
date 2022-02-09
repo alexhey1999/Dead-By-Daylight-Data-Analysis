@@ -22,7 +22,7 @@ def adjustScreenSizeEscapes(Screen,bVector):
     # cv2.imshow("Scores", result)
     return result
 
-def calculateEscapes(escapeList,location,Screen,bVector):
+def calculateEscapes(escapeList,location,Screen,bVector,show = True):
     offerings = {}
 
     thresholdOriginal = 0.80
@@ -102,6 +102,7 @@ def calculateEscapes(escapeList,location,Screen,bVector):
         if len(rectangles) > 0:
             offerings[item.split('.')[0]] = len(rectangles)
 
-    cv2.imshow("Escape Screen", Screen)
+    if show:
+        cv2.imshow("Escape Screen", Screen)
 
     return offerings

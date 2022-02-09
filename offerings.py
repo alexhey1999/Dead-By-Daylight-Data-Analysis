@@ -31,7 +31,7 @@ def adjustScreenSizeOfferings(Screen,bVector):
     # cv2.imshow("Screen", Screen)
     return Screen
 
-def calculateOfferings(offeringsList, location, Screen):
+def calculateOfferings(offeringsList, location, Screen, show = True):
     offerings = {}
     size = 50
     cropBorder = 0
@@ -85,6 +85,7 @@ def calculateOfferings(offeringsList, location, Screen):
         if len(rectangles) > 0:
             offerings[item.split('_')[1].split('.')[0]] = len(rectangles)
 
-    cv2.imshow("Offerings Screen", Screen)
+    if show:
+        cv2.imshow("Offerings Screen", Screen)
 
     return offerings

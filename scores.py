@@ -32,7 +32,7 @@ def checkPlayerScore(scores,playerScore,player):
     except:
         scores[player] = "NaN"
 
-def calculateScores(Screen):
+def calculateScores(Screen,show = True):
     # text = pytesseract.image_to_string(Screen, lang='eng',config='--psm 6 --oem 3 -c tessedit_char_whitelist=0123456789')
     text = pytesseract.image_to_string(Screen, lang='eng',config='--psm 6')
     # print(f'Text Extrapolated: \n{text}')
@@ -51,12 +51,7 @@ def calculateScores(Screen):
     except:
         print("Error in calculating scores")
 
-
-    firstrun = False
-    if firstrun:
-        cv2.imshow("Screen", Screen)
-        firstrun = False
-    
-    cv2.imshow("Scores Screen", Screen)
+    if show:
+        cv2.imshow("Scores Screen", Screen)
 
     return scores

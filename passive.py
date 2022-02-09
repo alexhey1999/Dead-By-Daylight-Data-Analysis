@@ -9,6 +9,7 @@ import PIL.Image as Image
 from PIL import ImageGrab
 import json
 import datetime
+import time
 
 path = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 # path = r'C:\Users\alex.hey\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
@@ -212,6 +213,7 @@ def main():
     offeringList = listdir("./Offerings/")
     escapeList = listdir("./Escapes/")
 
+    print("Starting Search...")
     while True:
         img = ImageGrab.grab(bbox=(70, 100, 350, 170)) #x, y, w, h
         img_np = np.array(img)
@@ -235,6 +237,7 @@ def main():
         # print(text)
         if "SCOREBOARD" in str(text) :
             print("Scoreboard Found - Saving Data")
+            time.sleep(2)
             screenshotName = getImageCapture()
 
             KillerScreen = cv2.imread('Screenshots/'+screenshotName)
@@ -253,12 +256,12 @@ def main():
             ScoreScreen = adjustScreenSizeScores(ScoreScreen, bVector)
             EscapeScreen = adjustScreenSizeEscapes(EscapeScreen, bVector)
             
-            killerPlayed, confirmation = calculateKiller(killerList, "./Killers/", KillerScreen)
-            perks = calculatePerks(perkList, "./Perks/", PerkScreen)
-            items = calculateItems(itemList, "./Items/", ItemScreen)
-            offerings = calculateOfferings(offeringList, "./Offerings/", OfferingScreen)
-            scores = calculateScores(ScoreScreen)
-            escapes = calculateEscapes(escapeList, "./Escapes/", EscapeScreen,bVector)
+            killerPlayed, confirmation = calculateKiller(killerList, "./Killers/", KillerScreen,False)
+            perks = calculatePerks(perkList, "./Perks/", PerkScreen,False)
+            items = calculateItems(itemList, "./Items/", ItemScreen,False)
+            offerings = calculateOfferings(offeringList, "./Offerings/", OfferingScreen,False)
+            scores = calculateScores(ScoreScreen,False)
+            escapes = calculateEscapes(escapeList, "./Escapes/", EscapeScreen,bVector,False)
 
             print('\n\n\n\n\n\n')
             print(f'Killer Played: {killerPlayed} , Confirmation: {round(confirmation*100,2)}%\n')

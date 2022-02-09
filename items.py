@@ -29,7 +29,7 @@ def adjustScreenSizeItems(Screen,bVector):
     # cv2.imshow("Screen", Screen)
     return Screen
 
-def calculateItems(itemList, location, Screen):
+def calculateItems(itemList, location, Screen,show = True):
     items = {}
     size = 42
     cropBorder = 2
@@ -86,7 +86,7 @@ def calculateItems(itemList, location, Screen):
            
             # print(f'{perk} : {len(rectangles)}')
     # print(perks)
-
-    cv2.imshow("Item Screen", Screen)
+    if show:
+        cv2.imshow("Item Screen", Screen)
 
     return items

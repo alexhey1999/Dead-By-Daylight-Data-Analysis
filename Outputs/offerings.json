@@ -955,6 +955,54 @@
         {
             "offering": "5thAnniversary",
             "gameid": 127
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 129
+        },
+        {
+            "offering": "momentoMoriEbony",
+            "gameid": 129
+        },
+        {
+            "offering": "sweetWilliamSachet",
+            "gameid": 129
+        },
+        {
+            "offering": "survivorPudding",
+            "gameid": 130
+        },
+        {
+            "offering": "freshSweetWilliam",
+            "gameid": 131
+        },
+        {
+            "offering": "bloodyPartyStreamers",
+            "gameid": 132
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 132
+        },
+        {
+            "offering": "heartLocket",
+            "gameid": 132
+        },
+        {
+            "offering": "momentoMoriEbony",
+            "gameid": 134
+        },
+        {
+            "offering": "bogLaurelSachet",
+            "gameid": 135
+        },
+        {
+            "offering": "bloodyPartyStreamers",
+            "gameid": 136
+        },
+        {
+            "offering": "creamChalkPouch",
+            "gameid": 136
         }
     ],
     "last_update": "11/01/2022"
