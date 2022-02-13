@@ -1003,6 +1003,122 @@
         {
             "offering": "creamChalkPouch",
             "gameid": 136
+        },
+        {
+            "offering": "crispleafAmaranthSachet",
+            "gameid": 140
+        },
+        {
+            "offering": "shroudOfBinding",
+            "gameid": 140
+        },
+        {
+            "offering": "5thAnniversary",
+            "gameid": 142
+        },
+        {
+            "offering": "vigosShroud",
+            "gameid": 143
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 144
+        },
+        {
+            "offering": "5thAnniversary",
+            "gameid": 144
+        },
+        {
+            "offering": "bloodyPartyStreamers",
+            "gameid": 145
+        },
+        {
+            "offering": "boundEnvelope",
+            "gameid": 145
+        },
+        {
+            "offering": "freshSweetWilliam",
+            "gameid": 145
+        },
+        {
+            "offering": "momentoMoriCypress",
+            "gameid": 146
+        },
+        {
+            "offering": "sealedEnvelope",
+            "gameid": 146
+        },
+        {
+            "offering": "freshSweetWilliam",
+            "gameid": 147
+        },
+        {
+            "offering": "macmilliansPhalanxBone",
+            "gameid": 147
+        },
+        {
+            "offering": "freshSweetWilliam",
+            "gameid": 149
+        },
+        {
+            "offering": "macmilliansPhalanxBone",
+            "gameid": 149
+        },
+        {
+            "offering": "freshSweetWilliam",
+            "gameid": 150
+        },
+        {
+            "offering": "macmilliansPhalanxBone",
+            "gameid": 150
+        },
+        {
+            "offering": "survivorPudding",
+            "gameid": 150
+        },
+        {
+            "offering": "bloodyPartyStreamers",
+            "gameid": 151
+        },
+        {
+            "offering": "freshSweetWilliam",
+            "gameid": 151
+        },
+        {
+            "offering": "macmilliansPhalanxBone",
+            "gameid": 151
+        },
+        {
+            "offering": "freshSweetWilliam",
+            "gameid": 152
+        },
+        {
+            "offering": "freshSweetWilliam",
+            "gameid": 153
+        },
+        {
+            "offering": "survivorPudding",
+            "gameid": 153
+        },
+        {
+            "offering": "bloodyPartyStreamers",
+            "gameid": 154
+        },
+        {
+            "offering": "sealedEnvelope",
+            "gameid": 154
+        },
+        {
+            "offering": "sealedEnvelope",
+            "gameid": 155
+        },
+        {
+            "offering": "wardBlack",
+            "gameid": 155
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 158
         }
     ],
     "last_update": "11/01/2022"

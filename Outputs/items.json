@@ -767,6 +767,174 @@
         {
             "item": "rundownAidKit",
             "gameid": 136
+        },
+        {
+            "item": "toolbox",
+            "gameid": 137
+        },
+        {
+            "item": "toolboxWornOut",
+            "gameid": 137
+        },
+        {
+            "item": "chineseFirecracker",
+            "gameid": 140
+        },
+        {
+            "item": "chineseFirecracker",
+            "gameid": 142
+        },
+        {
+            "item": "flashlight",
+            "gameid": 143
+        },
+        {
+            "item": "rundownAidKit",
+            "gameid": 144
+        },
+        {
+            "item": "winterEventFirecracker",
+            "gameid": 144
+        },
+        {
+            "item": "rundownAidKit",
+            "gameid": 145
+        },
+        {
+            "item": "flashlight",
+            "gameid": 146
+        },
+        {
+            "item": "rundownAidKit",
+            "gameid": 146
+        },
+        {
+            "item": "medkit",
+            "gameid": 147
+        },
+        {
+            "item": "toolbox",
+            "gameid": 147
+        },
+        {
+            "item": "toolboxWornOut",
+            "gameid": 147
+        },
+        {
+            "item": "medkit",
+            "gameid": 149
+        },
+        {
+            "item": "toolbox",
+            "gameid": 149
+        },
+        {
+            "item": "toolboxWornOut",
+            "gameid": 149
+        },
+        {
+            "item": "firstAidKit",
+            "gameid": 150
+        },
+        {
+            "item": "medkit",
+            "gameid": 150
+        },
+        {
+            "item": "toolboxWornOut",
+            "gameid": 150
+        },
+        {
+            "item": "chineseFirecracker",
+            "gameid": 151
+        },
+        {
+            "item": "firstAidKit",
+            "gameid": 151
+        },
+        {
+            "item": "medkit",
+            "gameid": 151
+        },
+        {
+            "item": "medkitHalloween",
+            "gameid": 151
+        },
+        {
+            "item": "toolboxWornOut",
+            "gameid": 151
+        },
+        {
+            "item": "medkit",
+            "gameid": 152
+        },
+        {
+            "item": "toolboxWornOut",
+            "gameid": 152
+        },
+        {
+            "item": "medkit",
+            "gameid": 153
+        },
+        {
+            "item": "toolbox",
+            "gameid": 153
+        },
+        {
+            "item": "toolboxWornOut",
+            "gameid": 153
+        },
+        {
+            "item": "chineseFirecracker",
+            "gameid": 154
+        },
+        {
+            "item": "medkit",
+            "gameid": 154
+        },
+        {
+            "item": "toolbox",
+            "gameid": 154
+        },
+        {
+            "item": "toolboxWornOut",
+            "gameid": 154
+        },
+        {
+            "item": "medkit",
+            "gameid": 155
+        },
+        {
+            "item": "toolboxWornOut",
+            "gameid": 155
+        },
+        {
+            "item": "chineseFirecracker",
+            "gameid": 156
+        },
+        {
+            "item": "medkit",
+            "gameid": 156
+        },
+        {
+            "item": "toolboxWornOut",
+            "gameid": 156
+        },
+        {
+            "item": "medkit",
+            "gameid": 158
+        },
+        {
+            "item": "toolbox",
+            "gameid": 158
+        },
+        {
+            "item": "toolboxWornOut",
+            "gameid": 158
+        },
+        {
+            "item": "winterEventFirecracker",
+            "gameid": 158
         }
     ],
     "last_update": "11/01/2022"

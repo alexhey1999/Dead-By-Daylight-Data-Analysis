@@ -600,6 +600,92 @@
             "alive": 3,
             "disconnected": 1,
             "gameid": 136
+        },
+        {
+            "alive": 3,
+            "sacrificed": 1,
+            "gameid": 137
+        },
+        {
+            "alive": 1,
+            "escape": 3,
+            "gameid": 138
+        },
+        {
+            "alive": 1,
+            "escape": 2,
+            "sacrificed": 1,
+            "gameid": 139
+        },
+        {
+            "escape": 4,
+            "gameid": 140
+        },
+        {
+            "death": 1,
+            "disconnected": 1,
+            "sacrificed": 2,
+            "gameid": 142
+        },
+        {
+            "escape": 3,
+            "sacrificed": 1,
+            "gameid": 143
+        },
+        {
+            "alive": 4,
+            "gameid": 144
+        },
+        {
+            "death": 1,
+            "escape": 3,
+            "gameid": 145
+        },
+        {
+            "escape": 3,
+            "gameid": 146
+        },
+        {
+            "escape": 4,
+            "gameid": 147
+        },
+        {
+            "escape": 4,
+            "gameid": 149
+        },
+        {
+            "escape": 4,
+            "gameid": 150
+        },
+        {
+            "escape": 4,
+            "gameid": 151
+        },
+        {
+            "escape": 4,
+            "gameid": 152
+        },
+        {
+            "escape": 4,
+            "gameid": 153
+        },
+        {
+            "escape": 4,
+            "gameid": 154
+        },
+        {
+            "escape": 4,
+            "gameid": 155
+        },
+        {
+            "escape": 2,
+            "sacrificed": 2,
+            "gameid": 156
+        },
+        {
+            "alive": 2,
+            "sacrificed": 2,
+            "gameid": 158
         }
     ],
     "last_update": "11/01/2022"
