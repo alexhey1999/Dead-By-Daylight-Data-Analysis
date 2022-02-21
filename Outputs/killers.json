@@ -627,6 +627,38 @@
         {
             "name": null,
             "gameid": 158
+        },
+        {
+            "name": "Nemesis.png",
+            "gameid": 159
+        },
+        {
+            "name": "Nemesis.png",
+            "gameid": 160
+        },
+        {
+            "name": "Demogorgon.png",
+            "gameid": 161
+        },
+        {
+            "name": null,
+            "gameid": 162
+        },
+        {
+            "name": "Artist.png",
+            "gameid": 163
+        },
+        {
+            "name": "Artist.png",
+            "gameid": 164
+        },
+        {
+            "name": "Wraith.png",
+            "gameid": 165
+        },
+        {
+            "name": "Myers.png",
+            "gameid": 166
         }
     ],
     "last_update": "11/01/2022"

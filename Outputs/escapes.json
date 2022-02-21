@@ -686,6 +686,40 @@
             "alive": 2,
             "sacrificed": 2,
             "gameid": 158
+        },
+        {
+            "escape": 4,
+            "gameid": 159
+        },
+        {
+            "escape": 4,
+            "gameid": 160
+        },
+        {
+            "escape": 4,
+            "gameid": 161
+        },
+        {
+            "escape": 4,
+            "gameid": 162
+        },
+        {
+            "escape": 4,
+            "gameid": 163
+        },
+        {
+            "escape": 3,
+            "sacrificed": 1,
+            "gameid": 164
+        },
+        {
+            "escape": 4,
+            "gameid": 165
+        },
+        {
+            "escape": 2,
+            "sacrificed": 2,
+            "gameid": 166
         }
     ],
     "last_update": "11/01/2022"

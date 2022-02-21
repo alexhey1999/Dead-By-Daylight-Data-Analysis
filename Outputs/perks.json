@@ -11951,6 +11951,618 @@
         {
             "perk": "windowsOfOpportunity",
             "gameid": 158
+        },
+        {
+            "perk": "adrenaline",
+            "gameid": 159
+        },
+        {
+            "perk": "bond",
+            "gameid": 159
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 159
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 159
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 159
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 159
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 159
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 159
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 159
+        },
+        {
+            "perk": "distortion",
+            "gameid": 159
+        },
+        {
+            "perk": "diversion",
+            "gameid": 159
+        },
+        {
+            "perk": "Flashbang",
+            "gameid": 159
+        },
+        {
+            "perk": "hysteria",
+            "gameid": 159
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 159
+        },
+        {
+            "perk": "lethalPursuer",
+            "gameid": 159
+        },
+        {
+            "perk": "soulGuard",
+            "gameid": 159
+        },
+        {
+            "perk": "surveillance",
+            "gameid": 159
+        },
+        {
+            "perk": "unbreakable",
+            "gameid": 159
+        },
+        {
+            "perk": "windowsOfOpportunity",
+            "gameid": 159
+        },
+        {
+            "perk": "adrenaline",
+            "gameid": 160
+        },
+        {
+            "perk": "bond",
+            "gameid": 160
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 160
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 160
+        },
+        {
+            "perk": "corruptIntervention",
+            "gameid": 160
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 160
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 160
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 160
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 160
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 160
+        },
+        {
+            "perk": "distortion",
+            "gameid": 160
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 160
+        },
+        {
+            "perk": "powerStruggle",
+            "gameid": 160
+        },
+        {
+            "perk": "ruin",
+            "gameid": 160
+        },
+        {
+            "perk": "soulGuard",
+            "gameid": 160
+        },
+        {
+            "perk": "surveillance",
+            "gameid": 160
+        },
+        {
+            "perk": "surveillance",
+            "gameid": 160
+        },
+        {
+            "perk": "tenacity",
+            "gameid": 160
+        },
+        {
+            "perk": "thrillingTremors",
+            "gameid": 160
+        },
+        {
+            "perk": "unbreakable",
+            "gameid": 160
+        },
+        {
+            "perk": "windowsOfOpportunity",
+            "gameid": 160
+        },
+        {
+            "perk": "adrenaline",
+            "gameid": 161
+        },
+        {
+            "perk": "bond",
+            "gameid": 161
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 161
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 161
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 161
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 161
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 161
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 161
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 161
+        },
+        {
+            "perk": "discordance",
+            "gameid": 161
+        },
+        {
+            "perk": "distortion",
+            "gameid": 161
+        },
+        {
+            "perk": "imAllEars",
+            "gameid": 161
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 161
+        },
+        {
+            "perk": "painResonance",
+            "gameid": 161
+        },
+        {
+            "perk": "powerStruggle",
+            "gameid": 161
+        },
+        {
+            "perk": "saveTheBestForLast",
+            "gameid": 161
+        },
+        {
+            "perk": "soulGuard",
+            "gameid": 161
+        },
+        {
+            "perk": "surveillance",
+            "gameid": 161
+        },
+        {
+            "perk": "tenacity",
+            "gameid": 161
+        },
+        {
+            "perk": "windowsOfOpportunity",
+            "gameid": 161
+        },
+        {
+            "perk": "adrenaline",
+            "gameid": 162
+        },
+        {
+            "perk": "bond",
+            "gameid": 162
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 162
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 162
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 162
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 162
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 162
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 162
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 162
+        },
+        {
+            "perk": "distortion",
+            "gameid": 162
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 162
+        },
+        {
+            "perk": "powerStruggle",
+            "gameid": 162
+        },
+        {
+            "perk": "soulGuard",
+            "gameid": 162
+        },
+        {
+            "perk": "tenacity",
+            "gameid": 162
+        },
+        {
+            "perk": "unbreakable",
+            "gameid": 162
+        },
+        {
+            "perk": "windowsOfOpportunity",
+            "gameid": 162
+        },
+        {
+            "perk": "adrenaline",
+            "gameid": 163
+        },
+        {
+            "perk": "bond",
+            "gameid": 163
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 163
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 163
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 163
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 163
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 163
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 163
+        },
+        {
+            "perk": "Deadlock",
+            "gameid": 163
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 163
+        },
+        {
+            "perk": "distortion",
+            "gameid": 163
+        },
+        {
+            "perk": "dragonsGrip",
+            "gameid": 163
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 163
+        },
+        {
+            "perk": "powerStruggle",
+            "gameid": 163
+        },
+        {
+            "perk": "soulGuard",
+            "gameid": 163
+        },
+        {
+            "perk": "surge",
+            "gameid": 163
+        },
+        {
+            "perk": "tenacity",
+            "gameid": 163
+        },
+        {
+            "perk": "unbreakable",
+            "gameid": 163
+        },
+        {
+            "perk": "windowsOfOpportunity",
+            "gameid": 163
+        },
+        {
+            "perk": "adrenaline",
+            "gameid": 164
+        },
+        {
+            "perk": "bond",
+            "gameid": 164
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 164
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 164
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 164
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 164
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 164
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 164
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 164
+        },
+        {
+            "perk": "distortion",
+            "gameid": 164
+        },
+        {
+            "perk": "flipFlop",
+            "gameid": 164
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 164
+        },
+        {
+            "perk": "noOneEscapesDeath",
+            "gameid": 164
+        },
+        {
+            "perk": "powerStruggle",
+            "gameid": 164
+        },
+        {
+            "perk": "soulGuard",
+            "gameid": 164
+        },
+        {
+            "perk": "surge",
+            "gameid": 164
+        },
+        {
+            "perk": "unbreakable",
+            "gameid": 164
+        },
+        {
+            "perk": "windowsOfOpportunity",
+            "gameid": 164
+        },
+        {
+            "perk": "adrenaline",
+            "gameid": 165
+        },
+        {
+            "perk": "BBQAndChili",
+            "gameid": 165
+        },
+        {
+            "perk": "bond",
+            "gameid": 165
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 165
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 165
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 165
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 165
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 165
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 165
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 165
+        },
+        {
+            "perk": "distortion",
+            "gameid": 165
+        },
+        {
+            "perk": "flipFlop",
+            "gameid": 165
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 165
+        },
+        {
+            "perk": "makeYourChoice",
+            "gameid": 165
+        },
+        {
+            "perk": "nemesis",
+            "gameid": 165
+        },
+        {
+            "perk": "powerStruggle",
+            "gameid": 165
+        },
+        {
+            "perk": "soulGuard",
+            "gameid": 165
+        },
+        {
+            "perk": "surveillance",
+            "gameid": 165
+        },
+        {
+            "perk": "windowsOfOpportunity",
+            "gameid": 165
+        },
+        {
+            "perk": "adrenaline",
+            "gameid": 166
+        },
+        {
+            "perk": "bond",
+            "gameid": 166
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 166
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 166
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 166
+        },
+        {
+            "perk": "corruptIntervention",
+            "gameid": 166
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 166
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 166
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 166
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 166
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 166
+        },
+        {
+            "perk": "distortion",
+            "gameid": 166
+        },
+        {
+            "perk": "Flashbang",
+            "gameid": 166
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 166
+        },
+        {
+            "perk": "lethalPursuer",
+            "gameid": 166
+        },
+        {
+            "perk": "playWithYourFood",
+            "gameid": 166
+        },
+        {
+            "perk": "sloppyButcher",
+            "gameid": 166
+        },
+        {
+            "perk": "soulGuard",
+            "gameid": 166
+        },
+        {
+            "perk": "surveillance",
+            "gameid": 166
+        },
+        {
+            "perk": "unbreakable",
+            "gameid": 166
+        },
+        {
+            "perk": "windowsOfOpportunity",
+            "gameid": 166
         }
     ],
     "last_update": "11/01/2022"

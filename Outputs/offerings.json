@@ -1119,6 +1119,66 @@
         {
             "offering": "escapeCake",
             "gameid": 158
+        },
+        {
+            "offering": "bloodyPartyStreamers",
+            "gameid": 159
+        },
+        {
+            "offering": "fragrantPrimroseBlossom",
+            "gameid": 160
+        },
+        {
+            "offering": "hollowShell",
+            "gameid": 160
+        },
+        {
+            "offering": "freshBogLaurel",
+            "gameid": 161
+        },
+        {
+            "offering": "survivorPudding",
+            "gameid": 161
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 162
+        },
+        {
+            "offering": "freshBogLaurel",
+            "gameid": 162
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 163
+        },
+        {
+            "offering": "freshBogLaurel",
+            "gameid": 163
+        },
+        {
+            "offering": "survivorPudding",
+            "gameid": 163
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 164
+        },
+        {
+            "offering": "freshBogLaurel",
+            "gameid": 164
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 165
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 166
+        },
+        {
+            "offering": "hollowShell",
+            "gameid": 166
         }
     ],
     "last_update": "11/01/2022"
