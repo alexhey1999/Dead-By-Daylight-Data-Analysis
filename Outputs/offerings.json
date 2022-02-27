@@ -1179,6 +1179,150 @@
         {
             "offering": "hollowShell",
             "gameid": 166
+        },
+        {
+            "offering": "annotatedBlueprint",
+            "gameid": 167
+        },
+        {
+            "offering": "bloodyPartyStreamers",
+            "gameid": 167
+        },
+        {
+            "offering": "freshCrispleafAmaranth",
+            "gameid": 168
+        },
+        {
+            "offering": "wardWhite",
+            "gameid": 168
+        },
+        {
+            "offering": "fragrantSweetWilliam",
+            "gameid": 170
+        },
+        {
+            "offering": "jigsawPiece",
+            "gameid": 170
+        },
+        {
+            "offering": "wardSacrificial",
+            "gameid": 171
+        },
+        {
+            "offering": "wardSacrificial",
+            "gameid": 172
+        },
+        {
+            "offering": "5thAnniversary",
+            "gameid": 172
+        },
+        {
+            "offering": "boundEnvelope",
+            "gameid": 173
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 174
+        },
+        {
+            "offering": "ravenWreath",
+            "gameid": 174
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 175
+        },
+        {
+            "offering": "wardWhite",
+            "gameid": 175
+        },
+        {
+            "offering": "bloodyPartyStreamers",
+            "gameid": 176
+        },
+        {
+            "offering": "devoutTanagerWreath",
+            "gameid": 176
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 176
+        },
+        {
+            "offering": "wardWhite",
+            "gameid": 176
+        },
+        {
+            "offering": "bloodyPartyStreamers",
+            "gameid": 177
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 177
+        },
+        {
+            "offering": "freshSweetWilliam",
+            "gameid": 177
+        },
+        {
+            "offering": "clearReagent",
+            "gameid": 178
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 178
+        },
+        {
+            "offering": "bloodyPartyStreamers",
+            "gameid": 179
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 179
+        },
+        {
+            "offering": "sealedEnvelope",
+            "gameid": 179
+        },
+        {
+            "offering": "bloodyPartyStreamers",
+            "gameid": 180
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 180
+        },
+        {
+            "offering": "sealedEnvelope",
+            "gameid": 180
+        },
+        {
+            "offering": "survivorPudding",
+            "gameid": 180
+        },
+        {
+            "offering": "cutCoin",
+            "gameid": 181
+        },
+        {
+            "offering": "sealedEnvelope",
+            "gameid": 181
+        },
+        {
+            "offering": "sealedEnvelope",
+            "gameid": 181
+        },
+        {
+            "offering": "cutCoin",
+            "gameid": 182
+        },
+        {
+            "offering": "sealedEnvelope",
+            "gameid": 182
+        },
+        {
+            "offering": "sealedEnvelope",
+            "gameid": 182
         }
     ],
     "last_update": "11/01/2022"

@@ -659,6 +659,70 @@
         {
             "name": "Myers.png",
             "gameid": 166
+        },
+        {
+            "name": "Myers.png",
+            "gameid": 167
+        },
+        {
+            "name": "Pig.png",
+            "gameid": 168
+        },
+        {
+            "name": "GhostFace.png",
+            "gameid": 169
+        },
+        {
+            "name": "Hillbilly.png",
+            "gameid": 170
+        },
+        {
+            "name": null,
+            "gameid": 171
+        },
+        {
+            "name": "Hillbilly.png",
+            "gameid": 172
+        },
+        {
+            "name": "Trapper.png",
+            "gameid": 173
+        },
+        {
+            "name": "Nemesis.png",
+            "gameid": 174
+        },
+        {
+            "name": "Legion.png",
+            "gameid": 175
+        },
+        {
+            "name": "Hillbilly.png",
+            "gameid": 176
+        },
+        {
+            "name": "GhostFace.png",
+            "gameid": 177
+        },
+        {
+            "name": "Pig.png",
+            "gameid": 178
+        },
+        {
+            "name": null,
+            "gameid": 179
+        },
+        {
+            "name": "Bubba.png",
+            "gameid": 180
+        },
+        {
+            "name": "Artist.png",
+            "gameid": 181
+        },
+        {
+            "name": "Artist.png",
+            "gameid": 182
         }
     ],
     "last_update": "11/01/2022"

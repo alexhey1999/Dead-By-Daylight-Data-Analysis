@@ -271,6 +271,10 @@ def main():
             print(f'Scores: {scores}\n')
             print(f'Escapes: {escapes}\n')
 
+            # print(escapes["escape"])
+            if "alive" in escapes:
+                print("Game Still In Progress")
+                continue
             addDataToStorage(killerPlayed, perks, items, offerings, scores, escapes,"./Outputs/", imgFile)
             print("Starting look for new game")
             while True:

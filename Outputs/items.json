@@ -1035,6 +1035,82 @@
         {
             "item": "medkit",
             "gameid": 166
+        },
+        {
+            "item": "flashlightSport",
+            "gameid": 168
+        },
+        {
+            "item": "rangersAidKit",
+            "gameid": 169
+        },
+        {
+            "item": "winterEventFirecracker",
+            "gameid": 170
+        },
+        {
+            "item": "toolboxAlexs",
+            "gameid": 171
+        },
+        {
+            "item": "toolboxAlexs",
+            "gameid": 172
+        },
+        {
+            "item": "flashlightSport",
+            "gameid": 173
+        },
+        {
+            "item": "winterEventFirecracker",
+            "gameid": 173
+        },
+        {
+            "item": "rangersAidKit",
+            "gameid": 175
+        },
+        {
+            "item": "flashlightSport",
+            "gameid": 176
+        },
+        {
+            "item": "rangersAidKit",
+            "gameid": 176
+        },
+        {
+            "item": "toolbox",
+            "gameid": 177
+        },
+        {
+            "item": "toolbox",
+            "gameid": 177
+        },
+        {
+            "item": "toolboxWornOut",
+            "gameid": 177
+        },
+        {
+            "item": "toolboxWornOut",
+            "gameid": 177
+        },
+        {
+            "item": "flashlight",
+            "gameid": 178
+        },
+        {
+            "item": "firstAidKit",
+            "gameid": 179
+        },
+        {
+            "item": "firstAidKit",
+            "gameid": 180
+        },
+        {
+            "item": "rundownAidKit",
+            "gameid": 181
+        },
+        {
+            "item": "rundownAidKit",
+            "gameid": 182
         }
     ],
     "last_update": "11/01/2022"
