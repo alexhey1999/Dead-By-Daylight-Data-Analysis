@@ -723,6 +723,50 @@
         {
             "name": "Artist.png",
             "gameid": 182
+        },
+        {
+            "name": null,
+            "gameid": 183
+        },
+        {
+            "name": "Freddy.png",
+            "gameid": 184
+        },
+        {
+            "name": "Hillbilly.png",
+            "gameid": 185
+        },
+        {
+            "name": "Blight.png",
+            "gameid": 186
+        },
+        {
+            "name": "Huntress.png",
+            "gameid": 187
+        },
+        {
+            "name": "Doctor.png",
+            "gameid": 188
+        },
+        {
+            "name": "Doctor.png",
+            "gameid": 189
+        },
+        {
+            "name": "Huntress.png",
+            "gameid": 190
+        },
+        {
+            "name": "Spirit.png",
+            "gameid": 191
+        },
+        {
+            "name": "Myers.png",
+            "gameid": 192
+        },
+        {
+            "name": "Hag.png",
+            "gameid": 193
         }
     ],
     "last_update": "11/01/2022"

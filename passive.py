@@ -69,6 +69,12 @@ def calculateBrightnessVector(brightness):
 def addDataToStorage(killerPlayed, perks, items, offerings, scores, escapes, location,file):
     gameID = 0
 
+    try:
+        newScoreData = {"player1Score": scores["Player1"],"player2Score": scores["Player2"],"player3Score": scores["Player3"],"player4Score": scores["Player4"],"killerScore": scores["Killer"],"gameid":gameID}
+    except:
+        print("Invalid Score Data")
+        return
+
     with open(location+'games.json',"r+") as games:
         gameID = 0
         game_data = json.load(games)

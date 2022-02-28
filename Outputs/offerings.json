@@ -1323,6 +1323,38 @@
         {
             "offering": "sealedEnvelope",
             "gameid": 182
+        },
+        {
+            "offering": "devoutTanagerWreath",
+            "gameid": 186
+        },
+        {
+            "offering": "shroudOfSeparation",
+            "gameid": 187
+        },
+        {
+            "offering": "moldyOak",
+            "gameid": 188
+        },
+        {
+            "offering": "sealedEnvelope",
+            "gameid": 191
+        },
+        {
+            "offering": "sealedEnvelope",
+            "gameid": 192
+        },
+        {
+            "offering": "survivorPudding",
+            "gameid": 192
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 193
+        },
+        {
+            "offering": "sealedEnvelope",
+            "gameid": 193
         }
     ],
     "last_update": "11/01/2022"

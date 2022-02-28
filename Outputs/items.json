@@ -1111,6 +1111,14 @@
         {
             "item": "rundownAidKit",
             "gameid": 182
+        },
+        {
+            "item": "flashlightSport",
+            "gameid": 193
+        },
+        {
+            "item": "rundownAidKit",
+            "gameid": 193
         }
     ],
     "last_update": "11/01/2022"
