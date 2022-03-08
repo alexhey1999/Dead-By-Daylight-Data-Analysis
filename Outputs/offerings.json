@@ -1355,6 +1355,90 @@
         {
             "offering": "sealedEnvelope",
             "gameid": 193
+        },
+        {
+            "offering": "freshSweetWilliam",
+            "gameid": 194
+        },
+        {
+            "offering": "sealedEnvelope",
+            "gameid": 194
+        },
+        {
+            "offering": "survivorPudding",
+            "gameid": 194
+        },
+        {
+            "offering": "bloodyPartyStreamers",
+            "gameid": 195
+        },
+        {
+            "offering": "bloodyPartyStreamers",
+            "gameid": 195
+        },
+        {
+            "offering": "fragrantSweetWilliam",
+            "gameid": 195
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 196
+        },
+        {
+            "offering": "fragrantBogLaurel",
+            "gameid": 197
+        },
+        {
+            "offering": "clearReagent",
+            "gameid": 198
+        },
+        {
+            "offering": "moldyOak",
+            "gameid": 198
+        },
+        {
+            "offering": "annotatedBlueprint",
+            "gameid": 199
+        },
+        {
+            "offering": "survivorPudding",
+            "gameid": 199
+        },
+        {
+            "offering": "survivorPudding",
+            "gameid": 201
+        },
+        {
+            "offering": "5thAnniversary",
+            "gameid": 202
+        },
+        {
+            "offering": "bloodyPartyStreamers",
+            "gameid": 203
+        },
+        {
+            "offering": "fragrantPrimroseBlossom",
+            "gameid": 203
+        },
+        {
+            "offering": "hollowShell",
+            "gameid": 204
+        },
+        {
+            "offering": "sweetWilliamSachet",
+            "gameid": 204
+        },
+        {
+            "offering": "bloodyPartyStreamers",
+            "gameid": 205
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 205
+        },
+        {
+            "offering": "macmilliansPhalanxBone",
+            "gameid": 205
         }
     ],
     "last_update": "11/01/2022"

@@ -767,6 +767,54 @@
         {
             "name": "Hag.png",
             "gameid": 193
+        },
+        {
+            "name": "Artist.png",
+            "gameid": 194
+        },
+        {
+            "name": "Blight.png",
+            "gameid": 195
+        },
+        {
+            "name": "Wraith.png",
+            "gameid": 196
+        },
+        {
+            "name": null,
+            "gameid": 197
+        },
+        {
+            "name": "Spirit.png",
+            "gameid": 198
+        },
+        {
+            "name": "Plague.png",
+            "gameid": 199
+        },
+        {
+            "name": "Wraith.png",
+            "gameid": 200
+        },
+        {
+            "name": "Huntress.png",
+            "gameid": 201
+        },
+        {
+            "name": "Wraith.png",
+            "gameid": 202
+        },
+        {
+            "name": "Trickster.png",
+            "gameid": 203
+        },
+        {
+            "name": "Wraith.png",
+            "gameid": 204
+        },
+        {
+            "name": "PyramidHead.png",
+            "gameid": 205
         }
     ],
     "last_update": "11/01/2022"
