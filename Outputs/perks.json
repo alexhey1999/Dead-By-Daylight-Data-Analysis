@@ -15563,6 +15563,2690 @@
         {
             "perk": "WereGonnaLiveForever",
             "gameid": 205
+        },
+        {
+            "perk": "adrenaline",
+            "gameid": 206
+        },
+        {
+            "perk": "blastMine",
+            "gameid": 206
+        },
+        {
+            "perk": "bond",
+            "gameid": 206
+        },
+        {
+            "perk": "BoonCircleOfHealing",
+            "gameid": 206
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 206
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 206
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 206
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 206
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 206
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 206
+        },
+        {
+            "perk": "Flashbang",
+            "gameid": 206
+        },
+        {
+            "perk": "floodOfRage",
+            "gameid": 206
+        },
+        {
+            "perk": "hexUndying",
+            "gameid": 206
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 206
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 206
+        },
+        {
+            "perk": "lithe",
+            "gameid": 206
+        },
+        {
+            "perk": "ruin",
+            "gameid": 206
+        },
+        {
+            "perk": "soulGuard",
+            "gameid": 206
+        },
+        {
+            "perk": "WereGonnaLiveForever",
+            "gameid": 206
+        },
+        {
+            "perk": "BBQAndChili",
+            "gameid": 207
+        },
+        {
+            "perk": "blastMine",
+            "gameid": 207
+        },
+        {
+            "perk": "BoonCircleOfHealing",
+            "gameid": 207
+        },
+        {
+            "perk": "BoonCircleOfHealing",
+            "gameid": 207
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 207
+        },
+        {
+            "perk": "callOfBrine",
+            "gameid": 207
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 207
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 207
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 207
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 207
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 207
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 207
+        },
+        {
+            "perk": "Flashbang",
+            "gameid": 207
+        },
+        {
+            "perk": "popGoesTheWeasel",
+            "gameid": 207
+        },
+        {
+            "perk": "saveTheBestForLast",
+            "gameid": 207
+        },
+        {
+            "perk": "soulGuard",
+            "gameid": 207
+        },
+        {
+            "perk": "surveillance",
+            "gameid": 207
+        },
+        {
+            "perk": "unbreakable",
+            "gameid": 207
+        },
+        {
+            "perk": "WereGonnaLiveForever",
+            "gameid": 207
+        },
+        {
+            "perk": "WereGonnaLiveForever",
+            "gameid": 207
+        },
+        {
+            "perk": "windowsOfOpportunity",
+            "gameid": 207
+        },
+        {
+            "perk": "balancedLanding",
+            "gameid": 208
+        },
+        {
+            "perk": "blastMine",
+            "gameid": 208
+        },
+        {
+            "perk": "bond",
+            "gameid": 208
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 208
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 208
+        },
+        {
+            "perk": "callOfBrine",
+            "gameid": 208
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 208
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 208
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 208
+        },
+        {
+            "perk": "dejaVu",
+            "gameid": 208
+        },
+        {
+            "perk": "desperateMeasures",
+            "gameid": 208
+        },
+        {
+            "perk": "Flashbang",
+            "gameid": 208
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 208
+        },
+        {
+            "perk": "lithe",
+            "gameid": 208
+        },
+        {
+            "perk": "mercilessStorm",
+            "gameid": 208
+        },
+        {
+            "perk": "painResonance",
+            "gameid": 208
+        },
+        {
+            "perk": "soulGuard",
+            "gameid": 208
+        },
+        {
+            "perk": "thatanophobia",
+            "gameid": 208
+        },
+        {
+            "perk": "urbanEvasion",
+            "gameid": 208
+        },
+        {
+            "perk": "wellMakeIt",
+            "gameid": 208
+        },
+        {
+            "perk": "aNursesCalling",
+            "gameid": 209
+        },
+        {
+            "perk": "blastMine",
+            "gameid": 209
+        },
+        {
+            "perk": "BoonCircleOfHealing",
+            "gameid": 209
+        },
+        {
+            "perk": "BoonCircleOfHealing",
+            "gameid": 209
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 209
+        },
+        {
+            "perk": "callOfBrine",
+            "gameid": 209
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 209
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 209
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 209
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 209
+        },
+        {
+            "perk": "deadManSwitch",
+            "gameid": 209
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 209
+        },
+        {
+            "perk": "Flashbang",
+            "gameid": 209
+        },
+        {
+            "perk": "floodOfRage",
+            "gameid": 209
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 209
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 209
+        },
+        {
+            "perk": "soulGuard",
+            "gameid": 209
+        },
+        {
+            "perk": "spineChill",
+            "gameid": 209
+        },
+        {
+            "perk": "WereGonnaLiveForever",
+            "gameid": 209
+        },
+        {
+            "perk": "WereGonnaLiveForever",
+            "gameid": 209
+        },
+        {
+            "perk": "adrenaline",
+            "gameid": 210
+        },
+        {
+            "perk": "bamboozle",
+            "gameid": 210
+        },
+        {
+            "perk": "blastMine",
+            "gameid": 210
+        },
+        {
+            "perk": "BoonCircleOfHealing",
+            "gameid": 210
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 210
+        },
+        {
+            "perk": "builtToLast",
+            "gameid": 210
+        },
+        {
+            "perk": "coulrophobia",
+            "gameid": 210
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 210
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 210
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 210
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 210
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 210
+        },
+        {
+            "perk": "Flashbang",
+            "gameid": 210
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 210
+        },
+        {
+            "perk": "lithe",
+            "gameid": 210
+        },
+        {
+            "perk": "monitorAndAbuse",
+            "gameid": 210
+        },
+        {
+            "perk": "overwhelmingPresence",
+            "gameid": 210
+        },
+        {
+            "perk": "selfCare",
+            "gameid": 210
+        },
+        {
+            "perk": "soulGuard",
+            "gameid": 210
+        },
+        {
+            "perk": "WereGonnaLiveForever",
+            "gameid": 210
+        },
+        {
+            "perk": "aNursesCalling",
+            "gameid": 211
+        },
+        {
+            "perk": "blastMine",
+            "gameid": 211
+        },
+        {
+            "perk": "bloodWarden",
+            "gameid": 211
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 211
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 211
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 211
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 211
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 211
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 211
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 211
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 211
+        },
+        {
+            "perk": "Flashbang",
+            "gameid": 211
+        },
+        {
+            "perk": "hatred",
+            "gameid": 211
+        },
+        {
+            "perk": "hope",
+            "gameid": 211
+        },
+        {
+            "perk": "hope",
+            "gameid": 211
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 211
+        },
+        {
+            "perk": "noOneEscapesDeath",
+            "gameid": 211
+        },
+        {
+            "perk": "soulGuard",
+            "gameid": 211
+        },
+        {
+            "perk": "spineChill",
+            "gameid": 211
+        },
+        {
+            "perk": "WereGonnaLiveForever",
+            "gameid": 211
+        },
+        {
+            "perk": "adrenaline",
+            "gameid": 212
+        },
+        {
+            "perk": "adrenaline",
+            "gameid": 212
+        },
+        {
+            "perk": "blastMine",
+            "gameid": 212
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 212
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 212
+        },
+        {
+            "perk": "callOfBrine",
+            "gameid": 212
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 212
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 212
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 212
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 212
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 212
+        },
+        {
+            "perk": "discordance",
+            "gameid": 212
+        },
+        {
+            "perk": "Flashbang",
+            "gameid": 212
+        },
+        {
+            "perk": "floodOfRage",
+            "gameid": 212
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 212
+        },
+        {
+            "perk": "soulGuard",
+            "gameid": 212
+        },
+        {
+            "perk": "sprintBurst",
+            "gameid": 212
+        },
+        {
+            "perk": "WereGonnaLiveForever",
+            "gameid": 212
+        },
+        {
+            "perk": "WereGonnaLiveForever",
+            "gameid": 212
+        },
+        {
+            "perk": "adrenaline",
+            "gameid": 213
+        },
+        {
+            "perk": "blastMine",
+            "gameid": 213
+        },
+        {
+            "perk": "BoonCircleOfHealing",
+            "gameid": 213
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 213
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 213
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 213
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 213
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 213
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 213
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 213
+        },
+        {
+            "perk": "FastTrack",
+            "gameid": 213
+        },
+        {
+            "perk": "Flashbang",
+            "gameid": 213
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 213
+        },
+        {
+            "perk": "soulGuard",
+            "gameid": 213
+        },
+        {
+            "perk": "spineChill",
+            "gameid": 213
+        },
+        {
+            "perk": "WereGonnaLiveForever",
+            "gameid": 213
+        },
+        {
+            "perk": "blastMine",
+            "gameid": 214
+        },
+        {
+            "perk": "BoonCircleOfHealing",
+            "gameid": 214
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 214
+        },
+        {
+            "perk": "darkSense",
+            "gameid": 214
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 214
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 214
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 214
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 214
+        },
+        {
+            "perk": "Flashbang",
+            "gameid": 214
+        },
+        {
+            "perk": "forThePeople",
+            "gameid": 214
+        },
+        {
+            "perk": "HuntressLullaby",
+            "gameid": 214
+        },
+        {
+            "perk": "insidious",
+            "gameid": 214
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 214
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 214
+        },
+        {
+            "perk": "popGoesTheWeasel",
+            "gameid": 214
+        },
+        {
+            "perk": "resilience",
+            "gameid": 214
+        },
+        {
+            "perk": "sloppyButcher",
+            "gameid": 214
+        },
+        {
+            "perk": "soulGuard",
+            "gameid": 214
+        },
+        {
+            "perk": "thatanophobia",
+            "gameid": 214
+        },
+        {
+            "perk": "BBQAndChili",
+            "gameid": 215
+        },
+        {
+            "perk": "blastMine",
+            "gameid": 215
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 215
+        },
+        {
+            "perk": "corruptIntervention",
+            "gameid": 215
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 215
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 215
+        },
+        {
+            "perk": "deception",
+            "gameid": 215
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 215
+        },
+        {
+            "perk": "diversion",
+            "gameid": 215
+        },
+        {
+            "perk": "diversion",
+            "gameid": 215
+        },
+        {
+            "perk": "Flashbang",
+            "gameid": 215
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 215
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 215
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 215
+        },
+        {
+            "perk": "popGoesTheWeasel",
+            "gameid": 215
+        },
+        {
+            "perk": "quickAndQuiet",
+            "gameid": 215
+        },
+        {
+            "perk": "shadowborn",
+            "gameid": 215
+        },
+        {
+            "perk": "soulGuard",
+            "gameid": 215
+        },
+        {
+            "perk": "spineChill",
+            "gameid": 215
+        },
+        {
+            "perk": "WereGonnaLiveForever",
+            "gameid": 215
+        },
+        {
+            "perk": "blastMine",
+            "gameid": 216
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 216
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 216
+        },
+        {
+            "perk": "callOfBrine",
+            "gameid": 216
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 216
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 216
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 216
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 216
+        },
+        {
+            "perk": "FastTrack",
+            "gameid": 216
+        },
+        {
+            "perk": "Flashbang",
+            "gameid": 216
+        },
+        {
+            "perk": "floodOfRage",
+            "gameid": 216
+        },
+        {
+            "perk": "lethalPursuer",
+            "gameid": 216
+        },
+        {
+            "perk": "proveThyself",
+            "gameid": 216
+        },
+        {
+            "perk": "soulGuard",
+            "gameid": 216
+        },
+        {
+            "perk": "spineChill",
+            "gameid": 216
+        },
+        {
+            "perk": "sprintBurst",
+            "gameid": 216
+        },
+        {
+            "perk": "WereGonnaLiveForever",
+            "gameid": 216
+        },
+        {
+            "perk": "windowsOfOpportunity",
+            "gameid": 216
+        },
+        {
+            "perk": "BBQAndChili",
+            "gameid": 217
+        },
+        {
+            "perk": "blastMine",
+            "gameid": 217
+        },
+        {
+            "perk": "BoonCircleOfHealing",
+            "gameid": 217
+        },
+        {
+            "perk": "BoonCircleOfHealing",
+            "gameid": 217
+        },
+        {
+            "perk": "BoonExponential",
+            "gameid": 217
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 217
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 217
+        },
+        {
+            "perk": "corruptIntervention",
+            "gameid": 217
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 217
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 217
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 217
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 217
+        },
+        {
+            "perk": "Flashbang",
+            "gameid": 217
+        },
+        {
+            "perk": "Flashbang",
+            "gameid": 217
+        },
+        {
+            "perk": "infectiousFright",
+            "gameid": 217
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 217
+        },
+        {
+            "perk": "lithe",
+            "gameid": 217
+        },
+        {
+            "perk": "saboteur",
+            "gameid": 217
+        },
+        {
+            "perk": "shadowborn",
+            "gameid": 217
+        },
+        {
+            "perk": "soulGuard",
+            "gameid": 217
+        },
+        {
+            "perk": "BBQAndChili",
+            "gameid": 218
+        },
+        {
+            "perk": "blastMine",
+            "gameid": 218
+        },
+        {
+            "perk": "BoonCircleOfHealing",
+            "gameid": 218
+        },
+        {
+            "perk": "BoonShadowStep",
+            "gameid": 218
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 218
+        },
+        {
+            "perk": "corruptIntervention",
+            "gameid": 218
+        },
+        {
+            "perk": "darkSense",
+            "gameid": 218
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 218
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 218
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 218
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 218
+        },
+        {
+            "perk": "dejaVu",
+            "gameid": 218
+        },
+        {
+            "perk": "Flashbang",
+            "gameid": 218
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 218
+        },
+        {
+            "perk": "painResonance",
+            "gameid": 218
+        },
+        {
+            "perk": "popGoesTheWeasel",
+            "gameid": 218
+        },
+        {
+            "perk": "premonition",
+            "gameid": 218
+        },
+        {
+            "perk": "soulGuard",
+            "gameid": 218
+        },
+        {
+            "perk": "spineChill",
+            "gameid": 218
+        },
+        {
+            "perk": "vigil",
+            "gameid": 218
+        },
+        {
+            "perk": "balancedLanding",
+            "gameid": 219
+        },
+        {
+            "perk": "BBQAndChili",
+            "gameid": 219
+        },
+        {
+            "perk": "blastMine",
+            "gameid": 219
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 219
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 219
+        },
+        {
+            "perk": "corruptIntervention",
+            "gameid": 219
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 219
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 219
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 219
+        },
+        {
+            "perk": "Flashbang",
+            "gameid": 219
+        },
+        {
+            "perk": "infectiousFright",
+            "gameid": 219
+        },
+        {
+            "perk": "innerStrength",
+            "gameid": 219
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 219
+        },
+        {
+            "perk": "ruin",
+            "gameid": 219
+        },
+        {
+            "perk": "smallGame",
+            "gameid": 219
+        },
+        {
+            "perk": "soulGuard",
+            "gameid": 219
+        },
+        {
+            "perk": "spineChill",
+            "gameid": 219
+        },
+        {
+            "perk": "spineChill",
+            "gameid": 219
+        },
+        {
+            "perk": "sprintBurst",
+            "gameid": 219
+        },
+        {
+            "perk": "windowsOfOpportunity",
+            "gameid": 219
+        },
+        {
+            "perk": "agitation",
+            "gameid": 221
+        },
+        {
+            "perk": "blastMine",
+            "gameid": 221
+        },
+        {
+            "perk": "bond",
+            "gameid": 221
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 221
+        },
+        {
+            "perk": "corruptIntervention",
+            "gameid": 221
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 221
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 221
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 221
+        },
+        {
+            "perk": "deception",
+            "gameid": 221
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 221
+        },
+        {
+            "perk": "Flashbang",
+            "gameid": 221
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 221
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 221
+        },
+        {
+            "perk": "lithe",
+            "gameid": 221
+        },
+        {
+            "perk": "popGoesTheWeasel",
+            "gameid": 221
+        },
+        {
+            "perk": "popGoesTheWeasel",
+            "gameid": 221
+        },
+        {
+            "perk": "resilience",
+            "gameid": 221
+        },
+        {
+            "perk": "selfCare",
+            "gameid": 221
+        },
+        {
+            "perk": "soulGuard",
+            "gameid": 221
+        },
+        {
+            "perk": "spineChill",
+            "gameid": 221
+        },
+        {
+            "perk": "adrenaline",
+            "gameid": 222
+        },
+        {
+            "perk": "adrenaline",
+            "gameid": 222
+        },
+        {
+            "perk": "blastMine",
+            "gameid": 222
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 222
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 222
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 222
+        },
+        {
+            "perk": "dejaVu",
+            "gameid": 222
+        },
+        {
+            "perk": "Flashbang",
+            "gameid": 222
+        },
+        {
+            "perk": "floodOfRage",
+            "gameid": 222
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 222
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 222
+        },
+        {
+            "perk": "quickAndQuiet",
+            "gameid": 222
+        },
+        {
+            "perk": "ruin",
+            "gameid": 222
+        },
+        {
+            "perk": "soulGuard",
+            "gameid": 222
+        },
+        {
+            "perk": "spineChill",
+            "gameid": 222
+        },
+        {
+            "perk": "sprintBurst",
+            "gameid": 222
+        },
+        {
+            "perk": "sprintBurst",
+            "gameid": 222
+        },
+        {
+            "perk": "vigil",
+            "gameid": 222
+        },
+        {
+            "perk": "aNursesCalling",
+            "gameid": 223
+        },
+        {
+            "perk": "babySitter",
+            "gameid": 223
+        },
+        {
+            "perk": "BBQAndChili",
+            "gameid": 223
+        },
+        {
+            "perk": "blastMine",
+            "gameid": 223
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 223
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 223
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 223
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 223
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 223
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 223
+        },
+        {
+            "perk": "deerstalker",
+            "gameid": 223
+        },
+        {
+            "perk": "dejaVu",
+            "gameid": 223
+        },
+        {
+            "perk": "fixated",
+            "gameid": 223
+        },
+        {
+            "perk": "Flashbang",
+            "gameid": 223
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 223
+        },
+        {
+            "perk": "ruin",
+            "gameid": 223
+        },
+        {
+            "perk": "soulGuard",
+            "gameid": 223
+        },
+        {
+            "perk": "unbreakable",
+            "gameid": 223
+        },
+        {
+            "perk": "vigil",
+            "gameid": 223
+        },
+        {
+            "perk": "WereGonnaLiveForever",
+            "gameid": 223
+        },
+        {
+            "perk": "adrenaline",
+            "gameid": 224
+        },
+        {
+            "perk": "blastMine",
+            "gameid": 224
+        },
+        {
+            "perk": "boilOver",
+            "gameid": 224
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 224
+        },
+        {
+            "perk": "breakout",
+            "gameid": 224
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 224
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 224
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 224
+        },
+        {
+            "perk": "dejaVu",
+            "gameid": 224
+        },
+        {
+            "perk": "enduring",
+            "gameid": 224
+        },
+        {
+            "perk": "Flashbang",
+            "gameid": 224
+        },
+        {
+            "perk": "lightborn",
+            "gameid": 224
+        },
+        {
+            "perk": "soulGuard",
+            "gameid": 224
+        },
+        {
+            "perk": "spiesFromTheShadows",
+            "gameid": 224
+        },
+        {
+            "perk": "surveillance",
+            "gameid": 224
+        },
+        {
+            "perk": "tenacity",
+            "gameid": 224
+        },
+        {
+            "perk": "tinkerer",
+            "gameid": 224
+        },
+        {
+            "perk": "unbreakable",
+            "gameid": 224
+        },
+        {
+            "perk": "urbanEvasion",
+            "gameid": 224
+        },
+        {
+            "perk": "wellMakeIt",
+            "gameid": 224
+        },
+        {
+            "perk": "WereGonnaLiveForever",
+            "gameid": 224
+        },
+        {
+            "perk": "adrenaline",
+            "gameid": 225
+        },
+        {
+            "perk": "agitation",
+            "gameid": 225
+        },
+        {
+            "perk": "balancedLanding",
+            "gameid": 225
+        },
+        {
+            "perk": "BBQAndChili",
+            "gameid": 225
+        },
+        {
+            "perk": "blastMine",
+            "gameid": 225
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 225
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 225
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 225
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 225
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 225
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 225
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 225
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 225
+        },
+        {
+            "perk": "Flashbang",
+            "gameid": 225
+        },
+        {
+            "perk": "lethalPursuer",
+            "gameid": 225
+        },
+        {
+            "perk": "resilience",
+            "gameid": 225
+        },
+        {
+            "perk": "soulGuard",
+            "gameid": 225
+        },
+        {
+            "perk": "Starstruck",
+            "gameid": 225
+        },
+        {
+            "perk": "unbreakable",
+            "gameid": 225
+        },
+        {
+            "perk": "WereGonnaLiveForever",
+            "gameid": 225
+        },
+        {
+            "perk": "anyMeansNecessary",
+            "gameid": 226
+        },
+        {
+            "perk": "blastMine",
+            "gameid": 226
+        },
+        {
+            "perk": "BoonCircleOfHealing",
+            "gameid": 226
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 226
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 226
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 226
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 226
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 226
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 226
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 226
+        },
+        {
+            "perk": "Flashbang",
+            "gameid": 226
+        },
+        {
+            "perk": "floodOfRage",
+            "gameid": 226
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 226
+        },
+        {
+            "perk": "painResonance",
+            "gameid": 226
+        },
+        {
+            "perk": "soulGuard",
+            "gameid": 226
+        },
+        {
+            "perk": "spineChill",
+            "gameid": 226
+        },
+        {
+            "perk": "WereGonnaLiveForever",
+            "gameid": 226
+        },
+        {
+            "perk": "windowsOfOpportunity",
+            "gameid": 226
+        },
+        {
+            "perk": "balancedLanding",
+            "gameid": 227
+        },
+        {
+            "perk": "BBQAndChili",
+            "gameid": 227
+        },
+        {
+            "perk": "blastMine",
+            "gameid": 227
+        },
+        {
+            "perk": "BoonCircleOfHealing",
+            "gameid": 227
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 227
+        },
+        {
+            "perk": "corruptIntervention",
+            "gameid": 227
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 227
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 227
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 227
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 227
+        },
+        {
+            "perk": "devourHope",
+            "gameid": 227
+        },
+        {
+            "perk": "Flashbang",
+            "gameid": 227
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 227
+        },
+        {
+            "perk": "Resurgence",
+            "gameid": 227
+        },
+        {
+            "perk": "sloppyButcher",
+            "gameid": 227
+        },
+        {
+            "perk": "soulGuard",
+            "gameid": 227
+        },
+        {
+            "perk": "spineChill",
+            "gameid": 227
+        },
+        {
+            "perk": "unbreakable",
+            "gameid": 227
+        },
+        {
+            "perk": "WereGonnaLiveForever",
+            "gameid": 227
+        },
+        {
+            "perk": "windowsOfOpportunity",
+            "gameid": 227
+        },
+        {
+            "perk": "bamboozle",
+            "gameid": 228
+        },
+        {
+            "perk": "blastMine",
+            "gameid": 228
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 228
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 228
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 228
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 228
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 228
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 228
+        },
+        {
+            "perk": "Flashbang",
+            "gameid": 228
+        },
+        {
+            "perk": "HexPlaything",
+            "gameid": 228
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 228
+        },
+        {
+            "perk": "lithe",
+            "gameid": 228
+        },
+        {
+            "perk": "soulGuard",
+            "gameid": 228
+        },
+        {
+            "perk": "surge",
+            "gameid": 228
+        },
+        {
+            "perk": "surveillance",
+            "gameid": 228
+        },
+        {
+            "perk": "tenacity",
+            "gameid": 228
+        },
+        {
+            "perk": "thatanophobia",
+            "gameid": 228
+        },
+        {
+            "perk": "unbreakable",
+            "gameid": 228
+        },
+        {
+            "perk": "unbreakable",
+            "gameid": 228
+        },
+        {
+            "perk": "WereGonnaLiveForever",
+            "gameid": 228
+        },
+        {
+            "perk": "windowsOfOpportunity",
+            "gameid": 228
+        },
+        {
+            "perk": "BBQAndChili",
+            "gameid": 229
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 229
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 229
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 229
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 229
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 229
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 229
+        },
+        {
+            "perk": "franklinsLoss",
+            "gameid": 229
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 229
+        },
+        {
+            "perk": "lithe",
+            "gameid": 229
+        },
+        {
+            "perk": "proveThyself",
+            "gameid": 229
+        },
+        {
+            "perk": "ruin",
+            "gameid": 229
+        },
+        {
+            "perk": "sloppyButcher",
+            "gameid": 229
+        },
+        {
+            "perk": "soulGuard",
+            "gameid": 229
+        },
+        {
+            "perk": "surveillance",
+            "gameid": 229
+        },
+        {
+            "perk": "surveillance",
+            "gameid": 229
+        },
+        {
+            "perk": "tenacity",
+            "gameid": 229
+        },
+        {
+            "perk": "tenacity",
+            "gameid": 229
+        },
+        {
+            "perk": "unbreakable",
+            "gameid": 229
+        },
+        {
+            "perk": "unbreakable",
+            "gameid": 229
+        },
+        {
+            "perk": "unbreakable",
+            "gameid": 229
+        },
+        {
+            "perk": "windowsOfOpportunity",
+            "gameid": 229
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 230
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 230
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 230
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 230
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 230
+        },
+        {
+            "perk": "Flashbang",
+            "gameid": 230
+        },
+        {
+            "perk": "grimEmbrace",
+            "gameid": 230
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 230
+        },
+        {
+            "perk": "lithe",
+            "gameid": 230
+        },
+        {
+            "perk": "painResonance",
+            "gameid": 230
+        },
+        {
+            "perk": "proveThyself",
+            "gameid": 230
+        },
+        {
+            "perk": "soulGuard",
+            "gameid": 230
+        },
+        {
+            "perk": "surveillance",
+            "gameid": 230
+        },
+        {
+            "perk": "tenacity",
+            "gameid": 230
+        },
+        {
+            "perk": "unbreakable",
+            "gameid": 230
+        },
+        {
+            "perk": "unbreakable",
+            "gameid": 230
+        },
+        {
+            "perk": "WereGonnaLiveForever",
+            "gameid": 230
+        },
+        {
+            "perk": "windowsOfOpportunity",
+            "gameid": 230
+        },
+        {
+            "perk": "BBQAndChili",
+            "gameid": 231
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 231
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 231
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 231
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 231
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 231
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 231
+        },
+        {
+            "perk": "Flashbang",
+            "gameid": 231
+        },
+        {
+            "perk": "hexPentimento",
+            "gameid": 231
+        },
+        {
+            "perk": "HexPlaything",
+            "gameid": 231
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 231
+        },
+        {
+            "perk": "lithe",
+            "gameid": 231
+        },
+        {
+            "perk": "proveThyself",
+            "gameid": 231
+        },
+        {
+            "perk": "soulGuard",
+            "gameid": 231
+        },
+        {
+            "perk": "surveillance",
+            "gameid": 231
+        },
+        {
+            "perk": "tenacity",
+            "gameid": 231
+        },
+        {
+            "perk": "unbreakable",
+            "gameid": 231
+        },
+        {
+            "perk": "unbreakable",
+            "gameid": 231
+        },
+        {
+            "perk": "unbreakable",
+            "gameid": 231
+        },
+        {
+            "perk": "windowsOfOpportunity",
+            "gameid": 231
+        },
+        {
+            "perk": "aNursesCalling",
+            "gameid": 232
+        },
+        {
+            "perk": "BBQAndChili",
+            "gameid": 232
+        },
+        {
+            "perk": "BoonCircleOfHealing",
+            "gameid": 232
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 232
+        },
+        {
+            "perk": "callOfBrine",
+            "gameid": 232
+        },
+        {
+            "perk": "Clairvoyance",
+            "gameid": 232
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 232
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 232
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 232
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 232
+        },
+        {
+            "perk": "dejaVu",
+            "gameid": 232
+        },
+        {
+            "perk": "Flashbang",
+            "gameid": 232
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 232
+        },
+        {
+            "perk": "proveThyself",
+            "gameid": 232
+        },
+        {
+            "perk": "quickAndQuiet",
+            "gameid": 232
+        },
+        {
+            "perk": "ruin",
+            "gameid": 232
+        },
+        {
+            "perk": "soulGuard",
+            "gameid": 232
+        },
+        {
+            "perk": "spineChill",
+            "gameid": 232
+        },
+        {
+            "perk": "tenacity",
+            "gameid": 232
+        },
+        {
+            "perk": "unbreakable",
+            "gameid": 232
+        },
+        {
+            "perk": "BBQAndChili",
+            "gameid": 233
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 233
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 233
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 233
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 233
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 233
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 233
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 233
+        },
+        {
+            "perk": "Flashbang",
+            "gameid": 233
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 233
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 233
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 233
+        },
+        {
+            "perk": "noOneEscapesDeath",
+            "gameid": 233
+        },
+        {
+            "perk": "ruin",
+            "gameid": 233
+        },
+        {
+            "perk": "soulGuard",
+            "gameid": 233
+        },
+        {
+            "perk": "tinkerer",
+            "gameid": 233
+        },
+        {
+            "perk": "unbreakable",
+            "gameid": 233
+        },
+        {
+            "perk": "unbreakable",
+            "gameid": 233
+        },
+        {
+            "perk": "wellMakeIt",
+            "gameid": 233
+        },
+        {
+            "perk": "windowsOfOpportunity",
+            "gameid": 233
+        },
+        {
+            "perk": "adrenaline",
+            "gameid": 234
+        },
+        {
+            "perk": "betterTogether",
+            "gameid": 234
+        },
+        {
+            "perk": "boilOver",
+            "gameid": 234
+        },
+        {
+            "perk": "bond",
+            "gameid": 234
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 234
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 234
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 234
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 234
+        },
+        {
+            "perk": "distressing",
+            "gameid": 234
+        },
+        {
+            "perk": "Flashbang",
+            "gameid": 234
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 234
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 234
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 234
+        },
+        {
+            "perk": "selfCare",
+            "gameid": 234
+        },
+        {
+            "perk": "shadowborn",
+            "gameid": 234
+        },
+        {
+            "perk": "situationalAwareness",
+            "gameid": 234
+        },
+        {
+            "perk": "soulGuard",
+            "gameid": 234
+        },
+        {
+            "perk": "sprintBurst",
+            "gameid": 234
+        },
+        {
+            "perk": "surveillance",
+            "gameid": 234
+        },
+        {
+            "perk": "tinkerer",
+            "gameid": 234
+        },
+        {
+            "perk": "whispers",
+            "gameid": 234
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 235
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 235
+        },
+        {
+            "perk": "callOfBrine",
+            "gameid": 235
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 235
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 235
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 235
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 235
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 235
+        },
+        {
+            "perk": "Flashbang",
+            "gameid": 235
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 235
+        },
+        {
+            "perk": "popGoesTheWeasel",
+            "gameid": 235
+        },
+        {
+            "perk": "selfCare",
+            "gameid": 235
+        },
+        {
+            "perk": "soulGuard",
+            "gameid": 235
+        },
+        {
+            "perk": "spineChill",
+            "gameid": 235
+        },
+        {
+            "perk": "surveillance",
+            "gameid": 235
+        },
+        {
+            "perk": "tinkerer",
+            "gameid": 235
+        },
+        {
+            "perk": "unbreakable",
+            "gameid": 235
+        },
+        {
+            "perk": "wellMakeIt",
+            "gameid": 235
+        },
+        {
+            "perk": "windowsOfOpportunity",
+            "gameid": 235
+        },
+        {
+            "perk": "BBQAndChili",
+            "gameid": 236
+        },
+        {
+            "perk": "bond",
+            "gameid": 236
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 236
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 236
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 236
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 236
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 236
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 236
+        },
+        {
+            "perk": "enduring",
+            "gameid": 236
+        },
+        {
+            "perk": "Flashbang",
+            "gameid": 236
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 236
+        },
+        {
+            "perk": "leader",
+            "gameid": 236
+        },
+        {
+            "perk": "popGoesTheWeasel",
+            "gameid": 236
+        },
+        {
+            "perk": "proveThyself",
+            "gameid": 236
+        },
+        {
+            "perk": "proveThyself",
+            "gameid": 236
+        },
+        {
+            "perk": "quickAndQuiet",
+            "gameid": 236
+        },
+        {
+            "perk": "shadowborn",
+            "gameid": 236
+        },
+        {
+            "perk": "soulGuard",
+            "gameid": 236
+        },
+        {
+            "perk": "unbreakable",
+            "gameid": 236
+        },
+        {
+            "perk": "alert",
+            "gameid": 237
+        },
+        {
+            "perk": "alert",
+            "gameid": 237
+        },
+        {
+            "perk": "BBQAndChili",
+            "gameid": 237
+        },
+        {
+            "perk": "BoonCircleOfHealing",
+            "gameid": 237
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 237
+        },
+        {
+            "perk": "Clairvoyance",
+            "gameid": 237
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 237
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 237
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 237
+        },
+        {
+            "perk": "Flashbang",
+            "gameid": 237
+        },
+        {
+            "perk": "hauntedGround",
+            "gameid": 237
+        },
+        {
+            "perk": "lithe",
+            "gameid": 237
+        },
+        {
+            "perk": "lithe",
+            "gameid": 237
+        },
+        {
+            "perk": "plunderersInstinct",
+            "gameid": 237
+        },
+        {
+            "perk": "popGoesTheWeasel",
+            "gameid": 237
+        },
+        {
+            "perk": "proveThyself",
+            "gameid": 237
+        },
+        {
+            "perk": "soulGuard",
+            "gameid": 237
+        },
+        {
+            "perk": "spineChill",
+            "gameid": 237
+        },
+        {
+            "perk": "thatanophobia",
+            "gameid": 237
+        },
+        {
+            "perk": "unbreakable",
+            "gameid": 237
+        },
+        {
+            "perk": "aceInTheHole",
+            "gameid": 238
+        },
+        {
+            "perk": "adrenaline",
+            "gameid": 238
+        },
+        {
+            "perk": "balancedLanding",
+            "gameid": 238
+        },
+        {
+            "perk": "BoonShadowStep",
+            "gameid": 238
+        },
+        {
+            "perk": "darkSense",
+            "gameid": 238
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 238
+        },
+        {
+            "perk": "dejaVu",
+            "gameid": 238
+        },
+        {
+            "perk": "dejaVu",
+            "gameid": 238
+        },
+        {
+            "perk": "dejaVu",
+            "gameid": 238
+        },
+        {
+            "perk": "deliverance",
+            "gameid": 238
+        },
+        {
+            "perk": "ironGrasp",
+            "gameid": 238
+        },
+        {
+            "perk": "resilience",
+            "gameid": 238
+        },
+        {
+            "perk": "spiesFromTheShadows",
+            "gameid": 238
+        },
+        {
+            "perk": "spineChill",
+            "gameid": 238
+        },
+        {
+            "perk": "sprintBurst",
+            "gameid": 238
+        },
+        {
+            "perk": "streetwise",
+            "gameid": 238
+        },
+        {
+            "perk": "surveillance",
+            "gameid": 238
+        },
+        {
+            "perk": "unbreakable",
+            "gameid": 238
+        },
+        {
+            "perk": "urbanEvasion",
+            "gameid": 238
+        },
+        {
+            "perk": "windowsOfOpportunity",
+            "gameid": 238
+        },
+        {
+            "perk": "BeastOfPrey",
+            "gameid": 239
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 239
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 239
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 239
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 239
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 239
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 239
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 239
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 239
+        },
+        {
+            "perk": "headOn",
+            "gameid": 239
+        },
+        {
+            "perk": "HuntressLullaby",
+            "gameid": 239
+        },
+        {
+            "perk": "ironGrasp",
+            "gameid": 239
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 239
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 239
+        },
+        {
+            "perk": "popGoesTheWeasel",
+            "gameid": 239
+        },
+        {
+            "perk": "resilience",
+            "gameid": 239
+        },
+        {
+            "perk": "selfCare",
+            "gameid": 239
+        },
+        {
+            "perk": "selfCare",
+            "gameid": 239
+        },
+        {
+            "perk": "spineChill",
+            "gameid": 239
+        },
+        {
+            "perk": "unbreakable",
+            "gameid": 239
+        },
+        {
+            "perk": "BeastOfPrey",
+            "gameid": 240
+        },
+        {
+            "perk": "boilOver",
+            "gameid": 240
+        },
+        {
+            "perk": "BoonShadowStep",
+            "gameid": 240
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 240
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 240
+        },
+        {
+            "perk": "hope",
+            "gameid": 240
+        },
+        {
+            "perk": "HuntressLullaby",
+            "gameid": 240
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 240
+        },
+        {
+            "perk": "leftBehind",
+            "gameid": 240
+        },
+        {
+            "perk": "painResonance",
+            "gameid": 240
+        },
+        {
+            "perk": "popGoesTheWeasel",
+            "gameid": 240
+        },
+        {
+            "perk": "resilience",
+            "gameid": 240
+        },
+        {
+            "perk": "resilience",
+            "gameid": 240
+        },
+        {
+            "perk": "Resurgence",
+            "gameid": 240
+        },
+        {
+            "perk": "saboteur",
+            "gameid": 240
+        },
+        {
+            "perk": "slipperyMeat",
+            "gameid": 240
+        },
+        {
+            "perk": "spineChill",
+            "gameid": 240
+        },
+        {
+            "perk": "spineChill",
+            "gameid": 240
+        },
+        {
+            "perk": "surveillance",
+            "gameid": 240
+        },
+        {
+            "perk": "TerritorialImperative",
+            "gameid": 240
+        },
+        {
+            "perk": "urbanEvasion",
+            "gameid": 240
+        },
+        {
+            "perk": "vigil",
+            "gameid": 240
         }
     ],
     "last_update": "11/01/2022"
