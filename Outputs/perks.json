@@ -26231,6 +26231,1054 @@
         {
             "perk": "thrillingTremors",
             "gameid": 341
+        },
+        {
+            "perk": "parentalGuidance",
+            "gameid": 342
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 346
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 347
+        },
+        {
+            "perk": "aftercare",
+            "gameid": 348
+        },
+        {
+            "perk": "betterTogether",
+            "gameid": 348
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 348
+        },
+        {
+            "perk": "discordance",
+            "gameid": 348
+        },
+        {
+            "perk": "BBQAndChili",
+            "gameid": 349
+        },
+        {
+            "perk": "BeastOfPrey",
+            "gameid": 349
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 349
+        },
+        {
+            "perk": "discordance",
+            "gameid": 349
+        },
+        {
+            "perk": "FastTrack",
+            "gameid": 349
+        },
+        {
+            "perk": "ironGrasp",
+            "gameid": 349
+        },
+        {
+            "perk": "noOneLeftBehind",
+            "gameid": 349
+        },
+        {
+            "perk": "premonition",
+            "gameid": 349
+        },
+        {
+            "perk": "pushThroughIt",
+            "gameid": 349
+        },
+        {
+            "perk": "selfCare",
+            "gameid": 349
+        },
+        {
+            "perk": "sprintBurst",
+            "gameid": 349
+        },
+        {
+            "perk": "surveillance",
+            "gameid": 349
+        },
+        {
+            "perk": "unbreakable",
+            "gameid": 349
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 350
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 350
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 350
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 350
+        },
+        {
+            "perk": "distressing",
+            "gameid": 350
+        },
+        {
+            "perk": "diversion",
+            "gameid": 350
+        },
+        {
+            "perk": "FastTrack",
+            "gameid": 350
+        },
+        {
+            "perk": "FastTrack",
+            "gameid": 350
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 350
+        },
+        {
+            "perk": "lithe",
+            "gameid": 350
+        },
+        {
+            "perk": "quickAndQuiet",
+            "gameid": 350
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 351
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 351
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 351
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 351
+        },
+        {
+            "perk": "distressing",
+            "gameid": 351
+        },
+        {
+            "perk": "diversion",
+            "gameid": 351
+        },
+        {
+            "perk": "FastTrack",
+            "gameid": 351
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 351
+        },
+        {
+            "perk": "lithe",
+            "gameid": 351
+        },
+        {
+            "perk": "quickAndQuiet",
+            "gameid": 351
+        },
+        {
+            "perk": "aceInTheHole",
+            "gameid": 352
+        },
+        {
+            "perk": "autodidact",
+            "gameid": 352
+        },
+        {
+            "perk": "BoonShadowStep",
+            "gameid": 352
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 352
+        },
+        {
+            "perk": "callOfBrine",
+            "gameid": 352
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 352
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 352
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 352
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 352
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 352
+        },
+        {
+            "perk": "discordance",
+            "gameid": 352
+        },
+        {
+            "perk": "headOn",
+            "gameid": 352
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 352
+        },
+        {
+            "perk": "plunderersInstinct",
+            "gameid": 352
+        },
+        {
+            "perk": "popGoesTheWeasel",
+            "gameid": 352
+        },
+        {
+            "perk": "resilience",
+            "gameid": 352
+        },
+        {
+            "perk": "spineChill",
+            "gameid": 352
+        },
+        {
+            "perk": "surveillance",
+            "gameid": 352
+        },
+        {
+            "perk": "adrenaline",
+            "gameid": 353
+        },
+        {
+            "perk": "babySitter",
+            "gameid": 353
+        },
+        {
+            "perk": "detectivesHunch",
+            "gameid": 353
+        },
+        {
+            "perk": "empathy",
+            "gameid": 353
+        },
+        {
+            "perk": "fixated",
+            "gameid": 353
+        },
+        {
+            "perk": "selfCare",
+            "gameid": 353
+        },
+        {
+            "perk": "slipperyMeat",
+            "gameid": 353
+        },
+        {
+            "perk": "spineChill",
+            "gameid": 353
+        },
+        {
+            "perk": "spineChill",
+            "gameid": 353
+        },
+        {
+            "perk": "technician",
+            "gameid": 353
+        },
+        {
+            "perk": "adrenaline",
+            "gameid": 354
+        },
+        {
+            "perk": "bond",
+            "gameid": 354
+        },
+        {
+            "perk": "bond",
+            "gameid": 354
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 354
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 354
+        },
+        {
+            "perk": "botanyKnowledge",
+            "gameid": 354
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 354
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 354
+        },
+        {
+            "perk": "deception",
+            "gameid": 354
+        },
+        {
+            "perk": "deception",
+            "gameid": 354
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 354
+        },
+        {
+            "perk": "FastTrack",
+            "gameid": 354
+        },
+        {
+            "perk": "Flashbang",
+            "gameid": 354
+        },
+        {
+            "perk": "Flashbang",
+            "gameid": 354
+        },
+        {
+            "perk": "headOn",
+            "gameid": 354
+        },
+        {
+            "perk": "headOn",
+            "gameid": 354
+        },
+        {
+            "perk": "resilience",
+            "gameid": 354
+        },
+        {
+            "perk": "sloppyButcher",
+            "gameid": 354
+        },
+        {
+            "perk": "thatanophobia",
+            "gameid": 354
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 355
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 355
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 355
+        },
+        {
+            "perk": "breakout",
+            "gameid": 355
+        },
+        {
+            "perk": "devourHope",
+            "gameid": 355
+        },
+        {
+            "perk": "enduring",
+            "gameid": 355
+        },
+        {
+            "perk": "lethalPursuer",
+            "gameid": 355
+        },
+        {
+            "perk": "surveillance",
+            "gameid": 355
+        },
+        {
+            "perk": "surveillance",
+            "gameid": 355
+        },
+        {
+            "perk": "balancedLanding",
+            "gameid": 356
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 356
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 356
+        },
+        {
+            "perk": "danceWithMe",
+            "gameid": 356
+        },
+        {
+            "perk": "headOn",
+            "gameid": 356
+        },
+        {
+            "perk": "luckyBreak",
+            "gameid": 356
+        },
+        {
+            "perk": "proveThyself",
+            "gameid": 356
+        },
+        {
+            "perk": "spineChill",
+            "gameid": 356
+        },
+        {
+            "perk": "sprintBurst",
+            "gameid": 356
+        },
+        {
+            "perk": "thatanophobia",
+            "gameid": 356
+        },
+        {
+            "perk": "urbanEvasion",
+            "gameid": 356
+        },
+        {
+            "perk": "WereGonnaLiveForever",
+            "gameid": 356
+        },
+        {
+            "perk": "whispers",
+            "gameid": 356
+        },
+        {
+            "perk": "windowsOfOpportunity",
+            "gameid": 356
+        },
+        {
+            "perk": "adrenaline",
+            "gameid": 357
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 357
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 357
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 357
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 357
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 357
+        },
+        {
+            "perk": "devourHope",
+            "gameid": 357
+        },
+        {
+            "perk": "hatred",
+            "gameid": 357
+        },
+        {
+            "perk": "hope",
+            "gameid": 357
+        },
+        {
+            "perk": "innerStrength",
+            "gameid": 357
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 357
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 357
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 357
+        },
+        {
+            "perk": "nemesis",
+            "gameid": 357
+        },
+        {
+            "perk": "playWithYourFood",
+            "gameid": 357
+        },
+        {
+            "perk": "proveThyself",
+            "gameid": 357
+        },
+        {
+            "perk": "resilience",
+            "gameid": 357
+        },
+        {
+            "perk": "sloppyButcher",
+            "gameid": 357
+        },
+        {
+            "perk": "spineChill",
+            "gameid": 357
+        },
+        {
+            "perk": "surveillance",
+            "gameid": 357
+        },
+        {
+            "perk": "adrenaline",
+            "gameid": 358
+        },
+        {
+            "perk": "BoonShadowStep",
+            "gameid": 358
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 358
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 358
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 358
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 358
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 358
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 358
+        },
+        {
+            "perk": "devourHope",
+            "gameid": 358
+        },
+        {
+            "perk": "hauntedGround",
+            "gameid": 358
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 358
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 358
+        },
+        {
+            "perk": "resilience",
+            "gameid": 358
+        },
+        {
+            "perk": "resilience",
+            "gameid": 358
+        },
+        {
+            "perk": "spineChill",
+            "gameid": 358
+        },
+        {
+            "perk": "surveillance",
+            "gameid": 358
+        },
+        {
+            "perk": "surveillance",
+            "gameid": 358
+        },
+        {
+            "perk": "unbreakable",
+            "gameid": 358
+        },
+        {
+            "perk": "windowsOfOpportunity",
+            "gameid": 358
+        },
+        {
+            "perk": "boilOver",
+            "gameid": 359
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 359
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 359
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 359
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 359
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 359
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 359
+        },
+        {
+            "perk": "distressing",
+            "gameid": 359
+        },
+        {
+            "perk": "headOn",
+            "gameid": 359
+        },
+        {
+            "perk": "lightweight",
+            "gameid": 359
+        },
+        {
+            "perk": "spineChill",
+            "gameid": 359
+        },
+        {
+            "perk": "spineChill",
+            "gameid": 359
+        },
+        {
+            "perk": "spineChill",
+            "gameid": 359
+        },
+        {
+            "perk": "unbreakable",
+            "gameid": 359
+        },
+        {
+            "perk": "adrenaline",
+            "gameid": 360
+        },
+        {
+            "perk": "BBQAndChili",
+            "gameid": 360
+        },
+        {
+            "perk": "bloodEcho",
+            "gameid": 360
+        },
+        {
+            "perk": "bond",
+            "gameid": 360
+        },
+        {
+            "perk": "BoonShadowStep",
+            "gameid": 360
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 360
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 360
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 360
+        },
+        {
+            "perk": "flipFlop",
+            "gameid": 360
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 360
+        },
+        {
+            "perk": "leftBehind",
+            "gameid": 360
+        },
+        {
+            "perk": "NoMither",
+            "gameid": 360
+        },
+        {
+            "perk": "proveThyself",
+            "gameid": 360
+        },
+        {
+            "perk": "selfCare",
+            "gameid": 360
+        },
+        {
+            "perk": "sloppyButcher",
+            "gameid": 360
+        },
+        {
+            "perk": "spineChill",
+            "gameid": 360
+        },
+        {
+            "perk": "spineChill",
+            "gameid": 360
+        },
+        {
+            "perk": "sprintBurst",
+            "gameid": 360
+        },
+        {
+            "perk": "surveillance",
+            "gameid": 360
+        },
+        {
+            "perk": "tenacity",
+            "gameid": 360
+        },
+        {
+            "perk": "unbreakable",
+            "gameid": 360
+        },
+        {
+            "perk": "BoonShadowStep",
+            "gameid": 361
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 361
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 361
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 361
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 361
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 361
+        },
+        {
+            "perk": "franklinsLoss",
+            "gameid": 361
+        },
+        {
+            "perk": "hexUndying",
+            "gameid": 361
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 361
+        },
+        {
+            "perk": "leftBehind",
+            "gameid": 361
+        },
+        {
+            "perk": "noOneEscapesDeath",
+            "gameid": 361
+        },
+        {
+            "perk": "noOneLeftBehind",
+            "gameid": 361
+        },
+        {
+            "perk": "resilience",
+            "gameid": 361
+        },
+        {
+            "perk": "resilience",
+            "gameid": 361
+        },
+        {
+            "perk": "spineChill",
+            "gameid": 361
+        },
+        {
+            "perk": "spineChill",
+            "gameid": 361
+        },
+        {
+            "perk": "surveillance",
+            "gameid": 361
+        },
+        {
+            "perk": "WereGonnaLiveForever",
+            "gameid": 361
+        },
+        {
+            "perk": "bond",
+            "gameid": 362
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 362
+        },
+        {
+            "perk": "botanyKnowledge",
+            "gameid": 362
+        },
+        {
+            "perk": "empathy",
+            "gameid": 362
+        },
+        {
+            "perk": "lightweight",
+            "gameid": 362
+        },
+        {
+            "perk": "luckyBreak",
+            "gameid": 362
+        },
+        {
+            "perk": "NoMither",
+            "gameid": 362
+        },
+        {
+            "perk": "selfCare",
+            "gameid": 362
+        },
+        {
+            "perk": "spineChill",
+            "gameid": 362
+        },
+        {
+            "perk": "surveillance",
+            "gameid": 362
+        },
+        {
+            "perk": "tenacity",
+            "gameid": 362
+        },
+        {
+            "perk": "unbreakable",
+            "gameid": 362
+        },
+        {
+            "perk": "unbreakable",
+            "gameid": 362
+        },
+        {
+            "perk": "urbanEvasion",
+            "gameid": 362
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 363
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 363
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 363
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 363
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 363
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 363
+        },
+        {
+            "perk": "proveThyself",
+            "gameid": 363
+        },
+        {
+            "perk": "unbreakable",
+            "gameid": 363
+        },
+        {
+            "perk": "unbreakable",
+            "gameid": 363
+        },
+        {
+            "perk": "windowsOfOpportunity",
+            "gameid": 363
+        },
+        {
+            "perk": "BoonShadowStep",
+            "gameid": 364
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 364
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 364
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 364
+        },
+        {
+            "perk": "ironGrasp",
+            "gameid": 364
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 364
+        },
+        {
+            "perk": "ironWill",
+            "gameid": 364
+        },
+        {
+            "perk": "lightweight",
+            "gameid": 364
+        },
+        {
+            "perk": "resilience",
+            "gameid": 364
+        },
+        {
+            "perk": "surveillance",
+            "gameid": 364
+        },
+        {
+            "perk": "bond",
+            "gameid": 365
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 365
+        },
+        {
+            "perk": "botanyKnowledge",
+            "gameid": 365
+        },
+        {
+            "perk": "empathy",
+            "gameid": 365
+        },
+        {
+            "perk": "lightweight",
+            "gameid": 365
+        },
+        {
+            "perk": "luckyBreak",
+            "gameid": 365
+        },
+        {
+            "perk": "NoMither",
+            "gameid": 365
+        },
+        {
+            "perk": "selfCare",
+            "gameid": 365
+        },
+        {
+            "perk": "spineChill",
+            "gameid": 365
+        },
+        {
+            "perk": "surveillance",
+            "gameid": 365
+        },
+        {
+            "perk": "tenacity",
+            "gameid": 365
+        },
+        {
+            "perk": "unbreakable",
+            "gameid": 365
+        },
+        {
+            "perk": "unbreakable",
+            "gameid": 365
+        },
+        {
+            "perk": "urbanEvasion",
+            "gameid": 365
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 366
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 366
+        },
+        {
+            "perk": "borrowedTime",
+            "gameid": 366
+        },
+        {
+            "perk": "DeadHard",
+            "gameid": 366
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 366
+        },
+        {
+            "perk": "decisiveStrike",
+            "gameid": 366
+        },
+        {
+            "perk": "proveThyself",
+            "gameid": 366
+        },
+        {
+            "perk": "surveillance",
+            "gameid": 366
+        },
+        {
+            "perk": "unbreakable",
+            "gameid": 366
+        },
+        {
+            "perk": "unbreakable",
+            "gameid": 366
+        },
+        {
+            "perk": "windowsOfOpportunity",
+            "gameid": 366
         }
     ],
     "last_update": "11/01/2022"

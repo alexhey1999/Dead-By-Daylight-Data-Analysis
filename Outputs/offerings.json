@@ -2423,6 +2423,62 @@
         {
             "offering": "wardWhite",
             "gameid": 341
+        },
+        {
+            "offering": "wardWhite",
+            "gameid": 350
+        },
+        {
+            "offering": "wardWhite",
+            "gameid": 351
+        },
+        {
+            "offering": "decrepitClapboard",
+            "gameid": 354
+        },
+        {
+            "offering": "fragrantSweetWilliam",
+            "gameid": 355
+        },
+        {
+            "offering": "boundEnvelope",
+            "gameid": 356
+        },
+        {
+            "offering": "devoutTanagerWreath",
+            "gameid": 356
+        },
+        {
+            "offering": "freshPrimroseBlossom",
+            "gameid": 356
+        },
+        {
+            "offering": "sealedEnvelope",
+            "gameid": 357
+        },
+        {
+            "offering": "freshPrimroseBlossom",
+            "gameid": 358
+        },
+        {
+            "offering": "fragrantSweetWilliam",
+            "gameid": 360
+        },
+        {
+            "offering": "freshPrimroseBlossom",
+            "gameid": 360
+        },
+        {
+            "offering": "decrepitClapboard",
+            "gameid": 361
+        },
+        {
+            "offering": "creamChalkPouch",
+            "gameid": 362
+        },
+        {
+            "offering": "creamChalkPouch",
+            "gameid": 365
         }
     ],
     "last_update": "11/01/2022"

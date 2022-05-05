@@ -42,6 +42,19 @@ def getImageCapture():
     cv2.imwrite('Screenshots/'+fileName, image)
     return fileName
 
+def saveImage(image):
+    count = 0
+    with open('Screenshots/previousTests.txt',"r+") as counter:
+        count = int(counter.read())
+    with open('Screenshots/previousTests.txt',"w") as counter:
+        counter.write(str(count+1))
+
+    fileName = f'Test{count}.png'
+    print(fileName)
+    image = cv2.cvtColor(np.array(image),cv2.COLOR_RGB2BGR)
+    cv2.imwrite('Screenshots/'+fileName, image)
+    return fileName
+
 def imageFix(location):
 
     imageList = listdir(location)
@@ -159,9 +172,8 @@ def addDataToStorage(killerPlayed, perks, items, offerings, scores, escapes, loc
             offering_data["offerings"].append(newOfferingData)
             offerings.seek(0)
             json.dump(offering_data, offerings, indent=4)
-
-
     print(scores)
+
     # Write Score Data to file
     newScoreData = {"player1Score": scores["Player1"],"player2Score": scores["Player2"],"player3Score": scores["Player3"],"player4Score": scores["Player4"],"killerScore": scores["Killer"],"gameid":gameID}
 
@@ -184,7 +196,83 @@ def addDataToStorage(killerPlayed, perks, items, offerings, scores, escapes, loc
     rename(file, "Screenshots/Archived/"+file.split('/')[1])
 
 
+def checkForEndGameScreenshot(image):
+    bVector = int(calculateBrightnessVector(0.7))
+    
+    img = image.crop(((70, 100, 350, 170)))
 
+    # Show Image
+    # img.show()
+    # img = ImageGrab.grab(bbox=(70, 100, 350, 170)) #x, y, w, h
+    img_np = np.array(img)
+    screen = cv2.cvtColor(img_np, cv2.COLOR_BGR2HSV)
+    
+    lowerRed  = np.array([100,100,100])
+    upperRed= np.array([255,255,255])
+
+    mask = cv2.inRange(screen, lowerRed, upperRed)
+    WhiteBackground = np.zeros((screen.shape[0], screen.shape[1], 3), dtype=np.uint8)
+    WhiteBackground[:,:,:] = (255,255,255)
+
+    BlackBackground = np.zeros((screen.shape[0], screen.shape[1], 3), dtype=np.uint8)
+    BlackBackground[:,:,:] = (0,0,0)
+
+    result = cv2.bitwise_and(WhiteBackground,WhiteBackground,BlackBackground ,mask = mask)
+    
+    result = cv2.bitwise_not(result)
+
+    text = pytesseract.image_to_string(result, lang='eng',config='--psm 6')
+    # print(text)
+    if "SCOREBOARD" in str(text) :
+        print("Scoreboard Found - Saving Data")
+        screenshotName = saveImage(image)
+        # image.show()
+        time.sleep(2)      
+
+        KillerScreen = cv2.imread('Screenshots/'+screenshotName)
+        PerkScreen = cv2.imread('Screenshots/'+screenshotName)
+        ItemScreen = cv2.imread('Screenshots/'+screenshotName)
+        OfferingScreen = cv2.imread('Screenshots/'+screenshotName)
+        ScoreScreen = cv2.imread('Screenshots/'+screenshotName)
+        EscapeScreen = cv2.imread('Screenshots/'+screenshotName)
+
+        imgFile = "Screenshots/"+screenshotName
+
+        KillerScreen = adjustScreenSizeKiller(KillerScreen, bVector)
+        PerkScreen = adjustScreenSizePerks(PerkScreen, bVector)
+        ItemScreen = adjustScreenSizeItems(ItemScreen, bVector)
+        OfferingScreen = adjustScreenSizeOfferings(OfferingScreen, bVector)
+        ScoreScreen = adjustScreenSizeScores(ScoreScreen, bVector)
+        EscapeScreen = adjustScreenSizeEscapes(EscapeScreen, bVector)
+        
+         # set output file
+        killerList = listdir("./Killers/")
+        perkList = listdir("./Perks/")
+        itemList = listdir("./Items/")
+        offeringList = listdir("./Offerings/")
+        escapeList = listdir("./Escapes/")
+
+        killerPlayed, confirmation = calculateKiller(killerList, "./Killers/", KillerScreen,False)
+        perks = calculatePerks(perkList, "./Perks/", PerkScreen,False)
+        items = calculateItems(itemList, "./Items/", ItemScreen,False)
+        offerings = calculateOfferings(offeringList, "./Offerings/", OfferingScreen,False)
+        scores = calculateScores(ScoreScreen,False)
+        escapes = calculateEscapes(escapeList, "./Escapes/", EscapeScreen,bVector,False)
+
+        print('\n\n\n\n\n\n')
+        print(f'Killer Played: {killerPlayed} , Confirmation: {round(confirmation*100,2)}%\n')
+        print(f'Perks: {perks}\n')
+        print(f'Items: {items}\n')
+        print(f'Offerings: {offerings}\n')
+        print(f'Scores: {scores}\n')
+        print(f'Escapes: {escapes}\n')
+
+        # print(escapes["escape"])
+        if "alive" in escapes:
+            print("Game Still In Progress")
+            return None
+        addDataToStorage(killerPlayed, perks, items, offerings, scores, escapes,"./Outputs/", imgFile)
+        print("Starting look for new game")
     
 
 

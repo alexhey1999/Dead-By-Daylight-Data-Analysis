@@ -2123,6 +2123,62 @@
         {
             "item": "rainbowMap",
             "gameid": 341
+        },
+        {
+            "item": "flashlight",
+            "gameid": 350
+        },
+        {
+            "item": "flashlightUtility",
+            "gameid": 350
+        },
+        {
+            "item": "flashlight",
+            "gameid": 351
+        },
+        {
+            "item": "flashlightUtility",
+            "gameid": 351
+        },
+        {
+            "item": "firstAidKit",
+            "gameid": 353
+        },
+        {
+            "item": "firstAidKit",
+            "gameid": 356
+        },
+        {
+            "item": "rundownAidKit",
+            "gameid": 356
+        },
+        {
+            "item": "flashlight",
+            "gameid": 358
+        },
+        {
+            "item": "toolboxCommodious",
+            "gameid": 358
+        },
+        {
+            "item": "firstAidKit",
+            "gameid": 360
+        },
+        {
+            "item": "toolbox",
+            "gameid": 360
+        },
+        {
+            "item": "toolboxWornOut",
+            "gameid": 360
+        },
+        {
+            "item": "rundownAidKit",
+            "gameid": 362
+        },
+        {
+            "item": "rundownAidKit",
+            "gameid": 365
         }
     ],
     "last_update": "11/01/2022"

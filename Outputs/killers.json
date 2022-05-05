@@ -1359,6 +1359,106 @@
         {
             "name": "Pig.png",
             "gameid": 341
+        },
+        {
+            "name": "Deathslinger.png",
+            "gameid": 342
+        },
+        {
+            "name": "Trickster.png",
+            "gameid": 343
+        },
+        {
+            "name": "Trickster.png",
+            "gameid": 344
+        },
+        {
+            "name": "Trickster.png",
+            "gameid": 345
+        },
+        {
+            "name": "Huntress.png",
+            "gameid": 346
+        },
+        {
+            "name": "Huntress.png",
+            "gameid": 347
+        },
+        {
+            "name": null,
+            "gameid": 348
+        },
+        {
+            "name": "Deathslinger.png",
+            "gameid": 349
+        },
+        {
+            "name": "Hillbilly.png",
+            "gameid": 350
+        },
+        {
+            "name": "Hillbilly.png",
+            "gameid": 351
+        },
+        {
+            "name": "Trickster.png",
+            "gameid": 352
+        },
+        {
+            "name": "Nemesis.png",
+            "gameid": 353
+        },
+        {
+            "name": "Legion.png",
+            "gameid": 354
+        },
+        {
+            "name": "Wraith.png",
+            "gameid": 355
+        },
+        {
+            "name": "Myers.png",
+            "gameid": 356
+        },
+        {
+            "name": "Myers.png",
+            "gameid": 357
+        },
+        {
+            "name": "Artist.png",
+            "gameid": 358
+        },
+        {
+            "name": "Hillbilly.png",
+            "gameid": 359
+        },
+        {
+            "name": "Trickster.png",
+            "gameid": 360
+        },
+        {
+            "name": "Deathslinger.png",
+            "gameid": 361
+        },
+        {
+            "name": "GhostFace.png",
+            "gameid": 362
+        },
+        {
+            "name": "Trickster.png",
+            "gameid": 363
+        },
+        {
+            "name": "Trickster.png",
+            "gameid": 364
+        },
+        {
+            "name": "GhostFace.png",
+            "gameid": 365
+        },
+        {
+            "name": "Trickster.png",
+            "gameid": 366
         }
     ],
     "last_update": "11/01/2022"
