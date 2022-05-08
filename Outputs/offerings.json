@@ -2479,6 +2479,78 @@
         {
             "offering": "creamChalkPouch",
             "gameid": 365
+        },
+        {
+            "offering": "boundEnvelope",
+            "gameid": 368
+        },
+        {
+            "offering": "hollowShell",
+            "gameid": 368
+        },
+        {
+            "offering": "sealedEnvelope",
+            "gameid": 372
+        },
+        {
+            "offering": "fragrantSweetWilliam",
+            "gameid": 373
+        },
+        {
+            "offering": "freshBogLaurel",
+            "gameid": 373
+        },
+        {
+            "offering": "survivorPudding",
+            "gameid": 373
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 374
+        },
+        {
+            "offering": "freshSweetWilliam",
+            "gameid": 375
+        },
+        {
+            "offering": "survivorPudding",
+            "gameid": 375
+        },
+        {
+            "offering": "freshBogLaurel",
+            "gameid": 376
+        },
+        {
+            "offering": "freshBogLaurel",
+            "gameid": 378
+        },
+        {
+            "offering": "bloodyPartyStreamers",
+            "gameid": 380
+        },
+        {
+            "offering": "ravenWreath",
+            "gameid": 380
+        },
+        {
+            "offering": "survivorPudding",
+            "gameid": 381
+        },
+        {
+            "offering": "survivorPudding",
+            "gameid": 382
+        },
+        {
+            "offering": "wardWhite",
+            "gameid": 382
+        },
+        {
+            "offering": "survivorPudding",
+            "gameid": 383
+        },
+        {
+            "offering": "wardWhite",
+            "gameid": 383
         }
     ],
     "last_update": "11/01/2022"

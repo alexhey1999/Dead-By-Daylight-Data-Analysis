@@ -1459,6 +1459,74 @@
         {
             "name": "Trickster.png",
             "gameid": 366
+        },
+        {
+            "name": "Wraith.png",
+            "gameid": 367
+        },
+        {
+            "name": "Wraith.png",
+            "gameid": 368
+        },
+        {
+            "name": "Nemesis.png",
+            "gameid": 369
+        },
+        {
+            "name": "Nemesis.png",
+            "gameid": 370
+        },
+        {
+            "name": "Legion.png",
+            "gameid": 371
+        },
+        {
+            "name": "Trickster.png",
+            "gameid": 372
+        },
+        {
+            "name": "Freddy.png",
+            "gameid": 373
+        },
+        {
+            "name": "Blight.png",
+            "gameid": 374
+        },
+        {
+            "name": "Deathslinger.png",
+            "gameid": 375
+        },
+        {
+            "name": "Wraith.png",
+            "gameid": 376
+        },
+        {
+            "name": "Blight.png",
+            "gameid": 377
+        },
+        {
+            "name": "Clown.png",
+            "gameid": 378
+        },
+        {
+            "name": "Bubba.png",
+            "gameid": 379
+        },
+        {
+            "name": "Pinhead.png",
+            "gameid": 380
+        },
+        {
+            "name": "Legion.png",
+            "gameid": 381
+        },
+        {
+            "name": "PyramidHead.png",
+            "gameid": 382
+        },
+        {
+            "name": "GhostFace.png",
+            "gameid": 383
         }
     ],
     "last_update": "11/01/2022"
