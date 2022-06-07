@@ -1,4 +1,5 @@
 #Handle Imports
+from ast import Or
 import cv2
 from os import listdir, rename
 import argparse
@@ -86,7 +87,7 @@ def addDataToStorage(killerPlayed, perks, items, offerings, scores, escapes, loc
         newScoreData = {"player1Score": scores["Player1"],"player2Score": scores["Player2"],"player3Score": scores["Player3"],"player4Score": scores["Player4"],"killerScore": scores["Killer"],"gameid":gameID}
     except:
         print("Invalid Score Data")
-        return
+        return False
 
     with open(location+'games.json',"r+") as games:
         gameID = 0
@@ -195,6 +196,8 @@ def addDataToStorage(killerPlayed, perks, items, offerings, scores, escapes, loc
 
     rename(file, "Screenshots/Archived/"+file.split('/')[1])
 
+    return True
+
 
 def checkForEndGameScreenshot(image):
     bVector = int(calculateBrightnessVector(0.7))
@@ -271,6 +274,7 @@ def checkForEndGameScreenshot(image):
         if "alive" in escapes:
             print("Game Still In Progress")
             return None
+
         addDataToStorage(killerPlayed, perks, items, offerings, scores, escapes,"./Outputs/", imgFile)
         print("Starting look for new game")
     
@@ -369,7 +373,13 @@ def main():
             if "alive" in escapes:
                 print("Game Still In Progress")
                 continue
-            addDataToStorage(killerPlayed, perks, items, offerings, scores, escapes,"./Outputs/", imgFile)
+            success = addDataToStorage(killerPlayed, perks, items, offerings, scores, escapes,"./Outputs/", imgFile)
+
+            if success == True or success == None:
+                print("Data Saved")
+            else:
+                continue
+
             print("Starting look for new game")
             while True:
                 img = ImageGrab.grab(bbox=(115, 990, 180, 1020)) #x, y, w, h

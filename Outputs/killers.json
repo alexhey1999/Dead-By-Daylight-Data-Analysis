@@ -1527,6 +1527,410 @@
         {
             "name": "GhostFace.png",
             "gameid": 383
+        },
+        {
+            "name": "Blight.png",
+            "gameid": 384
+        },
+        {
+            "name": "Wraith.png",
+            "gameid": 385
+        },
+        {
+            "name": "Pinhead.png",
+            "gameid": 386
+        },
+        {
+            "name": "Myers.png",
+            "gameid": 387
+        },
+        {
+            "name": "Huntress.png",
+            "gameid": 388
+        },
+        {
+            "name": "Myers.png",
+            "gameid": 389
+        },
+        {
+            "name": "Trapper.png",
+            "gameid": 390
+        },
+        {
+            "name": "Legion.png",
+            "gameid": 391
+        },
+        {
+            "name": "GhostFace.png",
+            "gameid": 392
+        },
+        {
+            "name": "Twins.png",
+            "gameid": 393
+        },
+        {
+            "name": "Twins.png",
+            "gameid": 394
+        },
+        {
+            "name": "Pig.png",
+            "gameid": 395
+        },
+        {
+            "name": "Trapper.png",
+            "gameid": 396
+        },
+        {
+            "name": "Hag.png",
+            "gameid": 397
+        },
+        {
+            "name": "Blight.png",
+            "gameid": 398
+        },
+        {
+            "name": "Wraith.png",
+            "gameid": 399
+        },
+        {
+            "name": "GhostFace.png",
+            "gameid": 400
+        },
+        {
+            "name": "Nurse.png",
+            "gameid": 401
+        },
+        {
+            "name": "Bubba.png",
+            "gameid": 402
+        },
+        {
+            "name": "PyramidHead.png",
+            "gameid": 403
+        },
+        {
+            "name": "Huntress.png",
+            "gameid": 404
+        },
+        {
+            "name": "Nemesis.png",
+            "gameid": 405
+        },
+        {
+            "name": "Huntress.png",
+            "gameid": 406
+        },
+        {
+            "name": "Twins.png",
+            "gameid": 407
+        },
+        {
+            "name": null,
+            "gameid": 408
+        },
+        {
+            "name": "GhostFace.png",
+            "gameid": 409
+        },
+        {
+            "name": "Trickster.png",
+            "gameid": 410
+        },
+        {
+            "name": "Legion.png",
+            "gameid": 411
+        },
+        {
+            "name": "Blight.png",
+            "gameid": 412
+        },
+        {
+            "name": "Huntress.png",
+            "gameid": 413
+        },
+        {
+            "name": "Legion.png",
+            "gameid": 414
+        },
+        {
+            "name": "GhostFace.png",
+            "gameid": 415
+        },
+        {
+            "name": "Freddy.png",
+            "gameid": 416
+        },
+        {
+            "name": "Artist.png",
+            "gameid": 417
+        },
+        {
+            "name": "Nemesis.png",
+            "gameid": 418
+        },
+        {
+            "name": "Oni.png",
+            "gameid": 419
+        },
+        {
+            "name": "PyramidHead.png",
+            "gameid": 420
+        },
+        {
+            "name": "Doctor.png",
+            "gameid": 421
+        },
+        {
+            "name": "Twins.png",
+            "gameid": 422
+        },
+        {
+            "name": "Pig.png",
+            "gameid": 423
+        },
+        {
+            "name": "Huntress.png",
+            "gameid": 424
+        },
+        {
+            "name": "Legion.png",
+            "gameid": 425
+        },
+        {
+            "name": "Nemesis.png",
+            "gameid": 426
+        },
+        {
+            "name": "Blight.png",
+            "gameid": 427
+        },
+        {
+            "name": "Pinhead.png",
+            "gameid": 428
+        },
+        {
+            "name": "Trickster.png",
+            "gameid": 429
+        },
+        {
+            "name": "Oni.png",
+            "gameid": 430
+        },
+        {
+            "name": "Myers.png",
+            "gameid": 431
+        },
+        {
+            "name": "Trapper.png",
+            "gameid": 432
+        },
+        {
+            "name": "Wraith.png",
+            "gameid": 433
+        },
+        {
+            "name": "Trickster.png",
+            "gameid": 434
+        },
+        {
+            "name": "Legion.png",
+            "gameid": 435
+        },
+        {
+            "name": "Hag.png",
+            "gameid": 436
+        },
+        {
+            "name": "Blight.png",
+            "gameid": 437
+        },
+        {
+            "name": null,
+            "gameid": 438
+        },
+        {
+            "name": "Twins.png",
+            "gameid": 439
+        },
+        {
+            "name": "Legion.png",
+            "gameid": 440
+        },
+        {
+            "name": "Wraith.png",
+            "gameid": 441
+        },
+        {
+            "name": "Myers.png",
+            "gameid": 442
+        },
+        {
+            "name": "Artist.png",
+            "gameid": 443
+        },
+        {
+            "name": "Trapper.png",
+            "gameid": 444
+        },
+        {
+            "name": "Hillbilly.png",
+            "gameid": 445
+        },
+        {
+            "name": "PyramidHead.png",
+            "gameid": 446
+        },
+        {
+            "name": "Legion.png",
+            "gameid": 447
+        },
+        {
+            "name": "Oni.png",
+            "gameid": 448
+        },
+        {
+            "name": "Huntress.png",
+            "gameid": 449
+        },
+        {
+            "name": "Huntress.png",
+            "gameid": 450
+        },
+        {
+            "name": "Pig.png",
+            "gameid": 451
+        },
+        {
+            "name": "Trickster.png",
+            "gameid": 452
+        },
+        {
+            "name": "Legion.png",
+            "gameid": 453
+        },
+        {
+            "name": "Deathslinger.png",
+            "gameid": 454
+        },
+        {
+            "name": "Plague.png",
+            "gameid": 455
+        },
+        {
+            "name": "Bubba.png",
+            "gameid": 456
+        },
+        {
+            "name": "Pinhead.png",
+            "gameid": 457
+        },
+        {
+            "name": "Legion.png",
+            "gameid": 458
+        },
+        {
+            "name": "Legion.png",
+            "gameid": 459
+        },
+        {
+            "name": "Blight.png",
+            "gameid": 460
+        },
+        {
+            "name": "Nurse.png",
+            "gameid": 461
+        },
+        {
+            "name": "Huntress.png",
+            "gameid": 462
+        },
+        {
+            "name": "Myers.png",
+            "gameid": 463
+        },
+        {
+            "name": "Wraith.png",
+            "gameid": 464
+        },
+        {
+            "name": "Hillbilly.png",
+            "gameid": 465
+        },
+        {
+            "name": "Nurse.png",
+            "gameid": 466
+        },
+        {
+            "name": "Spirit.png",
+            "gameid": 467
+        },
+        {
+            "name": "Trickster.png",
+            "gameid": 468
+        },
+        {
+            "name": "Hillbilly.png",
+            "gameid": 469
+        },
+        {
+            "name": "Demogorgon.png",
+            "gameid": 470
+        },
+        {
+            "name": "PyramidHead.png",
+            "gameid": 471
+        },
+        {
+            "name": "Huntress.png",
+            "gameid": 472
+        },
+        {
+            "name": "GhostFace.png",
+            "gameid": 473
+        },
+        {
+            "name": "Oni.png",
+            "gameid": 474
+        },
+        {
+            "name": "Hillbilly.png",
+            "gameid": 475
+        },
+        {
+            "name": "GhostFace.png",
+            "gameid": 476
+        },
+        {
+            "name": "Huntress.png",
+            "gameid": 477
+        },
+        {
+            "name": "Wraith.png",
+            "gameid": 478
+        },
+        {
+            "name": "Wraith.png",
+            "gameid": 479
+        },
+        {
+            "name": "Myers.png",
+            "gameid": 480
+        },
+        {
+            "name": "Wraith.png",
+            "gameid": 481
+        },
+        {
+            "name": "Artist.png",
+            "gameid": 482
+        },
+        {
+            "name": "Deathslinger.png",
+            "gameid": 483
+        },
+        {
+            "name": "Nurse.png",
+            "gameid": 484
         }
     ],
     "last_update": "11/01/2022"

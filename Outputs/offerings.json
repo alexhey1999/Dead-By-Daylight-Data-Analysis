@@ -2551,6 +2551,502 @@
         {
             "offering": "wardWhite",
             "gameid": 383
+        },
+        {
+            "offering": "azarovsKey",
+            "gameid": 384
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 384
+        },
+        {
+            "offering": "primroseBlossomSachet",
+            "gameid": 384
+        },
+        {
+            "offering": "momentoMoriCypress",
+            "gameid": 385
+        },
+        {
+            "offering": "strodeRealtyKey",
+            "gameid": 385
+        },
+        {
+            "offering": "momentoMoriEbony",
+            "gameid": 386
+        },
+        {
+            "offering": "freshPrimroseBlossom",
+            "gameid": 388
+        },
+        {
+            "offering": "macmilliansPhalanxBone",
+            "gameid": 389
+        },
+        {
+            "offering": "sealedEnvelope",
+            "gameid": 390
+        },
+        {
+            "offering": "5thAnniversary",
+            "gameid": 390
+        },
+        {
+            "offering": "fragrantSweetWilliam",
+            "gameid": 391
+        },
+        {
+            "offering": "boundEnvelope",
+            "gameid": 392
+        },
+        {
+            "offering": "hollowShell",
+            "gameid": 392
+        },
+        {
+            "offering": "bogLaurelSachet",
+            "gameid": 393
+        },
+        {
+            "offering": "shrikeWreath",
+            "gameid": 393
+        },
+        {
+            "offering": "azarovsKey",
+            "gameid": 394
+        },
+        {
+            "offering": "spottedOwlWreath",
+            "gameid": 394
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 395
+        },
+        {
+            "offering": "saltPouch",
+            "gameid": 395
+        },
+        {
+            "offering": "survivorPudding",
+            "gameid": 395
+        },
+        {
+            "offering": "clearReagent",
+            "gameid": 396
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 396
+        },
+        {
+            "offering": "granmasCookbook",
+            "gameid": 397
+        },
+        {
+            "offering": "sealedEnvelope",
+            "gameid": 397
+        },
+        {
+            "offering": "primroseBlossomSachet",
+            "gameid": 398
+        },
+        {
+            "offering": "devoutShrikeWreath",
+            "gameid": 400
+        },
+        {
+            "offering": "macmilliansPhalanxBone",
+            "gameid": 401
+        },
+        {
+            "offering": "devoutShrikeWreath",
+            "gameid": 402
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 402
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 404
+        },
+        {
+            "offering": "momentoMoriEbony",
+            "gameid": 404
+        },
+        {
+            "offering": "5thAnniversary",
+            "gameid": 405
+        },
+        {
+            "offering": "ardentShrikeWreath",
+            "gameid": 406
+        },
+        {
+            "offering": "crispleafAmaranthSachet",
+            "gameid": 406
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 407
+        },
+        {
+            "offering": "freshCrispleafAmaranth",
+            "gameid": 408
+        },
+        {
+            "offering": "freshCrispleafAmaranth",
+            "gameid": 409
+        },
+        {
+            "offering": "wardBlack",
+            "gameid": 409
+        },
+        {
+            "offering": "5thAnniversary",
+            "gameid": 411
+        },
+        {
+            "offering": "bloodyPartyStreamers",
+            "gameid": 412
+        },
+        {
+            "offering": "wardWhite",
+            "gameid": 414
+        },
+        {
+            "offering": "5thAnniversary",
+            "gameid": 414
+        },
+        {
+            "offering": "bogLaurelSachet",
+            "gameid": 415
+        },
+        {
+            "offering": "hollowShell",
+            "gameid": 415
+        },
+        {
+            "offering": "ardentShrikeWreath",
+            "gameid": 416
+        },
+        {
+            "offering": "sealedEnvelope",
+            "gameid": 417
+        },
+        {
+            "offering": "crowsEye",
+            "gameid": 418
+        },
+        {
+            "offering": "bogLaurelSachet",
+            "gameid": 420
+        },
+        {
+            "offering": "fragrantSweetWilliam",
+            "gameid": 420
+        },
+        {
+            "offering": "hollowShell",
+            "gameid": 420
+        },
+        {
+            "offering": "hollowShell",
+            "gameid": 424
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 426
+        },
+        {
+            "offering": "5thAnniversary",
+            "gameid": 426
+        },
+        {
+            "offering": "chalkPouch",
+            "gameid": 429
+        },
+        {
+            "offering": "5thAnniversary",
+            "gameid": 430
+        },
+        {
+            "offering": "hollowShell",
+            "gameid": 431
+        },
+        {
+            "offering": "sweetWilliamSachet",
+            "gameid": 431
+        },
+        {
+            "offering": "clearReagent",
+            "gameid": 432
+        },
+        {
+            "offering": "momentoMoriCypress",
+            "gameid": 433
+        },
+        {
+            "offering": "wardSacrificial",
+            "gameid": 434
+        },
+        {
+            "offering": "boundEnvelope",
+            "gameid": 435
+        },
+        {
+            "offering": "freshBogLaurel",
+            "gameid": 436
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 438
+        },
+        {
+            "offering": "freshPrimroseBlossom",
+            "gameid": 438
+        },
+        {
+            "offering": "wardWhite",
+            "gameid": 438
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 439
+        },
+        {
+            "offering": "wardBlack",
+            "gameid": 439
+        },
+        {
+            "offering": "ardentShrikeWreath",
+            "gameid": 440
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 440
+        },
+        {
+            "offering": "sealedEnvelope",
+            "gameid": 440
+        },
+        {
+            "offering": "freshBogLaurel",
+            "gameid": 441
+        },
+        {
+            "offering": "tornBlueprint",
+            "gameid": 441
+        },
+        {
+            "offering": "freshCrispleafAmaranth",
+            "gameid": 442
+        },
+        {
+            "offering": "sealedEnvelope",
+            "gameid": 442
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 443
+        },
+        {
+            "offering": "momentoMoriEbony",
+            "gameid": 443
+        },
+        {
+            "offering": "sealedEnvelope",
+            "gameid": 443
+        },
+        {
+            "offering": "heartLocket",
+            "gameid": 444
+        },
+        {
+            "offering": "moldyOak",
+            "gameid": 444
+        },
+        {
+            "offering": "sealedEnvelope",
+            "gameid": 444
+        },
+        {
+            "offering": "shrikeWreath",
+            "gameid": 446
+        },
+        {
+            "offering": "sealedEnvelope",
+            "gameid": 447
+        },
+        {
+            "offering": "fragrantPrimroseBlossom",
+            "gameid": 449
+        },
+        {
+            "offering": "hollowShell",
+            "gameid": 450
+        },
+        {
+            "offering": "vigosShroud",
+            "gameid": 451
+        },
+        {
+            "offering": "vigosShroud",
+            "gameid": 451
+        },
+        {
+            "offering": "survivorPudding",
+            "gameid": 452
+        },
+        {
+            "offering": "5thAnniversary",
+            "gameid": 452
+        },
+        {
+            "offering": "5thAnniversary",
+            "gameid": 452
+        },
+        {
+            "offering": "freshPrimroseBlossom",
+            "gameid": 453
+        },
+        {
+            "offering": "sealedEnvelope",
+            "gameid": 453
+        },
+        {
+            "offering": "wardBlack",
+            "gameid": 453
+        },
+        {
+            "offering": "chalkPouch",
+            "gameid": 454
+        },
+        {
+            "offering": "hollowShell",
+            "gameid": 454
+        },
+        {
+            "offering": "freshBogLaurel",
+            "gameid": 456
+        },
+        {
+            "offering": "5thAnniversary",
+            "gameid": 458
+        },
+        {
+            "offering": "hollowShell",
+            "gameid": 459
+        },
+        {
+            "offering": "strodeRealtyKey",
+            "gameid": 459
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 460
+        },
+        {
+            "offering": "fragrantSweetWilliam",
+            "gameid": 463
+        },
+        {
+            "offering": "heartLocket",
+            "gameid": 464
+        },
+        {
+            "offering": "strodeRealtyKey",
+            "gameid": 464
+        },
+        {
+            "offering": "5thAnniversary",
+            "gameid": 464
+        },
+        {
+            "offering": "sealedEnvelope",
+            "gameid": 465
+        },
+        {
+            "offering": "wardBlack",
+            "gameid": 466
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 468
+        },
+        {
+            "offering": "cutCoin",
+            "gameid": 470
+        },
+        {
+            "offering": "survivorPudding",
+            "gameid": 471
+        },
+        {
+            "offering": "sealedEnvelope",
+            "gameid": 472
+        },
+        {
+            "offering": "survivorPudding",
+            "gameid": 473
+        },
+        {
+            "offering": "devoutShrikeWreath",
+            "gameid": 474
+        },
+        {
+            "offering": "survivorPudding",
+            "gameid": 475
+        },
+        {
+            "offering": "sweetWilliamSachet",
+            "gameid": 476
+        },
+        {
+            "offering": "wardWhite",
+            "gameid": 477
+        },
+        {
+            "offering": "crispleafAmaranthSachet",
+            "gameid": 478
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 478
+        },
+        {
+            "offering": "wardBlack",
+            "gameid": 479
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 480
+        },
+        {
+            "offering": "hollowShell",
+            "gameid": 480
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 481
+        },
+        {
+            "offering": "5thAnniversary",
+            "gameid": 481
+        },
+        {
+            "offering": "boundEnvelope",
+            "gameid": 482
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 482
+        },
+        {
+            "offering": "ardentShrikeWreath",
+            "gameid": 483
         }
     ],
     "last_update": "11/01/2022"
