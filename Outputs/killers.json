@@ -1931,6 +1931,170 @@
         {
             "name": "Nurse.png",
             "gameid": 484
+        },
+        {
+            "name": "Dredge.png",
+            "gameid": 485
+        },
+        {
+            "name": "Legion.png",
+            "gameid": 486
+        },
+        {
+            "name": "Myers.png",
+            "gameid": 487
+        },
+        {
+            "name": "Nemesis.png",
+            "gameid": 488
+        },
+        {
+            "name": "Myers.png",
+            "gameid": 489
+        },
+        {
+            "name": "Doctor.png",
+            "gameid": 490
+        },
+        {
+            "name": "Plague.png",
+            "gameid": 491
+        },
+        {
+            "name": "Spirit.png",
+            "gameid": 492
+        },
+        {
+            "name": "Clown.png",
+            "gameid": 493
+        },
+        {
+            "name": "Dredge.png",
+            "gameid": 494
+        },
+        {
+            "name": "Nemesis.png",
+            "gameid": 495
+        },
+        {
+            "name": "Nemesis.png",
+            "gameid": 496
+        },
+        {
+            "name": "Nemesis.png",
+            "gameid": 497
+        },
+        {
+            "name": "Legion.png",
+            "gameid": 498
+        },
+        {
+            "name": "Dredge.png",
+            "gameid": 499
+        },
+        {
+            "name": "Wraith.png",
+            "gameid": 500
+        },
+        {
+            "name": "Doctor.png",
+            "gameid": 501
+        },
+        {
+            "name": "Dredge.png",
+            "gameid": 502
+        },
+        {
+            "name": "Spirit.png",
+            "gameid": 503
+        },
+        {
+            "name": "Onryo.png",
+            "gameid": 504
+        },
+        {
+            "name": "Spirit.png",
+            "gameid": 505
+        },
+        {
+            "name": "Twins.png",
+            "gameid": 506
+        },
+        {
+            "name": "Freddy.png",
+            "gameid": 507
+        },
+        {
+            "name": "Nurse.png",
+            "gameid": 508
+        },
+        {
+            "name": "Nemesis.png",
+            "gameid": 509
+        },
+        {
+            "name": "Hillbilly.png",
+            "gameid": 510
+        },
+        {
+            "name": "GhostFace.png",
+            "gameid": 511
+        },
+        {
+            "name": "Blight.png",
+            "gameid": 512
+        },
+        {
+            "name": "PyramidHead.png",
+            "gameid": 513
+        },
+        {
+            "name": "Wraith.png",
+            "gameid": 514
+        },
+        {
+            "name": "Wraith.png",
+            "gameid": 515
+        },
+        {
+            "name": "Wraith.png",
+            "gameid": 516
+        },
+        {
+            "name": null,
+            "gameid": 517
+        },
+        {
+            "name": "Legion.png",
+            "gameid": 518
+        },
+        {
+            "name": "Oni.png",
+            "gameid": 519
+        },
+        {
+            "name": "Demogorgon.png",
+            "gameid": 520
+        },
+        {
+            "name": "Legion.png",
+            "gameid": 521
+        },
+        {
+            "name": "Spirit.png",
+            "gameid": 522
+        },
+        {
+            "name": "Oni.png",
+            "gameid": 523
+        },
+        {
+            "name": "Pig.png",
+            "gameid": 524
+        },
+        {
+            "name": "Blight.png",
+            "gameid": 525
         }
     ],
     "last_update": "11/01/2022"

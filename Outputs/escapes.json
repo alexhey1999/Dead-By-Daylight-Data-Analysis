@@ -2130,6 +2130,194 @@
         {
             "sacrificed": 4,
             "gameid": 484
+        },
+        {
+            "sacrificed": 4,
+            "gameid": 485
+        },
+        {
+            "escape": 3,
+            "sacrificed": 1,
+            "gameid": 486
+        },
+        {
+            "death": 2,
+            "escape": 1,
+            "sacrificed": 1,
+            "gameid": 487
+        },
+        {
+            "escape": 3,
+            "sacrificed": 1,
+            "gameid": 488
+        },
+        {
+            "sacrificed": 4,
+            "gameid": 489
+        },
+        {
+            "escape": 3,
+            "sacrificed": 1,
+            "gameid": 490
+        },
+        {
+            "escape": 4,
+            "gameid": 491
+        },
+        {
+            "escape": 4,
+            "gameid": 492
+        },
+        {
+            "escape": 3,
+            "sacrificed": 1,
+            "gameid": 493
+        },
+        {
+            "escape": 2,
+            "sacrificed": 2,
+            "gameid": 494
+        },
+        {
+            "escape": 3,
+            "sacrificed": 1,
+            "gameid": 495
+        },
+        {
+            "sacrificed": 4,
+            "gameid": 496
+        },
+        {
+            "escape": 4,
+            "gameid": 497
+        },
+        {
+            "escape": 4,
+            "gameid": 498
+        },
+        {
+            "escape": 4,
+            "gameid": 499
+        },
+        {
+            "escape": 1,
+            "sacrificed": 3,
+            "gameid": 500
+        },
+        {
+            "escape": 1,
+            "sacrificed": 3,
+            "gameid": 501
+        },
+        {
+            "disconnected": 1,
+            "escape": 3,
+            "gameid": 502
+        },
+        {
+            "escape": 4,
+            "gameid": 503
+        },
+        {
+            "sacrificed": 2,
+            "gameid": 504
+        },
+        {
+            "escape": 4,
+            "gameid": 505
+        },
+        {
+            "escape": 3,
+            "sacrificed": 1,
+            "gameid": 506
+        },
+        {
+            "gameid": 507
+        },
+        {
+            "escape": 3,
+            "sacrificed": 1,
+            "gameid": 508
+        },
+        {
+            "escape": 4,
+            "gameid": 509
+        },
+        {
+            "escape": 2,
+            "sacrificed": 2,
+            "gameid": 510
+        },
+        {
+            "death": 1,
+            "sacrificed": 1,
+            "gameid": 511
+        },
+        {
+            "disconnected": 1,
+            "sacrificed": 3,
+            "gameid": 512
+        },
+        {
+            "death": 1,
+            "escape": 2,
+            "sacrificed": 1,
+            "gameid": 513
+        },
+        {
+            "sacrificed": 4,
+            "gameid": 514
+        },
+        {
+            "escape": 3,
+            "sacrificed": 1,
+            "gameid": 515
+        },
+        {
+            "disconnected": 1,
+            "escape": 2,
+            "sacrificed": 1,
+            "gameid": 516
+        },
+        {
+            "escape": 4,
+            "gameid": 517
+        },
+        {
+            "escape": 4,
+            "gameid": 518
+        },
+        {
+            "disconnected": 1,
+            "escape": 3,
+            "gameid": 519
+        },
+        {
+            "sacrificed": 4,
+            "gameid": 520
+        },
+        {
+            "escape": 3,
+            "sacrificed": 1,
+            "gameid": 521
+        },
+        {
+            "disconnected": 1,
+            "escape": 1,
+            "sacrificed": 2,
+            "gameid": 522
+        },
+        {
+            "escape": 4,
+            "gameid": 523
+        },
+        {
+            "escape": 4,
+            "gameid": 524
+        },
+        {
+            "sacrificed": 4,
+            "gameid": 525
         }
     ],
     "last_update": "11/01/2022"

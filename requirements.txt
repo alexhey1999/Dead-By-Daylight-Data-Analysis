@@ -1,0 +1,8 @@
+uuid
+pyautogui
+opencv-python
+pytesseract
+Pillow
+dotenv
+screeninfo
+numpy

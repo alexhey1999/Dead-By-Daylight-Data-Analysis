@@ -3799,6 +3799,334 @@
             "player4Score": 10074,
             "killerScore": 29909,
             "gameid": 484
+        },
+        {
+            "player1Score": 25986,
+            "player2Score": 22741,
+            "player3Score": 20401,
+            "player4Score": 15508,
+            "killerScore": 29700,
+            "gameid": 485
+        },
+        {
+            "player1Score": 24089,
+            "player2Score": 23871,
+            "player3Score": 21531,
+            "player4Score": 12629,
+            "killerScore": 22839,
+            "gameid": 486
+        },
+        {
+            "player1Score": 14135,
+            "player2Score": 5370,
+            "player3Score": 4074,
+            "player4Score": 3933,
+            "killerScore": 15008,
+            "gameid": 487
+        },
+        {
+            "player1Score": 28373,
+            "player2Score": 26805,
+            "player3Score": 26706,
+            "player4Score": 20620,
+            "killerScore": 29450,
+            "gameid": 488
+        },
+        {
+            "player1Score": 25193,
+            "player2Score": 22771,
+            "player3Score": 19393,
+            "player4Score": 11364,
+            "killerScore": 37100,
+            "gameid": 489
+        },
+        {
+            "player1Score": 26526,
+            "player2Score": 22725,
+            "player3Score": 16954,
+            "player4Score": 10833,
+            "killerScore": 25835,
+            "gameid": 490
+        },
+        {
+            "player1Score": 19958,
+            "player2Score": 18963,
+            "player3Score": 17894,
+            "player4Score": 16904,
+            "killerScore": 15410,
+            "gameid": 491
+        },
+        {
+            "player1Score": 31152,
+            "player2Score": 30212,
+            "player3Score": 29096,
+            "player4Score": 11093,
+            "killerScore": 21727,
+            "gameid": 492
+        },
+        {
+            "player1Score": 28679,
+            "player2Score": 26066,
+            "player3Score": 23212,
+            "player4Score": 22264,
+            "killerScore": 33850,
+            "gameid": 493
+        },
+        {
+            "player1Score": 21513,
+            "player2Score": 19104,
+            "player3Score": 16938,
+            "player4Score": 13716,
+            "killerScore": 23961,
+            "gameid": 494
+        },
+        {
+            "player1Score": 32415,
+            "player2Score": 23852,
+            "player3Score": 21903,
+            "player4Score": 20200,
+            "killerScore": 28650,
+            "gameid": 495
+        },
+        {
+            "player1Score": 17600,
+            "player2Score": 14957,
+            "player3Score": 14720,
+            "player4Score": 10387,
+            "killerScore": 32639,
+            "gameid": 496
+        },
+        {
+            "player1Score": 22023,
+            "player2Score": 18623,
+            "player3Score": 17282,
+            "player4Score": 16109,
+            "killerScore": 19436,
+            "gameid": 497
+        },
+        {
+            "player1Score": 28099,
+            "player2Score": 25662,
+            "player3Score": 24318,
+            "player4Score": 24124,
+            "killerScore": 22298,
+            "gameid": 498
+        },
+        {
+            "player1Score": 30945,
+            "player2Score": 27338,
+            "player3Score": 26433,
+            "player4Score": 23160,
+            "killerScore": 28399,
+            "gameid": 499
+        },
+        {
+            "player1Score": 23515,
+            "player2Score": 22869,
+            "player3Score": 19961,
+            "player4Score": "NaN",
+            "killerScore": 34350,
+            "gameid": 500
+        },
+        {
+            "player1Score": 28232,
+            "player2Score": 26150,
+            "player3Score": 19256,
+            "player4Score": "NaN",
+            "killerScore": 29850,
+            "gameid": 501
+        },
+        {
+            "player1Score": 19249,
+            "player2Score": 18104,
+            "player3Score": 14945,
+            "player4Score": 0,
+            "killerScore": 5216,
+            "gameid": 502
+        },
+        {
+            "player1Score": 31080,
+            "player2Score": 28212,
+            "player3Score": 25728,
+            "player4Score": 25448,
+            "killerScore": 26227,
+            "gameid": 503
+        },
+        {
+            "player1Score": "NaN",
+            "player2Score": "NaN",
+            "player3Score": "NaN",
+            "player4Score": "NaN",
+            "killerScore": "NaN",
+            "gameid": 504
+        },
+        {
+            "player1Score": 31515,
+            "player2Score": 22409,
+            "player3Score": 22215,
+            "player4Score": 17495,
+            "killerScore": 23458,
+            "gameid": 505
+        },
+        {
+            "player1Score": 28821,
+            "player2Score": 28339,
+            "player3Score": 27750,
+            "player4Score": 24815,
+            "killerScore": 29311,
+            "gameid": 506
+        },
+        {
+            "player1Score": "NaN",
+            "player2Score": "NaN",
+            "player3Score": "NaN",
+            "player4Score": "NaN",
+            "killerScore": "NaN",
+            "gameid": 507
+        },
+        {
+            "player1Score": 21448,
+            "player2Score": 16785,
+            "player3Score": 13869,
+            "player4Score": 12473,
+            "killerScore": 19963,
+            "gameid": 508
+        },
+        {
+            "player1Score": 32510,
+            "player2Score": 26240,
+            "player3Score": 25806,
+            "player4Score": 24516,
+            "killerScore": 27616,
+            "gameid": 509
+        },
+        {
+            "player1Score": 28801,
+            "player2Score": 24613,
+            "player3Score": 12502,
+            "player4Score": 8222,
+            "killerScore": 24022,
+            "gameid": 510
+        },
+        {
+            "player1Score": "NaN",
+            "player2Score": "NaN",
+            "player3Score": "NaN",
+            "player4Score": "NaN",
+            "killerScore": "NaN",
+            "gameid": 511
+        },
+        {
+            "player1Score": 11214,
+            "player2Score": 9045,
+            "player3Score": 6692,
+            "player4Score": 0,
+            "killerScore": 24477,
+            "gameid": 512
+        },
+        {
+            "player1Score": 29711,
+            "player2Score": 25913,
+            "player3Score": 23364,
+            "player4Score": 12828,
+            "killerScore": 29650,
+            "gameid": 513
+        },
+        {
+            "player1Score": 17808,
+            "player2Score": 17642,
+            "player3Score": "NaN",
+            "player4Score": 12452,
+            "killerScore": 38000,
+            "gameid": 514
+        },
+        {
+            "player1Score": 28823,
+            "player2Score": 24649,
+            "player3Score": 22068,
+            "player4Score": 19720,
+            "killerScore": 32792,
+            "gameid": 515
+        },
+        {
+            "player1Score": 29336,
+            "player2Score": 21196,
+            "player3Score": 14110,
+            "player4Score": 0,
+            "killerScore": 29028,
+            "gameid": 516
+        },
+        {
+            "player1Score": 25614,
+            "player2Score": 25550,
+            "player3Score": 24872,
+            "player4Score": 22089,
+            "killerScore": 19431,
+            "gameid": 517
+        },
+        {
+            "player1Score": 27200,
+            "player2Score": 24686,
+            "player3Score": 20362,
+            "player4Score": 20282,
+            "killerScore": 25284,
+            "gameid": 518
+        },
+        {
+            "player1Score": 28022,
+            "player2Score": 23153,
+            "player3Score": 21145,
+            "player4Score": 0,
+            "killerScore": 18657,
+            "gameid": 519
+        },
+        {
+            "player1Score": 17361,
+            "player2Score": 15433,
+            "player3Score": 13140,
+            "player4Score": 12866,
+            "killerScore": 30207,
+            "gameid": 520
+        },
+        {
+            "player1Score": 27572,
+            "player2Score": 24725,
+            "player3Score": 23222,
+            "player4Score": 19385,
+            "killerScore": 29331,
+            "gameid": 521
+        },
+        {
+            "player1Score": 19500,
+            "player2Score": 8719,
+            "player3Score": 6622,
+            "player4Score": 0,
+            "killerScore": 15837,
+            "gameid": 522
+        },
+        {
+            "player1Score": 25457,
+            "player2Score": 23427,
+            "player3Score": 22862,
+            "player4Score": 22509,
+            "killerScore": 23853,
+            "gameid": 523
+        },
+        {
+            "player1Score": 28928,
+            "player2Score": 21741,
+            "player3Score": 21338,
+            "player4Score": 18860,
+            "killerScore": 17976,
+            "gameid": 524
+        },
+        {
+            "player1Score": 23552,
+            "player2Score": 22986,
+            "player3Score": 21867,
+            "player4Score": 10395,
+            "killerScore": 31400,
+            "gameid": 525
         }
     ],
     "last_update": "11/01/2022"

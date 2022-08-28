@@ -3047,6 +3047,90 @@
         {
             "offering": "ardentShrikeWreath",
             "gameid": 483
+        },
+        {
+            "offering": "crowsEye",
+            "gameid": 487
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 487
+        },
+        {
+            "offering": "devoutShrikeWreath",
+            "gameid": 488
+        },
+        {
+            "offering": "heartLocket",
+            "gameid": 491
+        },
+        {
+            "offering": "heartLocket",
+            "gameid": 494
+        },
+        {
+            "offering": "fragrantSweetWilliam",
+            "gameid": 500
+        },
+        {
+            "offering": "5thAnniversary",
+            "gameid": 500
+        },
+        {
+            "offering": "bloodyPartyStreamers",
+            "gameid": 506
+        },
+        {
+            "offering": "hollowShell",
+            "gameid": 509
+        },
+        {
+            "offering": "bloodyPartyStreamers",
+            "gameid": 510
+        },
+        {
+            "offering": "bloodyPartyStreamers",
+            "gameid": 513
+        },
+        {
+            "offering": "bogLaurelSachet",
+            "gameid": 514
+        },
+        {
+            "offering": "macmilliansPhalanxBone",
+            "gameid": 514
+        },
+        {
+            "offering": "crispleafAmaranthSachet",
+            "gameid": 515
+        },
+        {
+            "offering": "escapeCake",
+            "gameid": 519
+        },
+        {
+            "offering": "clearReagent",
+            "gameid": 520
+        },
+        {
+            "offering": "survivorPudding",
+            "gameid": 521
+        },
+        {
+            "offering": "crispleafAmaranthSachet",
+            "gameid": 522
+        },
+        {
+            "offering": "freshPrimroseBlossom",
+            "gameid": 522
+        },
+        {
+            "offering": "petrifiedOak",
+            "gameid": 524
+        },
+        {
+            "offering": "bloodyPartyStreamers",
+            "gameid": 525
         }
     ],
     "last_update": "11/01/2022"
