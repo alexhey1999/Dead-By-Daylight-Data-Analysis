@@ -22,16 +22,23 @@ def main():
     # image, filename = ScreenTaker.get_image_capture()
     # print("Image Taken")
     
-    image, filename = ScreenTaker.get_image_from_filename('./Tests/test_full.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_full.png')
     # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_disconnected.png')
+    image, filename = ScreenTaker.get_image_from_filename('./Tests/test_random_1.png')
     # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_old.png')
     
     PerkAnalyser = Perks(image,None)
-    # PerkAnalyser.show_screen()
-    survivor_perks_used, killer_perks_used = PerkAnalyser.run()
+    # PerkAnalyser.test_perk_loaded()
+    PerkAnalyser.size_comparison()
     
-    print()
-    # PerkAnalyser.size_comparison()
+    # while True:pass
+    PerkAnalyser.show_screen()
+    survivor_perks_used, killer_perks_used = PerkAnalyser.run()
+    # print(survivor_perks_used)
+    print("Survivor Perks Used: " + ', '.join(survivor_perks_used))
+    print("Killer Perks Used: " + ', '.join(killer_perks_used))
+    
+    
     # PerkAnalyser.perk_test()
     
     

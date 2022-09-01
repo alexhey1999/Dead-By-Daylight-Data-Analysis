@@ -3,30 +3,72 @@ import os
 from os import listdir
 from screen_capping import Screen
 from screeninfo import get_monitors
-from dotenv import load_dotenv,find_dotenv
+from dotenv import load_dotenv, find_dotenv
 
 from perks import Perks
 
 
-load_dotenv(find_dotenv())
+@pytest.fixture
+def resources():
+    load_dotenv(find_dotenv())
+    monitor = get_monitors()[int(os.getenv("DEFAULT_MONITOR"))]
+    ScreenTaker = Screen(monitor.width, monitor.height)
+    PerkAnalyser = Perks(None, None)
+    return ScreenTaker, PerkAnalyser
 
-monitor = get_monitors()[int(os.getenv("DEFAULT_MONITOR"))]
-ScreenTaker = Screen(monitor.width, monitor.height)
-PerkAnalyser = Perks(None,None)
 
+@pytest.mark.parametrize(
+    "file_location,survivor_perks_actual,killer_perks_actual",
+    [
+        (
+            "./Tests/test_full.png",
+            [
+                "Power Struggle",
+                "Unbreakable",
+                "Flip Flop",
+                "Soul Guard",
+                "Head On",
+                "Quick And Quiet",
+                "Off The Record",
+                "Iron Will",
+                "Vigil",
+                "Head On",
+                "Off The Record",
+                "Resilience",
+                "Lithe",
+                "Empathy",
+                "Windows Of Opportunity",
+                "Solidarity",
+            ],
+            [
+                "Brutal Strength",
+                "Lethal Pursuer",
+                "Enduring",
+                "Spirit Fury",
+            ],
+        ),
+        (
+            "./Tests/test_random_1.png",
+            ['Boon Exponential', 'Left Behind', 'Power Struggle', 'Decisive Strike'],
+            ['Brutal Strength', 'Deathbound', 'Spies From The Shadows', 'Dead Man Switch']
+        )
+    ],
+)
+class Tests:
+    def test_survivor(
+        self, resources, file_location, survivor_perks_actual, killer_perks_actual
+    ):
+        ScreenTaker, PerkAnalyser = resources
+        image, _ = ScreenTaker.get_image_from_filename(file_location)
+        PerkAnalyser.set_image(image)
+        survivor_perks_used, _ = PerkAnalyser.run()
+        assert survivor_perks_used == survivor_perks_actual, f'Survivor Perk Not Found: f{file_location}'
 
-# def test_random_1():
-#     image, filename = ScreenTaker.get_image_from_filename('./Tests/test_random_1.png')
-#     PerkAnalyser.set_image(image)
-#     survivor_perks_used, killer_perks_used = PerkAnalyser.run()
-    
-    
-
-def test_full():
-    image, filename = ScreenTaker.get_image_from_filename('./Tests/test_full.png')
-    PerkAnalyser.set_image(image)
-    survivor_perks_used, killer_perks_used = PerkAnalyser.run()
-    assert survivor_perks_used == ['Power Struggle', 'Unbreakable', 'Flip Flop', 'Soul Guard', 'Head On', 'Quick And Quiet', 'Off The Record', 'Iron Will', 'Vigil', 'Head On', 'Off The Record', 'Resilience', 'Lithe', 'Empathy', 'Windows Of Opportunity', 'Solidarity']
-    assert killer_perks_used == ['Brutal Strength', 'Lethal Pursuer', 'Enduring', 'Spirit Fury']
-    
-    
+    def test_killer(
+        self, resources, file_location, survivor_perks_actual, killer_perks_actual
+    ):
+        ScreenTaker, PerkAnalyser = resources
+        image, _ = ScreenTaker.get_image_from_filename(file_location)
+        PerkAnalyser.set_image(image)
+        _, killer_perks_used = PerkAnalyser.run()
+        assert killer_perks_used == killer_perks_actual
