@@ -49,14 +49,29 @@ def resources():
         ),
         (
             "./Tests/test_random_1.png",
-            ['Boon Exponential', 'Left Behind', 'Power Struggle', 'Decisive Strike'],
-            ['Brutal Strength', 'Deathbound', 'Spies From The Shadows', 'Dead Man Switch']
+            ["Boon Exponential", "Left Behind", "Power Struggle", "Decisive Strike"],
+            [
+                "Brutal Strength",
+                "Deathbound",
+                "Spies From The Shadows",
+                "Dead Man Switch",
+            ],
         ),
         (
             "./Tests/test_mori.png",
-            ['Botany Knowledge', 'Lucky Break', 'Inner Focus', 'Poised'],
-            ['Call Of Brine', 'Predator', 'Spirit Fury', 'Mind Breaker']
-        )
+            ["Botany Knowledge", "Lucky Break", "Inner Focus", "Poised"],
+            ["Call Of Brine", "Predator", "Spirit Fury", "Mind Breaker"],
+        ),
+        (
+            "./Tests/test_difficult_survivor_perks.png",
+            ["Deja Vu", "Kindred", "Object Of Obsession", "Dark Sense"],
+            ["Stridor", "Beast Of Prey", "Hex Plaything", "Deathbound"],
+        ),
+        (
+            "./Tests/test_disconnected.png",
+            ["Appraisal", "Desperate Measures", "Resilience", "Smash Hit"],
+            ["Save The Best For Last", "Bamboozle", "Devour Hope", "Furtive Chase"],
+        ),
     ],
 )
 class Tests:
@@ -67,7 +82,9 @@ class Tests:
         image, _ = ScreenTaker.get_image_from_filename(file_location)
         PerkAnalyser.set_image(image)
         survivor_perks_used, _ = PerkAnalyser.run()
-        assert survivor_perks_used == survivor_perks_actual, f'Survivor Perk Not Found: f{file_location}'
+        assert (
+            survivor_perks_used == survivor_perks_actual
+        ), f"Survivor Perk Not Found: f{file_location}"
 
     def test_killer(
         self, resources, file_location, survivor_perks_actual, killer_perks_actual

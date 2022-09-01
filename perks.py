@@ -9,8 +9,8 @@ class Perks:
         self.brightness_vector = brightness_vector
         self.perk_size = 50
         self.perk_image_size = 40
-        self.radius = 17
-        self.lower_white = 105
+        self.radius = 18
+        self.lower_white = 100
     
     
     def set_image(self, image):
@@ -145,9 +145,9 @@ class Perks:
         player_4_perk_4 = survivor_perks_used.append(self.find_best_matching_perk(self.process_perk_screen_image(self.image[662:662+self.perk_size,357:357+self.perk_size])))
                  
         # Killer Perks
-        killer_perk_1 = killer_perks_used.append(self.find_best_matching_perk(self.process_perk_screen_image(self.image[771:771+self.perk_size,193:193+self.perk_size]),False)) 
-        killer_perk_2 = killer_perks_used.append(self.find_best_matching_perk(self.process_perk_screen_image(self.image[771:771+self.perk_size,247:247+self.perk_size]),False))
-        killer_perk_3 = killer_perks_used.append(self.find_best_matching_perk(self.process_perk_screen_image(self.image[771:771+self.perk_size,303:303+self.perk_size]),False))
+        killer_perk_1 = killer_perks_used.append(self.find_best_matching_perk(self.process_perk_screen_image(self.image[771:771+self.perk_size,192:192+self.perk_size]),False)) 
+        killer_perk_2 = killer_perks_used.append(self.find_best_matching_perk(self.process_perk_screen_image(self.image[771:771+self.perk_size,246:246+self.perk_size]),False))
+        killer_perk_3 = killer_perks_used.append(self.find_best_matching_perk(self.process_perk_screen_image(self.image[771:771+self.perk_size,302:302+self.perk_size]),False))
         killer_perk_4 = killer_perks_used.append(self.find_best_matching_perk(self.process_perk_screen_image(self.image[771:771+self.perk_size,356:356+self.perk_size]),False))
         
         survivor_perks_used = list(filter(lambda perk:perk != "No Perk",survivor_perks_used))
