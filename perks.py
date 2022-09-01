@@ -89,10 +89,11 @@ class Perks:
     
     def size_comparison(self):
         self.process_screen_image()
-        screen_perk = self.process_perk_screen_image(self.image[426:426+self.perk_size,358:358+self.perk_size])
+        screen_perk = self.process_perk_screen_image(self.image[771:771+self.perk_size,248:248+self.perk_size])
         screen_perk = cv2.resize(screen_perk,(self.perk_size * 10, self.perk_size * 10),interpolation=cv2.INTER_AREA)
         self.show_image(screen_perk,"Screen Perk")
-        icon = cv2.imread(f"{os.getenv('PERK_LOCATIONS_SURVIVOR')}/Iron Will.png")
+        # icon = cv2.imread(f"{os.getenv('PERK_LOCATIONS_SURVIVOR')}/Iron Will.png")
+        icon = cv2.imread(f"{os.getenv('PERK_LOCATIONS_KILLER')}/Predator.png")
         
         icon = self.perk_file_processing(icon)        
         icon = cv2.resize(icon, (self.perk_size * 10, self.perk_size * 10),interpolation=cv2.INTER_AREA)
@@ -145,7 +146,7 @@ class Perks:
                  
         # Killer Perks
         killer_perk_1 = killer_perks_used.append(self.find_best_matching_perk(self.process_perk_screen_image(self.image[771:771+self.perk_size,193:193+self.perk_size]),False)) 
-        killer_perk_2 = killer_perks_used.append(self.find_best_matching_perk(self.process_perk_screen_image(self.image[771:771+self.perk_size,248:248+self.perk_size]),False))
+        killer_perk_2 = killer_perks_used.append(self.find_best_matching_perk(self.process_perk_screen_image(self.image[771:771+self.perk_size,247:247+self.perk_size]),False))
         killer_perk_3 = killer_perks_used.append(self.find_best_matching_perk(self.process_perk_screen_image(self.image[771:771+self.perk_size,303:303+self.perk_size]),False))
         killer_perk_4 = killer_perks_used.append(self.find_best_matching_perk(self.process_perk_screen_image(self.image[771:771+self.perk_size,356:356+self.perk_size]),False))
         

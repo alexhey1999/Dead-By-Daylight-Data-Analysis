@@ -24,8 +24,8 @@ def main():
     
     # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_full.png')
     # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_disconnected.png')
-    image, filename = ScreenTaker.get_image_from_filename('./Tests/test_random_1.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_old.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_random_1.png')
+    image, filename = ScreenTaker.get_image_from_filename('./Tests/test_mori.png')
     
     PerkAnalyser = Perks(image,None)
     # PerkAnalyser.test_perk_loaded()

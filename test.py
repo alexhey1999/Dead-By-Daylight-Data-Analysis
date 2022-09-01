@@ -51,6 +51,11 @@ def resources():
             "./Tests/test_random_1.png",
             ['Boon Exponential', 'Left Behind', 'Power Struggle', 'Decisive Strike'],
             ['Brutal Strength', 'Deathbound', 'Spies From The Shadows', 'Dead Man Switch']
+        ),
+        (
+            "./Tests/test_mori.png",
+            ['Botany Knowledge', 'Lucky Break', 'Inner Focus', 'Poised'],
+            ['Call Of Brine', 'Predator', 'Spirit Fury', 'Mind Breaker']
         )
     ],
 )
