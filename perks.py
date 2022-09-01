@@ -15,20 +15,22 @@ class Perks:
         self.image = image
     
     
-    def get_perk_list(self):
-        self.process_screen_image()
-        return listdir(os.getenv("PERK_LOCATIONS"))
+    def get_perk_list(self,perk_path):
+        return listdir(perk_path)
+    
     
     def show_screen(self):
         # self.process_screen_image()
         cv2.imshow("Perk Screen ", self.image)
+    
         
     def show_image(self, image,name="No Name Given"):
         cv2.imshow(name,image)
+    
         
     def process_screen_image(self):
         upper_white = np.array([256, 256, 256])
-        lower_white = np.array([145, 145, 145])
+        lower_white = np.array([105, 105, 105])
         mask = cv2.inRange(self.image, lower_white, upper_white)
         WhiteBackground = np.zeros((self.image.shape[0], self.image.shape[1], 3), dtype=np.uint8)
         WhiteBackground[:,:,:] = (255,255,255)
@@ -36,87 +38,64 @@ class Perks:
         BlackBackground[:,:,:] = (0,0,0)
         result = cv2.bitwise_and(WhiteBackground,WhiteBackground,BlackBackground ,mask = mask)
         self.image = result
+    
         
     def process_perk_image(self,perk):
-        perk = cv2.cvtColor(np.array(perk),cv2.COLOR_RGB2BGR)
-        upper_white = np.array([256, 256, 256])
-        lower_white = np.array([175, 175, 175])
-        mask = cv2.inRange(perk, lower_white, upper_white)
-        WhiteBackground = np.zeros_like(perk)
-        WhiteBackground[:,:,:] = (255,255,255)
-        BlackBackground = np.zeros_like(perk)
-        BlackBackground[:,:,:] = (0,0,0)
-        result = cv2.bitwise_and(WhiteBackground,WhiteBackground,BlackBackground ,mask = mask)
-        # cv2.imshow(result,'Testing')
-        
-        return result
+        cv2.imshow(perk,'Testing')    
+        return perk
+    
     
     def process_perk_screen_image(self,perk_screen_image):
         height,width,_ = perk_screen_image.shape
         mask = np.zeros((height,width), np.uint8)
-        circle_img = cv2.circle(mask,(25,25),15,(255,255,255),thickness=-1)        
+        circle_img = cv2.circle(mask,(25,25),16,(255,255,255),thickness=-1)        
         perk_screen_image = cv2.bitwise_and(perk_screen_image, perk_screen_image, mask=circle_img)
         return(perk_screen_image)
     
-    def find_best_matching_perk(self,image_to_analyze):
+    
+    def find_best_matching_perk(self,image_to_analyze, survivor = True):
+            if survivor:
+                perk_path = os.getenv('PERK_LOCATIONS_SURVIVOR')
+            else:
+                perk_path = os.getenv('PERK_LOCATIONS_KILLER')
             most_probable_perk = None
             most_probable_perk_score = 0
-            second_probable_perk = None
-            second_probable_perk_score = 0
-            for perk in self.get_perk_list():
-                icon = cv2.imread(f"{os.getenv('PERK_LOCATIONS')}/{perk}")
+            for perk in self.get_perk_list(perk_path):
+                icon = cv2.imread(f"{perk_path}/{perk}")
                 icon = cv2.resize(icon, (self.perk_size, self.perk_size),interpolation=cv2.INTER_AREA)
-                icon = self.process_perk_image(icon)
+                # icon = self.process_perk_image(icon)
                 result = cv2.matchTemplate(image_to_analyze, icon, cv2.TM_CCOEFF_NORMED)
                 minVal, maxVal, minLoc, maxLoc = cv2.minMaxLoc(result)
                 if maxVal > most_probable_perk_score:
-                    second_probable_perk_score = most_probable_perk_score
                     most_probable_perk_score = maxVal
-                    second_probable_perk = most_probable_perk
                     most_probable_perk = perk
-
-            return most_probable_perk, most_probable_perk_score,second_probable_perk,second_probable_perk_score
+                    
+                if most_probable_perk:
+                    most_probable_perk
+            return most_probable_perk, most_probable_perk_score
             
     
-    def perk_checker_and_display(self,screen,name="Perk",show_image = False,show_second_best = False):
+    def perk_checker_and_display(self,screen,name="Perk",survivor = True, show_image = False):
         if show_image: self.show_image(screen,name)
-        perk_chosen, perk_score,perk_2_chosen, perk_2_score = self.find_best_matching_perk(screen)
+        perk_chosen, perk_score = self.find_best_matching_perk(screen,survivor)
         print("Perk Chosen: ", perk_chosen)
-        if show_second_best:
-            print("Perk Score: ", perk_score)
-            print("Perk 2 Chosen: ", perk_2_chosen)
-            print("Perk 2 Score: ", perk_2_score)    
+    
     
     def size_comparison(self):
         self.process_screen_image()
-
-        screen_perk = self.process_perk_screen_image(self.image[426:426+self.perk_size,248:248+self.perk_size])
+        screen_perk = self.process_perk_screen_image(self.image[770:770+self.perk_size,303:303+self.perk_size])
         screen_perk = cv2.resize(screen_perk,(self.perk_size * 10, self.perk_size * 10),interpolation=cv2.INTER_AREA)
         self.show_image(screen_perk,"Screen Perk")
-        
-        icon = cv2.imread(f"{os.getenv('PERK_LOCATIONS')}/iconPerks_overwhelmingPresence.png")
-        image = cv2.cvtColor(np.array(image),cv2.COLOR_RGB2BGR)
-        icon = self.process_perk_image(icon)
-        icon = cv2.resize(icon, (25, 25),interpolation=cv2.INTER_AREA)
+        icon = cv2.imread(f"{os.getenv('PERK_LOCATIONS_KILLER')}/iconPerks_enduring.png")
         icon = cv2.resize(icon, (self.perk_size, self.perk_size),interpolation=cv2.INTER_AREA)
         icon = cv2.resize(icon, (self.perk_size * 10, self.perk_size * 10),interpolation=cv2.INTER_AREA)
         self.show_image(icon,"Perk Size")
         
-    
-    def perk_test(self):
-        icon_original = cv2.imread(f"{os.getenv('PERK_LOCATIONS')}/iconPerks_overwhelmingPresence.png")
         
-        icon = self.process_perk_image(icon_original)
-        icon = cv2.resize(icon, (10, 10),interpolation=cv2.INTER_AREA)
-        icon = cv2.resize(icon, (self.perk_size, self.perk_size),interpolation=cv2.INTER_AREA)
-        cv2.imshow(icon, "Processed")
+    def run(self):
+        survivor_perks_used = []
+        killer_perks_used = []
         
-        cv2.imshow(icon_original, "Unprocessed")
-        
-        
-        
-    
-    def divide_screen(self):
         # Divides the screen into 20 spaces corresponding to each perk location.
         self.process_screen_image()
         # Width Then Height
@@ -133,7 +112,7 @@ class Perks:
         player_1_perk_4 = self.process_perk_screen_image(self.image[310:310+self.perk_size,358:358+self.perk_size])
         self.perk_checker_and_display(player_1_perk_4)
         
-        # Player 2
+        # # Player 2
         player_2_perk_1 = self.process_perk_screen_image(self.image[426:426+self.perk_size,193:193+self.perk_size])
         self.perk_checker_and_display(player_2_perk_1,"Perk 1")
         
@@ -148,7 +127,7 @@ class Perks:
         
         
         
-        # Player 3
+        # # Player 3
         player_3_perk_1 = self.process_perk_screen_image(self.image[544:544+self.perk_size,193:193+self.perk_size])
         self.perk_checker_and_display(player_3_perk_1,"Perk 1")
         
@@ -162,15 +141,29 @@ class Perks:
         self.perk_checker_and_display(player_3_perk_4, "Perk 4")
         
         
-        # Player 4
-        player_4_perk_1 = None
-        player_4_perk_2 = None
-        player_4_perk_3 = None
-        player_4_perk_4 = None
+        # # Player 4
+        player_4_perk_1 = self.process_perk_screen_image(self.image[662:662+self.perk_size,193:193+self.perk_size])
+        self.perk_checker_and_display(player_4_perk_1,"Perk 1")
+        
+        player_4_perk_2 = self.process_perk_screen_image(self.image[662:662+self.perk_size,248:248+self.perk_size])
+        self.perk_checker_and_display(player_4_perk_2, "Perk 2")
+        
+        player_4_perk_3 = self.process_perk_screen_image(self.image[662:662+self.perk_size,303:303+self.perk_size])
+        self.perk_checker_and_display(player_4_perk_3, "Perk 3")
+        
+        player_4_perk_4 = self.process_perk_screen_image(self.image[662:662+self.perk_size,358:358+self.perk_size])
+        self.perk_checker_and_display(player_4_perk_4, "Perk 4")
                  
         # Killer Perks
-        killer_perk_1 = None
-        killer_perk_2 = None
-        killer_perk_3 = None
-        killer_perk_4 = None
+        killer_perk_1 = self.process_perk_screen_image(self.image[770:770+self.perk_size,193:193+self.perk_size])
+        self.perk_checker_and_display(killer_perk_1,"Killer Perk 1",False,True)
+        
+        killer_perk_2 = self.process_perk_screen_image(self.image[770:770+self.perk_size,248:248+self.perk_size])
+        self.perk_checker_and_display(killer_perk_2, "Killer Perk 2",False,True)
+        
+        killer_perk_3 = self.process_perk_screen_image(self.image[770:770+self.perk_size,303:303+self.perk_size])
+        self.perk_checker_and_display(killer_perk_3, "Killer Perk 3",False,True)
+        
+        killer_perk_4 = self.process_perk_screen_image(self.image[770:770+self.perk_size,358:358+self.perk_size])
+        self.perk_checker_and_display(killer_perk_4, "Killer Perk 4",False,True)
         pass

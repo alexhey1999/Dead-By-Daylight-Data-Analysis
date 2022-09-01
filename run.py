@@ -21,13 +21,15 @@ from perks import Perks
 def main():
     # image, filename = ScreenTaker.get_image_capture()
     
-    image, filename = ScreenTaker.get_image_from_filename('./Tests/test_screenshot.png')
+    image, filename = ScreenTaker.get_image_from_filename('./Tests/test_full.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_disconnected.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_old.png')
     # print("Image Taken")
     
     PerkAnalyser = Perks(image,brightness_vector)
     # PerkAnalyser.show_screen()
-    # PerkAnalyser.divide_screen()
-    PerkAnalyser.size_comparison()
+    PerkAnalyser.run()
+    # PerkAnalyser.size_comparison()
     # PerkAnalyser.perk_test()
     
     
