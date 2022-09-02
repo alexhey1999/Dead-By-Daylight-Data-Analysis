@@ -27,10 +27,10 @@ class Perks:
         cv2.imshow(name,image)    
     
     def process_perk_screen_image(self,perk_screen_image):
-        height,width,_ = perk_screen_image.shape
-        mask = np.zeros((height,width), np.uint8)
-        circle_img = cv2.circle(mask,(25,25),self.radius,(255,255,255),thickness=-1)        
-        perk_screen_image = cv2.bitwise_and(perk_screen_image, perk_screen_image, mask=circle_img)
+        # height,width,_ = perk_screen_image.shape
+        # mask = np.zeros((height,width), np.uint8)
+        # circle_img = cv2.circle(mask,(25,25),self.radius,(255,255,255),thickness=-1)        
+        # perk_screen_image = cv2.bitwise_and(perk_screen_image, perk_screen_image, mask=circle_img)
         return(perk_screen_image)
     
     
@@ -64,17 +64,6 @@ class Perks:
         circle_img = cv2.circle(mask,(25,25),self.radius,(255,255,255),thickness=-1)
         icon = cv2.bitwise_and(icon, icon, mask=circle_img)
         return icon
-    
-    # def size_comparison(self):
-    #     screen_perk = self.process_perk_screen_image(self.image[771:771+self.perk_size,248:248+self.perk_size])
-    #     screen_perk = cv2.resize(screen_perk,(self.perk_size * 10, self.perk_size * 10),interpolation=cv2.INTER_AREA)
-    #     self.show_image(screen_perk,"Screen Perk")
-    #     # icon = cv2.imread(f"{os.getenv('PERK_LOCATION_SURVIVOR')}/Iron Will.png")
-    #     icon = cv2.imread(f"{os.getenv('PERK_LOCATION_KILLER')}/Predator.png")
-        
-    #     icon = self.perk_file_processing(icon)        
-    #     icon = cv2.resize(icon, (self.perk_size * 10, self.perk_size * 10),interpolation=cv2.INTER_AREA)
-    #     self.show_image(icon,"Perk Size")
         
     def run(self):
         survivor_perks_used = []
@@ -82,34 +71,34 @@ class Perks:
         
         # Divides the screen into 20 spaces corresponding to each perk location.        
         # Player 1
-        survivor_perks_used.append(self.find_best_matching_perk(self.process_perk_screen_image(self.image[310:310+self.perk_size,193:193+self.perk_size])))     
-        survivor_perks_used.append(self.find_best_matching_perk(self.process_perk_screen_image(self.image[310:310+self.perk_size,248:248+self.perk_size])))    
-        survivor_perks_used.append(self.find_best_matching_perk(self.process_perk_screen_image(self.image[310:310+self.perk_size,303:303+self.perk_size])))
-        survivor_perks_used.append(self.find_best_matching_perk(self.process_perk_screen_image(self.image[310:310+self.perk_size,357:357+self.perk_size])))
- 
+        survivor_perks_used.append(self.find_best_matching_perk(self.image[310:310+self.perk_size,193:193+self.perk_size]))
+        survivor_perks_used.append(self.find_best_matching_perk(self.image[310:310+self.perk_size,248:248+self.perk_size]))
+        survivor_perks_used.append(self.find_best_matching_perk(self.image[310:310+self.perk_size,303:303+self.perk_size]))
+        survivor_perks_used.append(self.find_best_matching_perk(self.image[310:310+self.perk_size,357:357+self.perk_size]))
+
         # # Player 2
-        survivor_perks_used.append(self.find_best_matching_perk(self.process_perk_screen_image(self.image[426:426+self.perk_size,193:193+self.perk_size])))
-        survivor_perks_used.append(self.find_best_matching_perk(self.process_perk_screen_image(self.image[426:426+self.perk_size,248:248+self.perk_size])))
-        survivor_perks_used.append(self.find_best_matching_perk(self.process_perk_screen_image(self.image[426:426+self.perk_size,303:303+self.perk_size])))
-        survivor_perks_used.append(self.find_best_matching_perk(self.process_perk_screen_image(self.image[426:426+self.perk_size,357:357+self.perk_size])))
+        survivor_perks_used.append(self.find_best_matching_perk(self.image[426:426+self.perk_size,193:193+self.perk_size]))
+        survivor_perks_used.append(self.find_best_matching_perk(self.image[426:426+self.perk_size,248:248+self.perk_size]))
+        survivor_perks_used.append(self.find_best_matching_perk(self.image[426:426+self.perk_size,303:303+self.perk_size]))
+        survivor_perks_used.append(self.find_best_matching_perk(self.image[426:426+self.perk_size,357:357+self.perk_size]))
         
         # # Player 3
-        survivor_perks_used.append(self.find_best_matching_perk(self.process_perk_screen_image(self.image[544:544+self.perk_size,193:193+self.perk_size]))) 
-        survivor_perks_used.append(self.find_best_matching_perk(self.process_perk_screen_image(self.image[544:544+self.perk_size,248:248+self.perk_size])))
-        survivor_perks_used.append(self.find_best_matching_perk(self.process_perk_screen_image(self.image[544:544+self.perk_size,303:303+self.perk_size])))
-        survivor_perks_used.append(self.find_best_matching_perk(self.process_perk_screen_image(self.image[544:544+self.perk_size,357:357+self.perk_size])))
+        survivor_perks_used.append(self.find_best_matching_perk(self.image[544:544+self.perk_size,193:193+self.perk_size]))
+        survivor_perks_used.append(self.find_best_matching_perk(self.image[544:544+self.perk_size,248:248+self.perk_size]))
+        survivor_perks_used.append(self.find_best_matching_perk(self.image[544:544+self.perk_size,303:303+self.perk_size]))
+        survivor_perks_used.append(self.find_best_matching_perk(self.image[544:544+self.perk_size,357:357+self.perk_size]))
         
         # # Player 4
-        survivor_perks_used.append(self.find_best_matching_perk(self.process_perk_screen_image(self.image[662:662+self.perk_size,193:193+self.perk_size])))
-        survivor_perks_used.append(self.find_best_matching_perk(self.process_perk_screen_image(self.image[662:662+self.perk_size,248:248+self.perk_size])))
-        survivor_perks_used.append(self.find_best_matching_perk(self.process_perk_screen_image(self.image[662:662+self.perk_size,303:303+self.perk_size])))
-        survivor_perks_used.append(self.find_best_matching_perk(self.process_perk_screen_image(self.image[662:662+self.perk_size,357:357+self.perk_size])))
+        survivor_perks_used.append(self.find_best_matching_perk(self.image[662:662+self.perk_size,193:193+self.perk_size]))
+        survivor_perks_used.append(self.find_best_matching_perk(self.image[662:662+self.perk_size,248:248+self.perk_size]))
+        survivor_perks_used.append(self.find_best_matching_perk(self.image[662:662+self.perk_size,303:303+self.perk_size]))
+        survivor_perks_used.append(self.find_best_matching_perk(self.image[662:662+self.perk_size,357:357+self.perk_size]))
                  
         # Killer Perks
-        killer_perks_used.append(self.find_best_matching_perk(self.process_perk_screen_image(self.image[771:771+self.perk_size,192:192+self.perk_size]),False)) 
-        killer_perks_used.append(self.find_best_matching_perk(self.process_perk_screen_image(self.image[771:771+self.perk_size,246:246+self.perk_size]),False))
-        killer_perks_used.append(self.find_best_matching_perk(self.process_perk_screen_image(self.image[771:771+self.perk_size,302:302+self.perk_size]),False))
-        killer_perks_used.append(self.find_best_matching_perk(self.process_perk_screen_image(self.image[771:771+self.perk_size,356:356+self.perk_size]),False))
+        killer_perks_used.append(self.find_best_matching_perk(self.image[771:771+self.perk_size,192:192+self.perk_size],False))
+        killer_perks_used.append(self.find_best_matching_perk(self.image[771:771+self.perk_size,246:246+self.perk_size],False))
+        killer_perks_used.append(self.find_best_matching_perk(self.image[771:771+self.perk_size,302:302+self.perk_size],False))
+        killer_perks_used.append(self.find_best_matching_perk(self.image[771:771+self.perk_size,356:356+self.perk_size],False))
         
         survivor_perks_used = list(filter(lambda perk:perk != "No Perk",survivor_perks_used))
         killer_perks_used = list(filter(lambda perk:perk != "No Perk",killer_perks_used))
