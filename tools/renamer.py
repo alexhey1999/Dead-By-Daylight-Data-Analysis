@@ -19,6 +19,6 @@ def main(file_location):
 if __name__ == '__main__':
     load_dotenv(find_dotenv())
     
-    # main(os.getenv('PERK_LOCATIONS_SURVIVOR'))
+    # main(os.getenv('PERK_LOCATION_SURVIVOR'))
     main('./temp')
 

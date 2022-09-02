@@ -17,7 +17,7 @@ class Perks:
     
     def get_perk_list(self):
         self.process_screen_image()
-        return listdir(os.getenv("PERK_LOCATIONS"))
+        return listdir(os.getenv("PERK_LOCATION"))
     
     
     def show_screen(self):
@@ -65,7 +65,7 @@ class Perks:
             second_probable_perk = None
             second_probable_perk_score = 0
             for perk in self.get_perk_list():
-                icon = cv2.imread(f"{os.getenv('PERK_LOCATIONS')}/{perk}")
+                icon = cv2.imread(f"{os.getenv('PERK_LOCATION')}/{perk}")
                 icon = self.process_perk_image(icon)
                 icon = cv2.resize(icon, (self.perk_size, self.perk_size),interpolation=cv2.INTER_AREA)
                 result = cv2.matchTemplate(image_to_analyze, icon, cv2.TM_CCOEFF_NORMED)
@@ -101,7 +101,7 @@ class Perks:
   
         self.show_image(screen_perk,"Screen Perks")
 
-        icon = cv2.imread(f"{os.getenv('PERK_LOCATIONS')}/iconPerks_vigil.png")
+        icon = cv2.imread(f"{os.getenv('PERK_LOCATION')}/iconPerks_vigil.png")
         icon = self.process_perk_image(icon)
         icon = cv2.resize(icon, (self.perk_size, self.perk_size),interpolation=cv2.INTER_AREA)
         icon = cv2.resize(icon, (self.perk_size * 10, self.perk_size * 10),interpolation=cv2.INTER_AREA)
