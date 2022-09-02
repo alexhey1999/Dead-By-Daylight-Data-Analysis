@@ -4,12 +4,9 @@ import cv2
 import numpy as np
 
 class Killer:
-    def __init__(self, image, brightness_vector):
+    def __init__(self, image):
         self.image = image
-        self.brightness_vector = brightness_vector
         self.perk_size = 50
-        self.perk_image_size = 40
-        self.radius = 18
         self.lower_white = 100
     
     
@@ -17,7 +14,7 @@ class Killer:
         self.image = image
     
     
-    def get_perk_list(self,perk_path):
+    def get_killer_list(self,perk_path):
         return listdir(perk_path)
     
     
@@ -39,11 +36,6 @@ class Killer:
         BlackBackground[:,:,:] = (0,0,0)
         result = cv2.bitwise_and(WhiteBackground,WhiteBackground,BlackBackground ,mask = mask)
         self.image = result
-    
-        
-    def process_perk_image(self,perk):
-        cv2.imshow(perk,'Testing')    
-        return perk
     
     
     def process_perk_screen_image(self,perk_screen_image):

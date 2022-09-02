@@ -13,7 +13,7 @@ def resources():
     load_dotenv(find_dotenv())
     monitor = get_monitors()[int(os.getenv("DEFAULT_MONITOR"))]
     ScreenTaker = Screen(monitor.width, monitor.height)
-    PerkAnalyser = Perks(None, None)
+    PerkAnalyser = Perks(None)
     return ScreenTaker, PerkAnalyser
 
 
@@ -80,6 +80,8 @@ class Tests:
     ):
         ScreenTaker, PerkAnalyser = resources
         image, _ = ScreenTaker.get_image_from_filename(file_location)
+        image = ScreenTaker.process_screen_image(image)
+        
         PerkAnalyser.set_image(image)
         survivor_perks_used, _ = PerkAnalyser.run()
         assert (
@@ -91,6 +93,7 @@ class Tests:
     ):
         ScreenTaker, PerkAnalyser = resources
         image, _ = ScreenTaker.get_image_from_filename(file_location)
+        image = ScreenTaker.process_screen_image(image)
         PerkAnalyser.set_image(image)
         _, killer_perks_used = PerkAnalyser.run()
         assert killer_perks_used == killer_perks_actual

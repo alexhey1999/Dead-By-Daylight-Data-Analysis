@@ -29,16 +29,17 @@ def main():
     # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_difficult_survivor_perks.png')
     # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_disconnected.png')
     
-    PerkAnalyser = Perks(image,None)
-    # PerkAnalyser.test_perk_loaded()
-    # PerkAnalyser.size_comparison()
+    image = ScreenTaker.process_screen_image(image)
     
-    # while True:pass
+    PerkAnalyser = Perks(image)
+    
     PerkAnalyser.show_screen()
+    
     survivor_perks_used, killer_perks_used = PerkAnalyser.run()
+    
     # print(survivor_perks_used)
-    # print("Survivor Perks Used: " + str(survivor_perks_used))
-    # print("Killer Perks Used: " + str(killer_perks_used))
+    print("Survivor Perks Used: " + str(survivor_perks_used))
+    print("Killer Perks Used: " + str(killer_perks_used))
     
     
     while True:
@@ -60,7 +61,8 @@ if __name__ == "__main__":
 
     ScreenTaker = Screen(monitor.width, monitor.height)
     
+    
     # Calculate BVector value
     brightness_vector = ScreenTaker.calculate_brightness_vector(1)
-
+    
     main()
