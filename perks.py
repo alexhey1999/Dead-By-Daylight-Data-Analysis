@@ -8,23 +8,13 @@ class Perks:
         self.image = image
         self.perk_size = 50
         self.radius = 18
-        self.lower_white = 100
-    
     
     def set_image(self, image):
         self.image = image
     
     
     def get_perk_list(self,perk_path):
-        return listdir(perk_path)
-    
-    
-    def show_screen(self):
-        cv2.imshow("Perk Screen ", self.image)
-    
-        
-    def show_image(self, image,name="No Name Given"):
-        cv2.imshow(name,image)    
+        return listdir(perk_path) 
     
     
     def find_best_matching_perk(self,image_to_analyze, survivor = True):

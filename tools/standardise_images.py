@@ -15,4 +15,4 @@ def imageFix(location):
         canvas.save(str(location+fileName), format="PNG")   
         
 if __name__ == "__main__":
-    imageFix('./temp/')
+    imageFix('./Images/Offerings/')
