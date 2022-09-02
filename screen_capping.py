@@ -43,3 +43,6 @@ class Screen():
         BlackBackground[:,:,:] = (0,0,0)
         result = cv2.bitwise_and(WhiteBackground,WhiteBackground,BlackBackground ,mask = mask)
         return result
+    
+    def show_image(self, image,name="No Name Given"):
+        cv2.imshow(name,image)

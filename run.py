@@ -16,30 +16,34 @@ from screeninfo import get_monitors
 
 # Import Analyser Classes
 from perks import Perks
+from killer import Killer
 
 
 def main():
     # image, filename = ScreenTaker.get_image_capture()
     # print("Image Taken")
     
-    image, filename = ScreenTaker.get_image_from_filename('./Tests/test_full.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_full.png')
     # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_disconnected.png')
     # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_random_1.png')
     # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_mori.png')
     # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_difficult_survivor_perks.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_disconnected.png')
+    image, filename = ScreenTaker.get_image_from_filename('./Tests/test_disconnected.png')
     
     image = ScreenTaker.process_screen_image(image)
     
     PerkAnalyser = Perks(image)
+    KillerAnalyser = Killer(image)
     
-    PerkAnalyser.show_screen()
+    # ScreenTaker.show_image(image,'Display')
+    KillerAnalyser.compare_killer()
     
-    survivor_perks_used, killer_perks_used = PerkAnalyser.run()
-    
-    # print(survivor_perks_used)
-    print("Survivor Perks Used: " + str(survivor_perks_used))
-    print("Killer Perks Used: " + str(killer_perks_used))
+    killer = KillerAnalyser.run()
+    print("Killer: ",killer)
+
+    # survivor_perks_used, killer_perks_used = PerkAnalyser.run()
+    # print("Survivor Perks Used: " + str(survivor_perks_used))
+    # print("Killer Perks Used: " + str(killer_perks_used))
     
     
     while True:
