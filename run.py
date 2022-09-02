@@ -17,6 +17,7 @@ from screeninfo import get_monitors
 # Import Analyser Classes
 from perks import Perks
 from killer import Killer
+from offerings import Offerings
 
 
 def main():
@@ -34,8 +35,13 @@ def main():
     
     PerkAnalyser = Perks(image)
     KillerAnalyser = Killer(image)
+    OfferingAnalyser = Offerings(image)
     
-    ScreenTaker.show_image(image[660:660+55,420:420+55],'Display')
+    # ScreenTaker.show_image(image[660:660+55,420:420+55],'Display')
+    
+    OfferingAnalyser.compare_offering()
+    offerings = OfferingAnalyser.run()
+    print("Offerings: ", offerings)
     
     # killer = KillerAnalyser.run()
     # print("Killer: ",killer)

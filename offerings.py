@@ -6,7 +6,7 @@ import numpy as np
 class Offerings:
     def __init__(self, image):
         self.image = image
-        self.offering_size = 55
+        self.offering_size = 48
         self.radius = 18
 
     
@@ -24,7 +24,7 @@ class Offerings:
             most_probable_offering_score = 0
             for offering in self.get_offering_list(offering_path):
                 icon = cv2.imread(f"{offering_path}/{offering}",1)
-                icon = self.perk_file_processing(icon)          
+                icon = self.offering_file_processing(icon)
                 
                 result = cv2.matchTemplate(image_to_analyze, icon, cv2.TM_CCOEFF_NORMED)
                 # result = cv2.matchTemplate(image_to_analyze, icon, cv2.TM_SQDIFF_NORMED)
@@ -47,11 +47,11 @@ class Offerings:
         return icon
     
     def compare_offering(self):
-        screen_img = self.image[310:310+self.offering_size,420:+self.offering_size]
+        screen_img = self.image[428:428+self.offering_size,423:423+self.offering_size]
         screen_img = cv2.resize(screen_img,(self.offering_size*5,self.offering_size*5))
         cv2.imshow("Screen Image",screen_img)
         
-        img_file = cv2.imread(os.getenv('OFFERING_LOCATION')+'/Nemesis.png')
+        img_file = cv2.imread(os.getenv('OFFERING_LOCATION')+'/Bound Envelope.png')
         img_file = cv2.resize(img_file,(self.offering_size*5,self.offering_size*5))
         cv2.imshow("File Image",img_file)
         
@@ -61,19 +61,19 @@ class Offerings:
         
         # Divides the screen into 20 spaces corresponding to each perk location.        
         # Player 1
-        offerings_used.append(self.find_best_matching_perk(self.image[310:310+self.offering_size,420:+self.offering_size]))
+        offerings_used.append(self.find_best_matching_offering(self.image[312:312+self.offering_size,423:423+self.offering_size]))
 
         # # Player 2
-        offerings_used.append(self.find_best_matching_perk(self.image[426:426+self.offering_size,357:357+self.offering_size]))
+        offerings_used.append(self.find_best_matching_offering(self.image[428:428+self.offering_size,423:423+self.offering_size]))
         
         # # Player 3
-        offerings_used.append(self.find_best_matching_perk(self.image[544:544+self.offering_size,357:357+self.offering_size]))
+        offerings_used.append(self.find_best_matching_offering(self.image[546:546+self.offering_size,423:423+self.offering_size]))
         
         # # Player 4
-        offerings_used.append(self.find_best_matching_perk(self.image[662:662+self.offering_size,357:357+self.offering_size]))
+        offerings_used.append(self.find_best_matching_offering(self.image[664:664+self.offering_size,423:423+self.offering_size]))
                  
         # Killer Offering Used
-        offerings_used.append(self.find_best_matching_perk(self.image[771:771+self.offering_size,356:356+self.offering_size]))
+        offerings_used.append(self.find_best_matching_offering(self.image[773:773+self.offering_size,423:423+self.offering_size]))
         
         offerings_used= list(filter(lambda offering:offering != "No Offering",offerings_used))
         
