@@ -26,13 +26,6 @@ class Perks:
     def show_image(self, image,name="No Name Given"):
         cv2.imshow(name,image)    
     
-    def process_perk_screen_image(self,perk_screen_image):
-        # height,width,_ = perk_screen_image.shape
-        # mask = np.zeros((height,width), np.uint8)
-        # circle_img = cv2.circle(mask,(25,25),self.radius,(255,255,255),thickness=-1)        
-        # perk_screen_image = cv2.bitwise_and(perk_screen_image, perk_screen_image, mask=circle_img)
-        return(perk_screen_image)
-    
     
     def find_best_matching_perk(self,image_to_analyze, survivor = True):
             if survivor:
