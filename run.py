@@ -24,12 +24,11 @@ def main():
     # image, filename = ScreenTaker.get_image_capture()
     # print("Image Taken")
     
-    image, filename = ScreenTaker.get_image_from_filename('./Tests/test_full.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_disconnected.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_full.png')
     # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_random_1.png')
     # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_mori.png')
     # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_difficult_survivor_perks.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_disconnected.png')
+    image, filename = ScreenTaker.get_image_from_filename('./Tests/test_disconnected.png')
     
     image = ScreenTaker.process_screen_image(image)
     
@@ -38,10 +37,17 @@ def main():
     OfferingAnalyser = Offerings(image)
     
     # ScreenTaker.show_image(image[660:660+55,420:420+55],'Display')
+    ScreenTaker.show_image(image,'Display')
     
-    OfferingAnalyser.compare_offering()
+    
+    #Offering Tests 
+    
+    # OfferingAnalyser.compare_offering()
     offerings = OfferingAnalyser.run()
     print("Offerings: ", offerings)
+    
+    
+    
     
     # killer = KillerAnalyser.run()
     # print("Killer: ",killer)

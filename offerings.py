@@ -8,6 +8,7 @@ class Offerings:
         self.image = image
         self.offering_size = 48
         self.radius = 18
+        self.compressed_resolution = 35
 
     
     def set_image(self, image):
@@ -40,6 +41,8 @@ class Offerings:
     
     def offering_file_processing(self,icon):
         # cv2.cvtColor(icon, cv2.COLOR_HSV2BGR)
+        icon = cv2.resize(icon,(self.compressed_resolution,self.compressed_resolution))
+        
         icon = cv2.resize(icon, (self.offering_size, self.offering_size),interpolation=cv2.INTER_AREA)
         mask = np.zeros((self.offering_size, self.offering_size), np.uint8)
         circle_img = cv2.circle(mask,(25,25),self.radius,(255,255,255),thickness=-1)
@@ -47,11 +50,13 @@ class Offerings:
         return icon
     
     def compare_offering(self):
-        screen_img = self.image[428:428+self.offering_size,423:423+self.offering_size]
+        screen_img = self.image[773:773+self.offering_size,423:423+self.offering_size]
         screen_img = cv2.resize(screen_img,(self.offering_size*5,self.offering_size*5))
         cv2.imshow("Screen Image",screen_img)
         
-        img_file = cv2.imread(os.getenv('OFFERING_LOCATION')+'/Bound Envelope.png')
+        img_file = cv2.imread(os.getenv('OFFERING_LOCATION')+'/Faint Reagent.png')
+        img_file = self.offering_file_processing(img_file)
+        # img_file = cv2.resize(img_file,(int(self.offering_size/2),int(self.offering_size/2)))
         img_file = cv2.resize(img_file,(self.offering_size*5,self.offering_size*5))
         cv2.imshow("File Image",img_file)
         
@@ -59,7 +64,7 @@ class Offerings:
         offerings_used = []
         
         
-        # Divides the screen into 20 spaces corresponding to each perk location.        
+        # Divides the screen into 5 spaces corresponding to each perk location.        
         # Player 1
         offerings_used.append(self.find_best_matching_offering(self.image[312:312+self.offering_size,423:423+self.offering_size]))
 

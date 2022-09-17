@@ -7,6 +7,7 @@ from dotenv import load_dotenv, find_dotenv
 
 from perks import Perks
 from killer import Killer
+from offerings import Offerings
 
 
 @pytest.fixture
@@ -16,14 +17,17 @@ def resources():
     ScreenTaker = Screen(monitor.width, monitor.height)
     PerkAnalyser = Perks(None)
     KillerAnalyser = Killer(None)
-    return ScreenTaker, PerkAnalyser, KillerAnalyser
+    OfferingAnalyser = Offerings(None)
+    return ScreenTaker, PerkAnalyser, KillerAnalyser, OfferingAnalyser
 
 
 @pytest.mark.parametrize(
-    "file_location,survivor_perks_actual,killer_perks_actual,killer",
+    "file_location,survivor_perks_actual,killer_perks_actual,killer,offerings",
     [
         (
+            # File Name
             "./Tests/test_full.png",
+            # Survivor Perks
             [
                 "Power Struggle",
                 "Unbreakable",
@@ -42,13 +46,21 @@ def resources():
                 "Windows Of Opportunity",
                 "Solidarity",
             ],
+            # Killer Perks
             [
                 "Brutal Strength",
                 "Lethal Pursuer",
                 "Enduring",
                 "Spirit Fury",
             ],
-            "Wraith"
+            # Killer
+            "Wraith",
+            # Offerings
+            [
+                'Murky Reagent',
+                'Bound Envelope',
+                'Shroud Of Union',
+            ]
         ),
         (
             "./Tests/test_random_1.png",
@@ -59,25 +71,30 @@ def resources():
                 "Spies From The Shadows",
                 "Dead Man Switch",
             ],
-            "Hag"
+            "Hag",
+            ['Murky Reagent']
         ),
         (
             "./Tests/test_mori.png",
             ["Botany Knowledge", "Lucky Break", "Inner Focus", "Poised"],
             ["Call Of Brine", "Predator", "Spirit Fury", "Mind Breaker"],
-            "Huntress"
+            "Huntress",
+            ['Momento Mori Cypress']
+            
         ),
         (
             "./Tests/test_difficult_survivor_perks.png",
             ["Deja Vu", "Kindred", "Object Of Obsession", "Dark Sense"],
             ["Stridor", "Beast Of Prey", "Hex Plaything", "Deathbound"],
-            "Demogorgon"
+            "Demogorgon",
+            []
         ),
         (
             "./Tests/test_disconnected.png",
             ["Appraisal", "Desperate Measures", "Resilience", "Smash Hit"],
             ["Save The Best For Last", "Bamboozle", "Devour Hope", "Furtive Chase"],
-            "Nemesis"
+            "Nemesis",
+            ['Macmillians Phalanx Bone']
         ),
     ],
 )
@@ -85,9 +102,9 @@ def resources():
 
 class Tests:
     def test_survivor_perks(
-        self, resources, file_location, survivor_perks_actual, killer_perks_actual, killer
+        self, resources, file_location, survivor_perks_actual, killer_perks_actual, killer, offerings
     ):
-        ScreenTaker, PerkAnalyser, _ = resources
+        ScreenTaker, PerkAnalyser, _, _ = resources
         image, _ = ScreenTaker.get_image_from_filename(file_location)
         image = ScreenTaker.process_screen_image(image)
         
@@ -99,9 +116,9 @@ class Tests:
 
 
     def test_killer_perks(
-        self, resources, file_location, survivor_perks_actual, killer_perks_actual, killer
+        self, resources, file_location, survivor_perks_actual, killer_perks_actual, killer, offerings
     ):
-        ScreenTaker, PerkAnalyser, _ = resources
+        ScreenTaker, PerkAnalyser, _, _ = resources
         image, _ = ScreenTaker.get_image_from_filename(file_location)
         image = ScreenTaker.process_screen_image(image)
         PerkAnalyser.set_image(image)
@@ -112,9 +129,9 @@ class Tests:
 
 
     def test_killer(
-        self, resources, file_location, survivor_perks_actual, killer_perks_actual, killer
+        self, resources, file_location, survivor_perks_actual, killer_perks_actual, killer, offerings
     ):
-        ScreenTaker, _ , KillerAnalyser = resources
+        ScreenTaker, _ , KillerAnalyser, _ = resources
         image, _ = ScreenTaker.get_image_from_filename(file_location)
         image = ScreenTaker.process_screen_image(image)
         KillerAnalyser.set_image(image)
@@ -122,3 +139,18 @@ class Tests:
         assert (
             killer_determined == killer
         ), f"Killer Non Matching: f{file_location}"
+        
+    def test_offerings(
+        self, resources, file_location, survivor_perks_actual, killer_perks_actual, killer, offerings
+    ):
+        ScreenTaker, _ , _, OfferingAnalyser = resources
+        image, _ = ScreenTaker.get_image_from_filename(file_location)
+        image = ScreenTaker.process_screen_image(image)
+        OfferingAnalyser.set_image(image)
+        offerings_determined = OfferingAnalyser.run()
+        assert (
+            offerings_determined == offerings_determined
+        ), f"Offerings Non Matching: f{file_location}"
+        
+        
+        
