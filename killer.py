@@ -6,7 +6,8 @@ import numpy as np
 class Killer:
     def __init__(self, image):
         self.image = image
-        self.killer_size = 43
+        self.killer_size = 42
+        self.compressed_image = 30
     
     
     def set_image(self, image):
@@ -22,6 +23,7 @@ class Killer:
             most_probable_killer_score = 0
             for killer in self.get_killer_list(killer_path):
                 icon = cv2.imread(f"{killer_path}/{killer}",1)
+                icon = cv2.resize(icon,(self.compressed_image,self.compressed_image),interpolation=cv2.INTER_AREA)
                 icon = cv2.resize(icon, (self.killer_size, self.killer_size),interpolation=cv2.INTER_AREA)
                 result = cv2.matchTemplate(image_to_analyze, icon, cv2.TM_CCOEFF_NORMED)
                 minVal, maxVal, minLoc, maxLoc = cv2.minMaxLoc(result)
@@ -39,7 +41,9 @@ class Killer:
         screen_img = cv2.resize(screen_img,(self.killer_size*5,self.killer_size*5))
         cv2.imshow("Screen Image",screen_img)
         
-        img_file = cv2.imread(os.getenv('KILLER_LOCATION')+'/Nemesis.png')
+        img_file = cv2.imread(os.getenv('KILLER_LOCATION')+'/Blight.png')
+        img_file = cv2.resize(img_file,(self.compressed_image,self.compressed_image),interpolation=cv2.INTER_AREA)
+        
         img_file = cv2.resize(img_file,(self.killer_size*5,self.killer_size*5))
         cv2.imshow("File Image",img_file)
         

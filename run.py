@@ -19,6 +19,7 @@ from screeninfo import get_monitors
 from perks import Perks
 from killer import Killer
 from offerings import Offerings
+from items import Items
 
 def brighness_calculation(image):
     greyscale_image = image.convert('L')
@@ -44,43 +45,39 @@ def main(show_images = None):
     # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_random_1.png')
     # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_mori.png')
     # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_difficult_survivor_perks.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_disconnected.png')
+    image, filename = ScreenTaker.get_image_from_filename('./Tests/test_disconnected.png')
+    
     # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_random_2.png')
-    image, filename = ScreenTaker.get_image_from_filename('./Tests/test_random_3.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_random_3.png')
+    ScreenTaker.show_image(image,'Display')
     
     image = ScreenTaker.process_screen_image(image)    
-    
-    # print(type(image))
-    # pil_image = Image.fromarray(image)
-    # print(type(pil_image))
-    # image = Image.open('./Tests/test_full.png')
-    
-    
-    # image_copy = image.copy()
-    
-    # print("%s\t%s" % ('image', brighness_calculation(pil_image)))
-    
     
     PerkAnalyser = Perks(image)
     KillerAnalyser = Killer(image)
     OfferingAnalyser = Offerings(image)
-    
-    
-    #Offering Tests 
+    ItemAnalyser = Items(image)
     
     # OfferingAnalyser.compare_offering()
-    offerings = OfferingAnalyser.run()
-    print("Offerings: ", offerings)    
+    # offerings = OfferingAnalyser.run()
+    # print("Offerings: ", offerings)    
     
-    killer = KillerAnalyser.run()
-    print("Killer: ",killer)
+    # KillerAnalyser.compare_killer()
+    # killer = KillerAnalyser.run()
+    # print("Killer: ",killer)
 
     # PerkAnalyser.compare_perk()
-    survivor_perks_used, killer_perks_used = PerkAnalyser.run()
-    print("Survivor Perks Used: " + str(survivor_perks_used))
-    print("Killer Perks Used: " + str(killer_perks_used))
+    # survivor_perks_used, killer_perks_used = PerkAnalyser.run()
+    # print("Survivor Perks Used: " + str(survivor_perks_used))
+    # print("Killer Perks Used: " + str(killer_perks_used))
     
-    ScreenTaker.show_image(image,'Display')
+    ItemAnalyser.compare_item()
+    items_used = ItemAnalyser.run()
+    print("Items Used: " + str(items_used))
+    
+    
+    
+    # ScreenTaker.show_image(image,'Display')
     
     while show_images:
         key = cv2.waitKey(30)
