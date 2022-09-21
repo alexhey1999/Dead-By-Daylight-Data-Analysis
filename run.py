@@ -45,16 +45,24 @@ def main(show_images = None):
     # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_full.png')
     # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_random_1.png')
     # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_mori.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_difficult_survivor_perks.png')
+    image, filename = ScreenTaker.get_image_from_filename('./Tests/test_difficult_survivor_perks.png')
     # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_disconnected.png')
     
     # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_random_2.png')
-    image, filename = ScreenTaker.get_image_from_filename('./Tests/test_random_3.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_random_3.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_random_4.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_random_5.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_random_6.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_random_7.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_random_8.png')
+
     pre_processed_image = image
     
     ScreenTaker.show_image(image,'Display')
     
     image = ScreenTaker.process_screen_image(image)    
+    
+    print(ScreenTaker.lower_white)
     
     PerkAnalyser = Perks(image)
     KillerAnalyser = Killer(image)
@@ -63,26 +71,25 @@ def main(show_images = None):
     ScoreAnalyser = Scores(pre_processed_image)
     
     # OfferingAnalyser.compare_offering()
-    # offerings = OfferingAnalyser.run()
-    # print("Offerings: ", offerings)    
+    offerings = OfferingAnalyser.run()
+    print("Offerings: ", offerings)    
     
     # KillerAnalyser.compare_killer()
-    # killer = KillerAnalyser.run()
-    # print("Killer: ",killer)
+    killer = KillerAnalyser.run()
+    print("Killer: ",killer)
 
     # PerkAnalyser.compare_perk()
-    # survivor_perks_used, killer_perks_used = PerkAnalyser.run()
-    # print("Survivor Perks Used: " + str(survivor_perks_used))
-    # print("Killer Perks Used: " + str(killer_perks_used))
+    survivor_perks_used, killer_perks_used = PerkAnalyser.run()
+    print("Survivor Perks Used: " + str(survivor_perks_used))
+    print("Killer Perks Used: " + str(killer_perks_used))
     
     # ItemAnalyser.compare_item()
-    # items_used = ItemAnalyser.run()
-    # print("Items Used: " + str(items_used))
+    items_used = ItemAnalyser.run()
+    print("Items Used: " + str(items_used))
     
-    ScoreAnalyser.compare_scores()
-    ScoreAnalyser.run()
-    
-    
+    # ScoreAnalyser.compare_scores()
+    scores = ScoreAnalyser.run()
+    print("Scores: " + str(scores))
     
     # ScreenTaker.show_image(image,'Display')
     

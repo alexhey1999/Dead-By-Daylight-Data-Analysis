@@ -23,7 +23,8 @@ class Scores:
         pytesseract.pytesseract.tesseract_cmd = os.getenv("PYTESSERACT_PATH")
             
     def set_image(self, image):
-        self.image = image
+        self.image = self.pre_process_image(image)
+        
     
     def pre_process_image(self, image):
         upper_white = np.array([256, 256, 256])
@@ -68,12 +69,12 @@ class Scores:
         cv2.imshow("Score Window",screen_perk)
         
     def run(self):
+        scores = {}
+        scores["player_1"] = self.find_scores(self.image[300:300+self.score_height,720:720+self.score_width])
+        scores["player_2"] = self.find_scores(self.image[420:420+self.score_height,720:720+self.score_width])
+        scores["player_3"] = self.find_scores(self.image[540:540+self.score_height,720:720+self.score_width])
+        scores["player_4"] = self.find_scores(self.image[660:660+self.score_height,720:720+self.score_width])
+        scores["killer"] = self.find_scores(self.image[775:775+self.score_height,720:720+self.score_width])
         
-        player_1_score = self.find_scores(self.image[300:300+self.score_height,720:720+self.score_width])
-        player_2_score = self.find_scores(self.image[420:420+self.score_height,720:720+self.score_width])
-        player_3_score = self.find_scores(self.image[540:540+self.score_height,720:720+self.score_width])
-        player_4_score = self.find_scores(self.image[660:660+self.score_height,720:720+self.score_width])
-        killer_score = self.find_scores(self.image[775:775+self.score_height,720:720+self.score_width])
-        
-        print(player_1_score, player_2_score, player_3_score, player_4_score, killer_score)
-        return player_1_score, player_2_score, player_3_score, player_4_score, killer_score
+        # print(scores)
+        return scores

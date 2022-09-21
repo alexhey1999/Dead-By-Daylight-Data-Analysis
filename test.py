@@ -9,6 +9,7 @@ from perks import Perks
 from killer import Killer
 from offerings import Offerings
 from items import Items
+from scores import Scores
 
 
 @pytest.fixture
@@ -20,11 +21,12 @@ def resources():
     KillerAnalyser = Killer(None)
     OfferingAnalyser = Offerings(None)
     ItemAnalyser = Items(None)
-    return ScreenTaker, PerkAnalyser, KillerAnalyser, OfferingAnalyser, ItemAnalyser
+    ScoreAnalyser = Scores(None)
+    return ScreenTaker, PerkAnalyser, KillerAnalyser, OfferingAnalyser, ItemAnalyser, ScoreAnalyser
 
 
 @pytest.mark.parametrize(
-    "file_location,survivor_perks_actual,killer_perks_actual,killer,offerings,items",
+    "file_location,survivor_perks_actual,killer_perks_actual,killer,offerings,items,scores",
     [
         (
             # File Name
@@ -64,7 +66,9 @@ def resources():
                 'Shroud Of Union',
             ],
             # Items
-            ['Rundown Aid Kit']
+            ['Rundown Aid Kit'],
+            # Scores
+            {'player_1': 11949, 'player_2': 9233, 'player_3': 8864, 'player_4': 8096, 'killer': 0}
         ),
         (
             "./Tests/test_random_1.png",
@@ -77,7 +81,8 @@ def resources():
             ],
             "Hag",
             ['Murky Reagent'],
-            ['Flashlight Utility']
+            ['Flashlight Utility'],
+            {'player_1': 23750, 'player_2': 'NAN', 'player_3': 'NAN', 'player_4': 'NAN', 'killer': 6413}
         ),
         (
             "./Tests/test_mori.png",
@@ -85,7 +90,8 @@ def resources():
             ["Call Of Brine", "Predator", "Spirit Fury", "Mind Breaker"],
             "Huntress",
             ['Momento Mori Cypress'],
-            ['Rangers Aid Kit']
+            ['Rangers Aid Kit'],
+            {'player_1': 11292, 'player_2': 'NAN', 'player_3': 'NAN', 'player_4': 'NAN', 'killer': 10875}
         ),
         (
             "./Tests/test_difficult_survivor_perks.png",
@@ -93,7 +99,8 @@ def resources():
             ["Stridor", "Beast Of Prey", "Hex Plaything", "Deathbound"],
             "Demogorgon",
             [],
-            ['Flashlight Utility']
+            ['Flashlight Utility'],
+            {'player_1': 4025, 'player_2': 'NAN', 'player_3': 'NAN', 'player_4': 'NAN', 'killer': 5784}
         ),
         (
             "./Tests/test_disconnected.png",
@@ -101,7 +108,8 @@ def resources():
             ["Save The Best For Last", "Bamboozle", "Devour Hope", "Furtive Chase"],
             "Nemesis",
             ['Macmillians Phalanx Bone'],
-            []
+            [],
+            {'player_1': 14688, 'player_2': 'NAN', 'player_3': 'NAN', 'player_4': 'NAN', 'killer': 0}
         ),
     ],
 )
@@ -109,9 +117,9 @@ def resources():
 
 class Tests:
     def test_survivor_perks(
-        self, resources, file_location, survivor_perks_actual, killer_perks_actual, killer, offerings, items
+        self, resources, file_location, survivor_perks_actual, killer_perks_actual, killer, offerings, items, scores
     ):
-        ScreenTaker, PerkAnalyser, _, _, _ = resources
+        ScreenTaker, PerkAnalyser, _, _, _, _ = resources
         image, _ = ScreenTaker.get_image_from_filename(file_location)
         image = ScreenTaker.process_screen_image(image)
         
@@ -123,9 +131,9 @@ class Tests:
 
 
     def test_killer_perks(
-        self, resources, file_location, survivor_perks_actual, killer_perks_actual, killer, offerings, items
+        self, resources, file_location, survivor_perks_actual, killer_perks_actual, killer, offerings, items, scores
     ):
-        ScreenTaker, PerkAnalyser, _, _, _ = resources
+        ScreenTaker, PerkAnalyser, _, _, _, _ = resources
         image, _ = ScreenTaker.get_image_from_filename(file_location)
         image = ScreenTaker.process_screen_image(image)
         PerkAnalyser.set_image(image)
@@ -136,9 +144,9 @@ class Tests:
 
 
     def test_killer(
-        self, resources, file_location, survivor_perks_actual, killer_perks_actual, killer, offerings, items
+        self, resources, file_location, survivor_perks_actual, killer_perks_actual, killer, offerings, items, scores
     ):
-        ScreenTaker, _ , KillerAnalyser, _, _ = resources
+        ScreenTaker, _ , KillerAnalyser, _, _, _ = resources
         image, _ = ScreenTaker.get_image_from_filename(file_location)
         image = ScreenTaker.process_screen_image(image)
         KillerAnalyser.set_image(image)
@@ -148,9 +156,9 @@ class Tests:
         ), f"Killer Non Matching: f{file_location}"
         
     def test_offerings(
-        self, resources, file_location, survivor_perks_actual, killer_perks_actual, killer, offerings, items
+        self, resources, file_location, survivor_perks_actual, killer_perks_actual, killer, offerings, items, scores
     ):
-        ScreenTaker, _ , _, OfferingAnalyser, _ = resources
+        ScreenTaker, _ , _, OfferingAnalyser, _, _ = resources
         image, _ = ScreenTaker.get_image_from_filename(file_location)
         image = ScreenTaker.process_screen_image(image)
         OfferingAnalyser.set_image(image)
@@ -160,9 +168,9 @@ class Tests:
         ), f"Offerings Non Matching: f{file_location}"
     
     def test_items(
-        self, resources, file_location, survivor_perks_actual, killer_perks_actual, killer, offerings, items
+        self, resources, file_location, survivor_perks_actual, killer_perks_actual, killer, offerings, items, scores
     ):
-        ScreenTaker, _ , _, _, ItemAnalyser = resources
+        ScreenTaker, _ , _, _, ItemAnalyser, _ = resources
         image, _ = ScreenTaker.get_image_from_filename(file_location)
         image = ScreenTaker.process_screen_image(image)
         ItemAnalyser.set_image(image)
@@ -170,7 +178,19 @@ class Tests:
         assert (
             items_determined == items
         ), f"Offerings Non Matching: f{file_location}"
-        
+    
+    def test_scores(
+        self, resources, file_location, survivor_perks_actual, killer_perks_actual, killer, offerings, items, scores
+    ):
+        ScreenTaker, _ , _, _, _, ScoreAnalyser = resources
+        image, _ = ScreenTaker.get_image_from_filename(file_location)
+        # image = ScreenTaker.process_screen_image(image)
+        ScoreAnalyser.set_image(image)
+        scores_determined = ScoreAnalyser.run()
+        assert (
+            scores_determined == scores
+        ), f"Scores Non Matching: f{file_location}"
+    
         
         
         
