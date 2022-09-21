@@ -20,6 +20,7 @@ from perks import Perks
 from killer import Killer
 from offerings import Offerings
 from items import Items
+from scores import Scores
 
 def brighness_calculation(image):
     greyscale_image = image.convert('L')
@@ -45,10 +46,12 @@ def main(show_images = None):
     # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_random_1.png')
     # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_mori.png')
     # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_difficult_survivor_perks.png')
-    image, filename = ScreenTaker.get_image_from_filename('./Tests/test_disconnected.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_disconnected.png')
     
     # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_random_2.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Tests/test_random_3.png')
+    image, filename = ScreenTaker.get_image_from_filename('./Tests/test_random_3.png')
+    pre_processed_image = image
+    
     ScreenTaker.show_image(image,'Display')
     
     image = ScreenTaker.process_screen_image(image)    
@@ -57,6 +60,7 @@ def main(show_images = None):
     KillerAnalyser = Killer(image)
     OfferingAnalyser = Offerings(image)
     ItemAnalyser = Items(image)
+    ScoreAnalyser = Scores(pre_processed_image)
     
     # OfferingAnalyser.compare_offering()
     # offerings = OfferingAnalyser.run()
@@ -71,9 +75,12 @@ def main(show_images = None):
     # print("Survivor Perks Used: " + str(survivor_perks_used))
     # print("Killer Perks Used: " + str(killer_perks_used))
     
-    ItemAnalyser.compare_item()
-    items_used = ItemAnalyser.run()
-    print("Items Used: " + str(items_used))
+    # ItemAnalyser.compare_item()
+    # items_used = ItemAnalyser.run()
+    # print("Items Used: " + str(items_used))
+    
+    ScoreAnalyser.compare_scores()
+    ScoreAnalyser.run()
     
     
     
@@ -94,9 +101,6 @@ if __name__ == "__main__":
     
     # Load .env file
     load_dotenv(find_dotenv())
-    
-    # Assign Pytesseract path for text processing functions
-    pytesseract.pytesseract.tesseract_cmd = os.getenv("PYTESSERACT_PATH")
 
     # Create Screen Capture Object
     monitor = get_monitors()[int(os.getenv("DEFAULT_MONITOR"))]
