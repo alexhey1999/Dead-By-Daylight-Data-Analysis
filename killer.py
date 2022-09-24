@@ -41,7 +41,7 @@ class Killer:
         screen_img = cv2.resize(screen_img,(self.killer_size*5,self.killer_size*5))
         cv2.imshow("Screen Image",screen_img)
         
-        img_file = cv2.imread(os.getenv('KILLER_LOCATION')+'/Blight.png')
+        img_file = cv2.imread(os.getenv('KILLER_LOCATION')+'/Demogorgon.png')
         img_file = cv2.resize(img_file,(self.compressed_image,self.compressed_image),interpolation=cv2.INTER_AREA)
         
         img_file = cv2.resize(img_file,(self.killer_size*5,self.killer_size*5))
