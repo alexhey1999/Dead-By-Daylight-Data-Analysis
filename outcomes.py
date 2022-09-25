@@ -76,7 +76,7 @@ class Outcomes:
                 cv2.rectangle(image_to_analyze, (x, y), (x + w, y + h), color, 2)
 
             if len(rectangles) > 0:
-                return outcome.split('.')[0]
+                return outcome.split('.')[0].capitalize()
         
         
 
@@ -95,8 +95,7 @@ class Outcomes:
     
     
     def run(self):
-        # cv2.imshow("Screen",self.image[290:290+self.outcome_height,890:890+self.outcome_width])
-        cv2.imshow("Screen",self.image[752:752+self.outcome_height,890:890+self.outcome_width])
+
         self.screen_image_processing(self.image)
         # outcomes = None
         # self.find_best_matching_outcome(self.image[290:290+self.outcome_height,890:890+self.outcome_width])
