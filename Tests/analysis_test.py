@@ -18,6 +18,7 @@ from items import Items
 from scores import Scores
 from outcomes import Outcomes
 from grades import Grades
+from crossplay import Crossplay
 
 
 
@@ -54,6 +55,10 @@ def OutcomeAnalyser():
 @pytest.fixture
 def GradeAnalyser():
     return Grades(None)
+
+@pytest.fixture
+def CrossplayAnalyser():
+    return Crossplay(None)
 
 @pytest.mark.parametrize(
     "test_case",
@@ -168,3 +173,16 @@ class Test:
         assert grades_determined["player_4"] == grades["player_4"]
         assert grades_determined["killer"] == grades["killer"]
             
+    def test_crossplay(
+        self, ScreenTaker, CrossplayAnalyser, test_case
+    ):
+        file_location,crossplay = test_case[0], test_case[9]
+        image, _ = ScreenTaker.get_image_from_filename(file_location)
+        CrossplayAnalyser.set_image(image)
+        crossplay_determined = CrossplayAnalyser.run()
+        # {'player_1': 'NAN', 'player_2': 'NAN', 'player_3': 'NAN', 'player_4': 'NAN', 'killer': 'NAN'}
+        assert crossplay_determined["character_1_crossplay"] == crossplay["character_1_crossplay"]
+        assert crossplay_determined["character_2_crossplay"] == crossplay["character_2_crossplay"]
+        assert crossplay_determined["character_3_crossplay"] == crossplay["character_3_crossplay"]
+        assert crossplay_determined["character_4_crossplay"] == crossplay["character_4_crossplay"]
+        assert crossplay_determined["killer_crossplay"] == crossplay["killer_crossplay"]

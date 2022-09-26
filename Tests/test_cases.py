@@ -54,6 +54,7 @@ TEST_CASES = [
                 "player_4": 1,
                 "killer": 3,
             },
+            {'character_1_crossplay': False, 'character_2_crossplay': False, 'character_3_crossplay': False, 'character_4_crossplay': False, 'killer_crossplay': False}
         )
     ),
     (
@@ -84,6 +85,7 @@ TEST_CASES = [
                 "player_4": "NAN",
                 "killer": "NAN",
             },
+            {'character_1_crossplay': False, 'character_2_crossplay': False, 'character_3_crossplay': False, 'character_4_crossplay': False, 'killer_crossplay': False}
         )
     ),
     (
@@ -109,6 +111,7 @@ TEST_CASES = [
                 "player_4": "NAN",
                 "killer": "NAN",
             },
+            {'character_1_crossplay': False, 'character_2_crossplay': False, 'character_3_crossplay': False, 'character_4_crossplay': False, 'killer_crossplay': False}
         )
     ),
     (
@@ -134,6 +137,7 @@ TEST_CASES = [
                 "player_4": "NAN",
                 "killer": "NAN",
             },
+            {'character_1_crossplay': False, 'character_2_crossplay': False, 'character_3_crossplay': False, 'character_4_crossplay': False, 'killer_crossplay': False}
         )
     ),
     (
@@ -159,6 +163,21 @@ TEST_CASES = [
                 "player_4": "NAN",
                 "killer": "NAN",
             },
+            {'character_1_crossplay': False, 'character_2_crossplay': False, 'character_3_crossplay': False, 'character_4_crossplay': False, 'killer_crossplay': False}
         )
     ),
+    (
+        (
+            "./Screenshots/test_crossplay.png",
+            ['Prove Thyself', 'Adrenaline', 'Boon Circle Of Healing', 'Lithe', 'Lithe', 'Prove Thyself', 'Second Wind', 'Adrenaline', 'Resilience', 'Kindred', 'Small Game', 'Spine Chill', 'Dead Hard', 'Fixated', 'Resilience', 'Off The Record'],
+            ['Lethal Pursuer', 'B B Q And Chili', 'Scourge Hook Gift Of Pain', 'Thatanophobia'],
+            "Legion",
+            ['Escape Cake', 'Dusty Noose', 'Fresh Crispleaf Amaranth', 'Rotten Oak'],
+            ['Medkit', 'Rangers Aid Kit', 'Rainbow Map', 'Flashlight'],
+            {'player_1': 29373, 'player_2': 27615, 'player_3': 19913, 'player_4': 0, 'killer': 21073},
+            ('Escape', 'Escape', 'Escape', 'Disconnected', 'No Outcome'),
+            {'player_1': 29, 'player_2': 24, 'player_3': 10, 'player_4': 1, 'killer': 3},
+            {'character_1_crossplay': True, 'character_2_crossplay': True, 'character_3_crossplay': True, 'character_4_crossplay': False, 'killer_crossplay': True}
+        )
+    )
 ]

@@ -23,7 +23,7 @@ from items import Items
 from scores import Scores
 from outcomes import Outcomes
 from grades import Grades
-from characters import Characters
+from crossplay import Crossplay
 
 image = None
 
@@ -48,12 +48,14 @@ def main(show_images = None):
     # image, filename = ScreenTaker.get_image_capture()
     # print("Image Taken")
     
-    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_full.png')
+    image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_full.png')
     # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_1.png')
-    image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_mori.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_mori.png')
     # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_difficult_survivor_perks.png')
     # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_disconnected.png')
     
+    
+    image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_crossplay.png')
     # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_2.png')
     # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_3.png')
     # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_4.png')
@@ -61,6 +63,10 @@ def main(show_images = None):
     # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_6.png')
     # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_7.png')
     # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_8.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_9.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_10.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_11.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_12.png')
 
     pre_processed_image = image
     
@@ -73,7 +79,7 @@ def main(show_images = None):
     ScoreAnalyser = Scores(pre_processed_image)
     OutcomeAnalyser = Outcomes(pre_processed_image)
     GradeAnalyser = Grades(pre_processed_image)
-    CharacterAnalyser = Characters(pre_processed_image)
+    CrossplayAnalyser = Crossplay(pre_processed_image)
     
     # OfferingAnalyser.compare_offering()
     offerings = OfferingAnalyser.run()
@@ -104,9 +110,11 @@ def main(show_images = None):
     grades = GradeAnalyser.run()
     print("Grades: ", str(grades))
     
-    # CharacterAnalyser.compare_characters()
-    characters = CharacterAnalyser.run()
-    print("Characters: ", characters)
+    # CrossplayAnalyser.compare_crossplay()
+    crossplay = CrossplayAnalyser.run()
+    print("Crossplay: ", crossplay)
+    
+    
     
     while show_images:
         ScreenTaker.show_image(pre_processed_image,'image')
