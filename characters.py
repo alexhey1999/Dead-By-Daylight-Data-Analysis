@@ -7,13 +7,15 @@ from dotenv import load_dotenv,find_dotenv
 import random
 
 
-class Crossplay:
+class Characters:
     def __init__(self, image):
         self.image = image
         self.radius = 18
         self.character_width = 400
         self.character_height = 32
         self.lower_white = 160
+        self.crossplay_size = 32
+        
         
         if image is not None:
             self.image = self.pre_process_image(image)
@@ -62,42 +64,31 @@ class Crossplay:
     
     def compare_characters(self):
         # self.process_screen_image()
-        screen = self.image[743:743+self.character_height,192:192+self.character_width]
-        screen = cv2.resize(screen,(self.character_height*5,self.character_width*5))
-        # screen = self.process_screen(screen)
-        outcome_path = os.getenv('HELP_LOCATION')
-        icon = cv2.imread(f"{outcome_path}/Crossplay.png",1)
-        
-        icon = self.crossplay_file_processing(icon)
-        icon = cv2.resize(icon,(self.character_height*5,self.character_width*5))
-        
+        screen = self.image[270:270+self.character_height,180+self.crossplay_size:180+self.crossplay_size+self.character_width]
+        # screen = cv2.resize(screen,(self.character_height*5,self.character_width*5))
         cv2.imshow("Crossplay Window",screen)
-        cv2.imshow("Crossplay File",icon)
         
     def run(self,crossplay_dict):
-        
         characters = {}
         
-        # character_1_crossplay = self.determine_crossplay(self.image[279:279+self.crossplay_size,192:192+self.crossplay_size])
-        # print(character_1_crossplay)
+        if crossplay_dict["character_1_crossplay"]:
+            characters["player_1"] = self.find_characters(self.image[270:270+self.character_height,180+self.crossplay_size:180+self.crossplay_size+self.character_width])
+        else:
+            characters["player_1"] = self.find_characters(self.image[270:270+self.character_height,180:180+self.character_width])
         
-        # character_2_crossplay = self.determine_crossplay(self.image[396:396+self.crossplay_size,192:192+self.crossplay_size])
-        # print(character_2_crossplay)
+        if crossplay_dict["character_2_crossplay"]:
+            characters["player_2"] = self.find_characters(self.image[388:388+self.character_height,180+self.crossplay_size:180+self.crossplay_size+self.character_width])
+        else:
+            characters["player_2"] = self.find_characters(self.image[388:388+self.character_height,180:180+self.character_width])
         
-        # character_3_crossplay = self.determine_crossplay(self.image[513:513+self.crossplay_size,192:192+self.crossplay_size])
-        # print(character_3_crossplay)
+        if crossplay_dict["character_3_crossplay"]:
+            characters["player_3"] = self.find_characters(self.image[506:506+self.character_height,180+self.crossplay_size:180+self.crossplay_size+self.character_width])
+        else:
+            characters["player_3"] = self.find_characters(self.image[506:506+self.character_height,180:180+self.character_width])
         
-        # character_4_crossplay = self.determine_crossplay(self.image[631:631+self.crossplay_size,192:192+self.crossplay_size])
-        # print(character_4_crossplay)
-        
-        # killer_crossplay = self.determine_crossplay(self.image[743:743+self.crossplay_size,192:192+self.crossplay_size])
-        # print(killer_crossplay)
-        
-        # characters["player_1"] = self.find_characters(self.image[270:270+self.character_height,180:180+self.character_width])
-        # characters["player_2"] = self.find_characters(self.image[388:388+self.character_height,180:180+self.character_width])
-        # characters["player_3"] = self.find_characters(self.image[506:506+self.character_height,180:180+self.character_width])
-        # characters["player_4"] = self.find_characters(self.image[624:624+self.character_height,180:180+self.character_width])
-
+        if crossplay_dict["character_4_crossplay"]:
+            characters["player_4"] = self.find_characters(self.image[624:624+self.character_height,180+self.crossplay_size:180+self.crossplay_size+self.character_width])
+        else:
+            characters["player_4"] = self.find_characters(self.image[624:624+self.character_height,180:180+self.character_width])
+            
         return characters
-        # print(scores)
-        # return scores

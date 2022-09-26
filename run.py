@@ -24,21 +24,9 @@ from scores import Scores
 from outcomes import Outcomes
 from grades import Grades
 from crossplay import Crossplay
+from characters import Characters
 
 image = None
-
-def brighness_calculation(image):
-    greyscale_image = image.convert('L')
-    histogram = greyscale_image.histogram()
-    pixels = sum(histogram)
-    brightness = scale = len(histogram)
-
-    for index in range(0, scale):
-        ratio = histogram[index] / pixels
-        brightness += ratio * (-scale + index)
-
-    return 1 if brightness == 255 else brightness / scale
-    
     
 def main(show_images = None):
     global image
@@ -55,10 +43,10 @@ def main(show_images = None):
     # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_disconnected.png')
     
     
-    image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_crossplay.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_2.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_3.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_4.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_crossplay.png')
+    image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_2.png')
+    image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_3.png')
+    image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_4.png')
     # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_5.png')
     # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_6.png')
     # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_7.png')
@@ -80,39 +68,46 @@ def main(show_images = None):
     OutcomeAnalyser = Outcomes(pre_processed_image)
     GradeAnalyser = Grades(pre_processed_image)
     CrossplayAnalyser = Crossplay(pre_processed_image)
+    CharacterAnalyser = Characters(pre_processed_image)
     
     # OfferingAnalyser.compare_offering()
-    offerings = OfferingAnalyser.run()
-    print("Offerings: ", offerings)    
+    # offerings = OfferingAnalyser.run()
+    # print("Offerings: ", offerings)    
     
     # KillerAnalyser.compare_killer()
-    killer = KillerAnalyser.run()
-    print("Killer: ",killer)
+    # killer = KillerAnalyser.run()
+    # print("Killer: ",killer)
 
     # PerkAnalyser.compare_perk()
-    survivor_perks_used, killer_perks_used = PerkAnalyser.run()
-    print("Survivor Perks Used: " + str(survivor_perks_used))
-    print("Killer Perks Used: " + str(killer_perks_used))
+    # survivor_perks_used, killer_perks_used = PerkAnalyser.run()
+    # print("Survivor Perks Used: " + str(survivor_perks_used))
+    # print("Killer Perks Used: " + str(killer_perks_used))
     
     # ItemAnalyser.compare_item()
-    items_used = ItemAnalyser.run()
-    print("Items Used: " + str(items_used))
+    # items_used = ItemAnalyser.run()
+    # print("Items Used: " + str(items_used))
     
     # ScoreAnalyser.compare_scores()
-    scores = ScoreAnalyser.run()
-    print("Scores: " + str(scores))
+    # scores = ScoreAnalyser.run()
+    # print("Scores: " + str(scores))
     
     # OutcomeAnalyser.compare_outcomes()
-    outcomes = OutcomeAnalyser.run()
-    print("Outcomes: ", str(outcomes))
+    # outcomes = OutcomeAnalyser.run()
+    # print("Outcomes: ", str(outcomes))
     
     # GradeAnalyser.compare_grades()
-    grades = GradeAnalyser.run()
-    print("Grades: ", str(grades))
+    # grades = GradeAnalyser.run()
+    # print("Grades: ", str(grades))
     
     # CrossplayAnalyser.compare_crossplay()
     crossplay = CrossplayAnalyser.run()
-    print("Crossplay: ", crossplay)
+    # print("Crossplay: ", crossplay)
+    
+    
+    # CharacterAnalyser.compare_characters()
+    characters = CharacterAnalyser.run(crossplay)
+    print("Characters: ", characters)
+    
     
     
     
