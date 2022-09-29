@@ -1,91 +1,90 @@
-
+import os
+from os import listdir
+from subprocess import CREATE_NEW_PROCESS_GROUP
 import cv2
 import numpy as np
-import random
 
-
-def adjustScreenSizeOfferings(Screen,bVector):
-    widthStartCut = 415
-    widthEndCut = 1450
-    hightStartCut = 280
-    hightEndCut = 280
-
-    upper_white = np.array([256, 256, 256])
-    lower_white = np.array([bVector, bVector, bVector])
-
-
-    mask = cv2.inRange(Screen, lower_white, upper_white)
-
-    WhiteBackground = np.zeros((Screen.shape[0], Screen.shape[1], 3), dtype=np.uint8)
-    WhiteBackground[:,:,:] = (255,255,255)
-
-    BlackBackground = np.zeros((Screen.shape[0], Screen.shape[1], 3), dtype=np.uint8)
-    BlackBackground[:,:,:] = (0,0,0)
-
-    result = cv2.bitwise_and(WhiteBackground,WhiteBackground,BlackBackground ,mask = mask)
-
-    Screen = result
-
-    # print(Screen.shape)
-    Screen = Screen[0+hightStartCut:Screen.shape[0]-hightEndCut, 0+widthStartCut:Screen.shape[1]-widthEndCut]
-    # cv2.imshow("Screen", Screen)
-    return Screen
-
-def calculateOfferings(offeringsList, location, Screen, show = True):
-    offerings = {}
-    size = 50
-    cropBorder = 0
-    thresholdOriginal = 0.85
-
-    firstrun = True
-
-    underdetectedOfferings = ["iconFavors_bloodyPartyStreamers.png",'iconsFavors_5thAnniversary.png','iconFavors_devoutTanagerWreath.png','iconFavors_strodeRealtyKey.png','iconFavors_fragrantSweetWilliam.png']
-    overdetectedOfferings = ["iconFavors_clearReagent.png",'iconFavors_faintReagent.png','iconFavors_hazyReagent.png','iconFavors_murkyReagent.png','iconFavors_vigosShroud.png','iconFavors_shroudOfBinding.png', 'iconFavors_shroudOfSeparation.png','iconFavors_shroudOfUnion.png']
-    # overdetectedOfferings = ["iconFavors_bloodyPartyStreamers.png"]
-
-    for item in offeringsList:
-        icon = cv2.imread(location+item)
-        icon = cv2.resize(icon, (size, size),interpolation=cv2.INTER_AREA)
-
+class Offerings:
+    def __init__(self, image):
+        self.image = image        
         
+        self.offering_size = 47
+        self.file_offering_margin = 1
+        self.compress_image = 40
+        self.radius = 21
 
-        if item in overdetectedOfferings:
-            threshold = 0.90
-
-        elif item in underdetectedOfferings:
-            threshold = 0.70
-
-        elif "mori" in item.lower():
-            threshold = 0.85
-
-        else:
-            threshold = thresholdOriginal
-
-        icon = icon[cropBorder:size-cropBorder , cropBorder:size-cropBorder]
-
-        result = cv2.matchTemplate(Screen, icon, cv2.TM_CCORR_NORMED)
-        yloc, xloc = np.where(result >= threshold)
-        rectangles = []
-
-        for (x, y) in zip(xloc, yloc):
-            rectangles.append([int(x-cropBorder), int(y-cropBorder), size,size])
-            rectangles.append([int(x-cropBorder), int(y-cropBorder), size,size])
-
-        rectangles, weights = cv2.groupRectangles(rectangles, 1, 0.2)
+    
+    def set_image(self, image):
+        self.image = image
+    
+    
+    def get_offering_list(self,perk_path):
+        return listdir(perk_path)
+    
+    
+    def file_offering_processing(self,image):
+        img_file = cv2.resize(image,(int(self.compress_image),int(self.compress_image)))
+        img_file = cv2.resize(img_file,(int(self.offering_size),int(self.offering_size)))
+        img_file = img_file[self.file_offering_margin:-self.file_offering_margin, self.file_offering_margin:-self.file_offering_margin]
+        return img_file
+    
+    def screen_offering_processing(self,image):
+        mask = np.zeros((self.offering_size, self.offering_size), np.uint8)
+        circle_img = cv2.circle(mask,(int(self.offering_size/2),int(self.offering_size/2)),self.radius,(255,255,255),thickness=-1)
+        image = cv2.bitwise_and(image, image, mask=circle_img)
+        return image
+    
+    def find_best_matching_offering(self,image_to_analyze):
+            image_to_analyze = self.screen_offering_processing(image_to_analyze)
+            offering_path = os.getenv('OFFERING_LOCATION')
+            most_probable_offering = None
+            most_probable_offering_score = 0
+            for offering in self.get_offering_list(offering_path):
+                icon = cv2.imread(f"{offering_path}/{offering}",1)
+                icon =  self.file_offering_processing(icon)
+                result = cv2.matchTemplate(image_to_analyze, icon, cv2.TM_CCOEFF_NORMED)
+                minVal, maxVal, minLoc, maxLoc = cv2.minMaxLoc(result)
+                if maxVal > most_probable_offering_score:
+                    most_probable_offering_score = maxVal
+                    most_probable_offering = offering
+                    
+            if most_probable_offering:
+                return most_probable_offering.split('.')[0]
+            else:
+                return "No Offering"
+    
+    
+    def compare_offering(self):
+        screen_img = self.image[773:773+self.offering_size,422:422+self.offering_size]
+        screen_img = self.screen_offering_processing(screen_img)
+        screen_img = cv2.resize(screen_img,(self.offering_size*5,self.offering_size*5))
+        cv2.imshow("Screen Image",screen_img)
         
-        color = tuple(list(np.random.choice(range(256), size=3)))
+        img_file = cv2.imread(os.getenv('OFFERING_LOCATION')+'/Escape Cake.png')
+        img_file = self.file_offering_processing(img_file)
+        img_file = cv2.resize(img_file,(self.offering_size*5,self.offering_size*5))
+        cv2.imshow("File Image",img_file)
+    
+    def run(self):
+        offerings_used = []
+        
+        
+        # Divides the screen into 5 spaces corresponding to each perk location.        
+        # Player 1
+        offerings_used.append(self.find_best_matching_offering(self.image[313:313+self.offering_size,424:424+self.offering_size]))
 
-        color = (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))
-
-        for (x, y, w, h) in rectangles:
-
-            cv2.putText(Screen, item.split("_")[1].split(".")[0], (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.3, color, 1)
-            cv2.rectangle(Screen, (x, y), (x + w, y + h), color, 2)
-
-        if len(rectangles) > 0:
-            offerings[item.split('_')[1].split('.')[0]] = len(rectangles)
-
-    if show:
-        cv2.imshow("Offerings Screen", Screen)
-
-    return offerings
+        # # Player 2
+        offerings_used.append(self.find_best_matching_offering(self.image[431:431+self.offering_size,424:424+self.offering_size]))
+        
+        # # Player 3
+        offerings_used.append(self.find_best_matching_offering(self.image[547:547+self.offering_size,424:424+self.offering_size]))
+        
+        # # Player 4
+        offerings_used.append(self.find_best_matching_offering(self.image[666:666+self.offering_size,424:424+self.offering_size]))
+                 
+        # Killer Offering Used
+        offerings_used.append(self.find_best_matching_offering(self.image[773:773+self.offering_size,422:422+self.offering_size]))
+        
+        offerings_used= list(filter(lambda offering:offering != "No Offering",offerings_used))
+        
+        return offerings_used

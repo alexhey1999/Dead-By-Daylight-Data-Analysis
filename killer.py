@@ -1,53 +1,53 @@
+import os
+from os import listdir
 import cv2
 import numpy as np
 
-
-def adjustScreenSizeKiller(Screen,bVector):
-    widthStartCut = 480
-    widthEndCut = 1390
-    hightStartCut = 735
-    hightEndCut = 275
-
-    upper_white = np.array([256, 256, 256])
-    lower_white = np.array([bVector, bVector, bVector])
-
-    mask = cv2.inRange(Screen, lower_white, upper_white)
-
-    WhiteBackground = np.zeros((Screen.shape[0], Screen.shape[1], 3), dtype=np.uint8)
-    WhiteBackground[:,:,:] = (255,255,255)
-
-    BlackBackground = np.zeros((Screen.shape[0], Screen.shape[1], 3), dtype=np.uint8)
-    BlackBackground[:,:,:] = (0,0,0)
-
-    result = cv2.bitwise_and(WhiteBackground,WhiteBackground,BlackBackground ,mask = mask)
-
-    # result = cv2.blur(result,(3,3))
-
+class Killer:
+    def __init__(self, image):
+        self.image = image
+        self.killer_size = 42
+        self.compressed_image = 30
     
     
-    result = result[0+hightStartCut:result.shape[0]-hightEndCut, 0+widthStartCut:result.shape[1]-widthEndCut]
-    # cv2.imshow("Killer Screen", result)
-    return result
-
-def calculateKiller(killerList, location, Screen,show = True):
-    mostProbableKiller = None
-    mostProbableKillerScore = 0
-
-    # firstrun = False
-
-    for killer in killerList:
-        icon = cv2.imread(location+killer)
-        icon = cv2.resize(icon, (40, 40),interpolation=cv2.INTER_AREA)
-
-        # if killer == "iconPowers_feralFrenzy.png" and firstrun:
-        #     cv2.imshow(killer, icon)
-        #     firstrun = False
-        result = cv2.matchTemplate(Screen, icon, cv2.TM_CCOEFF_NORMED)
-        minVal, maxVal, minLoc, maxLoc = cv2.minMaxLoc(result)
-        if maxVal > mostProbableKillerScore:
-            mostProbableKillerScore = maxVal
-            mostProbableKiller = killer
-    if show:
-        cv2.imshow("Killer Screen", Screen)
-
-    return mostProbableKiller, mostProbableKillerScore
+    def set_image(self, image):
+        self.image = image
+    
+    
+    def get_killer_list(self,perk_path):
+        return listdir(perk_path)    
+    
+    def find_best_matching_killer(self,image_to_analyze):
+            killer_path = os.getenv('KILLER_LOCATION')
+            most_probable_killer = None
+            most_probable_killer_score = 0
+            for killer in self.get_killer_list(killer_path):
+                icon = cv2.imread(f"{killer_path}/{killer}",1)
+                icon = cv2.resize(icon,(self.compressed_image,self.compressed_image),interpolation=cv2.INTER_AREA)
+                icon = cv2.resize(icon, (self.killer_size, self.killer_size),interpolation=cv2.INTER_AREA)
+                result = cv2.matchTemplate(image_to_analyze, icon, cv2.TM_CCOEFF_NORMED)
+                minVal, maxVal, minLoc, maxLoc = cv2.minMaxLoc(result)
+                if maxVal > most_probable_killer_score:
+                    most_probable_killer_score = maxVal
+                    most_probable_killer = killer
+                    
+            if most_probable_killer:
+                return most_probable_killer.split('.')[0]
+            else:
+                return "No Killer"
+        
+    def compare_killer(self):
+        screen_img = self.image[775:775+self.killer_size,490:490+self.killer_size]
+        screen_img = cv2.resize(screen_img,(self.killer_size*5,self.killer_size*5))
+        cv2.imshow("Screen Image",screen_img)
+        
+        img_file = cv2.imread(os.getenv('KILLER_LOCATION')+'/Demogorgon.png')
+        img_file = cv2.resize(img_file,(self.compressed_image,self.compressed_image),interpolation=cv2.INTER_AREA)
+        
+        img_file = cv2.resize(img_file,(self.killer_size*5,self.killer_size*5))
+        cv2.imshow("File Image",img_file)
+        
+    def run(self):
+        # Killer Analysis
+        killer = self.find_best_matching_killer(self.image[775:775+self.killer_size,490:490+self.killer_size])
+        return killer

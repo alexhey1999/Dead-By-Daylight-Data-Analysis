@@ -1,100 +1,100 @@
+import os
+from os import listdir
 import cv2
 import numpy as np
-import random
 
-def adjustScreenSizePerks(Screen,bVector):
-    widthStartCut = 170
-    widthEndCut = 1500
-    hightStartCut = 280
-    hightEndCut = 270
-
-    upper_white = np.array([256, 256, 256])
-    lower_white = np.array([bVector, bVector, bVector])
-
-
-    mask = cv2.inRange(Screen, lower_white, upper_white)
-
-    WhiteBackground = np.zeros((Screen.shape[0], Screen.shape[1], 3), dtype=np.uint8)
-    WhiteBackground[:,:,:] = (255,255,255)
-
-    BlackBackground = np.zeros((Screen.shape[0], Screen.shape[1], 3), dtype=np.uint8)
-    BlackBackground[:,:,:] = (0,0,0)
-
-    result = cv2.bitwise_and(WhiteBackground,WhiteBackground,BlackBackground ,mask = mask)
-
-    # result = cv2.blur(result,(3,3))
+class Perks:
+    def __init__(self, image):
+        self.image = image
+        self.perk_size = 50
+        self.radius = 18
     
-    result = result[0+hightStartCut:result.shape[0]-hightEndCut, 0+widthStartCut:result.shape[1]-widthEndCut]
-    # cv2.imshow("Perk Screen", result)
-    return result
-
-def calculatePerks(perkList,location,Screen,show = True):
-    perks = {}
-    size = 50
-    thresholdOriginal = 0.65
-    cropBorder = 0
-
-    firstrun = True
-
-    entropyList = []
-
-    for perk in perkList:
-        icon = cv2.imread(location+perk)
+    def set_image(self, image):
+        self.image = image
+    
+    def get_perk_list(self,perk_path):
+        return listdir(perk_path) 
+    
+    def find_best_matching_perk(self,image_to_analyze, survivor = True):
+            image_to_analyze = self.perk_file_processing(image_to_analyze)   
         
-        icon = cv2.resize(icon, (size, size),interpolation=cv2.INTER_AREA )
-
-        icon = icon[cropBorder:size-cropBorder , cropBorder:size-cropBorder]
-
-
-        underdetectedPerks = ["iconPerks_BoonExponential.png","iconPerks_trailOfTorment.png","iconPerks_dragonsGrip.png",'iconPerks_discordance.png','iconPerks_hexRetribution.png','iconPerks_camaraderie.png','iconPerks_bloodWarden.png','iconPerks_surveillance.png','iconPerks_breakout.png','iconPerks_surge.png',"iconPerks_Deadlock.png",'iconPerks_furtiveChase.png']
-
-        vUnderdetectedPerks = ['iconPerks_NoWayOut.png',"iconPerks_BoonCircleOfHealing.png",'iconPerks_corruptIntervention.png','iconPerks_BoonShadowStep.png','iconPerks_FastTrack.png','iconPerks_surveillance.png', 'iconPerks_painResonance.png','iconPerks_discordance.png']
-
-        noDetection = ['iconPerks_rememberMe.png']
-
-        overdetectedPerks = ["iconPerks_calmSpirit.png",'iconPerks_flipFlop.png','iconPerks_mettleOfMan.png','iconPerks_deception.png','iconPerks_premonition.png','iconPerks_alert.png','iconPerks_corruptIntervention.png']
-
-        if perk in vUnderdetectedPerks:
-            threshold = 0.54
-        elif perk in underdetectedPerks:
-            threshold = 0.62
-        elif perk in noDetection:
-            threshold = 0.52
-        elif perk in overdetectedPerks:
-            threshold = 0.70
-        else:
-            threshold = thresholdOriginal
-
-        result = cv2.matchTemplate(Screen, icon, cv2.TM_CCOEFF_NORMED)
-        yloc, xloc = np.where(result >= threshold)
-
-
-        rectangles = []
-
-        # testingPerkList = ["iconPerks_DeadHard.png","iconPerks_BoonCircleOfHealing.png","iconPerks_bond.png"]
-
-        # if perk in testingPerkList:
-            # cv2.imshow("Perk", icon)
-
-        for (x, y) in zip(xloc, yloc):
-            rectangles.append([int(x), int(y), size-cropBorder,size-cropBorder])
-            rectangles.append([int(x), int(y), size-cropBorder,size-cropBorder])
-
-        rectangles, weights = cv2.groupRectangles(rectangles, 1, 0.2)
+            if survivor:
+                perk_path = os.getenv('PERK_LOCATION_SURVIVOR')
+            else:
+                perk_path = os.getenv('PERK_LOCATION_KILLER')
+                
+            most_probable_perk = None
+            most_probable_perk_score = 0
+            for perk in self.get_perk_list(perk_path):
+                icon = cv2.imread(f"{perk_path}/{perk}",1)
+                icon = self.perk_file_processing(icon)          
+                
+                result = cv2.matchTemplate(image_to_analyze, icon, cv2.TM_CCOEFF_NORMED)
+                # result = cv2.matchTemplate(image_to_analyze, icon, cv2.TM_SQDIFF_NORMED)
+                minVal, maxVal, minLoc, maxLoc = cv2.minMaxLoc(result)
+                if maxVal > most_probable_perk_score:
+                    most_probable_perk_score = maxVal
+                    most_probable_perk = perk
+                    
+            if most_probable_perk:
+                return most_probable_perk.split('.')[0]
+            else:
+                return "No Perk"
+    
+    def perk_file_processing(self,icon):
+        # cv2.cvtColor(icon, cv2.COLOR_HSV2BGR)
+        icon = cv2.resize(icon, (self.perk_size, self.perk_size),interpolation=cv2.INTER_AREA)
+        mask = np.zeros((self.perk_size, self.perk_size), np.uint8)
+        circle_img = cv2.circle(mask,(int(self.perk_size/2),int(self.perk_size/2)),self.radius,(255,255,255),thickness=-1)
+        icon = cv2.bitwise_and(icon, icon, mask=circle_img)
+        return icon
+    
+    def compare_perk(self):
+        # self.process_screen_image()
+        screen_perk = self.perk_file_processing(self.image[662:662+self.perk_size,303:303+self.perk_size])
+        screen_perk = cv2.resize(screen_perk,(self.perk_size * 10, self.perk_size * 10),interpolation=cv2.INTER_AREA)
+        cv2.imshow("Screen Perk",screen_perk)
+        icon = cv2.imread(f"{os.getenv('PERK_LOCATION_SURVIVOR')}/Quick And Quiet.png")
+        icon = self.perk_file_processing(icon)        
+        icon = cv2.resize(icon, (self.perk_size * 10, self.perk_size * 10),interpolation=cv2.INTER_AREA)
+        cv2.imshow("Perk Size",icon)
         
-        color = tuple(list(np.random.choice(range(256), size=3)))
+    def run(self):
+        survivor_perks_used = []
+        killer_perks_used = []
+        
+        # Divides the screen into 20 spaces corresponding to each perk location.        
+        # Player 1
+        survivor_perks_used.append(self.find_best_matching_perk(self.image[310:310+self.perk_size,193:193+self.perk_size]))
+        survivor_perks_used.append(self.find_best_matching_perk(self.image[310:310+self.perk_size,248:248+self.perk_size]))
+        survivor_perks_used.append(self.find_best_matching_perk(self.image[310:310+self.perk_size,303:303+self.perk_size]))
+        survivor_perks_used.append(self.find_best_matching_perk(self.image[310:310+self.perk_size,358:358+self.perk_size]))
 
-        color = (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))
-
-        for (x, y, w, h) in rectangles:
-
-            cv2.putText(Screen, perk.split("_")[1].split(".")[0], (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.3, color, 1)
-            cv2.rectangle(Screen, (x, y), (x + w, y + h), color, 2)
-
-        if len(rectangles) > 0:
-            perks[perk.split('_')[1].split('.')[0]] = len(rectangles)
-
-    if show:
-        cv2.imshow("Perk Screen ", Screen)
-
-    return perks
+        # # Player 2
+        survivor_perks_used.append(self.find_best_matching_perk(self.image[428:428+self.perk_size,193:193+self.perk_size]))
+        survivor_perks_used.append(self.find_best_matching_perk(self.image[428:428+self.perk_size,248:248+self.perk_size]))
+        survivor_perks_used.append(self.find_best_matching_perk(self.image[428:428+self.perk_size,303:303+self.perk_size]))
+        survivor_perks_used.append(self.find_best_matching_perk(self.image[428:428+self.perk_size,358:358+self.perk_size]))
+        
+        # # Player 3
+        survivor_perks_used.append(self.find_best_matching_perk(self.image[544:544+self.perk_size,193:193+self.perk_size]))
+        survivor_perks_used.append(self.find_best_matching_perk(self.image[544:544+self.perk_size,248:248+self.perk_size]))
+        survivor_perks_used.append(self.find_best_matching_perk(self.image[544:544+self.perk_size,303:303+self.perk_size]))
+        survivor_perks_used.append(self.find_best_matching_perk(self.image[544:544+self.perk_size,358:358+self.perk_size]))
+        
+        # # Player 4
+        survivor_perks_used.append(self.find_best_matching_perk(self.image[662:662+self.perk_size,193:193+self.perk_size]))
+        survivor_perks_used.append(self.find_best_matching_perk(self.image[662:662+self.perk_size,248:248+self.perk_size]))
+        survivor_perks_used.append(self.find_best_matching_perk(self.image[662:662+self.perk_size,303:303+self.perk_size]))
+        survivor_perks_used.append(self.find_best_matching_perk(self.image[662:662+self.perk_size,358:358+self.perk_size]))
+                 
+        # Killer Perks
+        killer_perks_used.append(self.find_best_matching_perk(self.image[771:771+self.perk_size,192:192+self.perk_size],False))
+        killer_perks_used.append(self.find_best_matching_perk(self.image[771:771+self.perk_size,246:246+self.perk_size],False))
+        killer_perks_used.append(self.find_best_matching_perk(self.image[771:771+self.perk_size,302:302+self.perk_size],False))
+        killer_perks_used.append(self.find_best_matching_perk(self.image[771:771+self.perk_size,356:356+self.perk_size],False))
+        
+        survivor_perks_used = list(filter(lambda perk:perk != "No Perk",survivor_perks_used))
+        killer_perks_used = list(filter(lambda perk:perk != "No Perk",killer_perks_used))
+        
+        return survivor_perks_used, killer_perks_used

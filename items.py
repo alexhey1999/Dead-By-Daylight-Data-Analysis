@@ -1,92 +1,62 @@
+import os
+from os import listdir
 import cv2
 import numpy as np
-import random
 
-
-def adjustScreenSizeItems(Screen,bVector):
-    widthStartCut = 480
-    widthEndCut = 1390
-    hightStartCut = 280
-    hightEndCut = 400
-
-    upper_white = np.array([256, 256, 256])
-    lower_white = np.array([bVector, bVector, bVector])
-
-
-    mask = cv2.inRange(Screen, lower_white, upper_white)
-
-    WhiteBackground = np.zeros((Screen.shape[0], Screen.shape[1], 3), dtype=np.uint8)
-    WhiteBackground[:,:,:] = (255,255,255)
-
-    BlackBackground = np.zeros((Screen.shape[0], Screen.shape[1], 3), dtype=np.uint8)
-    BlackBackground[:,:,:] = (0,0,0)
-
-    result = cv2.bitwise_and(WhiteBackground,WhiteBackground,BlackBackground ,mask = mask)
-
-    Screen = result
-    # print(Screen.shape)
-    Screen = Screen[0+hightStartCut:Screen.shape[0]-hightEndCut, 0+widthStartCut:Screen.shape[1]-widthEndCut]
-    # cv2.imshow("Screen", Screen)
-    return Screen
-
-def calculateItems(itemList, location, Screen,show = True):
-    items = {}
-    size = 42
-    cropBorder = 2
-    thresholdOriginal = 0.80
-
-    issueItems = ['iconItems_partyPopper.png','iconItems_chineseFirecracker.png','iconItems_winterEventFirecracker.png']
-
-    for item in itemList:
-        icon = cv2.imread(location+item)
-        icon = cv2.resize(icon, (size, size),interpolation=cv2.INTER_AREA)
-        icon = icon[cropBorder:size-cropBorder , cropBorder:size-cropBorder]
-
-        if "key" in item.lower():
-            threshold = 0.90
-        elif "flashlight" in item.lower():
-            threshold = 0.80
-        elif "map" in item.lower():
-            threshold = 0.85
-        elif "toolbox" in item.lower():
-            threshold = 0.88
-        elif "aid" in item.lower() or "medkit" in item.lower():
-            # print("aid")
-            threshold = 0.85
-        elif item in issueItems:
-            threshold = 0.70
-        else:
-            threshold = thresholdOriginal
-
-        # threshold = thresholdOriginal
-
-        result = cv2.matchTemplate(Screen, icon, cv2.TM_CCORR_NORMED)
-        yloc, xloc = np.where(result >= threshold)
-        rectangles = []
-
-        for (x, y) in zip(xloc, yloc):
-            rectangles.append([int(x-cropBorder), int(y-cropBorder), size,size])
-            rectangles.append([int(x-cropBorder), int(y-cropBorder), size,size])
-
-        rectangles, weights = cv2.groupRectangles(rectangles, 1, 0.3)
-
-        color = tuple(list(np.random.choice(range(256), size=3)))
-
-        color = (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))
-
-        for (x, y, w, h) in rectangles:
-
-            cv2.putText(Screen, item.split("_")[1].split(".")[0], (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.3, color, 1)
-            cv2.rectangle(Screen, (x, y), (x + w, y + h), color, 2)
-
-        if len(rectangles) > 0:
-            items[item.split('_')[1].split('.')[0]] = len(rectangles)
-            # cv2.imshow(item, icon)
+class Items:
+    def __init__(self, image):
+        self.image = image
+        self.item_size = 38
+    
+    
+    def set_image(self, image):
+        self.image = image
+    
+    
+    def get_item_list(self,item_path):
+        return listdir(item_path)    
+    
+    def find_best_matching_item(self,image_to_analyze):
+            item_path = os.getenv('ITEM_LOCATION')
+            most_probable_item = None
+            most_probable_item_score = 0
+            for item in self.get_item_list(item_path):
+                icon = cv2.imread(f"{item_path}/{item}",1)
+                icon = cv2.resize(icon, (self.item_size, self.item_size),interpolation=cv2.INTER_AREA)
+                result = cv2.matchTemplate(image_to_analyze, icon, cv2.TM_CCOEFF_NORMED)
+                minVal, maxVal, minLoc, maxLoc = cv2.minMaxLoc(result)
+                if maxVal > most_probable_item_score:
+                    most_probable_item_score = maxVal
+                    most_probable_item = item
+                    
+            if most_probable_item:
+                return most_probable_item.split('.')[0]
+            else:
+                return "No Item"
         
-           
-            # print(f'{perk} : {len(rectangles)}')
-    # print(perks)
-    if show:
-        cv2.imshow("Item Screen", Screen)
+    def compare_item(self):
+        screen_img = self.image[553:553+self.item_size,492:492+self.item_size]
+        screen_img = cv2.resize(screen_img,(self.item_size*5,self.item_size*5))
+        cv2.imshow("Screen Image",screen_img)
+        
+        img_file = cv2.imread(os.getenv('ITEM_LOCATION')+'/Rainbow Map.png')
+        img_file = cv2.resize(img_file,(self.item_size*5,self.item_size*5))
+        cv2.imshow("File Image",img_file)
+        
+    def run(self):
+        items = []
+        # Item Anal     
+        items.append(self.find_best_matching_item(self.image[317:317+self.item_size,492:492+self.item_size]))
 
-    return items
+        # # Player 2
+        items.append(self.find_best_matching_item(self.image[435:435+self.item_size,492:492+self.item_size]))
+        
+        # # Player 3
+        items.append(self.find_best_matching_item(self.image[553:553+self.item_size,492:492+self.item_size]))
+        
+        # # Player 4
+        items.append(self.find_best_matching_item(self.image[671:671+self.item_size,492:492+self.item_size]))
+        
+        items= list(filter(lambda item:item != "No Item",items))
+        
+        return items

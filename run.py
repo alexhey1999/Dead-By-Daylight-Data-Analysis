@@ -1,5 +1,6 @@
 #Handle Imports
 import cv2
+import sys
 from os import listdir, rename
 import argparse
 import pyautogui
@@ -9,288 +10,144 @@ import PIL.Image as Image
 from PIL import ImageGrab
 import json
 import datetime
+from screen_capping import Screen
+import os
+from dotenv import load_dotenv,find_dotenv
+from screeninfo import get_monitors
 
-path = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
-# path = r'C:\Users\alex.hey\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
+# Import Analyser Classes
+from perks import Perks
+from killer import Killer
+from offerings import Offerings
+from items import Items
+from scores import Scores
+from outcomes import Outcomes
+from grades import Grades
+from crossplay import Crossplay
+from characters import Characters
+from addons import Addons
 
-pytesseract.pytesseract.tesseract_cmd = path
-
-from killer import *
-from items import *
-from perks import *
-from offerings import *
-from scores import *
-from escape import *
-from testing import *
-
-#Nebula
-#dbdicontoolbox://EvaZioNe-Nebula
-
-def getImageCapture():
-    count = 0
-    with open('Screenshots/previousTests.txt',"r+") as counter:
-        count = int(counter.read())
-    with open('Screenshots/previousTests.txt',"w") as counter:
-        counter.write(str(count+1))
-
-
-    fileName = f'Test{count}.png'
-    print(fileName)
-    image = pyautogui.screenshot()
-    image = cv2.cvtColor(np.array(image),cv2.COLOR_RGB2BGR)
-    cv2.imwrite('Screenshots/'+fileName, image)
-    return fileName
-
-def imageFix(location):
-
-    imageList = listdir(location)
-
-    for fileName in imageList:
-
-        image = Image.open(location+fileName)
-        image = image.convert("RGBA")
-        canvas = Image.new('RGBA', image.size, (0,0,0,255)) # Empty canvas colour (r,g,b,a)
-        canvas.paste(image, mask=image) # Paste the image onto the canvas, using it's alpha channel as mask
-        canvas.save(str(location+fileName), format="PNG")
-
-def calculateBrightnessVector(brightness):
-    # If brightness is set to 1, then the variable bVector will 135
-    fullBrightWhite = 135
-    noBrightWhite = 100
+image = None
     
-    difference = fullBrightWhite - noBrightWhite
-
-    bVector = noBrightWhite + (difference * float(brightness))
-
-    return bVector
-
-
-def addDataToStorage(killerPlayed, perks, items, offerings, scores, escapes, location,file):
-    gameID = 0
-
-    with open(location+'games.json',"r+") as games:
-        gameID = 0
-        game_data = json.load(games)
-        for line in game_data["games"]:
-            if line["gameid"] >= gameID:
-                gameID = line["gameid"]
-
-        gameID += 1
-
-    # Write Game Data to file
-
-    newGameData = {"gameid":gameID,"date":str(datetime.datetime.now())}
-    print(newGameData)
-
-    with open(location+'games.json',"r+") as games:
-        game_data = json.load(games)
-        game_data["games"].append(newGameData)
-        games.seek(0)
-        json.dump(game_data, games, indent=4)
+def main(show_images = None):
+    global image
+    show_images = True if show_images == None else False
+    # print(show_images)
+    # show_images = True if show_images == None else False
+    # image, filename = ScreenTaker.get_image_capture()
+    # print("Image Taken")
     
-
-    # Write Killer Data to file
-
-    newKillerData = {"name":killerPlayed,"gameid":gameID}           
-    print(killerPlayed)
-
-    with open(location+'killers.json',"r+") as killers:
-        killer_data = json.load(killers)
-        killer_data["killers"].append(newKillerData)
-        killers.seek(0)
-        json.dump(killer_data, killers, indent=4)
-
-    # Write Perk Data to file
-    # newPerkData = {"perk":,"gameid":gameID}
-
-
-    perkArray = []
-    for i in perks:
-        for j in range(perks[i]):
-            perkArray.append(i)
-        pass
+    image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_full.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_1.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_mori.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_difficult_survivor_perks.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_disconnected.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_crossplay.png')
     
-    for i in perkArray:
-        newPerkData = {"perk":i,"gameid":gameID}
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_2.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_3.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_4.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_5.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_6.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_7.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_8.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_9.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_10.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_11.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_12.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_13.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_14.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_15.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_16.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_17.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_18.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_19.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_20.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_22.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_23.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_24.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_25.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_26.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_27.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_28.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_29.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_30.png')
 
-        with open(location+'perks.json',"r+") as perks:
-            perk_data = json.load(perks)
-            perk_data["perks"].append(newPerkData)
-            perks.seek(0)
-            json.dump(perk_data, perks, indent=4)
-
-    itemsArray = []
-    for i in items:
-        for j in range(items[i]):
-            itemsArray.append(i)
-        pass
-
-    for i in itemsArray:
-        newItemData = {"item":i,"gameid":gameID}
-        # print(newItemData)
-
-        with open(location+'items.json',"r+") as items:
-            item_data = json.load(items)
-            item_data["items"].append(newItemData)
-            items.seek(0)
-            json.dump(item_data, items, indent=4)
+    pre_processed_image = image
     
-    # Write Offering Data to file
-    # newOfferingData = {"offering":,"gameid":gameID}
-
-    offeringArray = []
-    for i in offerings:
-        for j in range(offerings[i]):
-            offeringArray.append(i)
-        pass
-
-    for i in offeringArray:
-        newOfferingData = {"offering":i,"gameid":gameID}
-
-        with open(location+'offerings.json',"r+") as offerings:
-            offering_data = json.load(offerings)
-            offering_data["offerings"].append(newOfferingData)
-            offerings.seek(0)
-            json.dump(offering_data, offerings, indent=4)
-
-
-    print(scores)
-    # Write Score Data to file
-    newScoreData = {"player1Score": scores["Player1"],"player2Score": scores["Player2"],"player3Score": scores["Player3"],"player4Score": scores["Player4"],"killerScore": scores["Killer"],"gameid":gameID}
-
-    with open(location+'scores.json',"r+") as scores:
-        score_data = json.load(scores)
-        score_data["scores"].append(newScoreData)
-        scores.seek(0)
-        json.dump(score_data, scores, indent=4) 
-
-    # Write Escape Data to file
-    escapes["gameid"] = gameID
-
-    print(escapes)
-    with open(location+'escapes.json',"r+") as escapesFile:
-        escape_data = json.load(escapesFile)
-        escape_data["escapes"].append(escapes)
-        escapesFile.seek(0)
-        json.dump(escape_data, escapesFile, indent=4)
-
-    rename(file, "Screenshots/Archived/"+file.split('/')[1])
-
-
-
+    image = ScreenTaker.process_screen_image(image)    
     
-
-
-def main():
-    # create parser
-    descStr = "This takes a screenshot of DBD Endgame and then extrapolates perks, offerings, items, scores and ."
-    parser = argparse.ArgumentParser(description=descStr)
-
-    # add expected arguments
-    parser.add_argument('--file', dest='imgFile', required=False)
-    parser.add_argument('--icon', dest='icon', required=False)
-    parser.add_argument('--forceEnd', dest='forceEnd', required=False)
-    parser.add_argument('--testing', dest='testing', required=False)
-    parser.add_argument('--imageFix', dest='imageFix', required=False)
-    parser.add_argument('--folder', dest='folder', required=False)
-    parser.add_argument('--brightness', dest='brightness', required=False)
-    parser.add_argument('--save', dest='save', required=False)
-    parser.add_argument('--constant', dest='constant', required=False)
-
-    # parse args
-    args = parser.parse_args()
-
-    if args.imageFix:
-        imageFix(args.folder)
-        quit()
-
-    if args.brightness:
-        bVector = int(calculateBrightnessVector(args.brightness))
-    else:
-        bVector = int(calculateBrightnessVector(1))
+    PerkAnalyser = Perks(image)
+    KillerAnalyser = Killer(image)
+    OfferingAnalyser = Offerings(image)
+    ItemAnalyser = Items(image)
+    ScoreAnalyser = Scores(pre_processed_image)
+    OutcomeAnalyser = Outcomes(pre_processed_image)
+    GradeAnalyser = Grades(pre_processed_image)
+    CrossplayAnalyser = Crossplay(pre_processed_image)
+    CharacterAnalyser = Characters(pre_processed_image)
+    AddonAnalyser = Addons(image)
     
-    print(bVector)
+    # OfferingAnalyser.compare_offering()
+    offerings = OfferingAnalyser.run()
+    print("Offerings: ", offerings)    
+    
+    # KillerAnalyser.compare_killer()
+    killer = KillerAnalyser.run()
+    print("Killer: ",killer)
 
-    # set output file
-    killerList = listdir("./Killers/")
-    perkList = listdir("./Perks/")
-    itemList = listdir("./Items/")
-    offeringList = listdir("./Offerings/")
-    escapeList = listdir("./Escapes/")
-
-    if args.imgFile:
-        imgFile = args.imgFile
-        KillerScreen = cv2.imread(imgFile)
-        PerkScreen = cv2.imread(imgFile)
-        ItemScreen = cv2.imread(imgFile)
-        OfferingScreen = cv2.imread(imgFile)
-        ScoreScreen = cv2.imread(imgFile)
-        EscapeScreen = cv2.imread(imgFile)
-        TestingScreen = cv2.imread(imgFile)
-    else:
-        screenshotName = getImageCapture()
-
-        KillerScreen = cv2.imread('Screenshots/'+screenshotName)
-        PerkScreen = cv2.imread('Screenshots/'+screenshotName)
-        ItemScreen = cv2.imread('Screenshots/'+screenshotName)
-        OfferingScreen = cv2.imread('Screenshots/'+screenshotName)
-        ScoreScreen = cv2.imread('Screenshots/'+screenshotName)
-        EscapeScreen = cv2.imread('Screenshots/'+screenshotName)
-        TestingScreen = cv2.imread('Screenshots/'+screenshotName)
-
-        imgFile = "Screenshots/"+screenshotName
-
-    KillerScreen = adjustScreenSizeKiller(KillerScreen, bVector)
-    PerkScreen = adjustScreenSizePerks(PerkScreen, bVector)
-    ItemScreen = adjustScreenSizeItems(ItemScreen, bVector)
-    OfferingScreen = adjustScreenSizeOfferings(OfferingScreen, bVector)
-    ScoreScreen = adjustScreenSizeScores(ScoreScreen, bVector)
-    EscapeScreen = adjustScreenSizeEscapes(EscapeScreen, bVector)
-
-
-    if args.icon:
-        icon = args.icon
-        testingPerk(icon, "./Perks/", PerkScreen, True)
-
-
-    if args.testing:
-        while True:
-            img = ImageGrab.grab(bbox=(70, 100, 350, 170)) #x, y, w, h
-            img_np = np.array(img)
-            screen = cv2.cvtColor(img_np, cv2.COLOR_RGB2BGR)
-            
-            cv2.imshow("Testing", screen )
-            if cv2.waitKey(25) & 0xFF == ord('q'):
-                cv2.destroyAllWindows()
-                break
-
-    else:
-
-        killerPlayed, confirmation = calculateKiller(killerList, "./Killers/", KillerScreen)
-        perks = calculatePerks(perkList, "./Perks/", PerkScreen)
-        items = calculateItems(itemList, "./Items/", ItemScreen)
-        offerings = calculateOfferings(offeringList, "./Offerings/", OfferingScreen)
-        scores = calculateScores(ScoreScreen)
-        escapes = calculateEscapes(escapeList, "./Escapes/", EscapeScreen,bVector)
-
-        print('\n\n\n\n\n\n')
-        print(f'Killer Played: {killerPlayed} , Confirmation: {round(confirmation*100,2)}%\n')
-        print(f'Perks: {perks}\n')
-        print(f'Items: {items}\n')
-        print(f'Offerings: {offerings}\n')
-        print(f'Scores: {scores}\n')
-        print(f'Escapes: {escapes}\n')
+    # PerkAnalyser.compare_perk()
+    survivor_perks_used, killer_perks_used = PerkAnalyser.run()
+    print("Survivor Perks Used: " + str(survivor_perks_used))
+    print("Killer Perks Used: " + str(killer_perks_used))
+    
+    # ItemAnalyser.compare_item()
+    items_used = ItemAnalyser.run()
+    print("Items Used: " + str(items_used))
+    
+    # ScoreAnalyser.compare_scores()
+    scores = ScoreAnalyser.run()
+    print("Scores: " + str(scores))
+    
+    # OutcomeAnalyser.compare_outcomes()
+    outcomes = OutcomeAnalyser.run()
+    print("Outcomes: ", str(outcomes))
+    
+    # GradeAnalyser.compare_grades()
+    grades = GradeAnalyser.run()
+    print("Grades: ", str(grades))
+    
+    # CrossplayAnalyser.compare_crossplay()
+    crossplay = CrossplayAnalyser.run()
+    print("Crossplay: ", crossplay)
+    
+    # CharacterAnalyser.compare_characters()
+    characters = CharacterAnalyser.run(crossplay)
+    print("Characters: ", characters)
+    
+    # AddonAnalyser.compare_addons()
+    addons = AddonAnalyser.run(killer)
+    print("Addons: ", addons)
         
-        if args.save:    
-            addDataToStorage(killerPlayed, perks, items, offerings, scores, escapes,"./Outputs/", imgFile)
-
-    if args.forceEnd:
-        cv2.destroyAllWindows()
-    else:
-        while True:
-            key = cv2.waitKey(30)
-            if key == 27 or key == 0:
-                quit()
+    while show_images:
+        ScreenTaker.show_image(pre_processed_image,'image')
+        key = cv2.waitKey(30)
+        if key == 27 or key == 0:
+            quit()
+    
     
 if __name__ == "__main__":
-    main()
+    # print(sys.argv)
+    show_images = None
+    if len(sys.argv) == 2:
+        show_images = True if sys.argv[1] == True else False
+    
+    # Load .env file
+    load_dotenv(find_dotenv())
+
+    # Create Screen Capture Object
+    monitor = get_monitors()[int(os.getenv("DEFAULT_MONITOR"))]
+
+    ScreenTaker = Screen(monitor.width, monitor.height)
+    
+    main(show_images)
