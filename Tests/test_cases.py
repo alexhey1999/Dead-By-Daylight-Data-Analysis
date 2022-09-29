@@ -54,7 +54,20 @@ TEST_CASES = [
                 "player_4": 1,
                 "killer": 3,
             },
-            {'character_1_crossplay': False, 'character_2_crossplay': False, 'character_3_crossplay': False, 'character_4_crossplay': False, 'killer_crossplay': False}
+            {
+                "character_1_crossplay": False,
+                "character_2_crossplay": False,
+                "character_3_crossplay": False,
+                "character_4_crossplay": False,
+                "killer_crossplay": False,
+            },
+            {
+                "player_1": {"addon_1": "Syringe", "addon_2": "Bandages"},
+                "player_2": {"addon_1": "No Addon", "addon_2": "No Addon"},
+                "player_3": {"addon_1": "No Addon", "addon_2": "No Addon"},
+                "player_4": {"addon_1": "No Addon", "addon_2": "No Addon"},
+                "killer": {"addon_1": "No Addon", "addon_2": "No Addon"},
+            },
         )
     ),
     (
@@ -85,7 +98,23 @@ TEST_CASES = [
                 "player_4": "NAN",
                 "killer": "NAN",
             },
-            {'character_1_crossplay': False, 'character_2_crossplay': False, 'character_3_crossplay': False, 'character_4_crossplay': False, 'killer_crossplay': False}
+            {
+                "character_1_crossplay": False,
+                "character_2_crossplay": False,
+                "character_3_crossplay": False,
+                "character_4_crossplay": False,
+                "killer_crossplay": False,
+            },
+            {
+                "player_1": {
+                    "addon_1": "Long Life Battery",
+                    "addon_2": "Threaded Filament",
+                },
+                "player_2": {"addon_1": "No Addon", "addon_2": "No Addon"},
+                "player_3": {"addon_1": "No Addon", "addon_2": "No Addon"},
+                "player_4": {"addon_1": "No Addon", "addon_2": "No Addon"},
+                "killer": {"addon_1": "Granmas Heart", "addon_2": "Bloodied Water"},
+            },
         )
     ),
     (
@@ -111,7 +140,23 @@ TEST_CASES = [
                 "player_4": "NAN",
                 "killer": "NAN",
             },
-            {'character_1_crossplay': False, 'character_2_crossplay': False, 'character_3_crossplay': False, 'character_4_crossplay': False, 'killer_crossplay': False}
+            {
+                "character_1_crossplay": False,
+                "character_2_crossplay": False,
+                "character_3_crossplay": False,
+                "character_4_crossplay": False,
+                "killer_crossplay": False,
+            },
+            {
+                "player_1": {
+                    "addon_1": "Abdominal Dressing",
+                    "addon_2": "Gel Dressings",
+                },
+                "player_2": {"addon_1": "No Addon", "addon_2": "No Addon"},
+                "player_3": {"addon_1": "No Addon", "addon_2": "No Addon"},
+                "player_4": {"addon_1": "No Addon", "addon_2": "No Addon"},
+                "killer": {"addon_1": "Iridescent Head", "addon_2": "Deerskin Gloves"},
+            },
         )
     ),
     (
@@ -137,7 +182,23 @@ TEST_CASES = [
                 "player_4": "NAN",
                 "killer": "NAN",
             },
-            {'character_1_crossplay': False, 'character_2_crossplay': False, 'character_3_crossplay': False, 'character_4_crossplay': False, 'killer_crossplay': False}
+            {
+                "character_1_crossplay": False,
+                "character_2_crossplay": False,
+                "character_3_crossplay": False,
+                "character_4_crossplay": False,
+                "killer_crossplay": False,
+            },
+            {
+                "player_1": {
+                    "addon_1": "Long Life Battery",
+                    "addon_2": "Threaded Filament",
+                },
+                "player_2": {"addon_1": "No Addon", "addon_2": "No Addon"},
+                "player_3": {"addon_1": "No Addon", "addon_2": "No Addon"},
+                "player_4": {"addon_1": "No Addon", "addon_2": "No Addon"},
+                "killer": {"addon_1": "Deer Lung", "addon_2": "Sticky Lining"},
+            },
         )
     ),
     (
@@ -163,21 +224,81 @@ TEST_CASES = [
                 "player_4": "NAN",
                 "killer": "NAN",
             },
-            {'character_1_crossplay': False, 'character_2_crossplay': False, 'character_3_crossplay': False, 'character_4_crossplay': False, 'killer_crossplay': False}
+            {
+                "character_1_crossplay": False,
+                "character_2_crossplay": False,
+                "character_3_crossplay": False,
+                "character_4_crossplay": False,
+                "killer_crossplay": False,
+            },
+            {
+                "player_1": {"addon_1": "No Addon", "addon_2": "No Addon"},
+                "player_2": {"addon_1": "No Addon", "addon_2": "No Addon"},
+                "player_3": {"addon_1": "No Addon", "addon_2": "No Addon"},
+                "player_4": {"addon_1": "No Addon", "addon_2": "No Addon"},
+                "killer": {"addon_1": "Serotonin Injector", "addon_2": "Jill Sandwich"},
+            },
         )
     ),
     (
         (
             "./Screenshots/test_crossplay.png",
-            ['Prove Thyself', 'Adrenaline', 'Boon Circle Of Healing', 'Lithe', 'Lithe', 'Prove Thyself', 'Second Wind', 'Adrenaline', 'Resilience', 'Kindred', 'Small Game', 'Spine Chill', 'Dead Hard', 'Fixated', 'Resilience', 'Off The Record'],
-            ['Lethal Pursuer', 'B B Q And Chili', 'Scourge Hook Gift Of Pain', 'Thatanophobia'],
+            [
+                "Prove Thyself",
+                "Adrenaline",
+                "Boon Circle Of Healing",
+                "Lithe",
+                "Lithe",
+                "Prove Thyself",
+                "Second Wind",
+                "Adrenaline",
+                "Resilience",
+                "Kindred",
+                "Small Game",
+                "Spine Chill",
+                "Dead Hard",
+                "Fixated",
+                "Resilience",
+                "Off The Record",
+            ],
+            [
+                "Lethal Pursuer",
+                "B B Q And Chili",
+                "Scourge Hook Gift Of Pain",
+                "Thatanophobia",
+            ],
             "Legion",
-            ['Escape Cake', 'Dusty Noose', 'Fresh Crispleaf Amaranth', 'Rotten Oak'],
-            ['Medkit', 'Rangers Aid Kit', 'Rainbow Map', 'Flashlight'],
-            {'player_1': 29373, 'player_2': 27615, 'player_3': 19913, 'player_4': 0, 'killer': 21073},
-            ('Escape', 'Escape', 'Escape', 'Disconnected', 'No Outcome'),
-            {'player_1': 29, 'player_2': 24, 'player_3': 10, 'player_4': 1, 'killer': 3},
-            {'character_1_crossplay': True, 'character_2_crossplay': True, 'character_3_crossplay': True, 'character_4_crossplay': False, 'killer_crossplay': True}
+            ["Escape Cake", "Dusty Noose", "Fresh Crispleaf Amaranth", "Rotten Oak"],
+            ["Medkit", "Rangers Aid Kit", "Rainbow Map", "Flashlight"],
+            {
+                "player_1": 29373,
+                "player_2": 27615,
+                "player_3": 19913,
+                "player_4": 0,
+                "killer": 21073,
+            },
+            ("Escape", "Escape", "Escape", "Disconnected", "No Outcome"),
+            {
+                "player_1": 29,
+                "player_2": 24,
+                "player_3": 10,
+                "player_4": 1,
+                "killer": 3,
+            },
+            {
+                "character_1_crossplay": True,
+                "character_2_crossplay": True,
+                "character_3_crossplay": True,
+                "character_4_crossplay": False,
+                "killer_crossplay": True,
+            },
+            {
+                "player_1": {"addon_1": "Self Adherent Wrap", "addon_2": "Gause Roll"},
+                "player_2": {"addon_1": "Gel Dressings", "addon_2": "Gause Roll"},
+                "player_3": {"addon_1": "Stamp Unusual", "addon_2": "Retardant Jelly"},
+                "player_4": {"addon_1": "No Addon", "addon_2": "No Addon"},
+                "killer": {"addon_1": "Etched Ruler", "addon_2": "The Legion Button"},
+            },
         )
-    )
+    ),
 ]

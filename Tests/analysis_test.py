@@ -19,6 +19,7 @@ from scores import Scores
 from outcomes import Outcomes
 from grades import Grades
 from crossplay import Crossplay
+from addons import Addons
 
 
 
@@ -59,6 +60,10 @@ def GradeAnalyser():
 @pytest.fixture
 def CrossplayAnalyser():
     return Crossplay(None)
+
+@pytest.fixture
+def AddonAnalyser():
+    return Addons(None)
 
 @pytest.mark.parametrize(
     "test_case",
@@ -186,3 +191,20 @@ class Test:
         assert crossplay_determined["character_3_crossplay"] == crossplay["character_3_crossplay"]
         assert crossplay_determined["character_4_crossplay"] == crossplay["character_4_crossplay"]
         assert crossplay_determined["killer_crossplay"] == crossplay["killer_crossplay"]
+
+    def test_addons(
+        self, ScreenTaker,KillerAnalyser,AddonAnalyser, test_case
+    ):
+        file_location,addons = test_case[0], test_case[10]
+        image, _ = ScreenTaker.get_image_from_filename(file_location)
+        image = ScreenTaker.process_screen_image(image)
+        KillerAnalyser.set_image(image)
+        killer_determined = KillerAnalyser.run()
+        
+        AddonAnalyser.set_image(image)
+        addons_determined = AddonAnalyser.run(killer_determined)
+        assert addons_determined["player_1"] == addons["player_1"]
+        assert addons_determined["player_2"] == addons["player_2"]
+        assert addons_determined["player_3"] == addons["player_3"]
+        assert addons_determined["player_4"] == addons["player_4"]
+        assert addons_determined["killer"] == addons["killer"]

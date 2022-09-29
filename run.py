@@ -25,6 +25,7 @@ from outcomes import Outcomes
 from grades import Grades
 from crossplay import Crossplay
 from characters import Characters
+from addons import Addons
 
 image = None
     
@@ -42,7 +43,6 @@ def main(show_images = None):
     # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_difficult_survivor_perks.png')
     # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_disconnected.png')
     # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_crossplay.png')
-    
     
     # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_2.png')
     # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_3.png')
@@ -63,7 +63,15 @@ def main(show_images = None):
     # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_18.png')
     # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_19.png')
     # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_20.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_21.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_22.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_23.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_24.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_25.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_26.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_27.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_28.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_29.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_30.png')
 
     pre_processed_image = image
     
@@ -78,6 +86,7 @@ def main(show_images = None):
     GradeAnalyser = Grades(pre_processed_image)
     CrossplayAnalyser = Crossplay(pre_processed_image)
     CharacterAnalyser = Characters(pre_processed_image)
+    AddonAnalyser = Addons(image)
     
     # OfferingAnalyser.compare_offering()
     offerings = OfferingAnalyser.run()
@@ -116,9 +125,10 @@ def main(show_images = None):
     characters = CharacterAnalyser.run(crossplay)
     print("Characters: ", characters)
     
-    
-    
-    
+    # AddonAnalyser.compare_addons()
+    addons = AddonAnalyser.run(killer)
+    print("Addons: ", addons)
+        
     while show_images:
         ScreenTaker.show_image(pre_processed_image,'image')
         key = cv2.waitKey(30)

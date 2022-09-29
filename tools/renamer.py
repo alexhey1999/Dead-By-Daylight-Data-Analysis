@@ -22,6 +22,11 @@ def main(file_location):
 if __name__ == '__main__':
     load_dotenv(find_dotenv())
     
+    folder_root = "./Images/Addons/"
+    for i in listdir(folder_root):
+        main(f'{folder_root}{i}/')
+            
+    # os.getenv('PERK_LOCATION_SURVIVOR')
     # main(os.getenv('PERK_LOCATION_SURVIVOR'))
-    main('./Images/Items/')
+    # main('./Images/Items/')
 

@@ -15,4 +15,10 @@ def imageFix(location):
         canvas.save(str(location+fileName), format="PNG")   
         
 if __name__ == "__main__":
-    imageFix('./Images/Help/')
+    
+    # folderRoot = "./Images/Addons/"
+    # print(listdir('./Images/Addons/'))
+    # for i in listdir('./Images/Addons/'):
+    #     imageFix(f'./Images/Addons/{i}/')        
+    
+    imageFix('./Images/Addons/Plague/')
