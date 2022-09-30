@@ -10,16 +10,25 @@ import random
 class Crossplay:
     def __init__(self, image):
         self.image = image
+        self.lower_white_default = 170
         self.radius = 18
         self.lower_white = 160
         self.crossplay_size = 22
-        self.crossplay_threshold = 0.8
+        self.crossplay_threshold = 0.6
         
         if image is not None:
             self.image = self.pre_process_image(image)
 
         load_dotenv(find_dotenv())
         pytesseract.pytesseract.tesseract_cmd = os.getenv("PYTESSERACT_PATH")
+        
+    def set_lower_white(self, image_lower_white = None,image = None):
+        if image_lower_white is None:
+            self.lower_white = int(self.lower_white_default)
+        else:
+            self.lower_white = int(image_lower_white * 1.46)
+            self.image = self.pre_process_image(image)
+            self.lower_white = int(self.lower_white_default)
             
     def set_image(self, image):
         self.image = self.pre_process_image(image)

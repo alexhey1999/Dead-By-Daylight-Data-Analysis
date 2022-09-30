@@ -9,9 +9,10 @@ from dotenv import load_dotenv,find_dotenv
 class Grades:
     def __init__(self, image):
         self.image = image
+        self.lower_white_default = 170
         self.grade_width = 70
         self.grade_height = 50
-        self.lower_white = 160
+        self.lower_white = 170
         
         if image is not None:
             self.image = self.pre_process_image(image)
@@ -22,7 +23,14 @@ class Grades:
             
     def set_image(self, image):
         self.image = self.pre_process_image(image)
-        
+    
+    def set_lower_white(self, image_lower_white = None,image = None):
+        if image_lower_white is None:
+            self.lower_white = int(self.lower_white_default)
+        else:
+            self.lower_white = int(image_lower_white * 1.46)
+            self.image = self.pre_process_image(image)
+            self.lower_white = int(self.lower_white_default)
     
     def pre_process_image(self, image):
         upper_white = np.array([256, 256, 256])

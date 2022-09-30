@@ -7,13 +7,14 @@ from dotenv import load_dotenv,find_dotenv
 
 
 class Scores:
-    def __init__(self, image):
+    def __init__(self, image, lower_white = None):
+        self.lower_white_default = 170
         self.image = image
         self.radius = 18
         self.score_width = 150
         # self.score_height = 550
         self.score_height = 60
-        self.lower_white = 160
+        self.lower_white = 170
         
         if image is not None:
             self.image = self.pre_process_image(image)
@@ -24,7 +25,14 @@ class Scores:
             
     def set_image(self, image):
         self.image = self.pre_process_image(image)
-        
+    
+    def set_lower_white(self, image_lower_white = None,image = None):
+        if image_lower_white is None:
+            self.lower_white = int(self.lower_white_default)
+        else:
+            self.lower_white = int(image_lower_white * 1.5)
+            self.image = self.pre_process_image(image)
+            self.lower_white = int(self.lower_white_default)
     
     def pre_process_image(self, image):
         upper_white = np.array([256, 256, 256])
@@ -64,7 +72,7 @@ class Scores:
     
     def compare_scores(self):
         # self.process_screen_image()
-        screen_perk = self.image[765:765+self.score_height,720:720+self.score_width]
+        screen_perk = self.image[540:540+self.score_height,720:720+self.score_width]
         screen_perk = self.process_screen(screen_perk)
         cv2.imshow("Score Window",screen_perk)
         

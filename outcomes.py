@@ -47,9 +47,9 @@ class Outcomes:
             if outcome == "alive.png":
                 height, width, threshold, name = (48,40,0.8,"Alive")
             if outcome == "death.png":
-                height, width, threshold, name = (45,38,0.75,"Death")
+                height, width, threshold, name = (47,38,0.75,"Death")
             if outcome == "disconnected.png":
-                height, width, threshold, name = (35,52,0.75,"Disconnected")
+                height, width, threshold, name = (42,52,0.75,"Disconnected")
             if outcome == "escape.png":
                 height, width, threshold, name = (40,35,0.75, "Escape")
             if outcome == "sacrificed.png":
@@ -84,12 +84,26 @@ class Outcomes:
     
     
     def compare_outcomes(self):
-        screen_img = self.image[780:780+self.outcome_size,422:422+self.outcome_size]
-        screen_img = cv2.resize(screen_img,(self.outcome_size*5,self.outcome_size*5))
+        screen_img = self.image[754:754+self.outcome_height,890:890+self.outcome_width]
+        # screen_img = cv2.resize(screen_img,(self.outcome_height*5,self.outcome_width*5))
         cv2.imshow("Screen Image",screen_img)
         
-        img_file = cv2.imread(os.getenv('OUTCOME_LOCATION')+'/disconnected.png')
-        img_file = cv2.resize(img_file,(self.outcome_size*5,self.outcome_size*5))
+        outcome = "disconnected.png"
+        img_file = cv2.imread(os.getenv('OUTCOME_LOCATION')+f'/{outcome}')
+        if outcome == "alive.png":
+            height, width, threshold, name = (48,40,0.8,"Alive")
+        if outcome == "death.png":
+            height, width, threshold, name = (47,38,0.75,"Death")
+        if outcome == "disconnected.png":
+            height, width, threshold, name = (42,52,0.75,"Disconnected")
+        if outcome == "escape.png":
+            height, width, threshold, name = (40,35,0.75, "Escape")
+        if outcome == "sacrificed.png":
+            height, width, threshold, name = (57,40,0.75, "Sacrificed")
+        
+        img_file = self.file_outcome_processing(img_file, height, width)
+        
+
         cv2.imshow("File Image",img_file)
         
     

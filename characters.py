@@ -13,6 +13,7 @@ class Characters:
         self.radius = 18
         self.character_width = 400
         self.character_height = 32
+        self.lower_white_default = 160
         self.lower_white = 160
         self.crossplay_size = 32
         
@@ -25,6 +26,14 @@ class Characters:
             
     def set_image(self, image):
         self.image = self.pre_process_image(image)
+    
+    def set_lower_white(self, image_lower_white = None,image = None):
+        if image_lower_white is None:
+            self.lower_white = int(self.lower_white_default)
+        else:
+            self.lower_white = int(image_lower_white * 1.46)
+            self.image = self.pre_process_image(image)
+            self.lower_white = int(self.lower_white_default)
     
     def pre_process_image(self, image):
         upper_white = np.array([256, 256, 256])

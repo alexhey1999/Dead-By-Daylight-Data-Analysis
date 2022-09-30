@@ -38,11 +38,11 @@ def main(show_images = None):
     # print("Image Taken")
     
     image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_full.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_1.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_mori.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_difficult_survivor_perks.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_disconnected.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_crossplay.png')
+    image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_1.png')
+    image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_mori.png')
+    image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_difficult_survivor_perks.png')
+    image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_disconnected.png')
+    image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_crossplay.png')
     
     # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_2.png')
     # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_3.png')
@@ -72,21 +72,24 @@ def main(show_images = None):
     # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_28.png')
     # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_29.png')
     # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_30.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_skerm.png')
+    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_alive.png')
 
     pre_processed_image = image
     
-    image = ScreenTaker.process_screen_image(image)    
+    image = ScreenTaker.process_screen_image(image)
     
     PerkAnalyser = Perks(image)
     KillerAnalyser = Killer(image)
     OfferingAnalyser = Offerings(image)
     ItemAnalyser = Items(image)
-    ScoreAnalyser = Scores(pre_processed_image)
-    OutcomeAnalyser = Outcomes(pre_processed_image)
+    AddonAnalyser = Addons(image)
+    OutcomeAnalyser = Outcomes(image)
+    
     GradeAnalyser = Grades(pre_processed_image)
+    ScoreAnalyser = Scores(pre_processed_image)
     CrossplayAnalyser = Crossplay(pre_processed_image)
     CharacterAnalyser = Characters(pre_processed_image)
-    AddonAnalyser = Addons(image)
     
     # OfferingAnalyser.compare_offering()
     offerings = OfferingAnalyser.run()
@@ -105,7 +108,8 @@ def main(show_images = None):
     items_used = ItemAnalyser.run()
     print("Items Used: " + str(items_used))
     
-    # ScoreAnalyser.compare_scores()
+    ScoreAnalyser.set_lower_white(ScreenTaker.lower_white,pre_processed_image)
+    ScoreAnalyser.compare_scores()
     scores = ScoreAnalyser.run()
     print("Scores: " + str(scores))
     
@@ -113,14 +117,17 @@ def main(show_images = None):
     outcomes = OutcomeAnalyser.run()
     print("Outcomes: ", str(outcomes))
     
+    GradeAnalyser.set_lower_white(ScreenTaker.lower_white,pre_processed_image)
     # GradeAnalyser.compare_grades()
     grades = GradeAnalyser.run()
     print("Grades: ", str(grades))
     
+    CrossplayAnalyser.set_lower_white(ScreenTaker.lower_white,pre_processed_image)
     # CrossplayAnalyser.compare_crossplay()
     crossplay = CrossplayAnalyser.run()
-    print("Crossplay: ", crossplay)
+    # print("Crossplay: ", crossplay)
     
+    CharacterAnalyser.set_lower_white(ScreenTaker.lower_white,pre_processed_image)
     # CharacterAnalyser.compare_characters()
     characters = CharacterAnalyser.run(crossplay)
     print("Characters: ", characters)

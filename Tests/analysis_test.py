@@ -20,6 +20,7 @@ from outcomes import Outcomes
 from grades import Grades
 from crossplay import Crossplay
 from addons import Addons
+from characters import Characters
 
 
 
@@ -64,6 +65,11 @@ def CrossplayAnalyser():
 @pytest.fixture
 def AddonAnalyser():
     return Addons(None)
+
+@pytest.fixture
+def CharacterAnalyser():
+    return Characters(None)
+
 
 @pytest.mark.parametrize(
     "test_case",
@@ -143,8 +149,8 @@ class Test:
     ):
         file_location,scores = test_case[0], test_case[6]
         image, _ = ScreenTaker.get_image_from_filename(file_location)
-        # image = ScreenTaker.process_screen_image(image)
         ScoreAnalyser.set_image(image)
+        ScoreAnalyser.set_lower_white(ScreenTaker.lower_white,image)
         scores_determined = ScoreAnalyser.run()
         assert (
             scores_determined == scores
@@ -155,9 +161,9 @@ class Test:
     ):
         file_location, outcomes = test_case[0], test_case[7]
         image, _ = ScreenTaker.get_image_from_filename(file_location)
+        image = ScreenTaker.process_screen_image(image)
         OutcomeAnalyser.set_image(image)
         player_1_determined, player_2_determined, player_3_determined, player_4_determined, killer_determined = OutcomeAnalyser.run()
-        
         assert player_1_determined == outcomes[0]
         assert player_2_determined == outcomes[1]
         assert player_3_determined == outcomes[2]
@@ -170,6 +176,7 @@ class Test:
         file_location,grades = test_case[0], test_case[8]
         image, _ = ScreenTaker.get_image_from_filename(file_location)
         GradeAnalyser.set_image(image)
+        GradeAnalyser.set_lower_white(ScreenTaker.lower_white,image)
         grades_determined = GradeAnalyser.run()
         # {'player_1': 'NAN', 'player_2': 'NAN', 'player_3': 'NAN', 'player_4': 'NAN', 'killer': 'NAN'}
         assert grades_determined["player_1"] == grades["player_1"]
@@ -184,6 +191,8 @@ class Test:
         file_location,crossplay = test_case[0], test_case[9]
         image, _ = ScreenTaker.get_image_from_filename(file_location)
         CrossplayAnalyser.set_image(image)
+        CrossplayAnalyser.set_lower_white(ScreenTaker.lower_white,image)
+        
         crossplay_determined = CrossplayAnalyser.run()
         # {'player_1': 'NAN', 'player_2': 'NAN', 'player_3': 'NAN', 'player_4': 'NAN', 'killer': 'NAN'}
         assert crossplay_determined["character_1_crossplay"] == crossplay["character_1_crossplay"]
@@ -192,19 +201,12 @@ class Test:
         assert crossplay_determined["character_4_crossplay"] == crossplay["character_4_crossplay"]
         assert crossplay_determined["killer_crossplay"] == crossplay["killer_crossplay"]
 
-    def test_addons(
-        self, ScreenTaker,KillerAnalyser,AddonAnalyser, test_case
+    def test_characters(
+        self, ScreenTaker, CharacterAnalyser, test_case
     ):
-        file_location,addons = test_case[0], test_case[10]
+        file_location,crossplay_dict,characters = test_case[0], test_case[9], test_case[11]
         image, _ = ScreenTaker.get_image_from_filename(file_location)
-        image = ScreenTaker.process_screen_image(image)
-        KillerAnalyser.set_image(image)
-        killer_determined = KillerAnalyser.run()
-        
-        AddonAnalyser.set_image(image)
-        addons_determined = AddonAnalyser.run(killer_determined)
-        assert addons_determined["player_1"] == addons["player_1"]
-        assert addons_determined["player_2"] == addons["player_2"]
-        assert addons_determined["player_3"] == addons["player_3"]
-        assert addons_determined["player_4"] == addons["player_4"]
-        assert addons_determined["killer"] == addons["killer"]
+        CharacterAnalyser.set_lower_white(ScreenTaker.lower_white,image)
+        CharacterAnalyser.set_image(image)
+        characters_determined = CharacterAnalyser.run(crossplay_dict)
+        assert characters_determined == characters

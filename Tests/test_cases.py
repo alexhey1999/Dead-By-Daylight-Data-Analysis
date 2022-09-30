@@ -68,6 +68,7 @@ TEST_CASES = [
                 "player_4": {"addon_1": "No Addon", "addon_2": "No Addon"},
                 "killer": {"addon_1": "No Addon", "addon_2": "No Addon"},
             },
+            {'player_1': 'Ashley J. Williams', 'player_2': 'Elodie Rakoto', 'player_3': 'Steve Harrington', 'player_4': 'Haddie Kaur'}
         )
     ),
     (
@@ -115,6 +116,7 @@ TEST_CASES = [
                 "player_4": {"addon_1": "No Addon", "addon_2": "No Addon"},
                 "killer": {"addon_1": "Granmas Heart", "addon_2": "Bloodied Water"},
             },
+            {'player_1': 'Meg Thomas', 'player_2': 'No Character Found', 'player_3': 'No Character Found', 'player_4': 'No Character Found'}
         )
     ),
     (
@@ -157,6 +159,7 @@ TEST_CASES = [
                 "player_4": {"addon_1": "No Addon", "addon_2": "No Addon"},
                 "killer": {"addon_1": "Iridescent Head", "addon_2": "Deerskin Gloves"},
             },
+            {'player_1': 'Nea Karlsson', 'player_2': 'No Character Found', 'player_3': 'No Character Found', 'player_4': 'No Character Found'}
         )
     ),
     (
@@ -199,6 +202,7 @@ TEST_CASES = [
                 "player_4": {"addon_1": "No Addon", "addon_2": "No Addon"},
                 "killer": {"addon_1": "Deer Lung", "addon_2": "Sticky Lining"},
             },
+            {'player_1': 'Meg Thomas', 'player_2': 'No Character Found', 'player_3': 'No Character Found', 'player_4': 'No Character Found'}
         )
     ),
     (
@@ -238,6 +242,7 @@ TEST_CASES = [
                 "player_4": {"addon_1": "No Addon", "addon_2": "No Addon"},
                 "killer": {"addon_1": "Serotonin Injector", "addon_2": "Jill Sandwich"},
             },
+            {'player_1': 'David King', 'player_2': 'No Character Found', 'player_3': 'No Character Found', 'player_4': 'No Character Found'}
         )
     ),
     (
@@ -299,6 +304,7 @@ TEST_CASES = [
                 "player_4": {"addon_1": "No Addon", "addon_2": "No Addon"},
                 "killer": {"addon_1": "Etched Ruler", "addon_2": "The Legion Button"},
             },
+            {'player_1': 'Jane Romero', 'player_2': 'Ashley J. Williams', 'player_3': 'Ace Visconti', 'player_4': 'David King'}
         )
     ),
 ]
