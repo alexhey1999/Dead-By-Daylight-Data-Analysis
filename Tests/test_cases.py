@@ -3,24 +3,32 @@ TEST_CASES = [
         (  # File Name
             "./Screenshots/test_full.png",
             # Survivor Perks
-            [
-                "Power Struggle",
-                "Unbreakable",
-                "Flip Flop",
-                "Soul Guard",
-                "Head On",
-                "Quick And Quiet",
-                "Off The Record",
-                "Iron Will",
-                "Vigil",
-                "Head On",
-                "Off The Record",
-                "Resilience",
-                "Lithe",
-                "Empathy",
-                "Windows Of Opportunity",
-                "Solidarity",
-            ],
+            {
+                "player_1": {
+                    "perk_1": "Power Struggle",
+                    "perk_2": "Unbreakable",
+                    "perk_3": "Flip Flop",
+                    "perk_4": "Soul Guard",
+                },
+                "player_2": {
+                    "perk_1": "Head On",
+                    "perk_2": "Quick And Quiet",
+                    "perk_3": "Off The Record",
+                    "perk_4": "Iron Will",
+                },
+                "player_3": {
+                    "perk_1": "Vigil",
+                    "perk_2": "Head On",
+                    "perk_3": "Off The Record",
+                    "perk_4": "Resilience",
+                },
+                "player_4": {
+                    "perk_1": "Lithe",
+                    "perk_2": "Empathy",
+                    "perk_3": "Windows Of Opportunity",
+                    "perk_4": "Solidarity",
+                },
+            },
             # Killer Perks
             [
                 "Brutal Strength",
@@ -68,13 +76,43 @@ TEST_CASES = [
                 "player_4": {"addon_1": "No Addon", "addon_2": "No Addon"},
                 "killer": {"addon_1": "No Addon", "addon_2": "No Addon"},
             },
-            {'player_1': 'Ashley J. Williams', 'player_2': 'Elodie Rakoto', 'player_3': 'Steve Harrington', 'player_4': 'Haddie Kaur'}
+            {
+                "player_1": "Ashley J. Williams",
+                "player_2": "Elodie Rakoto",
+                "player_3": "Steve Harrington",
+                "player_4": "Haddie Kaur",
+            },
         )
     ),
     (
         (
             "./Screenshots/test_random_1.png",
-            ["Boon Exponential", "Left Behind", "Power Struggle", "Decisive Strike"],
+            {
+                "player_1": {
+                    "perk_1": "Boon Exponential",
+                    "perk_2": "Left Behind",
+                    "perk_3": "Power Struggle",
+                    "perk_4": "Decisive Strike",
+                },
+                "player_2": {
+                    "perk_1": "No Perk",
+                    "perk_2": "No Perk",
+                    "perk_3": "No Perk",
+                    "perk_4": "No Perk",
+                },
+                "player_3": {
+                    "perk_1": "No Perk",
+                    "perk_2": "No Perk",
+                    "perk_3": "No Perk",
+                    "perk_4": "No Perk",
+                },
+                "player_4": {
+                    "perk_1": "No Perk",
+                    "perk_2": "No Perk",
+                    "perk_3": "No Perk",
+                    "perk_4": "No Perk",
+                },
+            },
             [
                 "Brutal Strength",
                 "Deathbound",
@@ -116,13 +154,43 @@ TEST_CASES = [
                 "player_4": {"addon_1": "No Addon", "addon_2": "No Addon"},
                 "killer": {"addon_1": "Granmas Heart", "addon_2": "Bloodied Water"},
             },
-            {'player_1': 'Meg Thomas', 'player_2': 'No Character Found', 'player_3': 'No Character Found', 'player_4': 'No Character Found'}
+            {
+                "player_1": "Meg Thomas",
+                "player_2": "No Character Found",
+                "player_3": "No Character Found",
+                "player_4": "No Character Found",
+            },
         )
     ),
     (
         (
             "./Screenshots/test_mori.png",
-            ["Botany Knowledge", "Lucky Break", "Inner Focus", "Poised"],
+            {
+                "player_1": {
+                    "perk_1": "Botany Knowledge",
+                    "perk_2": "Lucky Break",
+                    "perk_3": "Inner Focus",
+                    "perk_4": "Poised",
+                },
+                "player_2": {
+                    "perk_1": "No Perk",
+                    "perk_2": "No Perk",
+                    "perk_3": "No Perk",
+                    "perk_4": "No Perk",
+                },
+                "player_3": {
+                    "perk_1": "No Perk",
+                    "perk_2": "No Perk",
+                    "perk_3": "No Perk",
+                    "perk_4": "No Perk",
+                },
+                "player_4": {
+                    "perk_1": "No Perk",
+                    "perk_2": "No Perk",
+                    "perk_3": "No Perk",
+                    "perk_4": "No Perk",
+                },
+            },
             ["Call Of Brine", "Predator", "Spirit Fury", "Mind Breaker"],
             "Huntress",
             ["Momento Mori Cypress"],
@@ -159,13 +227,43 @@ TEST_CASES = [
                 "player_4": {"addon_1": "No Addon", "addon_2": "No Addon"},
                 "killer": {"addon_1": "Iridescent Head", "addon_2": "Deerskin Gloves"},
             },
-            {'player_1': 'Nea Karlsson', 'player_2': 'No Character Found', 'player_3': 'No Character Found', 'player_4': 'No Character Found'}
+            {
+                "player_1": "Nea Karlsson",
+                "player_2": "No Character Found",
+                "player_3": "No Character Found",
+                "player_4": "No Character Found",
+            },
         )
     ),
     (
         (
             "./Screenshots/test_difficult_survivor_perks.png",
-            ["Deja Vu", "Kindred", "Object Of Obsession", "Dark Sense"],
+            {
+                "player_1": {
+                    "perk_1": "Deja Vu",
+                    "perk_2": "Kindred",
+                    "perk_3": "Object Of Obsession",
+                    "perk_4": "Dark Sense",
+                },
+                "player_2": {
+                    "perk_1": "No Perk",
+                    "perk_2": "No Perk",
+                    "perk_3": "No Perk",
+                    "perk_4": "No Perk",
+                },
+                "player_3": {
+                    "perk_1": "No Perk",
+                    "perk_2": "No Perk",
+                    "perk_3": "No Perk",
+                    "perk_4": "No Perk",
+                },
+                "player_4": {
+                    "perk_1": "No Perk",
+                    "perk_2": "No Perk",
+                    "perk_3": "No Perk",
+                    "perk_4": "No Perk",
+                },
+            },
             ["Stridor", "Beast Of Prey", "Hex Plaything", "Deathbound"],
             "Demogorgon",
             [],
@@ -202,13 +300,43 @@ TEST_CASES = [
                 "player_4": {"addon_1": "No Addon", "addon_2": "No Addon"},
                 "killer": {"addon_1": "Deer Lung", "addon_2": "Sticky Lining"},
             },
-            {'player_1': 'Meg Thomas', 'player_2': 'No Character Found', 'player_3': 'No Character Found', 'player_4': 'No Character Found'}
+            {
+                "player_1": "Meg Thomas",
+                "player_2": "No Character Found",
+                "player_3": "No Character Found",
+                "player_4": "No Character Found",
+            },
         )
     ),
     (
         (
             "./Screenshots/test_disconnected.png",
-            ["Appraisal", "Desperate Measures", "Resilience", "Smash Hit"],
+            {
+                "player_1": {
+                    "perk_1": "Appraisal",
+                    "perk_2": "Desperate Measures",
+                    "perk_3": "Resilience",
+                    "perk_4": "Smash Hit",
+                },
+                "player_2": {
+                    "perk_1": "No Perk",
+                    "perk_2": "No Perk",
+                    "perk_3": "No Perk",
+                    "perk_4": "No Perk",
+                },
+                "player_3": {
+                    "perk_1": "No Perk",
+                    "perk_2": "No Perk",
+                    "perk_3": "No Perk",
+                    "perk_4": "No Perk",
+                },
+                "player_4": {
+                    "perk_1": "No Perk",
+                    "perk_2": "No Perk",
+                    "perk_3": "No Perk",
+                    "perk_4": "No Perk",
+                },
+            },
             ["Save The Best For Last", "Bamboozle", "Devour Hope", "Furtive Chase"],
             "Nemesis",
             ["Macmillians Phalanx Bone"],
@@ -242,30 +370,43 @@ TEST_CASES = [
                 "player_4": {"addon_1": "No Addon", "addon_2": "No Addon"},
                 "killer": {"addon_1": "Serotonin Injector", "addon_2": "Jill Sandwich"},
             },
-            {'player_1': 'David King', 'player_2': 'No Character Found', 'player_3': 'No Character Found', 'player_4': 'No Character Found'}
+            {
+                "player_1": "David King",
+                "player_2": "No Character Found",
+                "player_3": "No Character Found",
+                "player_4": "No Character Found",
+            },
         )
     ),
     (
         (
             "./Screenshots/test_crossplay.png",
-            [
-                "Prove Thyself",
-                "Adrenaline",
-                "Boon Circle Of Healing",
-                "Lithe",
-                "Lithe",
-                "Prove Thyself",
-                "Second Wind",
-                "Adrenaline",
-                "Resilience",
-                "Kindred",
-                "Small Game",
-                "Spine Chill",
-                "Dead Hard",
-                "Fixated",
-                "Resilience",
-                "Off The Record",
-            ],
+            {
+                "player_1": {
+                    "perk_1": "Prove Thyself",
+                    "perk_2": "Adrenaline",
+                    "perk_3": "Boon Circle Of Healing",
+                    "perk_4": "Lithe",
+                },
+                "player_2": {
+                    "perk_1": "Lithe",
+                    "perk_2": "Prove Thyself",
+                    "perk_3": "Second Wind",
+                    "perk_4": "Adrenaline",
+                },
+                "player_3": {
+                    "perk_1": "Resilience",
+                    "perk_2": "Kindred",
+                    "perk_3": "Small Game",
+                    "perk_4": "Spine Chill",
+                },
+                "player_4": {
+                    "perk_1": "Dead Hard",
+                    "perk_2": "Fixated",
+                    "perk_3": "Resilience",
+                    "perk_4": "Off The Record",
+                },
+            },
             [
                 "Lethal Pursuer",
                 "B B Q And Chili",
@@ -304,7 +445,12 @@ TEST_CASES = [
                 "player_4": {"addon_1": "No Addon", "addon_2": "No Addon"},
                 "killer": {"addon_1": "Etched Ruler", "addon_2": "The Legion Button"},
             },
-            {'player_1': 'Jane Romero', 'player_2': 'Ashley J. Williams', 'player_3': 'Ace Visconti', 'player_4': 'David King'}
+            {
+                "player_1": "Jane Romero",
+                "player_2": "Ashley J. Williams",
+                "player_3": "Ace Visconti",
+                "player_4": "David King",
+            },
         )
     ),
 ]
