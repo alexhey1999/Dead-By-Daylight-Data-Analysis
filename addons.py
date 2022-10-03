@@ -94,7 +94,11 @@ class Addons:
         addons["player_4"]["addon_2"] = self.find_best_matching_addon(self.image[670:670+self.addon_size,595:595+self.addon_size])
         # Killer Addons
         addons["killer"] = {}
-        addons["killer"]["addon_1"] = self.find_best_matching_addon(self.image[777:777+self.addon_size,552:552+self.addon_size],killer)
-        addons["killer"]["addon_2"] = self.find_best_matching_addon(self.image[777:777+self.addon_size,593:593+self.addon_size],killer)
+        if killer == "No Killer":
+            addons["killer"]["addon_1"] = "No Addon"
+            addons["killer"]["addon_2"] = "No Addon"
+        else:
+            addons["killer"]["addon_1"] = self.find_best_matching_addon(self.image[777:777+self.addon_size,552:552+self.addon_size],killer)
+            addons["killer"]["addon_2"] = self.find_best_matching_addon(self.image[777:777+self.addon_size,593:593+self.addon_size],killer)
         
         return addons

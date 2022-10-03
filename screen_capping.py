@@ -15,7 +15,7 @@ class Screen():
         self.height = height
         self.lower_white = 105
         self.brightness_scalar = 3.7
-        self.screenshot_interval = 3  # seconds
+        self.screenshot_interval = 0.5  # seconds
         
         self.score_width = 90
         self.score_height = 35
@@ -92,6 +92,8 @@ class Screen():
                 text = pytesseract.image_to_string(ident_img)
                 text = re.sub(r'[^a-zA-Z]', '', text)
                 if text == "SCORE":
+                    time.sleep(1)
+                    image, filename = self.get_image_capture()
                     filename = self.save_image(image, filename)
                     return image, filename
             except:
