@@ -3,6 +3,11 @@ import pyautogui
 import numpy as np
 import PIL.Image as Image
 import cv2
+import time
+from dotenv import load_dotenv,find_dotenv
+import pytesseract
+import os
+import re
 
 class Screen():
     def __init__(self, width, height):
@@ -10,6 +15,16 @@ class Screen():
         self.height = height
         self.lower_white = 105
         self.brightness_scalar = 3.7
+        self.screenshot_interval = 3  # seconds
+        
+        self.score_width = 90
+        self.score_height = 35
+        
+        self.back_width = 60
+        self.back_height = 27
+
+        load_dotenv(find_dotenv())
+        pytesseract.pytesseract.tesseract_cmd = os.getenv("PYTESSERACT_PATH")
         
     def calculate_and_set_brightness_vector(self,image):
         image = Image.fromarray(image)
@@ -30,17 +45,16 @@ class Screen():
     def get_image_capture(self):
         fileName = f'{str(uuid.uuid4())}.png'
         image = pyautogui.screenshot()
-        # image = cv2.cvtColor(np.array(image),cv2.COLOR_RGB2BGR)
+        image = cv2.cvtColor(np.array(image),cv2.COLOR_RGB2BGR)
         image = cv2.resize(image, (1920, 1080))
         # cv2.imwrite('processing/'+fileName, image)
         return image, fileName
 
     def get_image_from_filename(self, filename):
-        fileName = f'filename.png'
         image = cv2.imread(filename)
         # image = cv2.cvtColor(np.array(image),cv2.COLOR_RGB2BGR)
         image = cv2.resize(image, (1920, 1080))
-        return image, fileName
+        return image, filename
     
     def process_screen_image(self,image):
         self.calculate_and_set_brightness_vector(image)
@@ -53,6 +67,48 @@ class Screen():
         BlackBackground[:,:,:] = (0,0,0)
         result = cv2.bitwise_and(WhiteBackground,WhiteBackground,BlackBackground ,mask = mask)
         return result
+    
+    def endgame_identifier_image_process(self, image):
+        image = image[218:218+self.score_height,788:788+self.score_width]
+        # image = cv2.bitwise_not(image)
+        return image
+        
+    def lobby_identifier_image_process(self, image):
+        image = image[991:991+self.back_height,115:115+self.back_width]
+        image = cv2.bitwise_not(image)
+        return image
+    
+    def save_image(self, image, name):
+        screenshot_path = os.getenv("SCREENSHOT_LOCATIONS")
+        cv2.imwrite(f"{screenshot_path}/{name}",image)
+        return f"{screenshot_path}/{name}"
+    
+    def test_endscreen(self):     
+        while True:
+            time.sleep(self.screenshot_interval)
+            image, filename = self.get_image_capture()
+            ident_img = self.endgame_identifier_image_process(image)
+            try:
+                text = pytesseract.image_to_string(ident_img)
+                text = re.sub(r'[^a-zA-Z]', '', text)
+                if text == "SCORE":
+                    filename = self.save_image(image, filename)
+                    return image, filename
+            except:
+                continue
+    
+    def test_lobby(self):
+        while True:
+            time.sleep(self.screenshot_interval)
+            image, filename = self.get_image_capture()
+            ident_img = self.lobby_identifier_image_process(image)
+            try:
+                text = pytesseract.image_to_string(ident_img)
+                text = re.sub(r'[^a-zA-Z]', '', text)
+                if text == "BACK":
+                    return True
+            except:
+                continue
     
     def show_image(self, image,name="No Name Given"):
         cv2.imshow(name,image)
