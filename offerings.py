@@ -66,25 +66,22 @@ class Offerings:
         cv2.imshow("File Image",img_file)
     
     def run(self):
-        offerings_used = []
-        
+        offerings = {}
         
         # Divides the screen into 5 spaces corresponding to each perk location.        
         # Player 1
-        offerings_used.append(self.find_best_matching_offering(self.image[313:313+self.offering_size,424:424+self.offering_size]))
+        offerings["player_1"] = self.find_best_matching_offering(self.image[313:313+self.offering_size,424:424+self.offering_size])
 
         # # Player 2
-        offerings_used.append(self.find_best_matching_offering(self.image[431:431+self.offering_size,424:424+self.offering_size]))
+        offerings["player_2"] = self.find_best_matching_offering(self.image[431:431+self.offering_size,424:424+self.offering_size])
         
         # # Player 3
-        offerings_used.append(self.find_best_matching_offering(self.image[547:547+self.offering_size,424:424+self.offering_size]))
+        offerings["player_3"] = self.find_best_matching_offering(self.image[547:547+self.offering_size,424:424+self.offering_size])
         
         # # Player 4
-        offerings_used.append(self.find_best_matching_offering(self.image[666:666+self.offering_size,424:424+self.offering_size]))
+        offerings["player_4"] = self.find_best_matching_offering(self.image[666:666+self.offering_size,424:424+self.offering_size])
                  
         # Killer Offering Used
-        offerings_used.append(self.find_best_matching_offering(self.image[773:773+self.offering_size,422:422+self.offering_size]))
+        offerings["killer"] = self.find_best_matching_offering(self.image[773:773+self.offering_size,422:422+self.offering_size])
         
-        offerings_used= list(filter(lambda offering:offering != "No Offering",offerings_used))
-        
-        return offerings_used
+        return offerings

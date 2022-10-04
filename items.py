@@ -44,19 +44,17 @@ class Items:
         cv2.imshow("File Image",img_file)
         
     def run(self):
-        items = []
+        items = {}
         # Item Anal     
-        items.append(self.find_best_matching_item(self.image[317:317+self.item_size,492:492+self.item_size]))
+        items["player_1"] = self.find_best_matching_item(self.image[317:317+self.item_size,492:492+self.item_size])
 
         # # Player 2
-        items.append(self.find_best_matching_item(self.image[435:435+self.item_size,492:492+self.item_size]))
+        items["player_2"] = self.find_best_matching_item(self.image[435:435+self.item_size,492:492+self.item_size])
         
         # # Player 3
-        items.append(self.find_best_matching_item(self.image[553:553+self.item_size,492:492+self.item_size]))
+        items["player_3"] = self.find_best_matching_item(self.image[553:553+self.item_size,492:492+self.item_size])
         
         # # Player 4
-        items.append(self.find_best_matching_item(self.image[671:671+self.item_size,492:492+self.item_size]))
-        
-        items= list(filter(lambda item:item != "No Item",items))
+        items["player_4"] = self.find_best_matching_item(self.image[671:671+self.item_size,492:492+self.item_size])
         
         return items
