@@ -27,7 +27,7 @@ TEST_3 = (
                     "perk_4": "No Perk",
                 },
             },
-            ["Call Of Brine", "Predator", "Spirit Fury", "Mind Breaker"],
+            {'perk_1': 'Call Of Brine', 'perk_2': 'Predator', 'perk_3': 'Spirit Fury', 'perk_4': 'Mind Breaker'},
             "Huntress",
             {'player_1': 'No Offering', 'player_2': 'No Offering', 'player_3': 'No Offering', 'player_4': 'No Offering', 'killer': 'Momento Mori Cypress'},
             {'player_1': 'Rangers Aid Kit', 'player_2': 'No Item', 'player_3': 'No Item', 'player_4': 'No Item'},

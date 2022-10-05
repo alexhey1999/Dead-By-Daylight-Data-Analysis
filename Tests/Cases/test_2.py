@@ -27,12 +27,7 @@ TEST_2 = (
                     "perk_4": "No Perk",
                 },
             },
-            [
-                "Brutal Strength",
-                "Deathbound",
-                "Spies From The Shadows",
-                "Dead Man Switch",
-            ],
+            {'perk_1': 'Brutal Strength', 'perk_2': 'Deathbound', 'perk_3': 'Spies From The Shadows', 'perk_4': 'Dead Man Switch'},
             "Hag",
             {'player_1': 'No Offering', 'player_2': 'No Offering', 'player_3': 'No Offering', 'player_4': 'No Offering', 'killer': 'Murky Reagent'},
             {'player_1': 'Flashlight Utility', 'player_2': 'No Item', 'player_3': 'No Item', 'player_4': 'No Item'},

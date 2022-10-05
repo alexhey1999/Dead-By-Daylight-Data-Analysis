@@ -110,12 +110,22 @@ def main(show_images = None):
     characters = CharacterAnalyser.run(crossplay)
     addons = AddonAnalyser.run(killer)
     
-    DatabaseHandler.store_data(
-        filename,
-
-        
-        )
+    print(killer_perks_used)
     
+    # DatabaseHandler.store_data(
+    #     filename,
+    #     killer,
+    #     survivor_perks_used,
+    #     killer_perks_used,
+    #     items_used,
+    #     scores,
+    #     outcomes,
+    #     offerings,
+    #     grades,
+    #     crossplay,
+    #     characters,
+    #     addons
+    #     )
         
     while show_images:
         ScreenTaker.show_image(pre_processed_image,'image')

@@ -20,17 +20,86 @@ class Database:
         player_id = data.fetchone()[0]
         return player_id
     
+    def write_killer_data(self, player_id, killer, addon_1, addon_2):
+        self.db.execute("INSERT INTO Killers VALUES (?,?,?,?,?);",[None,player_id,killer,addon_1,addon_2])
     
+    def write_offering_data(self, player_id, offering):
+        self.db.execute("INSERT INTO Offerings VALUES (?,?,?);",[None,player_id,offering])
+        
+    def write_outcome_data(self, player_id, outcome):
+        self.db.execute("INSERT INTO Outcomes VALUES (?,?,?);",[None,player_id,outcome])
+        
+    def write_score_data(self, player_id, score):
+        self.db.execute("INSERT INTO Scores VALUES (?,?,?);",[None,player_id,score])
     
-    def store_data(self,image_name):
-
+    def write_survivor_perks_data(self, player_id, perk):
+        self.db.execute("INSERT INTO SurvivorPerks VALUES (?,?,?);",[None,player_id,perk])
+    
+    def write_killer_perks_data(self, player_id, perk):
+        self.db.execute("INSERT INTO SurvivorPerks VALUES (?,?,?);",[None,player_id,perk])
+    
+    def store_data(self,filename,killer,survivor_perks_used,killer_perks_used,items_used,scores,outcomes,offerings,grades,crossplay,characters,addons):
         # Game Data
-        game_id = self.write_game_data(image_name)
+        game_id = self.write_game_data(filename)
         
         # Players
-
+        player_1_id = self.write_player_data(game_id, "1", scores["player_1"],characters["player_1"],grades["player_1"],str(crossplay["character_1_crossplay"]),items_used["player_1"],addons["player_1"]["addon_1"],addons["player_1"]["addon_2"])
+        player_2_id = self.write_player_data(game_id, "2", scores["player_2"],characters["player_2"],grades["player_2"],str(crossplay["character_2_crossplay"]),items_used["player_2"],addons["player_2"]["addon_1"],addons["player_2"]["addon_2"])
+        player_3_id = self.write_player_data(game_id, "3", scores["player_3"],characters["player_3"],grades["player_3"],str(crossplay["character_3_crossplay"]),items_used["player_3"],addons["player_3"]["addon_1"],addons["player_3"]["addon_2"])
+        player_4_id = self.write_player_data(game_id, "4", scores["player_4"],characters["player_4"],grades["player_4"],str(crossplay["character_4_crossplay"]),items_used["player_4"],addons["player_4"]["addon_1"],addons["player_4"]["addon_2"])
+        player_killer_id = self.write_player_data(game_id, "Killer" , scores["killer"],killer,grades["killer"],str(crossplay["killer_crossplay"]),"N/A",addons["killer"]["addon_1"],addons["killer"]["addon_2"])
         
+        # # Killer
+        self.write_killer_data(player_killer_id, killer, addons["killer"]["addon_1"], addons["killer"]["addon_2"])
+        
+        # # Offerings
+        self.write_offering_data(player_1_id, offerings["player_1"])
+        self.write_offering_data(player_2_id, offerings["player_2"])
+        self.write_offering_data(player_3_id, offerings["player_3"])
+        self.write_offering_data(player_4_id, offerings["player_4"])
+        self.write_offering_data(player_killer_id, offerings["killer"])
+        
+        # # Outcomes
+        self.write_outcome_data(player_1_id, outcomes[0])
+        self.write_outcome_data(player_2_id, outcomes[1])
+        self.write_outcome_data(player_3_id, outcomes[2])
+        self.write_outcome_data(player_4_id, outcomes[3])
+        self.write_outcome_data(player_killer_id, outcomes[4])
+        
+        # Scores
+        self.write_score_data(player_1_id, scores["player_1"])
+        self.write_score_data(player_2_id, scores["player_2"])
+        self.write_score_data(player_3_id, scores["player_3"])
+        self.write_score_data(player_4_id, scores["player_4"])
+        self.write_score_data(player_killer_id, scores["killer"])
+        
+        # Survivor Perks
+        self.write_survivor_perks_data(player_1_id, survivor_perks_used["player_1"]["perk_1"])
+        self.write_survivor_perks_data(player_1_id, survivor_perks_used["player_1"]["perk_2"])
+        self.write_survivor_perks_data(player_1_id, survivor_perks_used["player_1"]["perk_3"])
+        self.write_survivor_perks_data(player_1_id, survivor_perks_used["player_1"]["perk_4"])
     
+        self.write_survivor_perks_data(player_2_id, survivor_perks_used["player_2"]["perk_1"])
+        self.write_survivor_perks_data(player_2_id, survivor_perks_used["player_2"]["perk_2"])
+        self.write_survivor_perks_data(player_2_id, survivor_perks_used["player_2"]["perk_3"])
+        self.write_survivor_perks_data(player_2_id, survivor_perks_used["player_2"]["perk_4"])
+    
+        self.write_survivor_perks_data(player_3_id, survivor_perks_used["player_3"]["perk_1"])
+        self.write_survivor_perks_data(player_3_id, survivor_perks_used["player_3"]["perk_2"])
+        self.write_survivor_perks_data(player_3_id, survivor_perks_used["player_3"]["perk_3"])
+        self.write_survivor_perks_data(player_3_id, survivor_perks_used["player_3"]["perk_4"])
+    
+        self.write_survivor_perks_data(player_4_id, survivor_perks_used["player_4"]["perk_1"])
+        self.write_survivor_perks_data(player_4_id, survivor_perks_used["player_4"]["perk_2"])
+        self.write_survivor_perks_data(player_4_id, survivor_perks_used["player_4"]["perk_3"])
+        self.write_survivor_perks_data(player_4_id, survivor_perks_used["player_4"]["perk_4"])
+        
+        # Killer Perks
+        self.write_killer_perks_data(player_killer_id, killer_perks_used["perk_1"])
+        self.write_killer_perks_data(player_killer_id, killer_perks_used["perk_2"])
+        self.write_killer_perks_data(player_killer_id, killer_perks_used["perk_3"])
+        self.write_killer_perks_data(player_killer_id, killer_perks_used["perk_4"])        
+        
         self.con.commit()
 
 if __name__ == "__main__":

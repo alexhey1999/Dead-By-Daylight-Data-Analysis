@@ -27,12 +27,7 @@ TEST_6 = (
                     "perk_4": "Off The Record",
                 },
             },
-            [
-                "Lethal Pursuer",
-                "B B Q And Chili",
-                "Scourge Hook Gift Of Pain",
-                "Thatanophobia",
-            ],
+            {'perk_1': 'Lethal Pursuer', 'perk_2': 'B B Q And Chili', 'perk_3': 'Scourge Hook Gift Of Pain', 'perk_4': 'Thatanophobia'},
             "Legion",
             {'player_1': 'Escape Cake', 'player_2': 'Dusty Noose', 'player_3': 'Fresh Crispleaf Amaranth', 'player_4': 'No Offering', 'killer': 'Rotten Oak'},
             {'player_1': 'Medkit', 'player_2': 'Rangers Aid Kit', 'player_3': 'Rainbow Map', 'player_4': 'Flashlight'},

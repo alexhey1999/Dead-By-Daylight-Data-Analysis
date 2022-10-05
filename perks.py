@@ -64,6 +64,7 @@ class Perks:
         killer_perks_used = []
         
         survivor_perks_used = {}
+        killer_perks_used = {}
         # Divides the screen into 20 spaces corresponding to each perk location.        
         # Player 1
         survivor_perks_used["player_1"] = {}
@@ -94,12 +95,9 @@ class Perks:
         survivor_perks_used["player_4"]["perk_4"] = self.find_best_matching_perk(self.image[662:662+self.perk_size,358:358+self.perk_size])
                  
         # Killer Perks
-        killer_perks_used.append(self.find_best_matching_perk(self.image[771:771+self.perk_size,192:192+self.perk_size],False))
-        killer_perks_used.append(self.find_best_matching_perk(self.image[771:771+self.perk_size,246:246+self.perk_size],False))
-        killer_perks_used.append(self.find_best_matching_perk(self.image[771:771+self.perk_size,302:302+self.perk_size],False))
-        killer_perks_used.append(self.find_best_matching_perk(self.image[771:771+self.perk_size,356:356+self.perk_size],False))
-        
-        # survivor_perks_used = list(filter(lambda perk:perk != "No Perk",survivor_perks_used))
-        killer_perks_used = list(filter(lambda perk:perk != "No Perk",killer_perks_used))
+        killer_perks_used["perk_1"] = self.find_best_matching_perk(self.image[771:771+self.perk_size,192:192+self.perk_size],False)
+        killer_perks_used["perk_2"] = self.find_best_matching_perk(self.image[771:771+self.perk_size,246:246+self.perk_size],False)
+        killer_perks_used["perk_3"] = self.find_best_matching_perk(self.image[771:771+self.perk_size,302:302+self.perk_size],False)
+        killer_perks_used["perk_4"] = self.find_best_matching_perk(self.image[771:771+self.perk_size,356:356+self.perk_size],False)
         
         return survivor_perks_used, killer_perks_used

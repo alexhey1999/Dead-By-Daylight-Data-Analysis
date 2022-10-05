@@ -29,12 +29,7 @@ TEST_1 = (
                 },
             },
             # Killer Perks
-            [
-                "Brutal Strength",
-                "Lethal Pursuer",
-                "Enduring",
-                "Spirit Fury",
-            ],
+            {'perk_1': 'Brutal Strength', 'perk_2': 'Lethal Pursuer', 'perk_3': 'Enduring', 'perk_4': 'Spirit Fury'},
             # Killer
             "Wraith",
             # Offerings

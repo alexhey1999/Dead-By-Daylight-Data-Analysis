@@ -27,7 +27,7 @@ TEST_5 = (
                     "perk_4": "No Perk",
                 },
             },
-            ["Save The Best For Last", "Bamboozle", "Devour Hope", "Furtive Chase"],
+            {'perk_1': 'Save The Best For Last', 'perk_2': 'Bamboozle', 'perk_3': 'Devour Hope', 'perk_4': 'Furtive Chase'},
             "Nemesis",
             {'player_1': 'No Offering', 'player_2': 'No Offering', 'player_3': 'No Offering', 'player_4': 'No Offering', 'killer': 'Macmillians Phalanx Bone'},
             {'player_1': 'No Item', 'player_2': 'No Item', 'player_3': 'No Item', 'player_4': 'No Item'},

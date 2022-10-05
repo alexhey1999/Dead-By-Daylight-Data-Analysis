@@ -27,7 +27,7 @@ TEST_4 = (
                     "perk_4": "No Perk",
                 },
             },
-            ["Stridor", "Beast Of Prey", "Hex Plaything", "Deathbound"],
+            {'perk_1': 'Stridor', 'perk_2': 'Beast Of Prey', 'perk_3': 'Hex Plaything', 'perk_4': 'Deathbound'},
             "Demogorgon",
             {'player_1': 'No Offering', 'player_2': 'No Offering', 'player_3': 'No Offering', 'player_4': 'No Offering', 'killer': 'No Offering'},
             {'player_1': 'Flashlight Utility', 'player_2': 'No Item', 'player_3': 'No Item', 'player_4': 'No Item'},
