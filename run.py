@@ -22,7 +22,7 @@ from database_handling import Database
 
 image = None
     
-def main(image, filename):
+def main(image, filename, ScreenTaker, DatabaseHandler):
     pre_processed_image = image
     image = ScreenTaker.process_screen_image(image)
     
@@ -32,7 +32,6 @@ def main(image, filename):
     ItemAnalyser = Items(image)
     AddonAnalyser = Addons(image)
     OutcomeAnalyser = Outcomes(image)
-    DatabaseHandler = Database()
     
     GradeAnalyser = Grades(pre_processed_image)
     ScoreAnalyser = Scores(pre_processed_image)
@@ -70,46 +69,63 @@ def main(image, filename):
         addons
         )
     
+    del PerkAnalyser
+    del KillerAnalyser
+    del OfferingAnalyser
+    del ItemAnalyser
+    del AddonAnalyser
+    del OutcomeAnalyser
+    del GradeAnalyser
+    del ScoreAnalyser
+    del CrossplayAnalyser
+    del CharacterAnalyser
+    
 if __name__ == "__main__":
     load_dotenv(find_dotenv())
     monitor = get_monitors()[int(os.getenv("DEFAULT_MONITOR"))]
     ScreenTaker = Screen(monitor.width, monitor.height)
     
+    DatabaseHandler = Database()
     
     try:
         if sys.argv[1].lower() == "passive":
             while True:
+                ScreenTaker = Screen(monitor.width, monitor.height)    
                 print("==========================")
                 print("Looking for endgame screen")
                 print("==========================")
                 image, filename = ScreenTaker.test_endscreen()
                 print("Endgame Screen Found!")
                 print("==========================")
-                main(image, filename)
+                main(image, filename, ScreenTaker, DatabaseHandler)
                 print("Looking for Lobby Screen")
                 print("==========================")
                 ScreenTaker.test_lobby()
                 print("Lobby Screen Found!")
+                del ScreenTaker
         
         elif sys.argv[1].lower() == "folder":
             path = os.getenv("SCREENSHOT_LOCATIONS")
             for i in listdir(path):
+                ScreenTaker = Screen(monitor.width, monitor.height)    
                 image, filename = ScreenTaker.get_image_from_filename(f"{path}/{i}")
                 print(f"Image at: {i}")
-                main(image, filename)
+                main(image, filename, ScreenTaker, DatabaseHandler)
                 print("Added Data!")
-                print("==========================")
+                print("===========")
+                del ScreenTaker
+                
                 
         elif sys.argv[1].lower() == "file":
+            ScreenTaker = Screen(monitor.width, monitor.height)    
             image, filename = ScreenTaker.get_image_from_filename(f'./Screenshots/{sys.argv[2]}')
-            main(image, filename)
+            main(image, filename, ScreenTaker, DatabaseHandler)
+            del ScreenTaker
                 
         elif sys.argv[1].lower() == "create_db":
-            DatabaseHandler = Database()
             DatabaseHandler.create_tables()
             
         elif sys.argv[1].lower() == "drop_db":
-            DatabaseHandler = Database()
             DatabaseHandler.drop_tables()
             
         else:

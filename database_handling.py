@@ -18,25 +18,33 @@ class Database:
     def write_player_data(self, game_id, position, score, character, grade, crossplay, item, addon1, addon2):
         data = self.db.execute("INSERT INTO Players VALUES (?,?,?,?,?,?,?,?,?,?) RETURNING PlayerID;",[None,game_id,position,score,character,grade,crossplay,item,addon1,addon2])
         player_id = data.fetchone()[0]
+        self.con.commit()
         return player_id
+    
     
     def write_killer_data(self, player_id, killer, addon_1, addon_2):
         self.db.execute("INSERT INTO Killers VALUES (?,?,?,?,?);",[None,player_id,killer,addon_1,addon_2])
-    
+        self.con.commit()
+
     def write_offering_data(self, player_id, offering):
         self.db.execute("INSERT INTO Offerings VALUES (?,?,?);",[None,player_id,offering])
+        self.con.commit()
         
     def write_outcome_data(self, player_id, outcome):
         self.db.execute("INSERT INTO Outcomes VALUES (?,?,?);",[None,player_id,outcome])
+        self.con.commit()
         
     def write_score_data(self, player_id, score):
         self.db.execute("INSERT INTO Scores VALUES (?,?,?);",[None,player_id,score])
+        self.con.commit()
     
     def write_survivor_perks_data(self, player_id, perk):
         self.db.execute("INSERT INTO SurvivorPerks VALUES (?,?,?);",[None,player_id,perk])
+        self.con.commit()
     
     def write_killer_perks_data(self, player_id, perk):
         self.db.execute("INSERT INTO KillerPerks VALUES (?,?,?);",[None,player_id,perk])
+        self.con.commit()
     
     def store_data(self,filename,killer,survivor_perks_used,killer_perks_used,items_used,scores,outcomes,offerings,grades,crossplay,characters,addons):
         # Game Data

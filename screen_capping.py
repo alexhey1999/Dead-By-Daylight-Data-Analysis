@@ -9,6 +9,9 @@ import pytesseract
 import os
 import re
 
+from killer import Killer
+
+
 class Screen():
     def __init__(self, width, height):
         self.width = width
@@ -95,6 +98,12 @@ class Screen():
                 if text == "SCORE":
                     time.sleep(1)
                     image, filename = self.get_image_capture()
+                    
+                    killerAnalyser = Killer(image)
+                    killer = killerAnalyser.run()
+                    if killer == "No Killer":
+                        continue                    
+                    
                     filename = self.save_image(image, filename)
                     return image, filename
             except:
