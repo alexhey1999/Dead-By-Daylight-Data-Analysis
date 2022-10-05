@@ -1,4 +1,5 @@
 #Handle Imports
+from msilib.schema import File
 import cv2
 import sys
 from os import listdir, rename
@@ -26,6 +27,7 @@ from grades import Grades
 from crossplay import Crossplay
 from characters import Characters
 from addons import Addons
+from database_handling import Database
 
 image = None
     
@@ -48,51 +50,40 @@ def main(image, filename, show_images = None):
     ScoreAnalyser = Scores(pre_processed_image)
     CrossplayAnalyser = Crossplay(pre_processed_image)
     CharacterAnalyser = Characters(pre_processed_image)
-    
-    # OfferingAnalyser.compare_offering()
-    offerings = OfferingAnalyser.run()
-    print("Offerings: ", offerings)    
-    
-    # KillerAnalyser.compare_killer()
-    killer = KillerAnalyser.run()
-    print("Killer: ",killer)
-
-    # PerkAnalyser.compare_perk()
-    survivor_perks_used, killer_perks_used = PerkAnalyser.run()
-    print("Survivor Perks Used: " + str(survivor_perks_used))
-    print("Killer Perks Used: " + str(killer_perks_used))
-    
-    # ItemAnalyser.compare_item()
-    items_used = ItemAnalyser.run()
-    print("Items Used: " + str(items_used))
+    DatabaseHandler = Database()
     
     ScoreAnalyser.set_lower_white(ScreenTaker.lower_white,pre_processed_image)
-    # ScoreAnalyser.compare_scores()
-    scores = ScoreAnalyser.run()
-    print("Scores: " + str(scores))
-    
-    # OutcomeAnalyser.compare_outcomes()
-    outcomes = OutcomeAnalyser.run()
-    print("Outcomes: ", str(outcomes))
-    
     GradeAnalyser.set_lower_white(ScreenTaker.lower_white,pre_processed_image)
-    # GradeAnalyser.compare_grades()
-    grades = GradeAnalyser.run()
-    print("Grades: ", str(grades))
-    
     CrossplayAnalyser.set_lower_white(ScreenTaker.lower_white,pre_processed_image)
-    # CrossplayAnalyser.compare_crossplay()
-    crossplay = CrossplayAnalyser.run()
-    # print("Crossplay: ", crossplay)
-    
     CharacterAnalyser.set_lower_white(ScreenTaker.lower_white,pre_processed_image)
-    # CharacterAnalyser.compare_characters()
+
+    killer = KillerAnalyser.run()
+    survivor_perks_used, killer_perks_used = PerkAnalyser.run()
+    items_used = ItemAnalyser.run()
+    scores = ScoreAnalyser.run()
+    outcomes = OutcomeAnalyser.run()
+    offerings = OfferingAnalyser.run()
+    grades = GradeAnalyser.run()
+    crossplay = CrossplayAnalyser.run()
     characters = CharacterAnalyser.run(crossplay)
-    print("Characters: ", characters)
-    
-    # AddonAnalyser.compare_addons()
     addons = AddonAnalyser.run(killer)
-    print("Addons: ", addons)
+    
+    print(killer_perks_used)
+    
+    # DatabaseHandler.store_data(
+    #     filename,
+    #     killer,
+    #     survivor_perks_used,
+    #     killer_perks_used,
+    #     items_used,
+    #     scores,
+    #     outcomes,
+    #     offerings,
+    #     grades,
+    #     crossplay,
+    #     characters,
+    #     addons
+    #     )
         
     while show_images:
         ScreenTaker.show_image(pre_processed_image,'image')
