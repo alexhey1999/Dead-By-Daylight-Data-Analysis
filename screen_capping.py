@@ -51,6 +51,7 @@ class Screen():
         return image, fileName
 
     def get_image_from_filename(self, filename):
+        image_id = filename.split('/')[-1]
         image = cv2.imread(filename)
         # image = cv2.cvtColor(np.array(image),cv2.COLOR_RGB2BGR)
         image = cv2.resize(image, (1920, 1080))

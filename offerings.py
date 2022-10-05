@@ -1,6 +1,5 @@
 import os
 from os import listdir
-from subprocess import CREATE_NEW_PROCESS_GROUP
 import cv2
 import numpy as np
 

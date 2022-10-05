@@ -36,7 +36,7 @@ class Database:
         self.db.execute("INSERT INTO SurvivorPerks VALUES (?,?,?);",[None,player_id,perk])
     
     def write_killer_perks_data(self, player_id, perk):
-        self.db.execute("INSERT INTO SurvivorPerks VALUES (?,?,?);",[None,player_id,perk])
+        self.db.execute("INSERT INTO KillerPerks VALUES (?,?,?);",[None,player_id,perk])
     
     def store_data(self,filename,killer,survivor_perks_used,killer_perks_used,items_used,scores,outcomes,offerings,grades,crossplay,characters,addons):
         # Game Data
@@ -101,6 +101,39 @@ class Database:
         self.write_killer_perks_data(player_killer_id, killer_perks_used["perk_4"])        
         
         self.con.commit()
+    
+    def create_tables(self):    
+        commands = [
+            'CREATE TABLE "Games" ("GameID" INTEGER,"ImageUUID" TEXT,"CreatedOn" INTEGER, PRIMARY KEY("GameID" AUTOINCREMENT))',
+            'CREATE TABLE "Players" ( "PlayerID" INTEGER, "GameID" INTEGER, "Position" TEXT, "Score" INTEGER, "Character" TEXT, "Grade" TEXT, "Crossplay" TEXT, "Item" TEXT, "Addon1" TEXT, "Addon2" TEXT, PRIMARY KEY("PlayerID" AUTOINCREMENT) )',
+            'CREATE TABLE "KillerPerks" ("PerkID" INTEGER, "PersonID" INTEGER,"Perk" TEXT, PRIMARY KEY("PerkID" AUTOINCREMENT))',
+            'CREATE TABLE "Killers" ( "KillerID" INTEGER, "PlayerID" INTEGER, "Killer" TEXT, "Addon1" TEXT, "Addon2" TEXT, PRIMARY KEY("KillerID" AUTOINCREMENT))',
+            'CREATE TABLE "Offerings" ( "OfferingID" INTEGER, "PersonID" INTEGER, "Offering" TEXT, PRIMARY KEY("OfferingID" AUTOINCREMENT), FOREIGN KEY("PersonID") REFERENCES "Games"("GameID"))',
+            'CREATE TABLE "Outcomes" ( "OutcomeID" INTEGER, "PlayerID" INTEGER, "Outcome" TEXT, PRIMARY KEY("OutcomeID" AUTOINCREMENT))',
+            'CREATE TABLE "Scores" ( "ScoreID" INTEGER, "PlayerID" INTEGER, "Score" INTEGER, FOREIGN KEY("PlayerID") REFERENCES "Players"("PlayerID"), PRIMARY KEY("ScoreID" AUTOINCREMENT) )',
+            'CREATE TABLE "SurvivorPerks" ( "PerkID" INTEGER, "PersonID" INTEGER, "Perk" TEXT, PRIMARY KEY("PerkID" AUTOINCREMENT) )'
+        ]
+        
+        for i in commands:
+            self.db.execute(i)
+            self.con.commit()
+        
+    def drop_tables(self):
+        commands = [
+            'DROP TABLE "Games"',
+            'DROP TABLE "Players"',
+            'DROP TABLE "KillerPerks"',
+            'DROP TABLE "Killers"',
+            'DROP TABLE "Offerings"',
+            'DROP TABLE "Outcomes"',
+            'DROP TABLE "Scores"',
+            'DROP TABLE "SurvivorPerks"'
+        ]
+        
+        for i in commands:
+            self.db.execute(i)
+            self.con.commit()
+        
 
 if __name__ == "__main__":
     database = Database()

@@ -1,18 +1,9 @@
 #Handle Imports
-from msilib.schema import File
-import cv2
 import sys
-from os import listdir, rename
-import argparse
-import pyautogui
-import numpy as np
-import pytesseract
-import PIL.Image as Image
-from PIL import ImageGrab
-import json
-import datetime
 from screen_capping import Screen
 import os
+from os import listdir
+
 from dotenv import load_dotenv,find_dotenv
 from screeninfo import get_monitors
 
@@ -31,12 +22,8 @@ from database_handling import Database
 
 image = None
     
-def main(image, filename, show_images = None):
-    # global image
-    show_images = True if show_images == None else False
-    
+def main(image, filename):
     pre_processed_image = image
-    
     image = ScreenTaker.process_screen_image(image)
     
     PerkAnalyser = Perks(image)
@@ -82,38 +69,50 @@ def main(image, filename, show_images = None):
         characters,
         addons
         )
-        
-    while show_images:
-        ScreenTaker.show_image(pre_processed_image,'image')
-        key = cv2.waitKey(30)
-        if key == 27 or key == 0:
-            quit()
-    
     
 if __name__ == "__main__":
-    # print(sys.argv)
-    show_images = None
-    if len(sys.argv) == 2:
-        show_images = True if sys.argv[1] == True else False
-    
-    # Load .env file
     load_dotenv(find_dotenv())
-
-    # Create Screen Capture Object
     monitor = get_monitors()[int(os.getenv("DEFAULT_MONITOR"))]
-
     ScreenTaker = Screen(monitor.width, monitor.height)
     
-    while True:
-        print("==========================")
-        print("Looking for endgame screen")
-        print("==========================")
-        image, filename = ScreenTaker.test_endscreen()
-        print("Endgame Screen Found!")
-        print("==========================")
-        main(image, filename, True)
-        print("Looking for Lobby Screen")
-        print("==========================")
-        ScreenTaker.test_lobby()
-        print("Lobby Screen Found!")
+    
+    try:
+        if sys.argv[1].lower() == "passive":
+            while True:
+                print("==========================")
+                print("Looking for endgame screen")
+                print("==========================")
+                image, filename = ScreenTaker.test_endscreen()
+                print("Endgame Screen Found!")
+                print("==========================")
+                main(image, filename)
+                print("Looking for Lobby Screen")
+                print("==========================")
+                ScreenTaker.test_lobby()
+                print("Lobby Screen Found!")
         
+        elif sys.argv[1].lower() == "folder":
+            path = os.getenv("SCREENSHOT_LOCATIONS")
+            for i in listdir(path):
+                image, filename = ScreenTaker.get_image_from_filename(f"{path}/{i}")
+                print(f"Image at: {i}")
+                main(image, filename)
+                print("Added Data!")
+                print("==========================")
+                
+        elif sys.argv[1].lower() == "file":
+            image, filename = ScreenTaker.get_image_from_filename(f'./Screenshots/{sys.argv[2]}')
+            main(image, filename)
+                
+        elif sys.argv[1].lower() == "create_db":
+            DatabaseHandler = Database()
+            DatabaseHandler.create_tables()
+            
+        elif sys.argv[1].lower() == "drop_db":
+            DatabaseHandler = Database()
+            DatabaseHandler.drop_tables()
+            
+        else:
+            print("Error")
+    except:
+        Exception("Error Booting Up Script")

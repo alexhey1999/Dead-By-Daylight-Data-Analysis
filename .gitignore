@@ -6,3 +6,5 @@
 /tools/__pycache__
 DBDRoot.lnk
 /Tests/__pycache__
+dbd_data_dev.db
+dbd_data.sqbpro
