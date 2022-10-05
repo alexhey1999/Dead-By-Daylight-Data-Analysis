@@ -31,52 +31,10 @@ from database_handling import Database
 
 image = None
     
-def main(show_images = None):
-    global image
+def main(image, filename, show_images = None):
+    # global image
     show_images = True if show_images == None else False
-    # print(show_images)
-    # show_images = True if show_images == None else False
-    # image, filename = ScreenTaker.get_image_capture()
-    # print("Image Taken")
     
-    image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_full.png')
-    image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_1.png')
-    image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_mori.png')
-    image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_difficult_survivor_perks.png')
-    image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_disconnected.png')
-    image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_crossplay.png')
-    
-    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_2.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_3.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_4.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_5.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_6.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_7.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_8.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_9.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_10.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_11.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_12.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_13.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_14.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_15.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_16.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_17.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_18.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_19.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_20.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_22.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_23.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_24.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_25.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_26.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_27.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_28.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_29.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_random_30.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_skerm.png')
-    # image, filename = ScreenTaker.get_image_from_filename('./Screenshots/test_alive.png')
-
     pre_processed_image = image
     
     image = ScreenTaker.process_screen_image(image)
@@ -148,4 +106,16 @@ if __name__ == "__main__":
 
     ScreenTaker = Screen(monitor.width, monitor.height)
     
-    main(show_images)
+    while True:
+        print("==========================")
+        print("Looking for endgame screen")
+        print("==========================")
+        image, filename = ScreenTaker.test_endscreen()
+        print("Endgame Screen Found!")
+        print("==========================")
+        main(image, filename, True)
+        print("Looking for Lobby Screen")
+        print("==========================")
+        ScreenTaker.test_lobby()
+        print("Lobby Screen Found!")
+        
