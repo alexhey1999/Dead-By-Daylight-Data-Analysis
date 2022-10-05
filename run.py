@@ -45,12 +45,12 @@ def main(image, filename, show_images = None):
     ItemAnalyser = Items(image)
     AddonAnalyser = Addons(image)
     OutcomeAnalyser = Outcomes(image)
+    DatabaseHandler = Database()
     
     GradeAnalyser = Grades(pre_processed_image)
     ScoreAnalyser = Scores(pre_processed_image)
     CrossplayAnalyser = Crossplay(pre_processed_image)
     CharacterAnalyser = Characters(pre_processed_image)
-    DatabaseHandler = Database()
     
     ScoreAnalyser.set_lower_white(ScreenTaker.lower_white,pre_processed_image)
     GradeAnalyser.set_lower_white(ScreenTaker.lower_white,pre_processed_image)
@@ -68,22 +68,20 @@ def main(image, filename, show_images = None):
     characters = CharacterAnalyser.run(crossplay)
     addons = AddonAnalyser.run(killer)
     
-    print(killer_perks_used)
-    
-    # DatabaseHandler.store_data(
-    #     filename,
-    #     killer,
-    #     survivor_perks_used,
-    #     killer_perks_used,
-    #     items_used,
-    #     scores,
-    #     outcomes,
-    #     offerings,
-    #     grades,
-    #     crossplay,
-    #     characters,
-    #     addons
-    #     )
+    DatabaseHandler.store_data(
+        filename,
+        killer,
+        survivor_perks_used,
+        killer_perks_used,
+        items_used,
+        scores,
+        outcomes,
+        offerings,
+        grades,
+        crossplay,
+        characters,
+        addons
+        )
         
     while show_images:
         ScreenTaker.show_image(pre_processed_image,'image')
