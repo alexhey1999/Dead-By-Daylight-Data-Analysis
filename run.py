@@ -54,20 +54,32 @@ def main(image, filename, ScreenTaker, DatabaseHandler):
     characters = CharacterAnalyser.run(crossplay)
     addons = AddonAnalyser.run(killer)
     
-    DatabaseHandler.store_data(
-        filename,
-        killer,
-        survivor_perks_used,
-        killer_perks_used,
-        items_used,
-        scores,
-        outcomes,
-        offerings,
-        grades,
-        crossplay,
-        characters,
-        addons
-        )
+    # DatabaseHandler.store_data(
+    #     filename,
+    #     killer,
+    #     survivor_perks_used,
+    #     killer_perks_used,
+    #     items_used,
+    #     scores,
+    #     outcomes,
+    #     offerings,
+    #     grades,
+    #     crossplay,
+    #     characters,
+    #     addons
+    #     )
+    
+    print("Killer: ",killer)
+    print("Survivor Perks Used: " + str(survivor_perks_used))
+    print("Killer Perks Used: " + str(killer_perks_used))
+    print("Items Used: " + str(items_used))
+    print("Scores: " + str(scores))
+    print("Outcomes: ", str(outcomes))
+    print("Offerings: ", offerings)
+    print("Grades: ", str(grades))
+    print("Crossplay: ", crossplay)
+    print("Characters: ", characters)
+    print("Addons: ", addons)
     
     del PerkAnalyser
     del KillerAnalyser

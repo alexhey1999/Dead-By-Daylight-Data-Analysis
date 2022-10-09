@@ -108,7 +108,25 @@ class Screen():
                     return image, filename
             except:
                 continue
-    
+            
+    def test_endscreen_image(self, image):
+        ident_img = self.endgame_identifier_image_process(image)
+        try:
+            text = pytesseract.image_to_string(ident_img)
+            text = re.sub(r'[^a-zA-Z]', '', text)
+            if text == "SCORE":                
+                killerAnalyser = Killer(image)
+                killer = killerAnalyser.run()
+                if killer == "No Killer":
+                    return None, None                    
+                filename = self.save_image(image, f'{str(uuid.uuid4())}.png')
+                time.sleep(10)
+                return image, filename
+            else:
+                return None, None
+        except:
+            return None, None
+            
     def test_lobby(self):
         while True:
             time.sleep(self.screenshot_interval)
