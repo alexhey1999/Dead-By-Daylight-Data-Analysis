@@ -1,6 +1,6 @@
 # Dead-By-Daylight-Data-Analysis
 
-Python based program that analyses a screenshot of the scoreboard at endgame; and use image recognition and a small amount of machine learning to determine what perks have been used. This way removes the need for someone to manually analyse these games.
+Python based program that analyses a scoreboard screenshot using image recognition using opencv to determine what perks and other items have been used have been used. This way removes the need for someone to manually analyse these games.
 
 ## Example
 ![image](https://user-images.githubusercontent.com/64182587/205755914-b2fbb06d-a2ea-497b-8ab7-b43e4caa17dd.png)
